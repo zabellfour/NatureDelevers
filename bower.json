@@ -1,9 +1,8 @@
 {
   "name": "markup-starter-jc",
   "version": "0.1.0",
-  "homepage": "git+https://bitbucket.org/justcoded/npm_jcn_markup_starter",
   "authors": [
-    "Justcoded"
+    "A1"
   ],
   "description": "Starter kit for markup projects",
   "main": "",
