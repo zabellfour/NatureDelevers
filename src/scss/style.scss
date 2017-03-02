@@ -1,7 +1,10 @@
 /* Vendors*/
 @import './bower/include-media/dist/include-media';
+@import 'vendors/fonts';
 
 /* Base modules*/
 @import 'base/main';
+
+ 
 /* Components */
 @import 'components/starter-box';
