@@ -1,0 +1,49 @@
+/* diagram holder style */
+
+.diagram-holder {
+	.title-holder {
+		font-family: 'museo_sans','Times', 'Baskerville', 'Georgia', serif;;
+		text-align:center;
+		color:#f05238;
+		text-transform:uppercase;
+		max-width:560px;
+		padding:0 15px;
+		margin:0 auto 75px;
+		position:relative;
+		h2,
+		h3 {
+			font-size:30px;
+			line-height:32px;
+			color:#f05238;
+			margin:0 0 10px;
+		}
+		h3 {
+			font-size:20px;
+			line-height:22px;
+			color:$black;
+		}
+	}
+	.number {
+		font-size:128px;
+		line-height:128px;
+		position:absolute;
+		left:50%;
+		top:50%;
+		transform:translate(-50%,-50%);
+		color:#eee;
+		z-index:-1;
+	}
+}
+
+.sr {
+	.sr-item{
+		visibility: hidden;
+	}
+}
+
+.home {
+	.visible{
+		opacity: 0;
+		transition:1.5s cubic-bezier(.44,.47,.23,1) ;
+	}
+}

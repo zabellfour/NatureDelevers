@@ -8,6 +8,11 @@
  
 /* Components */
 @import 'components/starter-box';
+@import 'components/animate';
+@import 'components/diagram';
+@import 'components/images-list';
 
-/* Layout */
-@import 'layout/footer';
+/* Layouts */
+@import 'layouts/common';
+@import 'layouts/header';
+@import 'layouts/footer';
