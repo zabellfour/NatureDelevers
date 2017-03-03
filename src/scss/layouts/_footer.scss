@@ -1,34 +1,47 @@
 /* footer style */
 
-#footer-holder {
-	height:415px;
-	background:url("../images/footer-bg.jpg") 50% 100% / cover no-repeat;
-	padding:69px 15px 0;
-	position:relative;
-}
-
 #footer {
 	height:83px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-end;
-	position:absolute;
-	left:0;
-	right:0;
-	bottom:0;
 	background:url("../images/footer-nav-bg.png") 0 100% no-repeat;
+	position:relative;
+	z-index:1;
+	margin:-83px 0 0;
+	@include media('<tablet') {
+		height:75px;
+		margin:0;
+		background:none;
+	}
 }
 
 .nav-footer {
 	@extend %listreset;
 	font: 12px/14px $base-font-sans-serif,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 	text-transform:uppercase;
-	padding:0 17px 9px;
+	padding:0 16px 6px;
 	overflow:hidden;
+	@include media('<tablet') {
+		font-size:10px;
+		line-height:12px;
+		width:100%;
+		padding:0 10px 8px;
+		display:flex;
+		justify-content: space-between;
+	}
 	li {
 		margin: 0 20px 0 0;
 		float:left;
+		@include media('<tablet') {
+			margin:0;
+		}
+		span {
+			@include media('<tablet') {
+				display:none;
+			}
+		}
 	}
 	a {
 		color:$black;
@@ -36,25 +49,10 @@
 	}
 }
 
-.btn-footer {
-	font: 34px/36px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
-	max-width:383px;
-	margin:0 auto;
-	display:block;
-	border:4px solid $white;
-	color:$white;
-	text-transform:uppercase;
-	position:relative;
-	text-align:center;
-	box-shadow:0px 0px 13px 6px rgba(0,0,0,0.35);
-	.title-btn {
-		position:absolute;
-		left:50%;
-		top:50%;
-		transform:translate(-50%,-50%);
-	}
-	img {
-		width:100%;
-		vertical-align:top;
+.logo-mobile {
+	display:none;
+	@include media('<tablet') {
+		display:block;
+		padding:0 0 0 27px;
 	}
 }
