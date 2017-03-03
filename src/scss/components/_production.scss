@@ -1,0 +1,28 @@
+/* production style */
+
+.production-holder {
+	margin: 0 0 60px;
+	.title {
+		text-align:center;
+		position:relative;
+		text-transform:uppercase;
+		padding:35px 0;
+		margin:0 0 88px;
+		h1 {
+			font:50px/52px 'museo_sans';
+			color:#f05238;
+			margin:0;
+			strong {
+				color:$black;
+			}
+		}
+	}
+	.two-column {
+		font:14px/20px $base-font-sans-serif;
+		display: flex;
+		justify-content: space-between;
+		.box {
+			width:48%;
+		}
+	}
+}

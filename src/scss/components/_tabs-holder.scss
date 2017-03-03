@@ -1,0 +1,115 @@
+/* tabs-holder style */
+
+.tabs-holder {
+	position:relative;
+	padding:100px 0 0;
+	margin:0 0 111px;
+	background:#f7f6f2;
+	.decor-tabs {
+		position:absolute;
+		left:50%;
+		transform:translateX(-50%);
+		top:0;
+		width:100%;
+		height:1px;
+	}
+	.img-decor01 {
+		position:absolute;
+		left:50%;
+		transform:translateX(-50%);
+		top:-50px;
+		width:110px;
+		margin:0 auto;
+		img {
+			width:100%;
+			vertical-align:top;
+		}
+	}
+	.img-decor02 {
+		width:259px;
+		position:absolute;
+		right: 14%;
+		top: -100px;
+		img {
+			width:100%;
+			vertical-align:top;
+		}
+	}
+	.title-box {
+		text-align:center;
+		h2 {
+			font:40px/42px  'mochamattariw', 'Times', 'Baskerville', 'Georgia', serif;
+			text-transform:uppercase;
+			color:#1e1f2e;
+			margin:0 0 70px;
+		}
+	}
+	.tab-content {
+		>.actie {
+			display:block;
+		}
+		.js-tab-hidden{
+			display: block !important;
+			left: -9999px !important;
+			position: absolute !important;
+			top: -9999px !important;
+		}
+	}
+}
+
+.tabset-block {
+	max-width:995px;
+	margin:0 auto 119px;
+	padding:0 30px;
+	.tabset {
+		@extend %listreset;
+		display: flex;
+		justify-content: space-between;
+		padding:0 50px 0 0;
+		li {
+			text-align:center;
+			width:20%;
+		}
+		a {
+			 font: 40px/41px 'museo_sans','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+			background:#fff;
+			display:block;
+			text-decoration:none;
+			color:#000;
+			padding:11px;
+			&.active {
+				color:#fff;
+				background:#e04c34;
+			}
+		}
+	}
+	.tab-content {
+		font: 20px/22px $base-font-sans-serif;
+		background:#e04c34;
+		padding:75px 35px;
+		color:#fff;
+	}
+}
+
+.images-list-holder {
+	display: flex;
+	justify-content: space-between;
+	position:relative;
+	.img-box {
+		width:20%;
+		background:$white;
+		&:nth-child(2n+1) {
+			margin:48px 0 0;
+		}
+	}
+	.img-decor03 {
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		margin: 0 0 -8px;
+	}
+	img {
+		width:100%;
+		vertical-align:top;
+	}
+}

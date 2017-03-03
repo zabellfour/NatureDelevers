@@ -23,16 +23,16 @@
 			color:$black;
 		}
 	}
-	.number {
-		font-size:128px;
-		line-height:128px;
-		position:absolute;
-		left:50%;
-		top:50%;
-		transform:translate(-50%,-50%);
-		color:#eee;
-		z-index:-1;
-	}
+}
+
+.number {
+	font:128px/128px 'museo_sans';
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	color:#eee;
+	z-index:-1;
 }
 
 .sr {
