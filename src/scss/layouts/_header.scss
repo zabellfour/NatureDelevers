@@ -1,1 +1,28 @@
-#header{	} 
+#header {
+    position: relative;
+    .menu-opener {
+        @include animate(opacity);
+        position: absolute;
+        top: 17px;
+        left: 15px;
+        width: 24px;
+        height: 20px;
+        cursor: pointer;
+        border-bottom: 4px solid $white;
+        border-top: 4px solid $white;
+        z-index: 10;
+        &:hover {
+        	opacity: .7;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            margin-top: -2px;
+            background-color: $white;
+        }
+    }
+}

@@ -4,6 +4,16 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($black, .15);
+    }
     .h1 {
         color: $white;
         position: absolute;
@@ -15,11 +25,15 @@
         max-width: 520px;
         text-transform: uppercase;
         margin: 0 auto;
+        padding-bottom: 36px;
+        line-height: 1;
+        width: 100%;
     }
     .scroll-link {
+        @include animate(opacity);
         position: absolute;
         left: 50%;
-        bottom: 15%;
+        bottom: 116px;
         transform: translateX(-50%);
         font-family: $base-font-serif;
         font-size: 51px;
@@ -28,20 +42,55 @@
         a {
             color: inherit;
         }
+        &:hover {
+            opacity: .7;
+            .scroll-icon {
+                border-color: #d45f4b;
+            }
+        }
         .link-text {
             transform: rotate(-7deg);
             display: inline-block;
             position: relative;
             &:before {
                 content: '';
+                width: 129px;
+                height: 26px;
+                background-image: url(../images/stroke.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
                 position: absolute;
-               border:4px solid #d96148;
-                left: 20%;
-                right: 20%;
-                bottom: -5px;
-                
-
-                border-radius: 100%;
+                left: 50%;
+                transform: translateX(-50%) rotate(7deg);
+                bottom: -2px;
+            }
+        }
+        .scroll-icon {
+            @include animate(border-color);
+            display: inline-block;
+            border: 2px solid rgba($white, .8);
+            width: 31px;
+            height: 31px;
+            transform: rotate(45deg) translateX(-50%);
+            position: absolute;
+            left: 50%;
+            bottom: -56px;
+            margin-left: -4px;
+            animation: scroll-move 3s infinite;
+            &:hover {
+                border-color: #d45f4b;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-60%, -60%);
+                width: 14px;
+                height: 14px;
+                border: 1px solid $white;
+                border-width: 0 1px 1px 0;
+                border-color: inherit;
             }
         }
     }
@@ -51,9 +100,21 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 10px;
+    bottom: 0px;
     height: 64px;
     background-image: url(../images/banner-decoration.png);
-    background-position: 0 100%;
+    background-position: 50% 100%;
     background-repeat: repeat-x;
+}
+
+@keyframes scroll-move {
+    from {
+        bottom: -40px;
+    }
+    50% {
+        bottom: -90px;
+    }
+    to {
+        bottom: -40px;
+    }
 }
