@@ -1,10 +1,18 @@
 .banner {
-    height: 100vh;
+    height: 670px;
     border: 10px solid $white;
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%;
     position: relative;
+    @include media('<desktop') {
+        background-position: 70% 50%;
+    }
+    @include media('<tablet') {
+        height: 330px;
+        border: none;
+        background-attachment: scroll;
+    }
     &:before {
         content: '';
         position: absolute;
@@ -13,6 +21,9 @@
         right: 0;
         bottom: 0;
         background-color: rgba($black, .15);
+        @include media('<tablet') {
+            background-color: rgba($black, .6);
+        }
     }
     .h1 {
         color: $white;
@@ -28,25 +39,35 @@
         padding-bottom: 36px;
         line-height: 1;
         width: 100%;
+        @include media('<tablet') {
+            top: 37%;
+            padding: 0 20px;
+        }
     }
     .scroll-link {
         @include animate(opacity);
         position: absolute;
         left: 50%;
         bottom: 116px;
-        transform: translateX(-50%);
+        transform: translate3d(-50%, 0, 0);
         font-family: $base-font-serif;
         font-size: 51px;
         color: $white;
         text-decoration: none;
+        text-align: center;
+        @include media('<tablet') {
+            left: 0;
+            right: 0;
+            width: 100%;
+            transform: translateX(0);
+            font-size: 25px;
+            bottom: 73px;
+        }
         a {
             color: inherit;
         }
         &:hover {
             opacity: .7;
-            .scroll-icon {
-                border-color: #d45f4b;
-            }
         }
         .link-text {
             transform: rotate(-7deg);
@@ -56,13 +77,17 @@
                 content: '';
                 width: 129px;
                 height: 26px;
-                background-image: url(../images/stroke.png);
+                background-image: url("../images/stroke.png");
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%) rotate(7deg);
                 bottom: -2px;
+                @include media('<tablet') {
+                    width: 63px;
+                    height: 13px;
+                }
             }
         }
         .scroll-icon {
@@ -77,8 +102,13 @@
             bottom: -56px;
             margin-left: -4px;
             animation: scroll-move 3s infinite;
+            @include media('<tablet') {
+                width: 17px;
+                height: 17px;
+                animation: scroll-move 1s infinite;
+            }
             &:hover {
-                border-color: #d45f4b;
+                opacity: 0.7;
             }
             &:after {
                 content: '';
@@ -91,6 +121,10 @@
                 border: 1px solid $white;
                 border-width: 0 1px 1px 0;
                 border-color: inherit;
+                @include media('<tablet') {
+                    width: 7px;
+                    height: 7px;
+                }
             }
         }
     }
@@ -102,7 +136,7 @@
     right: 0;
     bottom: 0px;
     height: 64px;
-    background-image: url(../images/banner-decoration.png);
+    background-image: url("../images/banner-decoration.png");
     background-position: 50% 100%;
     background-repeat: repeat-x;
 }
@@ -116,5 +150,19 @@
     }
     to {
         bottom: -40px;
+    }
+}
+
+@include media('<tablet') {
+    @keyframes scroll-move {
+        from {
+            bottom: -30px;
+        }
+        50% {
+            bottom: -40px;
+        }
+        to {
+            bottom: -30px;
+        }
     }
 }

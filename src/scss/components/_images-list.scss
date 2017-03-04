@@ -1,0 +1,33 @@
+/* images list style*/
+
+.images-list-holder {
+	display: flex;
+	justify-content: space-between;
+	position:relative;
+	margin:-48px 0 108px;
+	@include media('<tablet') {
+		margin:-48px 0 54px;
+	}
+	.img-box {
+		width:20%;
+		&:nth-child(2n+1) {
+			margin:48px 0 0;
+			@include media('<tablet') {
+				margin:12px 0 0;
+			}
+		}
+	}
+	.img-decor03 {
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		margin: 0 0 -8px;
+		@include media('<tablet') {
+			display:none;
+		}
+	}
+	img {
+		width:100%;
+		vertical-align:top;
+	}
+}

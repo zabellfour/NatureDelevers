@@ -2,6 +2,8 @@
     position: relative;
     .menu-opener {
         @include animate(opacity);
+        font-size: 0;
+        text-indent: -9999px;
         position: absolute;
         top: 17px;
         left: 15px;
@@ -11,6 +13,13 @@
         border-bottom: 4px solid $white;
         border-top: 4px solid $white;
         z-index: 10;
+         @include media('<tablet') {
+        	top: 11px;
+        	left: 11px;
+
+         
+         }
+        		
         &:hover {
         	opacity: .7;
         }

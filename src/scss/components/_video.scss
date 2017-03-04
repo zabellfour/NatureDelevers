@@ -1,41 +1,144 @@
 /* video holder style */
 
 .video-holder {
-	margin:0 0 130px;
-	.title {
-		text-align:center;
-		padding:16px;
-		background: $black;
-		max-width: 490px;
-		margin:0 auto 23px;
-		h2 {
-			font: 20px/ 25px 'latoblack';
-			color:$white;
-			margin:0;
-		}
-	}
-	.two-column {
-		display: flex;
-		justify-content: space-between;
-		.box {
-			width:48%;
-			position:relative;
-		}
-		text-align:center;
-		h2 {
-			font: 30px/ 32px 'mochamattariw';
-			color:$white;
-			margin:0;
-			position:absolute;
-			left:0;
-			right:0;
-			top:50%;
-			transform:translateY(-50%);
-			padding:15px 20px;
-		}
-		img {
-			width:100%;
-			vertical-align:middle;
-		}
-	}
+    margin: 0 0 104px;
+    @include media('<tablet') {
+        margin-bottom: 29px;
+    }
+    .title {
+        text-align: center;
+        padding: 16px;
+        background: $black;
+        max-width: 490px;
+        margin: 0 auto 23px;
+        padding: 14px 5px 11px;
+        @include media('<tablet') {
+            display: none;
+        }
+        h2 {
+            font: 20px/ 26px 'lato';
+            color: $white;
+            margin: 0;
+            font-weight: 600;
+        }
+    }
+    .two-column {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .box {
+            width: 49%;
+            position: relative;
+            @include media('<tablet') {
+                width: 100%;
+                margin-bottom: 19px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background: rgba($black, .4);
+            }
+            &:hover .video-play-btn {
+                opacity: 1;
+                z-index: 5;
+                visibility: visible;
+            }
+        }
+        text-align:center;
+        h2 {
+            font: 30px/ 32px 'mochamattariw';
+            color: $white;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 15px 45px;
+            z-index: 4;
+            @include media('<tablet') {
+                font-size: 19px;
+                line-height: 1.1;
+            }
+        }
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+    .video-play-btn {
+        @include animate(opacity visibility);
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        font-size: 0;
+        text-indent: -9999px;
+        border-radius: 50%;
+        border: 4px solid $black;
+        box-shadow: inset 0px 0px 12px 0px rgba(255, 255, 255, 0.75), 0px 0px 12px 0px rgba(255, 255, 255, 0.75);
+        @include media('<desktop') {
+            visibility: visible;
+            opacity: 0 !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            transform: translate(0);
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            @include triangle(21px 15px, black, right);
+            z-index: 10;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            z-index: 9;
+            box-shadow: 0px 0px 22px 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+}
+
+#fancybox-loading,
+.fancybox-close,
+.fancybox-prev span,
+.fancybox-next span {
+    background-image: url(../images/fancybox_sprite.png);
+}
+
+.fancybox-nav {
+    background: transparent url(../images/blank.gif);
+}
+
+.fancybox-overlay {
+    background: url(../images/fancybox_overlay.png);
+}
+
+#fancybox-loading div {
+    background: url(../images/fancybox_loading@2x.gif) center center no-repeat;
 }

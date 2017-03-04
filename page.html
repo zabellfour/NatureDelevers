@@ -5,15 +5,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Project Title</title>
+	<!-- include the site stylesheet -->
 	<link media="all" rel="stylesheet" href="build/css/vendor.min.css">
 	<link media="all" rel="stylesheet" href="build/css/style.min.css">
 </head>
 
 <body>
+	<!-- main container of all the page elements -->
 	<div id="wrapper">
-		<header id="header">
-			<span class="menu-opener"></span>
-		</header>
+
+		<!-- heade of the page -->
+		<header id="header"><span class="menu-opener"></span></header>
+
+		<!-- banner of the page -->
 		<div class="banner" style="background-image: url(build/images/banner1.jpg)">
 			<h1 class="h1">la démarche nature d’éleveurs</h1>
 			<div class="scroll-link">
@@ -24,6 +28,8 @@
 			</div>
 			<div class="banner-decoration"></div>
 		</div>
+
+		<!-- production of the page -->
 		<section class="production-holder">
 			<div class="container">
 				<div class="title">
@@ -40,6 +46,7 @@
 				</div>
 			</div>
 		</section>
+		<!-- video of the page -->
 		<section class="video-holder">
 			<div class="container">
 				<div class="title">
@@ -57,6 +64,7 @@
 				</div>
 			</div>
 		</section>
+		<!-- tabs-holder of the page -->
 		<section class="tabs-holder">
 			<div class="decor-tabs">
 				<div class="img-decor01"><img src="build/images/decor01.png" alt="image description" /></div>
@@ -89,20 +97,25 @@
 					</article>
 				</div>
 			</div>
-			<div class="images-list-holder">
-				<div class="img-decor03"><img src="build/images/decor03.png" alt="image description" /></div>
-				<div class="img-box"><img src="/build/images/image-list01.jpg" alt="image description" /></div>
-				<div class="img-box"><img src="/build/images/image-list02.jpg" alt="image description" /></div>
-				<div class="img-box"><img src="/build/images/image-list03.jpg" alt="image description" /></div>
-				<div class="img-box"><img src="/build/images/image-list04.jpg" alt="image description" /></div>
-				<div class="img-box"><img src="/build/images/image-list05.jpg" alt="image description" /></div>
-			</div>
 		</section>
+		<!-- images-list of the page -->
+		<section class="images-list-holder">
+			<div class="img-decor03"><img src="build/images/decor03.png" alt="image description" /></div>
+			<div class="img-box"><img src="build/images/image-list01.jpg" alt="image description" /></div>
+			<div class="img-box"><img src="build/images/image-list02.jpg" alt="image description" /></div>
+			<div class="img-box"><img src="build/images/image-list03.jpg" alt="image description" /></div>
+			<div class="img-box"><img src="build/images/image-list04.jpg" alt="image description" /></div>
+			<div class="img-box"><img src="build/images/image-list05.jpg" alt="image description" /></div>
+		</section>
+		<!-- diagram of the page -->
 		<section class="diagram-holder">
 			<div class="title-holder">
-				<h2>L’ÉTHIQUE DE PRODUCTION DE L’AMONT DE NOTRE FILIÈRE,</h2>
+				<h2>L’ÉTHIQUE DE PRODUCTION <br>DE L’AMONT DE NOTRE FILIÈRE,</h2>
 				<h3>«DE L’OEUF À LA POULE EN PASSANT PAR LE CHAMP»</h3>
 				<span class="number">02</span>
+			</div>
+			<div class="containsvg-mobile">
+				<img src="build/images/animation.svg" alt="image description" />
 			</div>
 			<div class="containsvg appear" id="svgContainer">
 				<svg  viewBox="0 0 3759.4 2115.9" enable-background="new 0 0 3759.4 2115.9" xml:space="preserve">
@@ -10805,30 +10818,26 @@
 				</svg>
 			</div>
 		</section>
-		<section id="footer-holder">
+		<!-- baner of the page -->
+		<section class="baner-bottom">
 			<a class="btn-footer" href="#">
 				<img src="build/images/image-footer.jpg" alt="image description" />
 				<span class="title-btn">COMMENCER LA JOURNÉE</span>
 			</a>
-			<footer id="footer">
-				<ul class="nav-footer">
-					<li><a href="#">GROUPE LDC</a></li>
-					<li><a href="#">VENEZ VIVRE L’EXPÉRIENCE</a></li>
-					<li><a href="#">CONTACTEZ-NOUS</a></li>
-				</ul>
-			</footer>
 		</section>
+		<!-- footer of the page -->
+		<footer id="footer">
+			<a class="logo-mobile" href="#"><img src="build/images/logo-mobile.png" alt="image description" /></a>
+			<ul class="nav-footer">
+				<li><a href="#">GROUPE LDC</a></li>
+				<li><a href="#">VENEZ VIVRE L’EXPÉRIENCE</a></li>
+				<li><a href="#">CONTACT<span>EZ-NOUS</span></a></li>
+			</ul>
+		</footer>
 	</div>
+
+	<!-- include JavaScript -->
 	<script src="build/js/vendor.min.js"></script>
 	<script src="build/js/app.min.js"></script>
-
-	<script>
-		window.sr = ScrollReveal();
-		if (sr.isSupported()) {
-			document.documentElement.classList.add('sr');
-		}
-	</script>
-
 </body>
-
 </html>

@@ -1,0 +1,41 @@
+/* baner bottom style */
+
+.baner-bottom {
+	height:415px;
+	background:url("../images/footer-bg.jpg") 50% 100% / cover no-repeat;
+	padding:69px 15px 0;
+	position:relative;
+	@include media('<tablet') {
+		height:224px;
+		padding:49px 10px 0;
+	}
+}
+
+.btn-footer {
+	font: 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
+	max-width:376px;
+	margin:0 auto;
+	display:block;
+	border:3px solid $white;
+	color:$white;
+	text-transform:uppercase;
+	position:relative;
+	text-align:center;
+	box-shadow:0px 0px 13px 6px rgba(0,0,0,0.35);
+	@include media('<tablet') {
+		font-size:18px;
+		line-height:23px;
+		max-width:188px;
+	}
+	.title-btn {
+		position:absolute;
+		left:50%;
+		top:51%;
+		transform:translate(-50%,-50%);
+		letter-spacing:1[x];
+	}
+	img {
+		width:100%;
+		vertical-align:top;
+	}
+}
