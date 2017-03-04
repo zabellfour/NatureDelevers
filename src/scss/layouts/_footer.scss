@@ -17,6 +17,8 @@
 	}
 }
 
+/* footer navigation style */
+
 .nav-footer {
 	@extend %listreset;
 	font: 12px/14px $base-font-sans-serif,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -46,13 +48,23 @@
 	a {
 		color:$black;
 		text-decoration:none;
+		&:hover {
+			text-decoration:underline;
+		}
 	}
 }
+
+/* logo mobile footer */
 
 .logo-mobile {
 	display:none;
 	@include media('<tablet') {
 		display:block;
 		padding:0 0 0 27px;
+		width:60px;
+	}
+	img {
+		width:100%;
+		vertical-align:top;
 	}
 }
