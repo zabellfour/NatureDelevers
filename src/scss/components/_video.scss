@@ -20,6 +20,11 @@
             color: $white;
             margin: 0;
             font-weight: 600;
+             @include media('<desktop') {
+                font-size: 18px;
+             
+             }
+                    
         }
     }
     .two-column {
@@ -73,7 +78,7 @@
         }
     }
     .video-play-btn {
-        @include animate(opacity visibility);
+        @include animate(opacity visibility border-color);
         opacity: 0;
         visibility: hidden;
         position: absolute;
@@ -87,9 +92,10 @@
         font-size: 0;
         text-indent: -9999px;
         border-radius: 50%;
-        border: 4px solid $black;
+        border: 4px solid rgba($white, .5);
         box-shadow: inset 0px 0px 12px 0px rgba(255, 255, 255, 0.75), 0px 0px 12px 0px rgba(255, 255, 255, 0.75);
         @include media('<desktop') {
+            @include animate(border-color);
             visibility: visible;
             opacity: 0 !important;
             position: absolute;
@@ -101,13 +107,20 @@
             height: auto;
             transform: translate(0);
         }
+        &:hover {
+            border-color: rgba($black, .8);
+            &:after {
+                @include triangle(21px 15px, rgba($black, .58), right);
+            }
+        }
         &:after {
+            @include animate(border-color);
             position: absolute;
             content: '';
             top: 50%;
             left: 55%;
             transform: translate(-50%, -50%);
-            @include triangle(21px 15px, black, right);
+            @include triangle(21px 15px, rgba($white, .5), right);
             z-index: 10;
         }
         &:before {
@@ -116,10 +129,11 @@
             top: 50%;
             left: 55%;
             transform: translate(-50%, -50%);
-            width: 5px;
-            height: 5px;
+            width: 1px;
+            height: 1px;
+            background: transparent;
             z-index: 9;
-            box-shadow: 0px 0px 22px 5px rgba(255, 255, 255, 0.75);
+            box-shadow: 0px 0px 22px 7px rgba(255, 255, 255, 0.75);
         }
     }
 }

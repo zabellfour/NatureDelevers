@@ -6,7 +6,6 @@
     background-image: url("../images/decor04.png"), url("../images/decor05.png");
     background-position: 0px 50%, 69% 68%;
     background-repeat: no-repeat;
-
     @include media('<desktop') {
         padding: 30px 0 0 0;
         margin: 0 0 30px;
@@ -15,21 +14,15 @@
         padding: 15px 0 0 0;
         margin: 0 0 49px;
     }
-     @include media('<phone') {
-    	background: none;
-
-     
-     }
-    		
+    @include media('<phone') {
+        background: none;
+    }
     .number {
         left: 50%;
         top: 46%;
-         @include media('<tablet') {
-        	top: 25%;
-
-         
-         }
-        		
+        @include media('<tablet') {
+            top: 25%;
+        }
     }
     .title {
         text-align: center;
@@ -48,6 +41,11 @@
             font: 50px/52px 'museo_sans';
             color: #f05238;
             margin: 0;
+             @include media('<desktop') {
+                font-size: 35px;
+             
+             }
+                    
             @include media('<tablet') {
                 font-size: 28px;
                 line-height: 1;

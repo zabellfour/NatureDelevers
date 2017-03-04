@@ -55,6 +55,9 @@
         color: $white;
         text-decoration: none;
         text-align: center;
+        @include media('<desktop') {
+            font-size: 30px;
+        }
         @include media('<tablet') {
             left: 0;
             right: 0;
@@ -82,8 +85,12 @@
                 background-size: 100% 100%;
                 position: absolute;
                 left: 50%;
-                transform: translateX(-50%) rotate(7deg);
+                transform: translate3d(-50%, 0, 0) rotate(7deg);
                 bottom: -2px;
+                 @include media('<desktop') {
+                    width: 73px;
+                    height: 16px;
+                }
                 @include media('<tablet') {
                     width: 63px;
                     height: 13px;
@@ -96,7 +103,7 @@
             border: 2px solid rgba($white, .8);
             width: 31px;
             height: 31px;
-            transform: rotate(45deg) translateX(-50%);
+            transform: rotate(45deg) translate3d(-50%, 0, 0);
             position: absolute;
             left: 50%;
             bottom: -56px;
