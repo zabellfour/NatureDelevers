@@ -1,0 +1,88 @@
+/* navigation style */
+
+.nav-holder {
+	@include animate(transform);
+	width:550px;
+	transform: translateX(-100%);
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	background:$black;
+	z-index:10;
+	display:flex;
+	.nav-active & {
+		transform: translateX(0);
+	}
+	.social-box {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		align-items: center;
+		align-content: center;
+	}
+	.holder1 {
+		width:50px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		padding:10px;
+		color:$white;
+		a {
+			text-decoration:none;
+			color:$white;
+		}
+	}
+	.holder2,
+	.holder3 {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		width:250px;
+		.text {
+			font: 18px/ 25px 'museo_sans';
+			color: $white;
+			position:absolute;
+			left:0;
+			right:0;
+			padding:0 10px;
+			top:50%;
+			transform: translateY(-50%);
+			text-transform:uppercase;
+		}
+		a {
+			text-align:center;
+			position:relative;
+			display:block;
+			height:20%;
+			overflow:hidden;
+			&:hover {
+				opacity:.8;
+			}
+		}
+		img {
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			max-width: none;
+		}
+	}
+	.holder3 {
+		a {
+			height:14.3%;
+		}
+	}
+}
+
+.nav-active {
+	overflow:hidden;
+}
