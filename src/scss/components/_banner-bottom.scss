@@ -12,6 +12,7 @@
 }
 
 .btn-footer {
+	@include animate(box-shadow);
 	font: 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
 	max-width:376px;
 	margin:0 auto;

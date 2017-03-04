@@ -21,10 +21,10 @@
 
 .nav-footer {
 	@extend %listreset;
+	@extend %clearfix;
 	font: 12px/14px $base-font-sans-serif,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 	text-transform:uppercase;
 	padding:0 16px 6px;
-	overflow:hidden;
 	@include media('<tablet') {
 		font-size:10px;
 		line-height:12px;
@@ -36,12 +36,18 @@
 	li {
 		margin: 0 20px 0 0;
 		float:left;
+		position:relative;
 		@include media('<tablet') {
 			margin:0;
 		}
 		span {
 			@include media('<tablet') {
 				display:none;
+			}
+		}
+		&:hover {
+			.logo-mobile {
+				display:block;
 			}
 		}
 	}
@@ -58,10 +64,15 @@
 
 .logo-mobile {
 	display:none;
+	position:absolute;
+	left: 16px;
+	top: -72px;
+	width: 50px;
 	@include media('<tablet') {
 		display:block;
-		padding:0 0 0 27px;
-		width:60px;
+		width:31px;
+		top:-48px;
+		left: 16px;
 	}
 	img {
 		width:100%;
