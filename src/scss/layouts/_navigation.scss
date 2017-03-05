@@ -21,6 +21,14 @@
 		justify-content: flex-end;
 		align-items: center;
 		align-content: center;
+		a {
+			display:inline-block;
+			vertical-align:middle;
+			margin:0 0 5px;
+			&:hover {
+				opacity:.8;
+			}
+		}
 	}
 	.holder1 {
 		width:50px;

@@ -3,7 +3,6 @@ jQuery(function(){
 	initTabs();
 });
 
-
 // content tabs init
 function initTabs() {
 	jQuery('ul.tabset').tabset({
