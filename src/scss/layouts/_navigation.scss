@@ -22,11 +22,11 @@
 		align-items: center;
 		align-content: center;
 		a {
-			display:inline-block;
-			vertical-align:middle;
+			display: block;
+			width: 20px;
 			margin:0 0 5px;
-			&:hover {
-				opacity:.8;
+			&:last-child {
+				margin:0;
 			}
 		}
 	}
@@ -38,11 +38,32 @@
 		justify-content: space-between;
 		align-items: center;
 		align-content: center;
-		padding:10px;
+		padding:10px 10px 10px;
 		color:$white;
+		>a {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			border:1px solid #fff;
+			border-radius:100px;
+			width:29px;
+			height:29px;
+			i {
+				font-size: 15px;
+			}
+		}
 		a {
 			text-decoration:none;
 			color:$white;
+			&:hover {
+				opacity:.8;
+			}
+		}
+		i {
+			font-size:20px;
 		}
 	}
 	.holder2,
