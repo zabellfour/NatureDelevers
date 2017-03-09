@@ -33,4 +33,3 @@ jQuery(document).ready(function($) {
 		easing   : 'ease-out'
 	});
 });
-

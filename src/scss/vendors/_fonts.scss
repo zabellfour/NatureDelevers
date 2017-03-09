@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'mochamattariw';
     src: url('../fonts/mochamattariregular-webfont.woff2') format('woff2'),
-         url('../fonts/mochamattariregular-webfont.woff') format('woff');
+    url('../fonts/mochamattariregular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 } 
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'playlistscript';
     src: url('../fonts/playlist_script-webfont.woff2') format('woff2'),
-         url('../fonts/playlist_script-webfont.woff') format('woff');
+    url('../fonts/playlist_script-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'museo_sans';
     src: url('../fonts/museosans_900-webfont.woff2') format('woff2'),
-         url('../fonts/museosans_900-webfont.woff') format('woff');
+    url('../fonts/museosans_900-webfont.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'lato';
     src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
-         url('../fonts/lato-regular-webfont.woff') format('woff');
+    url('../fonts/lato-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -33,7 +33,7 @@
 @font-face {
     font-family: 'lato';
     src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
-         url('../fonts/lato-black-webfont.woff') format('woff');
+    url('../fonts/lato-black-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -41,7 +41,270 @@
 @font-face {
     font-family: 'lato';
     src: url('../fonts/lato-lightitalic-webfont.woff2') format('woff2'),
-         url('../fonts/lato-lightitalic-webfont.woff') format('woff');
+    url('../fonts/lato-lightitalic-webfont.woff') format('woff');
     font-weight: 300;
     font-style: italic;
+}
+
+
+//mochaMattari regular
+@font-face {
+    font-family: 'mochaMattari-regular';
+    src:         url(../fonts/mochaMattari-regular.eot);
+    src:         url(../fonts/mochaMattari-regular.eot?#iefix) format('embedded-opentype'), 
+    url(../fonts/mochaMattari-regular.woff) format('woff'), 
+    url(../fonts/mochaMattari-regular.ttf) format('truetype'), 
+    url(../fonts/mochaMattari-regular.svg#mochaMattari-regular) format('svg');
+    font-weight: 400;
+    font-style:  normal;
+}
+
+//lato hairline
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-hairline-webfont.eot);
+    src:         url(../fonts/lato-hairline-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-hairline-webfont.woff2) format('woff2'),
+    url(../fonts/lato-hairline-webfont.woff) format('woff'),
+    url(../fonts/lato-hairline-webfont.ttf) format('truetype'),
+    url(../fonts/lato-hairline-webfont.svg#lato) format('svg');
+    font-weight: 100;
+    font-style:  normal;
+}
+//lato hairline italic
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-hairlineitalic-webfont.eot);
+    src:         url(../fonts/lato-hairlineitalic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-hairlineitalic-webfont.woff2) format('woff2'),
+    url(../fonts/lato-hairlineitalic-webfont.woff) format('woff'),
+    url(../fonts/lato-hairlineitalic-webfont.ttf) format('truetype'),
+    url(../fonts/lato-hairlineitalic-webfont.svg#lato) format('svg');
+    font-weight: 100;
+    font-style:  italic;
+}
+
+//lato light
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-light-webfont.eot);
+    src:         url(../fonts/lato-light-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-light-webfont.woff2) format('woff2'),
+    url(../fonts/lato-light-webfont.woff) format('woff'),
+    url(../fonts/lato-light-webfont.ttf) format('truetype'),
+    url(../fonts/lato-light-webfont.svg#lato) format('svg');
+    font-weight: 200;
+    font-style:  normal;
+}
+//lato light italic
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-lightitalic-webfont.eot);
+    src:         url(../fonts/lato-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-lightitalic-webfont.woff2) format('woff2'),
+    url(../fonts/lato-lightitalic-webfont.woff) format('woff'),
+    url(../fonts/lato-lightitalic-webfont.ttf) format('truetype'),
+    url(../fonts/lato-lightitalic-webfont.svg#lato) format('svg');
+    font-weight: 200;
+    font-style:  italic;
+}
+
+//lato regular
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-regular-webfont.eot);
+    src:         url(../fonts/lato-regular-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-regular-webfont.woff2) format('woff2'),
+    url(../fonts/lato-regular-webfont.woff) format('woff'),
+    url(../fonts/lato-regular-webfont.ttf) format('truetype'),
+    url(../fonts/lato-regular-webfont.svg#lato) format('svg');
+    font-weight: 400;
+    font-style:  normal;
+}
+//lato italic
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-italic-webfont.eot);
+    src:         url(../fonts/lato-italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-italic-webfont.woff2) format('woff2'),
+    url(../fonts/lato-italic-webfont.woff) format('woff'),
+    url(../fonts/lato-italic-webfont.ttf) format('truetype'),
+    url(../fonts/lato-italic-webfont.svg#lato) format('svg');
+    font-weight: 400;
+    font-style:  italic;
+}
+
+//lato bold
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-bold-webfont.eot);
+    src:         url(../fonts/lato-bold-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-bold-webfont.woff2) format('woff2'),
+    url(../fonts/lato-bold-webfont.woff) format('woff'),
+    url(../fonts/lato-bold-webfont.ttf) format('truetype'),
+    url(../fonts/lato-bold-webfont.svg#lato) format('svg');
+    font-weight: 700;
+    font-style:  normal;
+}
+//lato bold italic
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-bolditalic-webfont.eot);
+    src:         url(../fonts/lato-bolditalic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-bolditalic-webfont.woff2) format('woff2'),
+    url(../fonts/lato-bolditalic-webfont.woff) format('woff'),
+    url(../fonts/lato-bolditalic-webfont.ttf) format('truetype'),
+    url(../fonts/lato-bolditalic-webfont.svg#lato) format('svg');
+    font-weight: 700;
+    font-style:  italic;
+}
+
+//lato black
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-black-webfont.eot);
+    src:         url(../fonts/lato-black-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-black-webfont.woff2) format('woff2'),
+    url(../fonts/lato-black-webfont.woff) format('woff'),
+    url(../fonts/lato-black-webfont.ttf) format('truetype'),
+    url(../fonts/lato-black-webfont.svg#lato) format('svg');
+    font-weight: 800;
+    font-style:  normal;
+}
+//lato black italic
+@font-face {
+    font-family: 'lato';
+    src:         url(../fonts/lato-blackitalic-webfont.eot);
+    src:         url(../fonts/lato-blackitalic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/lato-blackitalic-webfont.woff2) format('woff2'),
+    url(../fonts/lato-blackitalic-webfont.woff) format('woff'),
+    url(../fonts/lato-blackitalic-webfont.ttf) format('truetype'),
+    url(../fonts/lato-blackitalic-webfont.svg#lato) format('svg');
+    font-weight: 800;
+    font-style:  italic;
+}
+
+// museo sans light
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans-100-webfont.eot);
+    src:         url(../fonts/museosans-100-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans-100-webfont.woff2) format('woff2'),
+    url(../fonts/museosans-100-webfont.woff) format('woff'),
+    url(../fonts/museosans-100-webfont.ttf) format('truetype'),
+    url(../fonts/museosans-100-webfont.svg#museo_sans) format('svg');
+    font-weight: 100;
+    font-style:  normal;
+}
+// museo sans light italic
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans-100italic-webfont.eot);
+    src:         url(../fonts/museosans-100italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans-100italic-webfont.woff2) format('woff2'),
+    url(../fonts/museosans-100italic-webfont.woff) format('woff'),
+    url(../fonts/museosans-100italic-webfont.ttf) format('truetype'),
+    url(../fonts/museosans-100italic-webfont.svg#museo_sans) format('svg');
+    font-weight: 100;
+    font-style:  italic;
+}
+
+// museo sans thin
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans-300-webfont.eot);
+    src:         url(../fonts/museosans-300-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans-300-webfont.woff2) format('woff2'),
+    url(../fonts/museosans-300-webfont.woff) format('woff'),
+    url(../fonts/museosans-300-webfont.ttf) format('truetype'),
+    url(../fonts/museosans-300-webfont.svg#museo_sans) format('svg');
+    font-weight: 300;
+    font-style:  normal;
+}
+// museo sans thin italic
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans-300italic-webfont.eot);
+    src:         url(../fonts/museosans-300italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans-300italic-webfont.woff2) format('woff2'),
+    url(../fonts/museosans-300italic-webfont.woff) format('woff'),
+    url(../fonts/museosans-300italic-webfont.ttf) format('truetype'),
+    url(../fonts/museosans-300italic-webfont.svg#museo_sans) format('svg');
+    font-weight: 300;
+    font-style:  italic;
+}
+
+// museo sans medium
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans_500-webfont.eot);
+    src:         url(../fonts/museosans_500-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans_500-webfont.woff2) format('woff2'),
+    url(../fonts/museosans_500-webfont.woff) format('woff'),
+    url(../fonts/museosans_500-webfont.ttf) format('truetype'),
+    url(../fonts/museosans_500-webfont.svg#museo_sans) format('svg');
+    font-weight: 500;
+    font-style:  normal;
+}
+// museo sans medium italic
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans_500_italic-webfont.eot);
+    src:         url(../fonts/museosans_500_italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans_500_italic-webfont.woff2) format('woff2'),
+    url(../fonts/museosans_500_italic-webfont.woff) format('woff'),
+    url(../fonts/museosans_500_italic-webfont.ttf) format('truetype'),
+    url(../fonts/museosans_500_italic-webfont.svg#museo_sans) format('svg');
+    font-weight: 500;
+    font-style:  italic;
+}
+
+// museo sans bold
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans_700-webfont.eot);
+    src:         url(../fonts/museosans_700-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans_700-webfont.woff2) format('woff2'),
+    url(../fonts/museosans_700-webfont.woff) format('woff'),
+    url(../fonts/museosans_700-webfont.ttf) format('truetype'),
+    url(../fonts/museosans_700-webfont.svg#museo_sans) format('svg');
+    font-weight: 700;
+    font-style:  normal;
+}
+// museo sans bold italic
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans-700italic-webfont.eot);
+    src:         url(../fonts/museosans-700italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans-700italic-webfont.woff2) format('woff2'),
+    url(../fonts/museosans-700italic-webfont.woff) format('woff'),
+    url(../fonts/museosans-700italic-webfont.ttf) format('truetype'),
+    url(../fonts/museosans-700italic-webfont.svg#museo_sans) format('svg');
+    font-weight: 700;
+    font-style:  italic;
+}
+
+// museo_sans extra bold
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans_900-webfont.eot);
+    src:         url(../fonts/museosans_900-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans_900-webfont.woff2) format('woff2'),
+    url(../fonts/museosans_900-webfont.woff) format('woff'),
+    url(../fonts/museosans_900-webfont.ttf) format('truetype'),
+    url(../fonts/museosans_900-webfont.svg#museo_sans) format('svg');
+    font-weight: 900;
+    font-style:  normal;
+}
+// museo sans extra bold italic
+@font-face {
+    font-family: 'museo_sans';
+    src:         url(../fonts/museosans-900italic-webfont.eot);
+    src:         url(../fonts/museosans-900italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/museosans-900italic-webfont.woff2) format('woff2'),
+    url(../fonts/museosans-900italic-webfont.woff) format('woff'),
+    url(../fonts/museosans-900italic-webfont.ttf) format('truetype'),
+    url(../fonts/museosans-900italic-webfont.svg#museo_sans) format('svg');
+    font-weight: 900;
+    font-style:  italic;
 }

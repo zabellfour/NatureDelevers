@@ -2,17 +2,15 @@
 	overflow: hidden;
 }
 .container{
+	@extend %clearfix;
 	max-width:1010px;
 	padding: 0 20px;
 	margin: 0 auto;
-	 @include media('<tablet') {
+	@include media('<tablet') {
 		padding:  0 15px;
-	 
-	 }
-	  @include media('<phone') {
-	 	padding: 0 10px;
-	  
-	  }
-	 		
-			
+		
+	}
+	@include media('<phone') {
+		padding: 0 10px;
+	}
 }

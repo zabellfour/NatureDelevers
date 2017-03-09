@@ -17,9 +17,23 @@
 @import 'components/production';
 @import 'components/images-list';
 
-
 /* Layouts */
 @import 'layouts/common';
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/navigation';
+
+
+
+@import 'partials/animate';
+@import 'partials/commun';
+@import 'partials/home';
+@import 'partials/journee';
+@import 'partials/scrollpanel';
+
+.modal {
+            display:block !important;
+            opacity:1 !important;
+            width:100% !important;
+            overflow:hidden;
+        }
