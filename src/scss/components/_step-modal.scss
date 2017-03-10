@@ -1,0 +1,53 @@
+.modal-box {
+	.slide-block {
+		background-color: #fff;
+		height: 100%;
+		opacity: 0;
+		padding: 100px 0;
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+		width: 100%;
+		z-index: 2;
+		transition: all 0.5s ease;
+		&.sliding {
+			opacity: 1;
+			visibility: visible;
+		}
+		.scroll-block {
+			height: 280px;
+			outline: none;
+			position: relative;
+		}
+		.inner-wrap {
+			padding: 0 55px;
+		}
+		.item-block {
+			margin-bottom: 20px;
+			&:last-child { margin-bottom: 0; }
+		}
+		img {
+			height: auto;
+			max-width: 100%;
+		}
+		p {
+			color: #000;
+			font-family: $fontLato;
+			font-size: 14px;
+			line-height: 1.35em;
+			margin: 0;
+		}
+		&.left-slide-block {
+			left: -100%;
+			&.sliding {
+				left: 0;
+			}
+		}
+		&.right-slide-block {
+			right: -100%;
+			&.sliding {
+				right: 0;
+			}
+		}
+	}
+}

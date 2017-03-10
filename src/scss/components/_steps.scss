@@ -1,0 +1,218 @@
+.step-holder {
+	.number {
+		color: #000;
+		display: inline-block;
+		font-family: "museo_sans";
+		font-weight: 900;
+		font-size: 125px;
+		line-height: 100%;
+		margin: 0;
+		opacity: 0.1;
+		position: absolute;
+		z-index: 0;
+	}
+	.img-holder {
+		figure {
+			position: relative;
+			img {
+				max-width: 100%;
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+	h2 {
+		color: #f05238;
+		font-family: $fontMuseoSans;
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 100%;
+		margin: 0;
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+		span {
+			color: #000;
+		}
+	}
+	h3 {
+		margin: 0;
+	}
+	p {
+		color: #000;
+		font-family: $fontLato;
+		font-size: 14px;
+		line-height: 1.35em;
+		margin: 0;
+	}
+}
+
+.under-mask {
+	background-color: #eee;
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 10px;
+	width: 100%;
+	z-index: 1;
+	transition: top 0.5s;
+}
+
+.step1 {
+	position: relative;
+	padding:84px 0 133px;
+	.img-holder {
+		float:right;
+		width:55.5%;
+		margin:32px 0 0;
+		position:relative;
+		figure {
+			margin: 0;
+		}
+	}
+	.text-holder {
+		position:relative;
+		float:left;
+		width:40%;
+		margin-bottom: 20px;
+	}
+	.number {
+		left: -104px;
+		top: -47px;
+	}
+	h2 {
+		font-size: 43px;
+		line-height:45px;
+		margin-bottom:50px;
+	}
+	p {
+		font-size: 15px;
+		line-height: 1.35em;
+		strong { font-weight: 700; }
+	}
+}
+
+.step4,
+.step2 {
+	background-size: cover;
+	margin:0 0 220px;
+	position: relative;
+	.text-holder {
+		float:right;
+		width:41%;
+		margin:77px 0 0;
+		position:relative;
+	}
+	.img-holder {
+		float: left;
+		width: 58.5%;
+		position: relative;
+		margin: 0 0 0 -20px;
+		figure {
+			margin: 0;
+		}
+	}
+	.number {
+		left: auto;
+		right: -105px;
+		top: -41px;
+	}
+	h2 {
+		font-size: 50px;
+		line-height:50px;
+		margin-bottom: 51px;
+	}
+	p {
+		font-size: 15px;
+		line-height: 1.35em;
+		strong { font-weight: 700; }
+	}
+}
+
+.step3 {
+	background: url('../images/img-transition-plume3.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
+	background-size:  auto, cover,;
+	position: relative;
+	padding:116px 0 75px;
+	.decor1 {
+		position: absolute;
+		right: -96px;
+		top: -172px;
+		z-index:4;
+	}
+	.decor2 {
+		position: absolute;
+		left: -47px;
+		top: -255px;
+		z-index:4;
+	}
+	.text-holder {
+		float:left;
+		width:40%;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.img-holder {
+		float:right;
+		width:55.5%;
+		position:relative;
+		position: relative;
+		margin: 59px 0 0;
+		figure {
+			margin: 0;
+		}
+		.under-mask {
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	}
+	.number {
+		left: 0;
+		opacity: 0.4;
+		top: 0;
+	}
+	.btn-plus {
+		left: auto;
+		right: 140px;
+		top: 50px;
+	}
+	h2 {
+		font-size: 50px;
+		margin-bottom: 48px;
+		span {
+			color: #fff;
+		}
+	}
+	p {
+		color: #fff;
+		font-size: 15px;
+		line-height: 1.35em;
+		margin-bottom: 0;
+		strong {
+			font-weight: 700;
+		}
+	}
+}
+
+.step4 {
+	background: url('../images/bg-acteurVieRurale.png') no-repeat center top;
+	padding:90px 0 60px;
+	margin:0;
+	background-size: cover;
+	.text-holder {
+		margin:0;
+	}
+	.img-holder {
+		width:55.5%;
+		margin:55px 0 0 -20px;
+	}
+	.btn-plus{
+		top: 44px;
+		left: auto;
+		right: 126px;
+	}
+	h2 {
+		font-size: 45px;
+		line-height: 50px;
+		margin-bottom: 46px;
+	}
+}

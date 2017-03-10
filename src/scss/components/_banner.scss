@@ -87,7 +87,7 @@
                 left: 50%;
                 transform: translate3d(-50%, 0, 0) rotate(7deg);
                 bottom: -2px;
-                 @include media('<desktop') {
+                @include media('<desktop') {
                     width: 73px;
                     height: 16px;
                 }
@@ -133,6 +133,24 @@
                     height: 7px;
                 }
             }
+        }
+    }
+    .holder-left {
+        position: absolute;
+        width:50%;
+        top: 84px;
+        left:87px;
+        z-index:2;
+        color: #fff;
+        font-family: $fontLato;
+        font-size: 16px;
+        line-height:18px;
+        h1 {
+            color: #fff;
+            font-family: $fontMochaMattari;
+            font-size: 82px;
+            line-height:84px;
+            margin-bottom: 10px;
         }
     }
 }

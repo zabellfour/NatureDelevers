@@ -6,7 +6,6 @@
 /* Base modules*/
 @import 'base/main';
 
- 
 /* Components */
 @import 'components/animate';
 @import 'components/diagram';
@@ -16,6 +15,9 @@
 @import 'components/video';
 @import 'components/production';
 @import 'components/images-list';
+@import 'components/steps';
+@import 'components/step-modal';
+@import 'components/modal-pages';
 
 /* Layouts */
 @import 'layouts/common';

@@ -423,6 +423,66 @@ input[type='submit'] {
   -webkit-border-radius: 0;
   cursor: pointer; }
 
+/* button style */
+.close-modal {
+  transition: opacity 0.3s;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 25px;
+  margin: 0;
+  opacity: 1;
+  text-decoration: none; }
+  .close-modal:hover {
+    opacity: .8; }
+  .close-modal:focus {
+    outline: none; }
+  .close-modal i {
+    color: #fff;
+    font-size: 25px; }
+
+.close-text {
+  transition: opacity 0.3s ease-in-out;
+  font-size: 23px;
+  font-weight: 900;
+  position: absolute;
+  font-family: "lato", arial, sans-serif;
+  right: 0;
+  top: -33px;
+  color: #F05236;
+  cursor: pointer; }
+  .close-text:hover {
+    opacity: 0.7; }
+
+.btn-plus {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 29px;
+  left: 133px; }
+  .btn-plus i {
+    color: #f05238;
+    display: inline-block;
+    font-size: 58px;
+    z-index: 0; }
+    .btn-plus i:before {
+      position: relative;
+      z-index: 2; }
+    .btn-plus i:after {
+      background-color: #fff;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -10px 0 0 -10px;
+      z-index: 1;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+
 /* Components */
 /* animate style */
 /********************
@@ -3734,6 +3794,22 @@ g text {
           .banner .scroll-link .scroll-icon:after {
             width: 7px;
             height: 7px; } }
+  .banner .holder-left {
+    position: absolute;
+    width: 50%;
+    top: 84px;
+    left: 87px;
+    z-index: 2;
+    color: #fff;
+    font-family: "lato";
+    font-size: 16px;
+    line-height: 18px; }
+    .banner .holder-left h1 {
+      color: #fff;
+      font-family: "mochaMattari-regular";
+      font-size: 82px;
+      line-height: 84px;
+      margin-bottom: 10px; }
 
 .banner-decoration {
   position: absolute;
@@ -4173,6 +4249,247 @@ g text {
   .images-list-holder img {
     width: 100%;
     vertical-align: top; }
+
+.step-holder .number {
+  color: #000;
+  display: inline-block;
+  font-family: "museo_sans";
+  font-weight: 900;
+  font-size: 125px;
+  line-height: 100%;
+  margin: 0;
+  opacity: 0.1;
+  position: absolute;
+  z-index: 0; }
+
+.step-holder .img-holder figure {
+  position: relative; }
+  .step-holder .img-holder figure img {
+    max-width: 100%;
+    position: relative;
+    z-index: 2; }
+
+.step-holder h2 {
+  color: #f05238;
+  font-family: "museo_sans";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 100%;
+  margin: 0;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1; }
+  .step-holder h2 span {
+    color: #000; }
+
+.step-holder h3 {
+  margin: 0; }
+
+.step-holder p {
+  color: #000;
+  font-family: "lato";
+  font-size: 14px;
+  line-height: 1.35em;
+  margin: 0; }
+
+.under-mask {
+  background-color: #eee;
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  width: 100%;
+  z-index: 1;
+  transition: top 0.5s; }
+
+.step1 {
+  position: relative;
+  padding: 84px 0 133px; }
+  .step1 .img-holder {
+    float: right;
+    width: 55.5%;
+    margin: 32px 0 0;
+    position: relative; }
+    .step1 .img-holder figure {
+      margin: 0; }
+  .step1 .text-holder {
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-bottom: 20px; }
+  .step1 .number {
+    left: -104px;
+    top: -47px; }
+  .step1 h2 {
+    font-size: 43px;
+    line-height: 45px;
+    margin-bottom: 50px; }
+  .step1 p {
+    font-size: 15px;
+    line-height: 1.35em; }
+    .step1 p strong {
+      font-weight: 700; }
+
+.step4,
+.step2 {
+  background-size: cover;
+  margin: 0 0 220px;
+  position: relative; }
+  .step4 .text-holder,
+  .step2 .text-holder {
+    float: right;
+    width: 41%;
+    margin: 77px 0 0;
+    position: relative; }
+  .step4 .img-holder,
+  .step2 .img-holder {
+    float: left;
+    width: 58.5%;
+    position: relative;
+    margin: 0 0 0 -20px; }
+    .step4 .img-holder figure,
+    .step2 .img-holder figure {
+      margin: 0; }
+  .step4 .number,
+  .step2 .number {
+    left: auto;
+    right: -105px;
+    top: -41px; }
+  .step4 h2,
+  .step2 h2 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 51px; }
+  .step4 p,
+  .step2 p {
+    font-size: 15px;
+    line-height: 1.35em; }
+    .step4 p strong,
+    .step2 p strong {
+      font-weight: 700; }
+
+.step3 {
+  background: url("../images/img-transition-plume3.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat;
+  background-size: auto, cover;
+  position: relative;
+  padding: 116px 0 75px; }
+  .step3 .decor1 {
+    position: absolute;
+    right: -96px;
+    top: -172px;
+    z-index: 4; }
+  .step3 .decor2 {
+    position: absolute;
+    left: -47px;
+    top: -255px;
+    z-index: 4; }
+  .step3 .text-holder {
+    float: left;
+    width: 40%;
+    margin-bottom: 20px;
+    position: relative; }
+  .step3 .img-holder {
+    float: right;
+    width: 55.5%;
+    position: relative;
+    position: relative;
+    margin: 59px 0 0; }
+    .step3 .img-holder figure {
+      margin: 0; }
+    .step3 .img-holder .under-mask {
+      background-color: rgba(0, 0, 0, 0.4); }
+  .step3 .number {
+    left: 0;
+    opacity: 0.4;
+    top: 0; }
+  .step3 .btn-plus {
+    left: auto;
+    right: 140px;
+    top: 50px; }
+  .step3 h2 {
+    font-size: 50px;
+    margin-bottom: 48px; }
+    .step3 h2 span {
+      color: #fff; }
+  .step3 p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.35em;
+    margin-bottom: 0; }
+    .step3 p strong {
+      font-weight: 700; }
+
+.step4 {
+  background: url("../images/bg-acteurVieRurale.png") no-repeat center top;
+  padding: 90px 0 60px;
+  margin: 0;
+  background-size: cover; }
+  .step4 .text-holder {
+    margin: 0; }
+  .step4 .img-holder {
+    width: 55.5%;
+    margin: 55px 0 0 -20px; }
+  .step4 .btn-plus {
+    top: 44px;
+    left: auto;
+    right: 126px; }
+  .step4 h2 {
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 46px; }
+
+.modal-box .slide-block {
+  background-color: #fff;
+  height: 100%;
+  opacity: 0;
+  padding: 100px 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
+  transition: all 0.5s ease; }
+  .modal-box .slide-block.sliding {
+    opacity: 1;
+    visibility: visible; }
+  .modal-box .slide-block .scroll-block {
+    height: 280px;
+    outline: none;
+    position: relative; }
+  .modal-box .slide-block .inner-wrap {
+    padding: 0 55px; }
+  .modal-box .slide-block .item-block {
+    margin-bottom: 20px; }
+    .modal-box .slide-block .item-block:last-child {
+      margin-bottom: 0; }
+  .modal-box .slide-block img {
+    height: auto;
+    max-width: 100%; }
+  .modal-box .slide-block p {
+    color: #000;
+    font-family: "lato";
+    font-size: 14px;
+    line-height: 1.35em;
+    margin: 0; }
+  .modal-box .slide-block.left-slide-block {
+    left: -100%; }
+    .modal-box .slide-block.left-slide-block.sliding {
+      left: 0; }
+  .modal-box .slide-block.right-slide-block {
+    right: -100%; }
+    .modal-box .slide-block.right-slide-block.sliding {
+      right: 0; }
+
+.body-holder#section3 {
+  background: #fff url("../images/bg-chefdexploitations.png") no-repeat 0 25px; }
+
+.modal-header {
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  z-index: 2; }
 
 /* Layouts */
 #wrapper {
@@ -6901,105 +7218,14 @@ g text {
                 -ms-transform: scale(1.2);
                     transform: scale(1.2); }
 
-.modal-header {
-  border: none;
-  padding: 0;
-  position: absolute;
-  top: 11px;
-  right: 11px;
-  z-index: 2; }
-  .modal-header .close {
-    transition: opacity 0.3s;
-    border: none;
-    background: none;
-    color: #fff;
-    font-size: 25px;
-    margin: 0;
-    opacity: 1;
-    text-decoration: none; }
-    .modal-header .close:hover {
-      opacity: .8; }
-    .modal-header .close:focus {
-      outline: none; }
-    .modal-header .close i {
-      color: #fff;
-      font-size: 25px; }
-
-.header-bloc {
-  position: relative;
-  z-index: 0; }
-  .header-bloc .alaune {
-    height: 435px; }
-    .header-bloc .alaune img {
-      height: 100%;
-      object-fit: cover;
-      vertical-align: bottom;
-      width: 100%; }
-  .header-bloc h1 {
-    color: #fff;
-    font-family: "mochaMattari-regular";
-    font-size: 82px;
-    line-height: 84px;
-    margin-bottom: 10px; }
-  .header-bloc .desc {
-    color: #fff;
-    font-family: "lato";
-    font-size: 16px;
-    line-height: 18px; }
-  .header-bloc .titre-bloc {
-    padding: 0 0 0 87px;
-    position: absolute;
-    z-index: 2; }
-    .header-bloc .titre-bloc.with-desc {
-      top: 84px;
-      width: 50%; }
-      .header-bloc .titre-bloc.with-desc h1 {
-        margin-top: 0;
-        text-align: left; }
-    .header-bloc .titre-bloc.without-desc {
-      top: 300px; }
-      .header-bloc .titre-bloc.without-desc h1 {
-        text-align: center; }
-  .header-bloc .wrap-btn {
-    bottom: 82px;
-    left: 50%;
-    margin-left: -79px;
-    position: absolute;
-    z-index: 2; }
-    .header-bloc .wrap-btn .btn-decouvrir {
-      display: inline-block;
-      text-align: center; }
-      .header-bloc .wrap-btn .btn-decouvrir:hover i {
-        -webkit-animation: bounce 1s infinite;
-                animation: bounce 1s infinite; }
-      .header-bloc .wrap-btn .btn-decouvrir img, .header-bloc .wrap-btn .btn-decouvrir i {
-        display: inline-block; }
-      .header-bloc .wrap-btn .btn-decouvrir img {
-        height: auto;
-        margin-bottom: 5px;
-        max-width: 75%; }
-    .header-bloc .wrap-btn i {
-      color: #fff;
-      font-size: 35px; }
-
-#journee .menu .tool {
-  color: white; }
-
-#journee .menu #sound {
-  display: inline;
-  margin-left: 10px; }
-
-#journee .menu #footerBar {
-  display: none; }
-
-#journee #videoContainer {
+#videoContainer {
   width: 100%;
   margin: 0;
   height: 100%;
   position: relative;
   background-color: black;
   cursor: pointer; }
-  #journee #videoContainer .storyBtn {
+  #videoContainer .storyBtn {
     right: 13%;
     position: absolute;
     top: 40%;
@@ -7012,7 +7238,7 @@ g text {
     height: 36px;
     -o-transform: rotate(45deg);
     cursor: pointer; }
-    #journee #videoContainer .storyBtn:before {
+    #videoContainer .storyBtn:before {
       content: '+';
       position: relative;
       display: block;
@@ -7021,7 +7247,7 @@ g text {
               transform: rotate(45deg);
       right: -1px;
       top: -10px; }
-    #journee #videoContainer .storyBtn:after {
+    #videoContainer .storyBtn:after {
       opacity: 0;
       border: 2px solid #ffffff;
       content: "";
@@ -7032,9 +7258,9 @@ g text {
       top: -7px;
       width: 49px;
       transition: opacity 0.1s linear; }
-    #journee #videoContainer .storyBtn:hover:after {
+    #videoContainer .storyBtn:hover:after {
       opacity: 1.0; }
-  #journee #videoContainer .textVideo {
+  #videoContainer .textVideo {
     position: absolute;
     bottom: 20%;
     left: 3%;
@@ -7042,9 +7268,9 @@ g text {
     color: white;
     display: none;
     pointer-events: none; }
-    #journee #videoContainer .textVideo h2 {
+    #videoContainer .textVideo h2 {
       font-size: 50px; }
-  #journee #videoContainer #progressBar {
+  #videoContainer #progressBar {
     position: absolute;
     z-index: 1;
     margin: 0 auto;
@@ -7054,20 +7280,20 @@ g text {
     background-color: white;
     height: 2px;
     width: 41%; }
-    #journee #videoContainer #progressBar #jauge {
+    #videoContainer #progressBar #jauge {
       width: 0%;
       height: 100%;
       background-color: #f05238; }
-    #journee #videoContainer #progressBar .chapter {
+    #videoContainer #progressBar .chapter {
       background-color: #ffffff;
       border-radius: 50%;
       height: 14px;
       position: absolute;
       top: -6px;
       width: 14px; }
-      #journee #videoContainer #progressBar .chapter.active {
+      #videoContainer #progressBar .chapter.active {
         background-color: #f05238; }
-      #journee #videoContainer #progressBar .chapter:before {
+      #videoContainer #progressBar .chapter:before {
         opacity: 0;
         border: 2px solid #ffffff;
         border-radius: 50%;
@@ -7078,137 +7304,8 @@ g text {
         top: -7px;
         width: 28px;
         transition: opacity 0.2s linear; }
-      #journee #videoContainer #progressBar .chapter:hover:before {
+      #videoContainer #progressBar .chapter:hover:before {
         opacity: 1.0; }
-
-.link-list {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0; }
-
-.section-bloc .sectionNumber {
-  color: #000;
-  display: inline-block;
-  font-family: "museo_sans";
-  font-weight: 900;
-  font-size: 125px;
-  line-height: 100%;
-  margin: 0;
-  opacity: 0.1;
-  position: absolute;
-  z-index: 0; }
-
-.section-bloc h2 {
-  color: #f05238;
-  font-family: "museo_sans";
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 100%;
-  margin: 0;
-  position: relative;
-  text-transform: uppercase;
-  z-index: 1; }
-  .section-bloc h2 span {
-    color: #000; }
-
-.section-bloc .btn-voirplus {
-  display: inline-block;
-  position: absolute;
-  z-index: 2;
-  top: 29px;
-  left: 133px; }
-  .section-bloc .btn-voirplus i {
-    color: #f05238;
-    display: inline-block;
-    font-size: 58px;
-    z-index: 0; }
-    .section-bloc .btn-voirplus i:before {
-      position: relative;
-      z-index: 2; }
-    .section-bloc .btn-voirplus i:after {
-      background-color: #fff;
-      content: '';
-      display: inline-block;
-      height: 20px;
-      width: 20px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin: -10px 0 0 -10px;
-      z-index: 1;
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg); }
-
-.section-bloc h3 {
-  margin: 0; }
-
-.section-bloc p {
-  color: #000;
-  font-family: "lato";
-  font-size: 14px;
-  line-height: 1.35em;
-  margin: 0; }
-
-.section-bloc .visuel-bloc figure {
-  position: relative; }
-  .section-bloc .visuel-bloc figure img {
-    max-width: 100%;
-    position: relative;
-    z-index: 2; }
-
-.section-bloc .visuel-bloc .under-mask {
-  background-color: #eee;
-  display: block;
-  height: 100%;
-  position: absolute;
-  left: 10px;
-  width: 100%;
-  z-index: 1;
-  transition: top 0.5s; }
-
-.section-bloc .slide-bloc {
-  background-color: #fff;
-  height: 100%;
-  opacity: 0;
-  padding: 100px 0;
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  width: 100%;
-  z-index: 2;
-  transition: all 0.5s ease; }
-  .section-bloc .slide-bloc.sliding {
-    opacity: 1;
-    visibility: visible; }
-  .section-bloc .slide-bloc .scroll-bloc {
-    height: 280px;
-    outline: none;
-    position: relative; }
-  .section-bloc .slide-bloc .inner-wrap {
-    padding: 0 55px; }
-  .section-bloc .slide-bloc .item-bloc {
-    margin-bottom: 20px; }
-    .section-bloc .slide-bloc .item-bloc:last-child {
-      margin-bottom: 0; }
-  .section-bloc .slide-bloc img {
-    height: auto;
-    max-width: 100%; }
-  .section-bloc .slide-bloc p {
-    color: #000;
-    font-family: "lato";
-    font-size: 14px;
-    line-height: 1.35em;
-    margin: 0; }
-  .section-bloc .slide-bloc.left-slide-bloc {
-    left: -100%; }
-    .section-bloc .slide-bloc.left-slide-bloc.sliding {
-      left: 0; }
-  .section-bloc .slide-bloc.right-slide-bloc {
-    right: -100%; }
-    .section-bloc .slide-bloc.right-slide-bloc.sliding {
-      right: 0; }
 
 .respectueuse-bloc {
   background: #fff url("../images/bg-respectueuse.png") no-repeat center top;
@@ -7400,187 +7497,6 @@ g text {
       font-weight: 800;
       padding: 10px 10px;
       text-transform: uppercase; }
-
-.show-detail-modal figure img {
-  height: auto;
-  max-width: 100%; }
-
-.body-bloc#section3 {
-  background: #fff url("../images/bg-chefdexploitations.png") no-repeat 0 25px; }
-
-.chefExploitations-bloc {
-  position: relative;
-  padding: 84px 0 133px; }
-  .chefExploitations-bloc .visuel-bloc {
-    float: right;
-    width: 55.5%;
-    margin: 32px 0 0; }
-  .chefExploitations-bloc .desc-bloc {
-    position: relative;
-    float: left;
-    width: 40%;
-    margin-bottom: 20px; }
-  .chefExploitations-bloc .sectionNumber {
-    left: -104px;
-    top: -47px; }
-  .chefExploitations-bloc h2 {
-    font-size: 43px;
-    line-height: 45px;
-    margin-bottom: 50px; }
-  .chefExploitations-bloc p {
-    font-size: 15px;
-    line-height: 1.35em; }
-    .chefExploitations-bloc p strong {
-      font-weight: 700; }
-  .chefExploitations-bloc .visuel-bloc {
-    position: relative; }
-    .chefExploitations-bloc .visuel-bloc figure {
-      margin: 0; }
-
-.close-text-infos {
-  transition: opacity 0.3s ease-in-out;
-  font-size: 23px;
-  font-weight: 900;
-  position: absolute;
-  font-family: "lato", arial, sans-serif;
-  right: 0;
-  top: -33px;
-  color: #F05236;
-  cursor: pointer; }
-  .close-text-infos:hover {
-    opacity: 0.7; }
-
-.pointeNotreMetier-bloc {
-  background-size: cover;
-  margin: 0 0 220px;
-  position: relative; }
-  .pointeNotreMetier-bloc.fore-bloc {
-    background: url("../images/bg-acteurVieRurale.png") no-repeat center top;
-    padding: 90px 0 60px;
-    margin: 0;
-    background-size: cover; }
-    .pointeNotreMetier-bloc.fore-bloc .desc-bloc {
-      margin: 0; }
-    .pointeNotreMetier-bloc.fore-bloc .visuel-bloc {
-      width: 55.5%;
-      margin: 55px 0 0 -20px; }
-    .pointeNotreMetier-bloc.fore-bloc .btn-voirplus {
-      top: 44px;
-      left: auto;
-      right: 126px; }
-    .pointeNotreMetier-bloc.fore-bloc h2 {
-      font-size: 45px;
-      line-height: 50px;
-      margin-bottom: 46px; }
-  .pointeNotreMetier-bloc .desc-bloc {
-    float: right;
-    width: 41%;
-    margin: 77px 0 0; }
-  .pointeNotreMetier-bloc .visuel-bloc {
-    float: left;
-    width: 58.5%;
-    position: relative;
-    margin: 0 0 0 -20px; }
-    .pointeNotreMetier-bloc .visuel-bloc figure {
-      margin: 0; }
-  .pointeNotreMetier-bloc h2 {
-    font-size: 50px;
-    line-height: 50px;
-    margin-bottom: 51px; }
-  .pointeNotreMetier-bloc p {
-    font-size: 15px;
-    line-height: 1.35em; }
-    .pointeNotreMetier-bloc p strong {
-      font-weight: 700; }
-  .pointeNotreMetier-bloc .sectionNumber {
-    left: auto;
-    right: -105px;
-    top: -41px; }
-  .pointeNotreMetier-bloc .desc-bloc {
-    position: relative; }
-
-.polyculteurs-bloc {
-  background: url("../images/img-transition-plume3.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat;
-  background-size: auto, cover;
-  position: relative;
-  padding: 116px 0 75px; }
-  .polyculteurs-bloc .decor1 {
-    position: absolute;
-    left: 0;
-    top: 0; }
-  .polyculteurs-bloc .decor2 {
-    position: absolute;
-    left: 0;
-    top: 0; }
-  .polyculteurs-bloc .desc-bloc {
-    float: left;
-    width: 40%; }
-  .polyculteurs-bloc .visuel-bloc {
-    float: right;
-    width: 55.5%;
-    position: relative; }
-  .polyculteurs-bloc .inner-content {
-    padding: 60px 20px 25px; }
-  .polyculteurs-bloc .desc-bloc {
-    margin-bottom: 20px;
-    position: relative; }
-  .polyculteurs-bloc .sectionNumber {
-    left: 0;
-    opacity: 0.4;
-    top: 0; }
-  .polyculteurs-bloc .visuel-bloc {
-    position: relative;
-    margin: 59px 0 0; }
-    .polyculteurs-bloc .visuel-bloc figure {
-      margin: 0; }
-    .polyculteurs-bloc .visuel-bloc .under-mask {
-      background-color: rgba(0, 0, 0, 0.4); }
-  .polyculteurs-bloc .btn-voirplus {
-    left: auto;
-    right: 140px;
-    top: 50px; }
-  .polyculteurs-bloc h2 {
-    font-size: 50px;
-    margin-bottom: 48px; }
-    .polyculteurs-bloc h2 span {
-      color: #fff; }
-  .polyculteurs-bloc p {
-    color: #fff;
-    font-size: 15px;
-    line-height: 1.35em;
-    margin-bottom: 0; }
-    .polyculteurs-bloc p strong {
-      font-weight: 700; }
-
-.acteurVieRurale-bloc {
-  background: #fff url("../images/n}bg-acteurVieRurale.png") no-repeat center top;
-  background-size: cover;
-  position: relative; }
-  .acteurVieRurale-bloc h2 {
-    font-size: 20px;
-    line-height: 1.2em;
-    margin-bottom: 25px;
-    padding-top: 20px; }
-  .acteurVieRurale-bloc p {
-    font-size: 15px;
-    line-height: 1.5em; }
-    .acteurVieRurale-bloc p strong {
-      font-weight: 700; }
-  .acteurVieRurale-bloc .sectionNumber {
-    left: auto;
-    opacity: 0.3;
-    right: 0;
-    top: 0; }
-  .acteurVieRurale-bloc .visuel-bloc {
-    margin-top: 50px;
-    position: relative; }
-    .acteurVieRurale-bloc .visuel-bloc figure {
-      position: relative;
-      margin: 0 10px 10px 0; }
-  .acteurVieRurale-bloc .btn-voirplus {
-    left: auto;
-    right: 130px;
-    top: 50px; }
 
 /*
  * CSS Styles that are needed by jScrollPane for it to operate correctly.

@@ -1,0 +1,68 @@
+/* button style */
+
+.close-modal {
+	transition: opacity 0.3s;
+	border:none;
+	background:none;
+	color: #fff;
+	font-size: 25px;
+	margin: 0;
+	opacity: 1;
+	text-decoration: none;
+	&:hover {
+		opacity:.8;
+	}
+	&:focus {
+		outline:none;
+	}
+	i {
+		color: #fff;
+		font-size: 25px;
+	}
+}
+
+.close-text {
+	@include animate (opacity);
+	font-size: 23px;
+	font-weight: 900;
+	position: absolute;
+	font-family: "lato", arial, sans-serif;
+	right: 0;
+	top: -33px;
+	color: #F05236;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.btn-plus {
+	display: inline-block;
+	position: absolute;
+	z-index: 2;
+	top:29px;
+	left:133px;
+	i {
+		color: #f05238;
+		display: inline-block;
+		font-size: 58px;
+		z-index: 0;
+		&:before {
+			position: relative;
+			z-index: 2;
+		}
+		&:after {
+			background-color: #fff;
+			content: '';
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -10px 0 0 -10px;
+			z-index: 1;
+			transform: rotate(45deg);
+		}
+	}
+}
