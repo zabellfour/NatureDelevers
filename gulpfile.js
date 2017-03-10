@@ -53,7 +53,7 @@
         showError.apply(this, ['JS error', err])
       })
       .pipe(source('app.min.js'))
-      .pipe(gulp.dest(`./${Paths.build}/${Paths.buildJS}`))
+      .pipe(gulp.dest(`./${Paths.buildJS}`))
       .pipe(browserSync.stream());
   });
 
@@ -65,7 +65,7 @@
       gulp.src(filesExist(jsVendors))
       .pipe(concat('vendor.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest(`./${Paths.build}/${Paths.buildJS}`));
+      .pipe(gulp.dest(`./${Paths.buildJS}`));
   });
 
   /**
@@ -80,7 +80,7 @@
       }))
       .pipe(autoprefixer('last 4 versions'))
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest(`./${Paths.build}/${Paths.buildCss}`))
+      .pipe(gulp.dest(`./${Paths.buildCss}`))
       .pipe(browserSync.stream());
   });
 
@@ -98,7 +98,7 @@
       .pipe(gcmq())
       .pipe(cssnano({ safe: true }))
       .pipe(autoprefixer('last 4 versions'))
-      .pipe(gulp.dest(`./${Paths.build}/${Paths.buildCss}`));
+      .pipe(gulp.dest(`./${Paths.buildCss}`));
   });
 
   /**
@@ -112,7 +112,7 @@
       .pipe(cssimport())
       .pipe(rename('vendor.min.css'))
       .pipe(cssnano({ safe: true }))
-      .pipe(gulp.dest(`./${Paths.build}/${Paths.buildCss}`));
+      .pipe(gulp.dest(`./${Paths.buildCss}`));
   });
 
   /**
@@ -120,14 +120,14 @@
    */
   gulp.task('imageMin', function() {
     gulp.src(`./${Paths.src}/${Paths.srcImages}/**/*`)
-      .pipe(newer(`${Paths.build}/${Paths.buildImages}/`))
+      .pipe(newer(`${Paths.buildImages}/`))
       .pipe(imagemin({
         optimizationLevel: 5,
         progressive: true,
         svgoPlugins: [{ removeViewBox: false }],
         use: [pngquant()]
       }))
-      .pipe(gulp.dest(`${Paths.build}/${Paths.buildImages}/`))
+      .pipe(gulp.dest(`${Paths.buildImages}/`))
       .pipe(browserSync.stream());
   });
 
@@ -135,7 +135,7 @@
    * Clean image build directory
    */
   gulp.task('imageClean', function() {
-    gulp.src(`${Paths.build}/${Paths.buildImages}/`).pipe(rimraf());
+    gulp.src(`${Paths.buildImages}/`).pipe(rimraf());
   });
 
   /**
@@ -210,7 +210,7 @@
    */
   gulp.task('copyFonts', function() {
     gulp.src([`./${Paths.src}/${Paths.fonts}/**/*`])
-      .pipe(gulp.dest(`./${Paths.build}/${Paths.fonts}/`));
+      .pipe(gulp.dest(`./${Paths.fonts}/`));
   });
 
   /**

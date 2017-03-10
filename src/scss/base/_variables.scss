@@ -4,10 +4,16 @@ $gray:                                #999;
 $black:                               #000;
 $white:                               #fff;
 $tomato:                              #d45f4b;
-
+$rouge :                              #f05238;
 $base-font-sans-serif: 'latoregular', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'playlistscript', 'Times', 'Baskerville', 'Georgia', serif;
 $san-serif-second: 'mochamattariw', 'latoregular', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif; 
+$fontBasic              : arial, sans-serif;
+$fontMochaMattari       :'mochaMattari-regular';
+$fontLato               : 'lato';
+$fontMuseoSans          : 'museo_sans';
+
+
 // Body
 $base-text-color:                     $black ;
 $base-background-color:               $white;
@@ -45,7 +51,6 @@ $h6-font-size:                        15px;
 $headings-font-family:                inherit !default;
 $headings-color:                      inherit !default;
 
- 
 $animation-speed:                     0.3s;
 
 
@@ -67,54 +72,3 @@ $media-expressions: (
   'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
   'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
-
-// VARIABLES
-$imageUrl               : '../images/';
-$imageDesign            : '../images/design/';
-$imageData              : '../images/data/';
-$fontPath               : '../fonts/';
-
-
-$fontBasic              : arial, sans-serif;
-$fontMochaMattari       :'mochaMattari-regular';
-$fontLato               : 'lato';
-$fontMuseoSans          : 'museo_sans';
-$font-size-base         : 14px;
-$baseColor              : #000;
-
-
-$thinFont               : 100;
-$lightFont              : 300;
-$regularFont            : 400;
-$mediumFont             : 500;
-$boldFont               : 700;
-$blackFont              : 900;
-
-
-$min414     :"only screen and (min-width: 414px)";
-
-//Queries
-$min320     :"only screen and (min-width: 320px)";
-$min360     :"only screen and (min-width: 360px)";
-$min480     :"only screen and (min-width: 480px)";
-$min640     :"only screen and (min-width: 640px)";
-$min736     :"only screen and (min-width: 736px)";
-$min768     :"only screen and (min-width: 768px)";
-$min960     :"only screen and (min-width: 960px)";
-$min992     :"only screen and (min-width: 992px)";
-$min1024     :"only screen and (min-width: 1024px)";
-$min1200    :"only screen and (min-width: 1200px)";
-
-$max640     :"only screen and (max-width: 640px)";
-$max767     :"only screen and (max-width: 767px)";
-$max768     :"only screen and (max-width: 768px)";
-$max992     :"only screen and (max-width: 992px)";
-
-$desktop : 1024px;
-$tablet : 768px;
-$mobile : 500px;
-
-$sm-query    : "only screen and (min-width: 768px) and (max-width: 959px)";
-$md-query    : "only screen and (min-width: 1024px) and (max-width: 1199px)";
-
-$rouge : #f05238;
