@@ -13,6 +13,6 @@ jQuery(document).ready(function($) {
             media: {}
         }
     });
-
+    var s = skrollr.init({forceHeight: false});
 });
 

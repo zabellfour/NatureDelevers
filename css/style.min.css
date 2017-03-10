@@ -3644,7 +3644,7 @@ g text {
     transition: opacity 0.3s ease-in-out;
     position: absolute;
     left: 50%;
-    bottom: 116px;
+    bottom: 90px;
     -webkit-transform: translate3d(-50%, 0, 0);
             transform: translate3d(-50%, 0, 0);
     font-family: "playlistscript", "Times", "Baskerville", "Georgia", serif;
@@ -3790,7 +3790,7 @@ g text {
 
 .btn-footer {
   transition: box-shadow 0.3s ease-in-out;
-  font: 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
+  font: 900 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
   max-width: 376px;
   margin: 0 auto;
   display: block;
@@ -3808,12 +3808,14 @@ g text {
     box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.35); }
   .btn-footer .title-btn {
     position: absolute;
-    left: 50%;
+    left: 0;
+    right: 0;
+    padding: 0 66px;
     top: 51%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    letter-spacing: 1 [x]; }
+    -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    letter-spacing: 1px; }
   .btn-footer img {
     width: 100%;
     vertical-align: top; }
@@ -6903,8 +6905,8 @@ g text {
   border: none;
   padding: 0;
   position: absolute;
-  top: 28px;
-  left: 28px;
+  top: 11px;
+  right: 11px;
   z-index: 2; }
   .modal-header .close {
     transition: opacity 0.3s;
@@ -6936,19 +6938,21 @@ g text {
   .header-bloc h1 {
     color: #fff;
     font-family: "mochaMattari-regular";
-    font-size: 32px;
+    font-size: 82px;
+    line-height: 84px;
     margin-bottom: 10px; }
   .header-bloc .desc {
     color: #fff;
     font-family: "lato";
-    font-size: 12px;
-    margin-bottom: 0; }
+    font-size: 16px;
+    line-height: 18px; }
   .header-bloc .titre-bloc {
-    padding: 0 20px;
+    padding: 0 0 0 87px;
     position: absolute;
     z-index: 2; }
     .header-bloc .titre-bloc.with-desc {
-      top: 70px; }
+      top: 84px;
+      width: 50%; }
       .header-bloc .titre-bloc.with-desc h1 {
         margin-top: 0;
         text-align: left; }
@@ -7088,7 +7092,7 @@ g text {
   display: inline-block;
   font-family: "museo_sans";
   font-weight: 900;
-  font-size: 64px;
+  font-size: 125px;
   line-height: 100%;
   margin: 0;
   opacity: 0.1;
@@ -7111,11 +7115,13 @@ g text {
 .section-bloc .btn-voirplus {
   display: inline-block;
   position: absolute;
-  z-index: 2; }
+  z-index: 2;
+  top: 29px;
+  left: 133px; }
   .section-bloc .btn-voirplus i {
     color: #f05238;
     display: inline-block;
-    font-size: 37px;
+    font-size: 58px;
     z-index: 0; }
     .section-bloc .btn-voirplus i:before {
       position: relative;
@@ -7166,7 +7172,7 @@ g text {
   background-color: #fff;
   height: 100%;
   opacity: 0;
-  padding: 70px 0 45px;
+  padding: 100px 0;
   position: absolute;
   top: 0;
   visibility: hidden;
@@ -7404,22 +7410,23 @@ g text {
 
 .chefExploitations-bloc {
   position: relative;
-  padding: 0 0 220px; }
+  padding: 84px 0 133px; }
   .chefExploitations-bloc .visuel-bloc {
     float: right;
-    width: 50%; }
+    width: 55.5%;
+    margin: 32px 0 0; }
   .chefExploitations-bloc .desc-bloc {
     position: relative;
     float: left;
     width: 40%;
-    margin-bottom: 20px;
-    padding: 25px 0 0 25px; }
+    margin-bottom: 20px; }
   .chefExploitations-bloc .sectionNumber {
-    left: 11px;
-    top: 0; }
+    left: -104px;
+    top: -47px; }
   .chefExploitations-bloc h2 {
-    font-size: 20px;
-    margin-bottom: 25px; }
+    font-size: 43px;
+    line-height: 45px;
+    margin-bottom: 50px; }
   .chefExploitations-bloc p {
     font-size: 15px;
     line-height: 1.35em; }
@@ -7428,30 +7435,58 @@ g text {
   .chefExploitations-bloc .visuel-bloc {
     position: relative; }
     .chefExploitations-bloc .visuel-bloc figure {
-      margin: 0 10px 10px 0; }
+      margin: 0; }
+
+.close-text-infos {
+  transition: opacity 0.3s ease-in-out;
+  font-size: 23px;
+  font-weight: 900;
+  position: absolute;
+  font-family: "lato", arial, sans-serif;
+  right: 0;
+  top: -33px;
+  color: #F05236;
+  cursor: pointer; }
+  .close-text-infos:hover {
+    opacity: 0.7; }
 
 .pointeNotreMetier-bloc {
   background-size: cover;
-  margin: 0 0 120px;
+  margin: 0 0 220px;
   position: relative; }
   .pointeNotreMetier-bloc.fore-bloc {
     background: url("../images/bg-acteurVieRurale.png") no-repeat center top;
     padding: 90px 0 60px;
     margin: 0;
     background-size: cover; }
+    .pointeNotreMetier-bloc.fore-bloc .desc-bloc {
+      margin: 0; }
+    .pointeNotreMetier-bloc.fore-bloc .visuel-bloc {
+      width: 55.5%;
+      margin: 55px 0 0 -20px; }
+    .pointeNotreMetier-bloc.fore-bloc .btn-voirplus {
+      top: 44px;
+      left: auto;
+      right: 126px; }
+    .pointeNotreMetier-bloc.fore-bloc h2 {
+      font-size: 45px;
+      line-height: 50px;
+      margin-bottom: 46px; }
   .pointeNotreMetier-bloc .desc-bloc {
     float: right;
-    width: 40%; }
+    width: 41%;
+    margin: 77px 0 0; }
   .pointeNotreMetier-bloc .visuel-bloc {
     float: left;
-    width: 50%;
-    position: relative; }
+    width: 58.5%;
+    position: relative;
+    margin: 0 0 0 -20px; }
     .pointeNotreMetier-bloc .visuel-bloc figure {
-      margin: 0 10px 10px 0; }
+      margin: 0; }
   .pointeNotreMetier-bloc h2 {
-    font-size: 20px;
-    margin-bottom: 25px;
-    padding-top: 20px; }
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 51px; }
   .pointeNotreMetier-bloc p {
     font-size: 15px;
     line-height: 1.35em; }
@@ -7459,38 +7494,45 @@ g text {
       font-weight: 700; }
   .pointeNotreMetier-bloc .sectionNumber {
     left: auto;
-    right: 0;
-    top: 0; }
+    right: -105px;
+    top: -41px; }
   .pointeNotreMetier-bloc .desc-bloc {
-    margin-bottom: 20px;
     position: relative; }
 
 .polyculteurs-bloc {
   background: url("../images/img-transition-plume3.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat;
   background-size: auto, cover;
   position: relative;
-  padding: 50px 0; }
+  padding: 116px 0 75px; }
+  .polyculteurs-bloc .decor1 {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .polyculteurs-bloc .decor2 {
+    position: absolute;
+    left: 0;
+    top: 0; }
   .polyculteurs-bloc .desc-bloc {
     float: left;
     width: 40%; }
   .polyculteurs-bloc .visuel-bloc {
     float: right;
-    width: 50%;
+    width: 55.5%;
     position: relative; }
   .polyculteurs-bloc .inner-content {
     padding: 60px 20px 25px; }
   .polyculteurs-bloc .desc-bloc {
     margin-bottom: 20px;
-    padding: 0 0 0 25px;
     position: relative; }
   .polyculteurs-bloc .sectionNumber {
     left: 0;
     opacity: 0.4;
     top: 0; }
   .polyculteurs-bloc .visuel-bloc {
-    position: relative; }
+    position: relative;
+    margin: 59px 0 0; }
     .polyculteurs-bloc .visuel-bloc figure {
-      margin: 0 10px 10px 0; }
+      margin: 0; }
     .polyculteurs-bloc .visuel-bloc .under-mask {
       background-color: rgba(0, 0, 0, 0.4); }
   .polyculteurs-bloc .btn-voirplus {
@@ -7498,9 +7540,8 @@ g text {
     right: 140px;
     top: 50px; }
   .polyculteurs-bloc h2 {
-    font-size: 20px;
-    margin-bottom: 25px;
-    padding-top: 20px; }
+    font-size: 50px;
+    margin-bottom: 48px; }
     .polyculteurs-bloc h2 span {
       color: #fff; }
   .polyculteurs-bloc p {

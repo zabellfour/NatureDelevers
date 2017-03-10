@@ -2,8 +2,8 @@
 	border: none;
 	padding: 0;
 	position: absolute;
-	top: 28px;
-	left: 28px;
+	top: 11px;
+	right: 11px;
 	z-index: 2;
 	.close {
 		transition: opacity 0.3s;
@@ -42,21 +42,23 @@
 	h1 {
 		color: #fff;
 		font-family: $fontMochaMattari;
-		font-size: 32px;
+		font-size: 82px;
+		line-height:84px;
 		margin-bottom: 10px;
 	}
 	.desc {
 		color: #fff;
 		font-family: $fontLato;
-		font-size: 12px;
-		margin-bottom: 0;
+		font-size: 16px;
+		line-height:18px;
 	}
 	.titre-bloc {
-		padding: 0 20px;
+		padding: 0 0 0 87px;
 		position: absolute;
 		z-index: 2;
 		&.with-desc {
-			top: 70px;
+			top: 84px;
+			width:50%;
 			h1 {
 				margin-top: 0;
 				text-align: left;
@@ -155,75 +157,76 @@
 			}
 		}
 		.textVideo {
-		 position: absolute;
-		 bottom: 20%;
-		 left: 3%;
-		 z-index: 10;
-		 color: white;
-		 display: none;
-		 pointer-events: none;
-		 h2 {
-			 font-size:50px;
-		 }
-	 }
-	 #progressBar {
-		position: absolute;
-		z-index: 1;
-		margin: 0 auto;
-		left: 0;
-		right: 0;
-		bottom: 40px;
-		background-color: white;
-		height: 2px;
-		width: 41%;
-		#jauge {
-			width: 0%;
-			height: 100%;
-			background-color: $rouge;
-		}
-		.chapter {
-			background-color: #ffffff;
-			border-radius: 50%;
-			height: 14px;
 			position: absolute;
-			top: -6px;
-			width: 14px;
-			&.active {
+			bottom: 20%;
+			left: 3%;
+			z-index: 10;
+			color: white;
+			display: none;
+			pointer-events: none;
+			h2 {
+				font-size:50px;
+			}
+		}
+		#progressBar {
+			position: absolute;
+			z-index: 1;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			bottom: 40px;
+			background-color: white;
+			height: 2px;
+			width: 41%;
+			#jauge {
+				width: 0%;
+				height: 100%;
 				background-color: $rouge;
 			}
-			&:before {
-				opacity: 0;
-				border: 2px solid #ffffff;
+			.chapter {
+				background-color: #ffffff;
 				border-radius: 50%;
-				content: "";
-				height: 28px;
-				left: -7px;
+				height: 14px;
 				position: absolute;
-				top: -7px;
-				width: 28px;
-				transition: opacity 0.2s linear;
-			}
-			&:hover:before {
-				opacity: 1.0;
+				top: -6px;
+				width: 14px;
+				&.active {
+					background-color: $rouge;
+				}
+				&:before {
+					opacity: 0;
+					border: 2px solid #ffffff;
+					border-radius: 50%;
+					content: "";
+					height: 28px;
+					left: -7px;
+					position: absolute;
+					top: -7px;
+					width: 28px;
+					transition: opacity 0.2s linear;
+				}
+				&:hover:before {
+					opacity: 1.0;
+				}
 			}
 		}
 	}
 }
-}
+
 .link-list {
 	position: absolute;
 	z-index: 2;
 	top: 0;
 	left: 0;
-	button {}
 }
+
 .section-bloc {
 	.sectionNumber {
 		color: #000;
 		display: inline-block;
-		font-family: $fontMuseoSans;
+		font-family: "museo_sans";
 		font-weight: 900;
-		font-size: 64px;
+		font-size: 125px;
 		line-height: 100%;
 		margin: 0;
 		opacity: 0.1;
@@ -248,10 +251,12 @@
 		display: inline-block;
 		position: absolute;
 		z-index: 2;
+		top:29px;
+		left:133px;
 		i {
 			color: #f05238;
 			display: inline-block;
-			font-size: 37px;
+			font-size: 58px;
 			z-index: 0;
 			&:before {
 				position: relative;
@@ -306,7 +311,7 @@
 		background-color: #fff;
 		height: 100%;
 		opacity: 0;
-		padding: 70px 0 45px;
+		padding: 100px 0;
 		position: absolute;
 		top: 0;
 		visibility: hidden;
@@ -601,32 +606,33 @@
 }
 
 .body-bloc {
-   &#section3 {
-	 background: #fff url('../images/bg-chefdexploitations.png') no-repeat 0 25px;
- }
+	&#section3 {
+		background: #fff url('../images/bg-chefdexploitations.png') no-repeat 0 25px;
+	}
 }
 
 .chefExploitations-bloc {
 	position: relative;
-	padding:0 0 220px;
+	padding:84px 0 133px;
 	.visuel-bloc {
 		float:right;
-		width:50%;
+		width:55.5%;
+		margin:32px 0 0;
 	}
 	.desc-bloc {
 		position:relative;
 		float:left;
 		width:40%;
 		margin-bottom: 20px;
-		padding: 25px 0 0 25px;
 	}
 	.sectionNumber {
-		left: 11px;
-		top: 0;
+		left: -104px;
+		top: -47px;
 	}
 	h2 {
-		font-size: 20px;
-		margin-bottom: 25px;
+		font-size: 43px;
+		line-height:45px;
+		margin-bottom:50px;
 	}
 	p {
 		font-size: 15px;
@@ -636,37 +642,71 @@
 	.visuel-bloc {
 		position: relative;
 		figure {
-			margin: 0 10px 10px 0;
+			margin: 0;
 		}
+	}
+}
+
+.close-text-infos {
+	@include animate (opacity);
+	font-size: 23px;
+	font-weight: 900;
+	position: absolute;
+	font-family: "lato", arial, sans-serif;
+	right: 0;
+	top: -33px;
+	color: #F05236;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
 	}
 }
 
 .pointeNotreMetier-bloc {
 	background-size: cover;
-	margin:0 0 120px;
+	margin:0 0 220px;
 	position: relative;
 	&.fore-bloc {
 		background: url('../images/bg-acteurVieRurale.png') no-repeat center top;
 		padding:90px 0 60px;
 		margin:0;
 		background-size: cover;
+		.desc-bloc {
+			margin:0;
+		}
+		.visuel-bloc {
+			width:55.5%;
+			margin:55px 0 0 -20px;
+		}
+		.btn-voirplus{
+			top: 44px;
+			left: auto;
+			right: 126px;
+		}
+		h2 {
+			font-size: 45px;
+			line-height: 50px;
+			margin-bottom: 46px;
+		}
 	}
 	.desc-bloc {
 		float:right;
-		width:40%;
+		width:41%;
+		margin:77px 0 0;
 	}
 	.visuel-bloc {
-		float:left;
-		width:50%;
-		position:relative;
+		float: left;
+		width: 58.5%;
+		position: relative;
+		margin: 0 0 0 -20px;
 		figure {
-			margin: 0 10px 10px 0;
+			margin: 0;
 		}
 	}
 	h2 {
-		font-size: 20px;
-		margin-bottom: 25px;
-		padding-top: 20px;
+		font-size: 50px;
+		line-height:50px;
+		margin-bottom: 51px;
 	}
 	p {
 		font-size: 15px;
@@ -675,11 +715,10 @@
 	}
 	.sectionNumber {
 		left: auto;
-		right: 0;
-		top: 0;
+		right: -105px;
+		top: -41px;
 	}
 	.desc-bloc {
-		margin-bottom: 20px;
 		position: relative;
 	}
 }
@@ -687,14 +726,24 @@
 	background: url('../images/img-transition-plume3.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
 	background-size:  auto, cover,;
 	position: relative;
-	padding:50px 0;
+	padding:116px 0 75px;
+	.decor1 {
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	.decor2 {
+		position:absolute;
+		left:0;
+		top:0;
+	}
 	.desc-bloc {
 		float:left;
 		width:40%;
 	}
 	.visuel-bloc {
 		float:right;
-		width:50%;
+		width:55.5%;
 		position:relative;
 	}
 	.inner-content {
@@ -702,7 +751,6 @@
 	}
 	.desc-bloc {
 		margin-bottom: 20px;
-		padding: 0 0 0 25px;
 		position: relative;
 	}
 	.sectionNumber {
@@ -712,8 +760,9 @@
 	}
 	.visuel-bloc {
 		position: relative;
+		margin: 59px 0 0;
 		figure {
-			margin: 0 10px 10px 0;
+			margin: 0;
 		}
 		.under-mask {
 			background-color: rgba(0, 0, 0, 0.4);
@@ -725,9 +774,8 @@
 		top: 50px;
 	}
 	h2 {
-		font-size: 20px;
-		margin-bottom: 25px;
-		padding-top: 20px;
+		font-size: 50px;
+		margin-bottom: 48px;
 		span {
 			color: #fff;
 		}

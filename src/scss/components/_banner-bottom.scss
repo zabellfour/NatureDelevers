@@ -13,7 +13,7 @@
 
 .btn-footer {
 	@include animate(box-shadow);
-	font: 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
+	font: 900 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
 	max-width:376px;
 	margin:0 auto;
 	display:block;
@@ -31,11 +31,13 @@
 		box-shadow:0px 0px 13px 6px rgba(0,0,0,0.35);
 	}
 	.title-btn {
-		position:absolute;
-		left:50%;
-		top:51%;
-		transform:translate(-50%,-50%);
-		letter-spacing:1[x];
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 0 66px;
+		top: 51%;
+		transform: translate(0%, -50%);
+		letter-spacing: 1px;
 	}
 	img {
 		width:100%;
