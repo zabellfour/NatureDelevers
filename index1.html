@@ -20,6 +20,98 @@
             <header id="header">
                 <span class="menu-opener">Menu</span>
             </header>
+            <div class="nav-holder">
+                <div class="holder1">
+                    <div class="box">
+                        <a href="#"><i class="icon-chicken"></i></a>
+                    </div>
+                    <div class="social-box">
+                        <a href="#"><i class="icon-baseball"></i></a>
+                        <a href="#"><i class="icon-microphone"></i></a>
+                        <a href="#"><i class="icon-envelope"></i></a>
+                        <a href="#"><i class="icon-share"></i></a>
+                        <a href="#"><i class="icon-copy"></i></a>
+                        <a href="#"><img src="images/menu/flagenglish.svg" alt="flag english" width="26" height="16"></a>
+                        <a href="#"><img src="images/menu/flagfrench.svg" alt="flag french" width="26" height="16"></a>
+                    </div>
+                </div>
+                <ul class="holder2">
+                    <li>
+                        <a href="#">
+                            <img src="images/menu/zone2-1.jpg" alt="image description" />
+                            <span class="text">nos actualis</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/menu/zone2-2.jpg" alt="image description" />
+                            <span class="text">Découvrez ici prochainement</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-1.jpg" alt="image description" />
+                                    <span class="text">la démarche nature d’éleveur</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-2.jpg" alt="image description" />
+                                    <span class="text">Découvrez ici prochainement</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-3.jpg" alt="image description" />
+                                    <span class="text">VISUALISEZ L’ÉVOLUTION DU </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-4.jpg" alt="image description" />
+                                    <span class="text">nos actualis</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-5.jpg" alt="image description" />
+                                    <span class="text">nos actualis</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-6.jpg" alt="image description" />
+                                    <span class="text">Lexperiences</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/menu/zone3-7.jpg" alt="image description" />
+                                    <span class="text">nos actualis</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/menu/zone2-3.jpg" alt="image description" />
+                            <span class="text">le témoignage d’un éleveur</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/menu/zone2-4.jpg" alt="image description" />
+                            <span class="text">VISUALISEZ L’ÉVOLUTION DU </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/menu/zone2-5.jpg" alt="image description" />
+                            <span class="text">nos actualis</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <section class="row-top">
                 <img class="logo" src="/images/logoNe.png" alt="NATURE  D'Eleveurs EN TERRES DE FRANCE">
                 <div id="videoContainer">
@@ -33,27 +125,32 @@ nature d’éleveurs</h2>
                     <footer id="footer">
                         <a class="logo-mobile" href="#" target="_blank"><img src="images/logo-mobile.png" alt="LDC" /></a>
                         <ul class="nav-footer">
-                            <li><a href="#">GROUPE LDC</a></li>
+                            <li>
+                                <a href="#">GROUPE LDC</a>
+                                <a class="logo-mobile" href="#" target="_blank"><img src="images/logoLdc.png" alt="LDC" /></a>
+                            </li>
                             <li><a href="#">VENEZ VIVRE L’EXPÉRIENCE</a></li>
                             <li><a href="#">CONTACT<span>EZ-NOUS</span></a></li>
                         </ul>
                     </footer>
                 </div>
-                <div class="col2" style="background-image: url('images/home/eggs.jpg');">
-               <h2 class="h2">  c’est ici que
-tout commence</h2>
-                </div>
+                <a href="#" class="col2">
+                    <div class="bg-holder" style="background-image: url('images/home/eggs.jpg');">
+                    </div>
+                    <h2 class="h2">  c’est ici que tout commence</h2>
+                </a>
             </section>
         </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
-    <!-- 	<script src='js/three.min.js'></script>
-	<script src='js/threex.videotexture.js'></script>
-	<script src="js/loaders/DDSLoader.js"></script>
-	<script src="js/loaders/MTLLoader.js"></script>
-	<script src="js/loaders/OBJLoader.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	<script src="js/modules/commun.js"></script>
+   <script src="js/modules/threex.videotexture.js"></script>
+    <script src="js/modules/three.min.js"></script>
+	<script src="js/modules/playerFE.js"></script>
+	<script src="js/modules/DDSLoader.js"></script>
+   <script src="js/modules/MTLLoader.js"></script>
+   <script src="js/modules/OBJLoader.js"></script>
     <script type="text/javascript">
     // ---- Redirection sur clique sur video
     $("canvas").click(function() {
