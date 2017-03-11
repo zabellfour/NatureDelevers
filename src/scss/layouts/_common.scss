@@ -30,6 +30,10 @@
 		opacity: 0.1;
 		position: absolute;
 		z-index: 0;
+		@include media('<tablet') {
+			font-size: 64px;
+			line-height: 66px;
+		}
 	}
 	h2 {
 		color: #f05238;

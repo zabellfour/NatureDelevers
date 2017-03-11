@@ -1,4 +1,7 @@
 .step-holder {
+	.text-holder {
+		color:#000;
+	}
 	.img-holder {
 		figure {
 			position: relative;
@@ -20,6 +23,14 @@
 			position: relative;
 			text-transform: uppercase;
 			z-index: 1;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+			}
+			@include media('<tablet') {
+				font-size:29px;
+				line-height:31px;
+			}
 			span {
 				color: #000;
 			}
@@ -29,11 +40,14 @@
 		margin: 0;
 	}
 	p {
-		color: #000;
 		font-family: $fontLato;
 		font-size: 14px;
 		line-height: 1.35em;
 		margin: 0;
+		@include media('<tablet') {
+			font-size:13px;
+			line-height:15px;
+		}
 	}
 	img {
 		width:100%;
@@ -49,16 +63,35 @@
 	width: 100%;
 	z-index: 1;
 	transition: top 0.5s;
+	@include media('<tablet') {
+		top:10px !important;
+		left:10px !important;
+	}
 }
 
 .step1 {
 	position: relative;
 	padding:78px 0 68px;
+	@include media('<desktop') {
+		padding:30px 0;
+	}
+	@include media('<tablet') {
+		padding:30px 0 40px;
+	}
 	.img-holder {
 		float:right;
 		width:55%;
 		margin:32px 0 0;
 		position:relative;
+		@include media('<desktop') {
+			width:48%;
+			margin:10px 0 0;
+		}
+		@include media('<tablet') {
+			margin:0;
+			padding: 0 22px 0 13px;
+			width:100%;
+		}
 		figure {
 			margin: 0;
 		}
@@ -68,22 +101,41 @@
 		float:left;
 		width:40%;
 		margin-bottom: 20px;
+		@include media('<desktop') {
+			width:48%;
+		}
+		@include media('<tablet') {
+			padding:0 0 0 49px;
+			margin:0 0 29px;
+			width:100%;
+		}
 	}
 	.number {
 		left: -31px;
 		top: 14px;
+		@include media('<desktop') {
+			left:70px;
+		}
+		@include media('<tablet') {
+			top:12px;
+			left: -14px;
+		}
 	}
 	.title {
 		h2 {
 			font-size: 43px;
 			line-height:45px;
 			margin-bottom:50px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+				margin:0 0 20px;
+			}
+			@include media('<tablet') {
+				font-size:29px;
+				line-height:31px;
+			}
 		}
-	}
-	p {
-		font-size: 15px;
-		line-height: 1.35em;
-		strong { font-weight: 700; }
 	}
 }
 
@@ -92,17 +144,46 @@
 	background-size: cover;
 	padding:65px 0 220px;
 	position: relative;
+	@include media('<desktop') {
+		padding:30px 0;
+	}
+	@include media('<tablet') {
+		padding:30px 0 90px;
+	}
+	.wrap-box {
+		@include media('<tablet') {
+			display: flex;
+			flex-direction: column-reverse;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+		}
+	}
 	.text-holder {
 		float:right;
 		width:41%;
 		margin:77px 0 0;
 		position:relative;
+		@include media('<desktop') {
+			width:48%;
+			margin:0 0 20px;
+		}
+		@include media('<tablet') {
+			width:100%;
+		}
 	}
 	.img-holder {
 		float: left;
 		width: 57%;
 		position: relative;
 		margin: 0 0 0 -20px;
+		@include media('<desktop') {
+			width:48%;
+			margin:0;
+		}
+		@include media('<tablet') {
+			padding: 0 16px 0 9px;
+			width:100%;
+		}
 		figure {
 			margin: 0;
 		}
@@ -111,22 +192,38 @@
 		left: auto;
 		right: -181px;
 		top: 20px;
+		@include media('<desktop') {
+			right:-80px;
+		}
+		@include media('<tablet') {
+			right: -42px;
+			top:10px;
+			left:auto;
+		}
 	}
 	.btn-plus {
 		top: 23px;
 		left: 51px;
+		@include media('<phone') {
+			top: 20px;
+			left: 40px;
+		}
 	}
 	.title {
 		h2 {
 			font-size: 50px;
 			line-height:50px;
 			margin-bottom: 51px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+				margin:0 0 20px;
+			}
+			@include media('<phone') {
+				font-size:29px;
+				line-height:31px;
+			}
 		}
-	}
-	p {
-		font-size: 15px;
-		line-height: 1.35em;
-		strong { font-weight: 700; }
 	}
 }
 
@@ -135,30 +232,56 @@
 	background-size:  auto, cover,;
 	position: relative;
 	padding:116px 0 75px;
+	@include media('<tablet') {
+		padding:65px 0 38px;
+	}
 	.decor1 {
 		position: absolute;
 		right: -96px;
 		top: -172px;
 		z-index:4;
+		@include media('<tablet') {
+			display:none;
+		}
 	}
 	.decor2 {
 		position: absolute;
 		left: -47px;
 		top: -255px;
 		z-index:4;
+		@include media('<tablet') {
+			display:none;
+		}
 	}
 	.text-holder {
+		color:#fff;
 		float:left;
 		width:40%;
 		margin-bottom: 20px;
 		position: relative;
+		@include media('<desktop') {
+			width:48%;
+		}
+		@include media('<tablet') {
+			padding:0 0 0 50px;
+			margin:0 0 51px;
+			width:100%;
+		}
 	}
 	.img-holder {
 		float:right;
 		width:55.5%;
 		position:relative;
-		position: relative;
 		margin: 59px 0 0;
+		@include media('<desktop') {
+			width:48%;
+			margin:20px 0 0;
+		}
+		@include media('<tablet') {
+			margin:0;
+			padding:0 18px;
+			width:100%;
+		}
 		figure {
 			margin: 0;
 		}
@@ -176,22 +299,28 @@
 			left: -28px;
 			opacity: 0.4;
 			top: 16px;
+			@include media('<desktop') {
+				left:68px;
+			}
+			@include media('<tablet') {
+				left:auto;
+			}
 		}
 		h2 {
 			font-size: 50px;
 			margin-bottom: 48px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+				margin:0 0 20px;
+			}
+			@include media('<tablet') {
+				font-size:29px;
+				line-height:31px;
+			}
 			span {
 				color: #fff;
 			}
-		}
-	}
-	p {
-		color: #fff;
-		font-size: 15px;
-		line-height: 1.35em;
-		margin-bottom: 0;
-		strong {
-			font-weight: 700;
 		}
 	}
 }
@@ -201,12 +330,22 @@
 	padding:90px 0 60px;
 	margin:0;
 	background-size: cover;
+	@include media('<tablet') {
+		padding:30px 0 67px;
+	}
 	.text-holder {
 		margin:0;
 	}
 	.img-holder {
 		width:55.5%;
 		margin:55px 0 0 -20px;
+		@include media('<desktop') {
+			width:48%;
+			margin:20px 0 0;
+		}
+		@include media('<tablet') {
+			width:100%;
+		}
 	}
 	.btn-plus{
 		top: 44px;
@@ -218,6 +357,15 @@
 			font-size: 45px;
 			line-height: 50px;
 			margin-bottom: 46px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+				margin:0 0 20px;
+			}
+			@include media('<tablet') {
+				font-size:29px;
+				line-height:31px;
+			}
 		}
 	}
 }
@@ -233,6 +381,13 @@
 		.img-holder {
 			width: 55%;
 			margin: 83px -15px 0px 0;
+			@include media('<desktop') {
+				width:48%;
+				margin:20px 0 0;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
 		}
 		.text-holder {
 			p {
@@ -242,6 +397,9 @@
 		.number {
 			left: -28px;
 			top: 22px;
+			@include media('<tablet') {
+				left:50%;
+			}
 		}
 		.btn-plus {
 			left: auto;
@@ -255,6 +413,14 @@
 		}
 		h2 {
 			line-height:38px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+			}
+			@include media('<phone') {
+				font-size:29px;
+				line-height:31px;
+			}
 			span {
 				font-size:29px;
 				line-height:31px;
@@ -293,6 +459,9 @@
 	.text-holder {
 		text-align:center;
 		margin:0 0 77px;
+		@include media('<desktop') {
+			margin:0 0 20px;
+		}
 		p {
 			margin:0;
 		}
@@ -301,6 +470,14 @@
 		margin:0 0 54px;
 		h2 {
 			font-size:43px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+			}
+			@include media('<phone') {
+				font-size:29px;
+				line-height:31px;
+			}
 		}
 	}
 	.listing-block {
@@ -350,6 +527,7 @@
 		background:  url('../images/img-transition-plume2.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
 		background-size: auto, cover;
 		padding:100px 0 26px;
+		color:#fff;
 		.decor {
 			position:absolute;
 			left:58%;
@@ -371,6 +549,14 @@
 		.title {
 			h2 {
 				font-size:40px;
+				@include media('<desktop') {
+					font-size:22px;
+					line-height:24px;
+				}
+				@include media('<phone') {
+					font-size:29px;
+					line-height:31px;
+				}
 			}
 		}
 		h3 {
