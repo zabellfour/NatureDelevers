@@ -37,15 +37,14 @@
         @include media('<tablet') {
             margin: 0 0 26px;
         }
-        h1 {
-            font: 50px/52px 'museo_sans';
-            color: #f05238;
+        h2 {
+            font-size:50px;
+            line-height:52px;
             margin: 0;
              @include media('<desktop') {
                 font-size: 35px;
              
              }
-                    
             @include media('<tablet') {
                 font-size: 28px;
                 line-height: 1;

@@ -16,8 +16,6 @@ module.exports = [
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
-	//'./src/js/modules/main.js',
-	'./src/js/modules/scrollreveal.min.js',
 	'./src/js/modules/commun.js',
 	//'./src/js/modules/playerFE.js',
 	//'./src/js/modules/three.min.js',

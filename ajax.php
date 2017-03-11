@@ -1,0 +1,1 @@
+<img src="images/econome-photo.jpg" alt="image description" />

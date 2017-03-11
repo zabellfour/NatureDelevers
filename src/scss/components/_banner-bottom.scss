@@ -1,9 +1,10 @@
 /* baner bottom style */
 
 .baner-bottom {
+	@include v-align;
 	height:415px;
 	background:url("../images/footer-bg.jpg") 50% 100% / cover no-repeat;
-	padding:69px 15px 0;
+	padding:0 15px;
 	position:relative;
 	@include media('<tablet') {
 		height:224px;
@@ -15,8 +16,6 @@
 	@include animate(box-shadow);
 	font: 900 34px/45px 'museo_sans','Times', 'Baskerville', 'Georgia', serif;
 	max-width:376px;
-	margin:0 auto;
-	display:block;
 	border:3px solid $white;
 	color:$white;
 	text-transform:uppercase;

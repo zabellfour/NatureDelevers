@@ -13,6 +13,17 @@ jQuery(document).ready(function($) {
             media: {}
         }
     });
+    $(".economes-popup").fancybox({
+        maxWidth    : 500,
+        maxHeight   : 400,
+        fitToView   : false,
+        width       : '500px',
+        height      : '400px',
+        autoSize    : false,
+        closeClick  : false,
+        openEffect  : 'none',
+        closeEffect : 'none'
+    });
     var s = skrollr.init({forceHeight: false});
 });
 

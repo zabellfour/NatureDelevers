@@ -1,0 +1,102 @@
+/* video style */
+
+#videoContainer {
+	width: 100%;
+	margin: 0;
+	height: 100%;
+	position: relative;
+	background-color: black;
+	cursor: pointer;
+	.storyBtn {
+		right: 13%;
+		position: absolute;
+		top: 40%;
+		z-index: 10;
+		border: 0;
+		background-color: $rouge;
+		color: white;
+		font-size: 40px;
+		width: 36px;
+		height: 36px;
+		-o-transform: rotate(45deg);
+		cursor:pointer;
+		&:before{
+			content:'+';
+			position: relative;
+			display: block;
+			transform: rotate(45deg);
+			right: -1px;
+			top: -10px;
+		}
+		&:after{
+			opacity: 0;
+			border: 2px solid #ffffff;
+			content: "";
+			height: 49px;
+			left: -7px;
+			position: absolute;
+			display: block;
+			top: -7px;
+			width: 49px;
+			transition: opacity 0.1s linear;
+		}
+
+		&:hover:after{
+			opacity: 1.0;
+		}
+	}
+	.textVideo {
+		position: absolute;
+		bottom: 20%;
+		left: 3%;
+		z-index: 10;
+		color: white;
+		display: none;
+		pointer-events: none;
+		h2 {
+			font-size:50px;
+		}
+	}
+	#progressBar {
+		position: absolute;
+		z-index: 1;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		bottom: 40px;
+		background-color: white;
+		height: 2px;
+		width: 41%;
+		#jauge {
+			width: 0%;
+			height: 100%;
+			background-color: $rouge;
+		}
+		.chapter {
+			background-color: #ffffff;
+			border-radius: 50%;
+			height: 14px;
+			position: absolute;
+			top: -6px;
+			width: 14px;
+			&.active {
+				background-color: $rouge;
+			}
+			&:before {
+				opacity: 0;
+				border: 2px solid #ffffff;
+				border-radius: 50%;
+				content: "";
+				height: 28px;
+				left: -7px;
+				position: absolute;
+				top: -7px;
+				width: 28px;
+				transition: opacity 0.2s linear;
+			}
+			&:hover:before {
+				opacity: 1.0;
+			}
+		}
+	}
+}
