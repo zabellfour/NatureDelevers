@@ -1,6 +1,23 @@
 // page init
-jQuery(function(){
+jQuery(function() {
     initMobileNav();
+    $(".drop-opener").click(function(event) {
+        event.preventDefault();
+        $(this).parent().find(".dropdown").toggleClass("opened");
+    });
+    $("body").click(function(e) {
+
+        if ($(e.target).closest(".holder2").length == 0)
+            $(".dropdown").removeClass("opened");
+        if ($(e.target).closest(".share-opened").length == 0)
+            $(".share-holder").removeClass("share-opened");
+
+    });
+    $(".share-holder").click(function(event) {
+        event.preventDefault();
+        $(this).toggleClass("share-opened");
+    });
+
 });
 
 // mobile menu init
@@ -9,14 +26,17 @@ function initMobileNav() {
         hideOnClickOutside: true,
         menuActiveClass: 'nav-active',
         menuOpener: '.menu-opener',
-        menuDrop: '.nav-drop'
+        menuDrop: '.nav-holder'
     });
 }
+
+
 
 /*
  * Simple Mobile Navigation
  */
-;(function($) {
+;
+(function($) {
     function MobileNav(options) {
         this.options = $.extend({
             container: null,
@@ -40,15 +60,15 @@ function initMobileNav() {
         attachEvents: function() {
             var self = this;
 
-            if(activateResizeHandler) {
+            if (activateResizeHandler) {
                 activateResizeHandler();
                 activateResizeHandler = null;
             }
 
             this.outsideClickHandler = function(e) {
-                if(self.isOpened()) {
+                if (self.isOpened()) {
                     var target = $(e.target);
-                    if(!target.closest(self.opener).length && !target.closest(self.drop).length) {
+                    if (!target.closest(self.opener).length && !target.closest(self.drop).length) {
                         self.hide();
                     }
                 }
@@ -66,18 +86,18 @@ function initMobileNav() {
         },
         show: function() {
             this.container.addClass(this.options.menuActiveClass);
-            if(this.options.hideOnClickOutside) {
+            if (this.options.hideOnClickOutside) {
                 this.page.on(this.options.outsideClickEvent, this.outsideClickHandler);
             }
         },
         hide: function() {
             this.container.removeClass(this.options.menuActiveClass);
-            if(this.options.hideOnClickOutside) {
+            if (this.options.hideOnClickOutside) {
                 this.page.off(this.options.outsideClickEvent, this.outsideClickHandler);
             }
         },
         toggle: function() {
-            if(this.isOpened()) {
+            if (this.isOpened()) {
                 this.hide();
             } else {
                 this.show();
@@ -100,7 +120,7 @@ function initMobileNav() {
             doc.removeClass(resizeClass);
         };
         var resizeHandler = function() {
-            if(!flag) {
+            if (!flag) {
                 flag = true;
                 doc.addClass(resizeClass);
             }
@@ -112,7 +132,7 @@ function initMobileNav() {
 
     $.fn.mobileNav = function(options) {
         return this.each(function() {
-            var params = $.extend({}, options, {container: this}),
+            var params = $.extend({}, options, { container: this }),
                 instance = new MobileNav(params);
             $.data(this, 'MobileNav', instance);
         });

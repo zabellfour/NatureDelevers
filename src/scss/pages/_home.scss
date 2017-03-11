@@ -1,14 +1,43 @@
 .home-page {
     height: 100%;
+    @include media('<tablet') {
+        height: auto;
+        overflow: auto !important;
+    }
+    #header .menu-opener {
+        top: 10px;
+        left: 8px;
+    }
     .row-top {
-        height: 65%;
+        height: 62.6%;
         position: relative;
+        overflow: hidden;
+        @include media('<tablet') {
+            height: 282px;
+        }
+        &:after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: -70%;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 49%, rgba(0, 0, 0, 0.5) 100%);
+        }
         .logo {
             position: absolute;
-            top: 60px;
-            left: 60px;
+            top: 20%;
+            left: 8%;
             width: 318px;
             z-index: 10;
+            @include media('<tablet') {
+                width: 152px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 17%;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -16,45 +45,65 @@
         }
     }
     .row-bottom {
-        height: 35%;
         @extend %clearfix;
+        height: 37.4%;
+        @include media('<tablet') {
+            height: auto;
+        }
         .col1,
         .col2 {
             height: 100%;
             background-size: cover;
             background-position: 50% 50%;
+            @include media('<tablet') {
+                height: 150px;
+            }
         }
         .col1 {
             position: relative;
-            width: 56%;
+            width: 57.4%;
             float: left;
             padding: 21px 15px;
-            #footer {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
+            @include media('<tablet') {
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         .col2 {
-            width: 44%;
+            width: 42.6%;
             position: relative;
             overflow: hidden;
             float: left;
             padding: 21px 15px;
+            @include media('<tablet') {
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             .h2 {
                 color: $black;
                 text-decoration: none;
+                max-width: 180px;
+                margin-bottom: 0;
+                @include media('<tablet') {
+                    max-width: none;
+                }
             }
             .bg-holder {
-            	@include animate(top left bottom right);
+                @include animate(top left bottom right);
                 position: absolute;
                 top: 0;
                 left: 0;
                 right: 0;
                 bottom: 0;
                 z-index: -1;
-                    background-size: cover;
+                background-size: cover;
                 background-position: 50% 50%;
             }
             &:hover .bg-holder {
@@ -62,7 +111,6 @@
                 left: -40px;
                 right: -40px;
                 bottom: -40px;
-            
             }
         }
         .h2 {
@@ -71,12 +119,137 @@
             text-transform: uppercase;
             max-width: 220px;
             font-family: $fontMochaMattari;
-            line-height: 1.1;
+            line-height: 1;
             font-weight: 400;
+            margin-bottom: 0px;
+            @include media('<tablet') {
+                max-width: none;
+                text-align: center;
+            }
         }
     }
     .home-container {
         border: 8px solid $white;
         height: 100vh;
+        position: relative;
+        @include media('<tablet') {
+            height: auto;
+            border: none;
+        }
+        #footer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            @include media('<tablet') {
+                position: static;
+            }
+        }
+    }
+}
+
+.drag-box {
+    @extend %clearfix;
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    width: 228px;
+    color: $white;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 80px;
+        right: 64px;
+        height: 1px;
+        border-bottom: 1px dashed $white;
+    }
+    .icon-holder {
+        font-size: 30px;
+        float: left;
+        padding: 10px;
+        border-radius: 50%;
+        border: 2px solid $white;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.rotate {
+            @include animate(color border-color);
+            float: right;
+            transform: rotate(90deg);
+            font-size: 25px;
+            position: relative;
+            border-color: transparent;
+            color: transparent;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                border: 2px solid $white;
+                border-radius: 50%;
+            }
+        }
+    }
+    &:hover .icon-holder.rotate {
+        border-color: $white;
+        color: $white;
+    }
+}
+
+.modal-links {
+    @extend %listreset;
+    display: none;
+    @include media('<tablet') {
+        display: block;
+    }
+    li {
+        height: auto;
+        a {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+             @include media('<phone') {
+                    height:     90px;
+             
+             }
+                        
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, .5);
+                z-index: 1;
+            }
+        }
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            text-align: center;
+            font-size: 18px;
+            font-family: $san-serif-second;
+            line-height: 1.2;
+            color: $white;
+            z-index: 2;
+        }
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }

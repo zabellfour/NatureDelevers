@@ -16,7 +16,6 @@ module.exports = [
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
-
 	'./src/js/modules/jquery.mousewheel.js',
 	'./src/js/modules/mwheelIntent.js',
 	'./src/js/modules/jquery.jscrollpane.js',

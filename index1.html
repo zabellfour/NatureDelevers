@@ -23,71 +23,80 @@
             <div class="nav-holder">
                 <div class="holder1">
                     <div class="box">
-                        <a href="#"><i class="icon-chicken"></i></a>
+                        <a href="#" class="menu-opener"><i class="icon-chicken"></i></a>
                     </div>
                     <div class="social-box">
                         <a href="#"><i class="icon-baseball"></i></a>
                         <a href="#"><i class="icon-microphone"></i></a>
                         <a href="#"><i class="icon-envelope"></i></a>
-                        <a href="#"><i class="icon-share"></i></a>
+                        <span href="#" class="share-holder">
+                        	<i class="icon-share"></i>
+                        	<ul class="share-list">
+                        		<li><a href="https://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.MONSITEINTERNET"><i class="icon-twitter"></i></a></li>
+                        		<li><a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.MONSITEINTERNET.fr"><i class="icon-facebook"></i></a></li>
+                        		<li><a href="#"><i class="icon-envelope"></i></a></li>
+                        	</ul>
+                        </span>
                         <a href="#"><i class="icon-copy"></i></a>
-                        <a href="#"><img src="images/menu/flagenglish.svg" alt="flag english" width="26" height="16"></a>
-                        <a href="#"><img src="images/menu/flagfrench.svg" alt="flag french" width="26" height="16"></a>
+                        <div class="flags">
+                            <a href="#"><img src="images/menu/flagenglish.svg" alt="flag english" width="26" height="16"></a>
+                            <a href="#"><img src="images/menu/flagfrench.svg" alt="flag french" width="26" height="16"></a>
+                        </div>
                     </div>
                 </div>
                 <ul class="holder2">
                     <li>
                         <a href="#">
                             <img src="images/menu/zone2-1.jpg" alt="image description" />
-                            <span class="text">nos actualis</span>
+                            <span class="text">la démarche <br>nature d’éleveurs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="drop-opener">
                             <img src="images/menu/zone2-2.jpg" alt="image description" />
-                            <span class="text">Découvrez ici prochainement</span>
+                            <span class="text">LA JOURNÉE <br>D’UN ÉLEVEUR</span>
                         </a>
                         <ul class="dropdown">
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-1.jpg" alt="image description" />
-                                    <span class="text">la démarche nature d’éleveur</span>
+                                    <span class="text">NOS ÉLEVAGES</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-2.jpg" alt="image description" />
-                                    <span class="text">Découvrez ici prochainement</span>
+                                    <span class="text">NOUS LES <br>ÉLEVEURS</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-3.jpg" alt="image description" />
-                                    <span class="text">VISUALISEZ L’ÉVOLUTION DU </span>
+                                    <span class="text">NOS <br>EXPLOITATIONS</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-4.jpg" alt="image description" />
-                                    <span class="text">nos actualis</span>
+                                    <span class="text">LE CONFORT <br>POUR NOS VOLAILLES</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-5.jpg" alt="image description" />
-                                    <span class="text">nos actualis</span>
+                                    <span class="text">L’ALIMENTATION pour <br>nos volailles</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-6.jpg" alt="image description" />
-                                    <span class="text">Lexperiences</span>
+                                    <span class="text">LA SANTÉ pour <br>NOS VOLAILLES</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="images/menu/zone3-7.jpg" alt="image description" />
-                                    <span class="text">nos actualis</span>
+                                    <span class="text">une traçabilité garantie <br> de l’oeuf à l’assiette</span>
                                 </a>
                             </li>
                         </ul>
@@ -95,19 +104,19 @@
                     <li>
                         <a href="#">
                             <img src="images/menu/zone2-3.jpg" alt="image description" />
-                            <span class="text">le témoignage d’un éleveur</span>
+                            <span class="text">LES SECRETS <br>DE NOS TERROIRS</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="images/menu/zone2-4.jpg" alt="image description" />
-                            <span class="text">VISUALISEZ L’ÉVOLUTION DU </span>
+                            <span class="text">VENEZ VIVRE <br>L’EXPÉRIENCE</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="images/menu/zone2-5.jpg" alt="image description" />
-                            <span class="text">nos actualis</span>
+                            <span class="text">NOS <br>ACTUALITÉS</span>
                         </a>
                     </li>
                 </ul>
@@ -117,40 +126,103 @@
                 <div id="videoContainer">
                     <canvas id="canvas"></canvas>
                 </div>
+                <div class="drag-box">
+                    <span class="icon-holder"><i class="icon-drag"></i></span>
+                    <span class="icon-holder rotate"><i class="icon-drag"></i></span>
+                </div>
             </section>
             <section class="row-bottom">
                 <div class="col1" style="background-image: url('images/home/landscape.jpg');">
-                    <h2 class="h2">la démarche
-nature d’éleveurs</h2>
-                    <footer id="footer">
-                        <a class="logo-mobile" href="#" target="_blank"><img src="images/logo-mobile.png" alt="LDC" /></a>
-                        <ul class="nav-footer">
-                            <li>
-                                <a href="#">GROUPE LDC</a>
-                                <a class="logo-mobile" href="#" target="_blank"><img src="images/logoLdc.png" alt="LDC" /></a>
-                            </li>
-                            <li><a href="#">VENEZ VIVRE L’EXPÉRIENCE</a></li>
-                            <li><a href="#">CONTACT<span>EZ-NOUS</span></a></li>
-                        </ul>
-                    </footer>
+                    <h2 class="h2">la démarche nature d’éleveurs</h2>
                 </div>
-                <a href="#" class="col2">
+                <div class="col2">
                     <div class="bg-holder" style="background-image: url('images/home/eggs.jpg');">
                     </div>
                     <h2 class="h2">  c’est ici que tout commence</h2>
-                </a>
+                    <span href="#" class="share-holder">
+                        <i class="icon-share"></i>
+                        <ul class="share-list">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-envelope"></i></a></li>
+                        </ul>
+                    </span>
+                </div>
             </section>
+            <ul class=" modal-links ">
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-1.jpg" alt="image description" />
+                        <span class="text">NOS ÉLEVAGES <br>	
+FRANÇAIS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-2.jpg" alt="image description" />
+                        <span class="text">NOUS LES <br>	
+ÉLEVEURS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-3.jpg" alt="image description" />
+                        <span class="text">NOS <br>	
+EXPLOITATIONS </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-4.jpg" alt="image description" />
+                        <span class="text">LE CONFORT <br>	
+POUR NOS VOLAILLES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-5.jpg" alt="image description" />
+                        <span class="text">L’ALIMENTATION</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-6.jpg" alt="image description" />
+                        <span class="text">LA SANTÉ <br>	
+DE NOS VOLAILLES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/menu/zone3-7.jpg" alt="image description" />
+                        <span class="text">LA TRAÇABILITÉ</span>
+                    </a>
+                </li>
+            </ul>
+            <footer id="footer">
+                <a class="logo-mobile" href="#" target="_blank"><img src="images/logo-mobile.png" alt="LDC" /></a>
+                <ul class="nav-footer">
+                    <li>
+                        <a href="#">GROUPE LDC</a>
+                        <a class="logo-mobile" href="#" target="_blank"><img src="images/logoLdc.png" alt="LDC" /></a>
+                    </li>
+                    <li><a href="#">VENEZ VIVRE L’EXPÉRIENCE</a></li>
+                    <li><a href="#">CONTACT<span>EZ-NOUS</span></a></li>
+                </ul>
+            </footer>
         </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
-	<script src="js/modules/commun.js"></script>
-   <script src="js/modules/threex.videotexture.js"></script>
+    <script src="js/modules/commun.js"></script>
+    <script src="js/modules/threex.videotexture.js"></script>
     <script src="js/modules/three.min.js"></script>
-	<script src="js/modules/playerFE.js"></script>
-	<script src="js/modules/DDSLoader.js"></script>
-   <script src="js/modules/MTLLoader.js"></script>
-   <script src="js/modules/OBJLoader.js"></script>
+    <script src="js/modules/playerFE.js"></script>
+    <script src="js/modules/DDSLoader.js"></script>
+    <script src="js/modules/MTLLoader.js"></script>
+    <script src="js/modules/OBJLoader.js"></script>
     <script type="text/javascript">
     // ---- Redirection sur clique sur video
     $("canvas").click(function() {
