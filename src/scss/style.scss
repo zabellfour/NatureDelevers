@@ -18,6 +18,7 @@
 @import 'components/steps';
 @import 'components/step-modal';
 @import 'components/modal-pages';
+@import 'components/video-page';
 
 /* Layouts */
 @import 'layouts/common';
@@ -29,16 +30,14 @@
 
 @import 'partials/animate';
 @import 'partials/commun';
-//@import 'partials/home';
-@import 'partials/journee';
 @import 'partials/scrollpanel';
 
+	
 .modal {
-            display:block !important;
-            opacity:1 !important;
-            width:100% !important;
-            overflow:hidden;
-        }
+    display:block !important;
+    opacity:1 !important;
+    width:100% !important;
+}
 
 /* Pages */
 @import 'pages/home';

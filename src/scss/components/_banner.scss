@@ -2,7 +2,6 @@
     height: 670px;
     border: 10px solid $white;
     background-size: cover;
-    background-attachment: fixed;
     background-position: 50% 50%;
     position: relative;
     @include media('<desktop') {
@@ -137,20 +136,17 @@
     }
     .holder-left {
         position: absolute;
-        width:50%;
-        top: 84px;
+        width: 44%;
+        top: 85px;
         left:87px;
         z-index:2;
         color: #fff;
-        font-family: $fontLato;
-        font-size: 16px;
-        line-height:18px;
+        font: bold 16px/19px $fontLato;
         h1 {
             color: #fff;
-            font-family: $fontMochaMattari;
-            font-size: 82px;
-            line-height:84px;
-            margin-bottom: 10px;
+            font: 82px/84px $fontMochaMattari;
+            margin-bottom: 7px;
+            letter-spacing:0.7px;
         }
     }
 }
@@ -171,7 +167,7 @@
         bottom: -40px;
     }
     50% {
-        bottom: -90px;
+        bottom: -75px;
     }
     to {
         bottom: -40px;

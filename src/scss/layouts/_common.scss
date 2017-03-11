@@ -14,3 +14,35 @@
 		padding: 0 10px;
 	}
 }
+
+/*title number style */
+
+.title {
+	position:relative;
+	.number {
+		color: #000;
+		display: inline-block;
+		font-family: "museo_sans";
+		font-weight: 900;
+		font-size: 125px;
+		line-height: 100%;
+		margin: 0;
+		opacity: 0.1;
+		position: absolute;
+		z-index: 0;
+	}
+	h2 {
+		color: #f05238;
+		font-family: $fontMuseoSans;
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 100%;
+		margin: 0;
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+		span {
+			color: #000;
+		}
+	}
+}

@@ -37,21 +37,26 @@
 }
 
 .btn-plus {
+	@include animate(transform);
 	display: inline-block;
 	position: absolute;
 	z-index: 2;
-	top:29px;
-	left:133px;
+	top: 34px;
+	left: 129px;
+	&:hover {
+		transform: scale(1.1);
+	}
 	i {
 		color: #f05238;
 		display: inline-block;
-		font-size: 58px;
+		font-size: 53px;
 		z-index: 0;
 		&:before {
 			position: relative;
 			z-index: 2;
 		}
 		&:after {
+			@include animate(transform);
 			background-color: #fff;
 			content: '';
 			display: inline-block;
@@ -64,5 +69,22 @@
 			z-index: 1;
 			transform: rotate(45deg);
 		}
+	}
+}
+
+.btn {
+	@include animate(background color);
+	font: 900 20px/22px "lato", arial, sans-serif;
+	text-transform:uppercase;
+	background: $rouge;
+	color:#fff;
+	min-width:490px;
+	display:inline-block;
+	vertical-align:middle;
+	padding:15px 10px;
+	position:relative;
+	&:hover {
+		background:#fff;
+		color:$rouge;
 	}
 }

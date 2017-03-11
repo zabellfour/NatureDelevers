@@ -1,16 +1,4 @@
 .step-holder {
-	.number {
-		color: #000;
-		display: inline-block;
-		font-family: "museo_sans";
-		font-weight: 900;
-		font-size: 125px;
-		line-height: 100%;
-		margin: 0;
-		opacity: 0.1;
-		position: absolute;
-		z-index: 0;
-	}
 	.img-holder {
 		figure {
 			position: relative;
@@ -21,18 +9,20 @@
 			}
 		}
 	}
-	h2 {
-		color: #f05238;
-		font-family: $fontMuseoSans;
-		font-size: 24px;
-		font-weight: 900;
-		line-height: 100%;
-		margin: 0;
-		position: relative;
-		text-transform: uppercase;
-		z-index: 1;
-		span {
-			color: #000;
+	.title {
+		h2 {
+			color: #f05238;
+			font-family: $fontMuseoSans;
+			font-size: 24px;
+			font-weight: 900;
+			line-height: 100%;
+			margin: 0;
+			position: relative;
+			text-transform: uppercase;
+			z-index: 1;
+			span {
+				color: #000;
+			}
 		}
 	}
 	h3 {
@@ -45,6 +35,9 @@
 		line-height: 1.35em;
 		margin: 0;
 	}
+	img {
+		width:100%;
+	}
 }
 
 .under-mask {
@@ -52,7 +45,7 @@
 	display: block;
 	height: 100%;
 	position: absolute;
-	left: 10px;
+	left: 16px;
 	width: 100%;
 	z-index: 1;
 	transition: top 0.5s;
@@ -60,10 +53,10 @@
 
 .step1 {
 	position: relative;
-	padding:84px 0 133px;
+	padding:78px 0 68px;
 	.img-holder {
 		float:right;
-		width:55.5%;
+		width:55%;
 		margin:32px 0 0;
 		position:relative;
 		figure {
@@ -77,13 +70,15 @@
 		margin-bottom: 20px;
 	}
 	.number {
-		left: -104px;
-		top: -47px;
+		left: -31px;
+		top: 14px;
 	}
-	h2 {
-		font-size: 43px;
-		line-height:45px;
-		margin-bottom:50px;
+	.title {
+		h2 {
+			font-size: 43px;
+			line-height:45px;
+			margin-bottom:50px;
+		}
 	}
 	p {
 		font-size: 15px;
@@ -95,7 +90,7 @@
 .step4,
 .step2 {
 	background-size: cover;
-	margin:0 0 220px;
+	padding:65px 0 220px;
 	position: relative;
 	.text-holder {
 		float:right;
@@ -105,7 +100,7 @@
 	}
 	.img-holder {
 		float: left;
-		width: 58.5%;
+		width: 57%;
 		position: relative;
 		margin: 0 0 0 -20px;
 		figure {
@@ -114,13 +109,19 @@
 	}
 	.number {
 		left: auto;
-		right: -105px;
-		top: -41px;
+		right: -181px;
+		top: 20px;
 	}
-	h2 {
-		font-size: 50px;
-		line-height:50px;
-		margin-bottom: 51px;
+	.btn-plus {
+		top: 23px;
+		left: 51px;
+	}
+	.title {
+		h2 {
+			font-size: 50px;
+			line-height:50px;
+			margin-bottom: 51px;
+		}
 	}
 	p {
 		font-size: 15px;
@@ -165,21 +166,23 @@
 			background-color: rgba(0, 0, 0, 0.4);
 		}
 	}
-	.number {
-		left: 0;
-		opacity: 0.4;
-		top: 0;
-	}
 	.btn-plus {
 		left: auto;
 		right: 140px;
 		top: 50px;
 	}
-	h2 {
-		font-size: 50px;
-		margin-bottom: 48px;
-		span {
-			color: #fff;
+	.title {
+		.number {
+			left: -28px;
+			opacity: 0.4;
+			top: 16px;
+		}
+		h2 {
+			font-size: 50px;
+			margin-bottom: 48px;
+			span {
+				color: #fff;
+			}
 		}
 	}
 	p {
@@ -210,9 +213,174 @@
 		left: auto;
 		right: 126px;
 	}
-	h2 {
-		font-size: 45px;
-		line-height: 50px;
-		margin-bottom: 46px;
+	.title {
+		h2 {
+			font-size: 45px;
+			line-height: 50px;
+			margin-bottom: 46px;
+		}
+	}
+}
+
+//*********************page exploiatioms ****************//
+
+.step1 {
+	#exploitations & {
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		padding:114px 0 130px;
+		.img-holder {
+			width: 55%;
+			margin: 83px -15px 0px 0;
+		}
+		.text-holder {
+			p {
+				margin:0 0 2px;
+			}
+		}
+		.number {
+			left: -28px;
+			top: 22px;
+		}
+		.btn-plus {
+			left: auto;
+			right: 58px;
+			top: 15px;
+		}
+		.decor {
+			position:absolute;
+			right:0;
+			top:20px;
+		}
+		h2 {
+			line-height:38px;
+			span {
+				font-size:29px;
+				line-height:31px;
+			}
+		}
+		h3 {
+			color: #000;
+			font-family: $fontMuseoSans;
+			font-size: 16px;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.economes-block {
+	background-color: #f7f6f2;
+	position:relative;
+	.decor1 {
+		position:absolute;
+		right: -95px;
+		top:50%;
+		transform:translateY(-50%);
+	}
+	.decor2 {
+		position:absolute;
+		left: -55px;
+		top: -190px;
+	}
+	.baner-holder {
+		background-size:cover;
+		background-position: 50% 50%;
+		height:280px;
+		margin:0 0 109px;
+	}
+	.text-holder {
+		text-align:center;
+		margin:0 0 77px;
+		p {
+			margin:0;
+		}
+	}
+	.title {
+		margin:0 0 54px;
+		h2 {
+			font-size:43px;
+		}
+	}
+	.listing-block {
+		display:flex;
+		justify-content: space-between;
+		.box {
+			display:flex;
+			flex-direction: column;
+			width:30%;
+		}
+		h3 {
+			font: 40px/38px "mochaMattari-regular";
+			margin:0 0 22px;
+		}
+	}
+	.text-box {
+		flex: auto;
+		font-family:$fontLato;
+	}
+	.img-box {
+		text-align:center;
+		a {
+			display:block;
+			>img {
+				display:none;
+			}
+			#popup-text {
+				display:none;
+			}
+		}
+		a:hover {
+			img {
+				display:none;
+			}
+			img.hover-img {
+				display:inline-block;
+			}
+		}
+	}
+	.hover-img {
+		display:none;
+	}
+}
+
+.step3 {
+	#exploitations & {
+		background:  url('../images/img-transition-plume2.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
+		background-size: auto, cover;
+		padding:100px 0 26px;
+		.decor {
+			position:absolute;
+			left:58%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
+		.two-column {
+			display:flex;
+			justify-content: space-between;
+			margin:0 0 40px;
+			position:relative;
+		}
+		.block {
+			width:41%;
+		}
+		.wrap-btn {
+			text-align:center;
+		}
+		.title {
+			h2 {
+				font-size:40px;
+			}
+		}
+		h3 {
+			font: 40px/42px "mochaMattari-regular";
+			color:#fff;
+			text-transform:uppercase;
+			margin:0 0 15px;
+		}
+		p {
+			margin:0 0 30px;
+		}
 	}
 }
