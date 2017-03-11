@@ -11,6 +11,7 @@
 	background:$black;
 	z-index:10;
 	display:flex;
+	z-index: 99;
 	.nav-active & {
 		transform: translateX(0);
 	}
@@ -66,8 +67,9 @@
 			font-size:20px;
 		}
 	}
-	.holder2,
-	.holder3 {
+	.holder2,.dropdown {
+		@extend %listreset ;
+				
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -84,11 +86,15 @@
 			transform: translateY(-50%);
 			text-transform:uppercase;
 		}
+		li{
+			display: block;
+			height: 20%;
+		}
 		a {
 			text-align:center;
 			position:relative;
 			display:block;
-			height:20%;
+			height:100%;
 			overflow:hidden;
 			&:hover {
 				opacity:.8;
@@ -105,7 +111,7 @@
 			max-width: none;
 		}
 	}
-	.holder3 {
+	.dropdown {
 		a {
 			height:14.3%;
 		}

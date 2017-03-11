@@ -2,11 +2,8 @@
     height: 670px;
     border: 10px solid $white;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 0;
     position: relative;
-    @include media('<desktop') {
-        background-position: 70% 50%;
-    }
     @include media('<tablet') {
         height: 330px;
         border: none;
@@ -42,113 +39,137 @@
             top: 37%;
             padding: 0 20px;
         }
+        @include media('<phone') {
+         font-size:32px;
+     }
+ }
+ .scroll-link {
+    @include animate(opacity);
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    transform: translate3d(-50%, 0, 0);
+    font-family: $base-font-serif;
+    font-size: 51px;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    @include media('<desktop') {
+        font-size: 30px;
     }
-    .scroll-link {
-        @include animate(opacity);
-        position: absolute;
-        left: 50%;
-        bottom: 90px;
-        transform: translate3d(-50%, 0, 0);
-        font-family: $base-font-serif;
-        font-size: 51px;
-        color: $white;
-        text-decoration: none;
-        text-align: center;
-        @include media('<desktop') {
-            font-size: 30px;
-        }
-        @include media('<tablet') {
-            left: 0;
-            right: 0;
-            width: 100%;
-            transform: translateX(0);
-            font-size: 25px;
-            bottom: 73px;
-        }
-        a {
-            color: inherit;
-        }
-        &:hover {
-            opacity: .7;
-        }
-        .link-text {
-            transform: rotate(-7deg);
-            display: inline-block;
-            position: relative;
-            &:before {
-                content: '';
-                width: 129px;
-                height: 26px;
-                background-image: url("../images/stroke.png");
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                position: absolute;
-                left: 50%;
-                transform: translate3d(-50%, 0, 0) rotate(7deg);
-                bottom: -2px;
-                @include media('<desktop') {
-                    width: 73px;
-                    height: 16px;
-                }
-                @include media('<tablet') {
-                    width: 63px;
-                    height: 13px;
-                }
-            }
-        }
-        .scroll-icon {
-            @include animate(border-color);
-            display: inline-block;
-            border: 2px solid rgba($white, .8);
-            width: 31px;
-            height: 31px;
-            transform: rotate(45deg) translate3d(-50%, 0, 0);
+    @include media('<tablet') {
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: translateX(0);
+        font-size: 25px;
+        bottom: 73px;
+    }
+    a {
+        color: inherit;
+    }
+    &:hover {
+        opacity: .7;
+    }
+    .link-text {
+        transform: rotate(-7deg);
+        display: inline-block;
+        position: relative;
+        &:before {
+            content: '';
+            width: 129px;
+            height: 26px;
+            background-image: url("../images/stroke.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
             position: absolute;
             left: 50%;
-            bottom: -56px;
-            margin-left: -4px;
-            animation: scroll-move 3s infinite;
+            transform: translate3d(-50%, 0, 0) rotate(7deg);
+            bottom: -2px;
+            @include media('<desktop') {
+                width: 73px;
+                height: 16px;
+            }
             @include media('<tablet') {
-                width: 17px;
-                height: 17px;
-                animation: scroll-move 1s infinite;
-            }
-            &:hover {
-                opacity: 0.7;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-60%, -60%);
-                width: 14px;
-                height: 14px;
-                border: 1px solid $white;
-                border-width: 0 1px 1px 0;
-                border-color: inherit;
-                @include media('<tablet') {
-                    width: 7px;
-                    height: 7px;
-                }
+                width: 63px;
+                height: 13px;
             }
         }
     }
-    .holder-left {
+    .scroll-icon {
+        @include animate(border-color);
+        display: inline-block;
+        border: 2px solid rgba($white, .8);
+        width: 31px;
+        height: 31px;
+        transform: rotate(45deg) translate3d(-50%, 0, 0);
         position: absolute;
-        width: 44%;
-        top: 85px;
-        left:87px;
-        z-index:2;
-        color: #fff;
-        font: bold 16px/19px $fontLato;
-        h1 {
-            color: #fff;
-            font: 82px/84px $fontMochaMattari;
-            margin-bottom: 7px;
-            letter-spacing:0.7px;
+        left: 50%;
+        bottom: -56px;
+        margin-left: -4px;
+        animation: scroll-move 3s infinite;
+        @include media('<tablet') {
+            width: 17px;
+            height: 17px;
+            animation: scroll-move 1s infinite;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -60%);
+            width: 14px;
+            height: 14px;
+            border: 1px solid $white;
+            border-width: 0 1px 1px 0;
+            border-color: inherit;
+            @include media('<tablet') {
+                width: 7px;
+                height: 7px;
+            }
         }
     }
+}
+.holder-left {
+    position: absolute;
+    width: 44%;
+    top: 85px;
+    left:87px;
+    z-index:2;
+    color: #fff;
+    font: bold 16px/19px $fontLato;
+    @include media('<tablet') {
+        font-size:12px;
+        line-height:14px;
+        top: 55px;
+        left: 10px;
+        width:90%;
+    }
+    @include media('<phone') {
+        top:83px;
+        width:100%;
+        padding:0 40px 0 0;
+    }
+    h1 {
+        color: #fff;
+        font: 82px/84px $fontMochaMattari;
+        margin-bottom: 7px;
+        letter-spacing:0.7px;
+        @include media('<desktop') {
+            font-size:58px;
+            line-height:60px;
+        }
+        @include media('<tablet') {
+            font-size:40px;
+            line-height:42px;
+            margin:0 0 16px;
+        }
+    }
+}
 }
 
 .banner-decoration {

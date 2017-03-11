@@ -37,6 +37,11 @@
 				letter-spacing: 0;
 			}
 		}
+		.number {
+			@include media('<tablet') {
+				top:14%;
+			}
+		}
 	}
 }
 
@@ -48,11 +53,6 @@
 	transform:translate(-50%,-50%);
 	color:#eee;
 	z-index:-1;
-	@include media('<tablet') {
-		font-size: 64px;
-		line-height: 66px;
-		top:14%;
-	}
 }
 
 .sr {

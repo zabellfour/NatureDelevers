@@ -23,42 +23,56 @@
             height: 100%;
             background-size: cover;
             background-position: 50% 50%;
-
         }
         .col1 {
-        	position: relative;
+            position: relative;
             width: 56%;
             float: left;
             padding: 21px 15px;
-           #footer{
-           	position:absolute;
-         
-           	left:0;
-			right: 0;
-           	bottom:0;
-           	
-           			
-           }
+            #footer {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
         }
         .col2 {
             width: 44%;
-            float: left;
-
+            position: relative;
+            overflow: hidden;
             float: left;
             padding: 21px 15px;
-            .h2{
-            	color: $black;
+            .h2 {
+                color: $black;
+                text-decoration: none;
             }
-
+            .bg-holder {
+            	@include animate(top left bottom right);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                    background-size: cover;
+                background-position: 50% 50%;
+            }
+            &:hover .bg-holder {
+                top: -40px;
+                left: -40px;
+                right: -40px;
+                bottom: -40px;
+            
+            }
         }
-        .h2{
-        	font-size: 35px;
-        	color: $white;
-        	text-transform: uppercase;
-        	max-width: 220px;
-        	font-family: $fontMochaMattari;
-        	line-height: 1.1;
-        	font-weight: 400;
+        .h2 {
+            font-size: 35px;
+            color: $white;
+            text-transform: uppercase;
+            max-width: 220px;
+            font-family: $fontMochaMattari;
+            line-height: 1.1;
+            font-weight: 400;
         }
     }
     .home-container {

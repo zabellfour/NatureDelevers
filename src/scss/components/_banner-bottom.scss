@@ -2,13 +2,16 @@
 
 .baner-bottom {
 	@include v-align;
-	height:415px;
+	height:442px;
 	background:url("../images/footer-bg.jpg") 50% 100% / cover no-repeat;
 	padding:0 15px;
 	position:relative;
 	@include media('<tablet') {
 		height:224px;
 		padding:49px 10px 0;
+	}
+	@include media('<phone') {
+		padding:0;
 	}
 }
 
@@ -26,6 +29,9 @@
 		line-height:23px;
 		max-width:188px;
 	}
+	@include media('<phone') {
+		margin: 0 0 36px;
+	}
 	&:hover {
 		box-shadow:0px 0px 13px 6px rgba(0,0,0,0.35);
 	}
@@ -37,6 +43,9 @@
 		top: 51%;
 		transform: translate(0%, -50%);
 		letter-spacing: 1px;
+		@include media('<tablet') {
+			padding:0;
+		}
 	}
 	img {
 		width:100%;
