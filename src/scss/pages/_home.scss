@@ -1,0 +1,68 @@
+.home-page {
+    height: 100%;
+    .row-top {
+        height: 65%;
+        position: relative;
+        .logo {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            width: 318px;
+            z-index: 10;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .row-bottom {
+        height: 35%;
+        @extend %clearfix;
+        .col1,
+        .col2 {
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+        .col1 {
+        	position: relative;
+            width: 56%;
+            float: left;
+            padding: 21px 15px;
+           #footer{
+           	position:absolute;
+         
+           	left:0;
+			right: 0;
+           	bottom:0;
+           	
+           			
+           }
+        }
+        .col2 {
+            width: 44%;
+            float: left;
+
+            float: left;
+            padding: 21px 15px;
+            .h2{
+            	color: $black;
+            }
+
+        }
+        .h2{
+        	font-size: 35px;
+        	color: $white;
+        	text-transform: uppercase;
+        	max-width: 220px;
+        	font-family: $fontMochaMattari;
+        	line-height: 1.1;
+        	font-weight: 400;
+        }
+    }
+    .home-container {
+        border: 8px solid $white;
+        height: 100vh;
+    }
+}

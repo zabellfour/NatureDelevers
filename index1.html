@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nature D'Eleveurs - Accueil</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" href="images/favicon/NE-favicons_48x48.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="images/favicon/NE-favicons_16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="images/favicon/NE-favicons_32x32.png" type="image/png">
+    <link rel="icon" sizes="48x48" href="images/favicon/NE-favicons_48x48.png" type="image/png">
+    <link media="all" rel="stylesheet" href="css/vendor.min.css">
+    <link media="all" rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body id="home" class="home-page">
+    <div class="wrapper">
+        <div class="home-container">
+            <header id="header">
+                <span class="menu-opener">Menu</span>
+            </header>
+            <section class="row-top">
+                <img class="logo" src="/images/logoNe.png" alt="NATURE  D'Eleveurs EN TERRES DE FRANCE">
+                <div id="videoContainer">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </section>
+            <section class="row-bottom">
+                <div class="col1" style="background-image: url('images/home/landscape.jpg');">
+                    <h2 class="h2">la démarche
+nature d’éleveurs</h2>
+                    <footer id="footer">
+                        <a class="logo-mobile" href="#" target="_blank"><img src="images/logo-mobile.png" alt="LDC" /></a>
+                        <ul class="nav-footer">
+                            <li><a href="#">GROUPE LDC</a></li>
+                            <li><a href="#">VENEZ VIVRE L’EXPÉRIENCE</a></li>
+                            <li><a href="#">CONTACT<span>EZ-NOUS</span></a></li>
+                        </ul>
+                    </footer>
+                </div>
+                <div class="col2" style="background-image: url('images/home/eggs.jpg');">
+               <h2 class="h2">  c’est ici que
+tout commence</h2>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <!-- 	<script src='js/three.min.js'></script>
+	<script src='js/threex.videotexture.js'></script>
+	<script src="js/loaders/DDSLoader.js"></script>
+	<script src="js/loaders/MTLLoader.js"></script>
+	<script src="js/loaders/OBJLoader.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script type="text/javascript">
+    // ---- Redirection sur clique sur video
+    $("canvas").click(function() {
+        document.location.href = "journee.php";
+    });
+
+    // ---- Zone cible de la video
+    var videoContainer = $("#videoContainer");
+    // ---- Vidéo à jouer dans les différents formats
+    var videoMp4 = 'videos/NatureDEleveurs_accueil_480.mp4';
+    var videoOgg = 'videos/NatureDEleveurs_accueil_480.ogv';
+    </script>
+    <!-- 
+	<script src="js/playerFE.js"></script> -->
+</body>
+
+</html>
