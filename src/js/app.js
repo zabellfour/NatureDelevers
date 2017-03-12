@@ -16,14 +16,16 @@ jQuery(document).ready(function($) {
     $(".economes-popup").fancybox({
         maxWidth    : 500,
         maxHeight   : 400,
-        fitToView   : false,
-        width       : '500px',
-        height      : '400px',
-        autoSize    : false,
+        fitToView   : true,
+        autoSize    : true,
         closeClick  : false,
         openEffect  : 'none',
         closeEffect : 'none'
     });
-  // var s = skrollr.init({forceHeight: false});
+    $(function () {
+      if ($(window).width() > 1024) {
+        skrollr.init({forceHeight: false});
+        $('.scroll-block').jScrollPane();
+    }
 });
-
+});

@@ -3,22 +3,3 @@
 		background: #fff url('../images/bg-chefdexploitations.png') no-repeat 0 111px;
 	}
 }
-
-.modal-header {
-	border: none;
-	padding: 0;
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	z-index: 2;
-	@include media('<tablet') {
-		right:auto;
-		left: 4px;
-		top: 2px
-	}
-	i {
-		@include media('<tablet') {
-			font-size:21px;
-		}
-	}
-}

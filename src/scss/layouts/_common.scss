@@ -32,6 +32,14 @@
 		opacity: 0.1;
 		position: absolute;
 		z-index: 0;
+		@include media('<widescreen') {
+			left:0;
+			 transform: translate(0,-50%);
+		}
+		@include media('<desktop') {
+			font-size:70px;
+			line-height:72px;
+		}
 		@include media('<tablet') {
 			font-size: 64px;
 			line-height: 66px;
@@ -50,5 +58,28 @@
 		span {
 			color: #000;
 		}
+	}
+}
+
+.under-mask {
+	background-color: #eee;
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 16px;
+	width: 100%;
+	z-index: 1;
+	transition: top 0.5s;
+	@include media('<desktop') {
+		top:10px !important;
+		left:10px !important;
+	}
+}
+
+.decor1,
+.decor2 {
+	position:absolute;
+	@include media('<tablet') {
+		display:none;
 	}
 }
