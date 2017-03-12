@@ -23,7 +23,7 @@
 @import 'components/share';
 @import 'components/custom-scroll';
 
-/* Layouts */
+/* Layouts */ 
 @import 'layouts/common';
 @import 'layouts/header';
 @import 'layouts/footer';
@@ -31,3 +31,12 @@
 
 /* Pages */
 @import 'pages/home';
+@import 'pages/journee';
+
+.modal {
+     display:block !important;
+     opacity:1 !important;
+    width:100% !important;
+    overflow:hidden !important;
+    display: none !important;
+}

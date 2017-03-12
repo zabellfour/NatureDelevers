@@ -6,12 +6,10 @@ jQuery(function() {
         $(this).parent().find(".dropdown").toggleClass("opened");
     });
     $("body").click(function(e) {
-
         if ($(e.target).closest(".holder2").length == 0)
             $(".dropdown").removeClass("opened");
         if ($(e.target).closest(".share-opened").length == 0)
             $(".share-holder").removeClass("share-opened");
-
     });
     $(".share-holder").click(function(event) {
         event.preventDefault();

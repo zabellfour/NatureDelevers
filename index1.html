@@ -11,9 +11,8 @@
     <link rel="icon" sizes="48x48" href="images/favicon/NE-favicons_48x48.png" type="image/png">
     <link media="all" rel="stylesheet" href="css/vendor.min.css">
     <link media="all" rel="stylesheet" href="css/style.min.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
 
+</head>
 <body id="home" class="home-page">
     <div class="wrapper">
         <div class="home-container">
@@ -29,14 +28,14 @@
                         <a href="#"><i class="icon-baseball"></i></a>
                         <a href="#"><i class="icon-microphone"></i></a>
                         <a href="#"><i class="icon-envelope"></i></a>
-                        <span href="#" class="share-holder">
+                        <div  class="share-holder">
                         	<i class="icon-share"></i>
                         	<ul class="share-list">
                         		<li><a href="https://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.MONSITEINTERNET"><i class="icon-twitter"></i></a></li>
                         		<li><a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.MONSITEINTERNET.fr"><i class="icon-facebook"></i></a></li>
                         		<li><a href="#"><i class="icon-envelope"></i></a></li>
                         	</ul>
-                        </span>
+                        </div>
                         <a href="#"><i class="icon-copy"></i></a>
                         <div class="flags">
                             <a href="#"><img src="images/menu/flagenglish.svg" alt="flag english" width="26" height="16"></a>
@@ -122,13 +121,16 @@
                 </ul>
             </div>
             <section class="row-top">
-                <img class="logo" src="/images/logoNe.png" alt="NATURE  D'Eleveurs EN TERRES DE FRANCE">
+                <img class="logo" id="logo" src="/images/logoNe.png" alt="NATURE  D'Eleveurs EN TERRES DE FRANCE">
                 <div id="videoContainer">
                     <canvas id="canvas"></canvas>
                 </div>
                 <div class="drag-box">
                     <span class="icon-holder"><i class="icon-drag"></i></span>
                     <span class="icon-holder rotate"><i class="icon-drag"></i></span>
+                </div>
+                <div class="fake-play-btn"> 
+
                 </div>
             </section>
             <section class="row-bottom">
@@ -139,7 +141,7 @@
                     <div class="bg-holder" style="background-image: url('images/home/eggs.jpg');">
                     </div>
                     <h2 class="h2">  c’est ici que tout commence</h2>
-                    <span href="#" class="share-holder">
+                    <div class="share-holder">
                         <i class="icon-share"></i>
                         <ul class="share-list">
                             <li>
@@ -149,36 +151,32 @@
                             <li><a href="#"><i class="icon-facebook"></i></a></li>
                             <li><a href="#"><i class="icon-envelope"></i></a></li>
                         </ul>
-                    </span>
+                    </div>
                 </div>
             </section>
             <ul class=" modal-links ">
                 <li>
                     <a href="#">
                         <img src="images/menu/zone3-1.jpg" alt="image description" />
-                        <span class="text">NOS ÉLEVAGES <br>	
-FRANÇAIS</span>
+                        <span class="text">NOS ÉLEVAGES <br>FRANÇAIS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/menu/zone3-2.jpg" alt="image description" />
-                        <span class="text">NOUS LES <br>	
-ÉLEVEURS</span>
+                        <span class="text">NOUS LES <br>ÉLEVEURS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/menu/zone3-3.jpg" alt="image description" />
-                        <span class="text">NOS <br>	
-EXPLOITATIONS </span>
+                        <span class="text">NOS <br>EXPLOITATIONS </span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/menu/zone3-4.jpg" alt="image description" />
-                        <span class="text">LE CONFORT <br>	
-POUR NOS VOLAILLES</span>
+                        <span class="text">LE CONFORT <br>POUR NOS VOLAILLES</span>
                     </a>
                 </li>
                 <li>
@@ -190,8 +188,7 @@ POUR NOS VOLAILLES</span>
                 <li>
                     <a href="#">
                         <img src="images/menu/zone3-6.jpg" alt="image description" />
-                        <span class="text">LA SANTÉ <br>	
-DE NOS VOLAILLES</span>
+                        <span class="text">LA SANTÉ <br>DE NOS VOLAILLES</span>
                     </a>
                 </li>
                 <li>
@@ -223,20 +220,33 @@ DE NOS VOLAILLES</span>
     <script src="js/DDSLoader.js"></script>
     <script src="js/MTLLoader.js"></script>
     <script src="js/OBJLoader.js"></script>
+
     <script type="text/javascript">
     // ---- Redirection sur clique sur video
+    // $("canvas").click(function() {
+    //     document.location.href = "journee.php";
+    // });
+        var playVideo = true;
     $("canvas").click(function() {
-        document.location.href = "journee.php";
-    });
+        if (playVideo) {
+            onVideoPauseButtonClick();
+          
+            playVideo = false;
+        } else {
+            onVideoPlayButtonClick();
 
+            playVideo = true;
+        }
+    });
+  
     // ---- Zone cible de la video
     var videoContainer = $("#videoContainer");
     // ---- Vidéo à jouer dans les différents formats
     var videoMp4 = 'videos/NatureDEleveurs_accueil_480.mp4';
     var videoOgg = 'videos/NatureDEleveurs_accueil_480.ogv';
-    </script>
-    <!-- 
-	<script src="js/playerFE.js"></script> -->
+
+   </script>
+  
 </body>
 
 </html>
