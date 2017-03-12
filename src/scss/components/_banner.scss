@@ -1,9 +1,12 @@
 .banner {
-    height: 670px;
+    height: 100vh;
     border: 10px solid $white;
     background-size: cover;
     background-position: 50% 0;
     position: relative;
+    @include media('<desktop') {
+        height:550px;
+    }
     @include media('<tablet') {
         height: 330px;
         border: none;
@@ -136,7 +139,7 @@
 }
 .holder-left {
     position: absolute;
-    width: 44%;
+    width: 90%;
     top: 85px;
     left:87px;
     z-index:2;
@@ -168,6 +171,9 @@
             line-height:42px;
             margin:0 0 16px;
         }
+    }
+    p {
+        margin:0;
     }
 }
 }

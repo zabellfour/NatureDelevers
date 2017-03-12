@@ -1,6 +1,15 @@
 .step-holder {
 	.text-holder {
+		font-weight:bold;
 		color:#000;
+		line-height: 1.35em;
+		@include media('<tablet') {
+			font-size:13px;
+			line-height:15px;
+		}
+		strong {
+			font-weight:900;
+		}
 	}
 	.img-holder {
 		figure {
@@ -39,33 +48,11 @@
 	h3 {
 		margin: 0;
 	}
-	p {
-		font-family: $fontLato;
-		font-size: 14px;
-		line-height: 1.35em;
-		margin: 0;
-		@include media('<tablet') {
-			font-size:13px;
-			line-height:15px;
-		}
-	}
 	img {
 		width:100%;
 	}
-}
-
-.under-mask {
-	background-color: #eee;
-	display: block;
-	height: 100%;
-	position: absolute;
-	left: 16px;
-	width: 100%;
-	z-index: 1;
-	transition: top 0.5s;
-	@include media('<tablet') {
-		top:10px !important;
-		left:10px !important;
+	p {
+		margin:0;
 	}
 }
 
@@ -113,13 +100,6 @@
 	.number {
 		left: -31px;
 		top: 14px;
-		@include media('<desktop') {
-			left:70px;
-		}
-		@include media('<tablet') {
-			top:12px;
-			left: -14px;
-		}
 	}
 	.title {
 		h2 {
@@ -188,17 +168,15 @@
 			margin: 0;
 		}
 	}
-	.number {
-		left: auto;
-		right: -181px;
-		top: 20px;
-		@include media('<desktop') {
-			right:-80px;
-		}
-		@include media('<tablet') {
-			right: -42px;
-			top:10px;
-			left:auto;
+	.title {
+		.number {
+			left: auto;
+			right: -181px;
+			top: 20px;
+			@include media('<widescreen') {
+				right:0;
+				left:auto;
+			}
 		}
 	}
 	.btn-plus {
@@ -211,8 +189,8 @@
 	}
 	.title {
 		h2 {
-			font-size: 50px;
-			line-height:50px;
+			font-size: 45px;
+			line-height:47px;
 			margin-bottom: 51px;
 			@include media('<desktop') {
 				font-size:22px;
@@ -236,22 +214,14 @@
 		padding:65px 0 38px;
 	}
 	.decor1 {
-		position: absolute;
 		right: -96px;
 		top: -172px;
 		z-index:4;
-		@include media('<tablet') {
-			display:none;
-		}
 	}
 	.decor2 {
-		position: absolute;
 		left: -47px;
 		top: -255px;
 		z-index:4;
-		@include media('<tablet') {
-			display:none;
-		}
 	}
 	.text-holder {
 		color:#fff;
@@ -300,10 +270,7 @@
 			opacity: 0.4;
 			top: 16px;
 			@include media('<desktop') {
-				left:68px;
-			}
-			@include media('<tablet') {
-				left:auto;
+				left:-15px;
 			}
 		}
 		h2 {
@@ -378,6 +345,9 @@
 		position: relative;
 		z-index: 1;
 		padding:114px 0 130px;
+		@include media('<desktop') {
+			padding:75px 0 58px;
+		}
 		.img-holder {
 			width: 55%;
 			margin: 83px -15px 0px 0;
@@ -394,13 +364,6 @@
 				margin:0 0 2px;
 			}
 		}
-		.number {
-			left: -28px;
-			top: 22px;
-			@include media('<tablet') {
-				left:50%;
-			}
-		}
 		.btn-plus {
 			left: auto;
 			right: 58px;
@@ -414,10 +377,6 @@
 		h2 {
 			line-height:38px;
 			@include media('<desktop') {
-				font-size:22px;
-				line-height:24px;
-			}
-			@include media('<phone') {
 				font-size:29px;
 				line-height:31px;
 			}
@@ -440,13 +399,11 @@
 	background-color: #f7f6f2;
 	position:relative;
 	.decor1 {
-		position:absolute;
 		right: -95px;
 		top:50%;
 		transform:translateY(-50%);
 	}
 	.decor2 {
-		position:absolute;
 		left: -55px;
 		top: -190px;
 	}
@@ -455,6 +412,12 @@
 		background-position: 50% 50%;
 		height:280px;
 		margin:0 0 109px;
+		@include media('<desktop') {
+			margin:0 0 60px;
+		}
+		@include media('<tablet') {
+			height:200px;
+		}
 	}
 	.text-holder {
 		text-align:center;
@@ -468,29 +431,54 @@
 	}
 	.title {
 		margin:0 0 54px;
+		@include media('<desktop') {
+			margin:0 0 40px;
+		}
 		h2 {
 			font-size:43px;
 			@include media('<desktop') {
-				font-size:22px;
-				line-height:24px;
-			}
-			@include media('<phone') {
 				font-size:29px;
 				line-height:31px;
 			}
+		}
+		.number {
+			@include media('<desktop') {
+				transform:translate(-50%,-50%);
+				left:50%;
+			}
+		}
+	}
+	.text {
+		@include media('<desktop') {
+			margin:0 0 40px;
 		}
 	}
 	.listing-block {
 		display:flex;
 		justify-content: space-between;
+		overflow:hidden;
+		@include media('<tablet') {
+			display:block;
+			text-align:center;
+		}
 		.box {
 			display:flex;
 			flex-direction: column;
 			width:30%;
+			@include media('<tablet') {
+				display:block;
+				width:50%;
+				margin:0 auto 40px;
+			}
 		}
 		h3 {
 			font: 40px/38px "mochaMattari-regular";
 			margin:0 0 22px;
+			@include media('<desktop') {
+				font-size:27px;
+				line-height:29px;
+				margin:0 0 15px;
+			}
 		}
 	}
 	.text-box {
@@ -520,6 +508,9 @@
 	.hover-img {
 		display:none;
 	}
+	strong {
+		font-weight:900;
+	}
 }
 
 .step3 {
@@ -539,9 +530,22 @@
 			justify-content: space-between;
 			margin:0 0 40px;
 			position:relative;
+			@include media('<phone') {
+				display:block;
+				margin:0 0 20px;
+				text-align:center;
+			}
 		}
 		.block {
 			width:41%;
+			@include media('<tablet') {
+				width:50%;
+				padding:0 10px;
+			}
+			@include media('<phone') {
+				width:100%;
+				margin:0 0 20px;
+			}
 		}
 		.wrap-btn {
 			text-align:center;
@@ -550,10 +554,6 @@
 			h2 {
 				font-size:40px;
 				@include media('<desktop') {
-					font-size:22px;
-					line-height:24px;
-				}
-				@include media('<phone') {
 					font-size:29px;
 					line-height:31px;
 				}
@@ -564,9 +564,237 @@
 			color:#fff;
 			text-transform:uppercase;
 			margin:0 0 15px;
+			@include media('<tablet') {
+				font-size:30px;
+				line-height:32px;
+			}
 		}
 		p {
 			margin:0 0 30px;
+			@include media('<tablet') {
+				margin:0 0 5px;
+			}
+		}
+	}
+	strong {
+		font-weight:900;
+	}
+}
+
+//*********************page etape-confortdenosvolailles ****************//
+
+.step1 {
+	#confort &{
+		.btn-plus {
+			left:337px;
+		}
+	}
+}
+
+.step2 {
+	#confort &{
+		padding:65px 0 118px;
+		@include media('<tablet') {
+			padding:30px 0;
+		}
+		.decor1 {
+			top: -131px;
+			left: -42px;
+		}
+		.decor2 {
+			top: -41px;
+			right: 32%;
+			transform:translateX(-50%);
+		}
+		.btn-plus {
+			top: auto;
+			bottom: 38px;
+			left: 251px;
+		}
+	}
+}
+
+.step3 {
+	#confort &{
+		padding:111px 0 81px;
+		.wrap-box {
+			@include media('<tablet') {
+				display:flex;
+				flex-direction: column-reverse;
+			}
+		}
+		.img-holder {
+			float:left;
+			width:33%;
+			margin: 37px 0 0 -23px;
+			@include media('<desktop') {
+				margin:10px 0 0;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.text-holder {
+			float:right;
+			width:61.5%;
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.title {
+			.number {
+				right: -181px;
+			}
+		}
+		h2 {
+			font-size:39px;
+			line-height:49px;
+			@include media('<desktop') {
+				font-size:22px;
+				line-height:24px;
+			}
+		}
+	}
+}
+
+.step4 {
+	#confort &{
+		padding:71px 0 104px;
+		@include media('<tablet') {
+			padding:32px 0 40px;
+		}
+		.title {
+			text-align:center;
+			margin:0 0 142px;
+			@include media('<desktop') {
+				margin:0 0 40px;
+			}
+			.number {
+				left:50%;
+				right:auto;
+				top:50%;
+				transform: translate(-50%, -50%);
+			}
+			h2 {
+				font-size:50px;
+				line-height:52px;
+				@include media('<desktop') {
+					font-size:22px;
+					line-height:24px;
+				}
+			}
+		}
+		.img-holder {
+			float:right;
+			margin:0;
+			width:49%;
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.text-holder {
+			float:left;
+			width:49%;
+			@include media('<tablet') {
+				width:100%;
+				margin: 0 0 28px;
+			}
+			ul {
+				@extend %listreset;
+				margin: 3px 0 0 38px;
+			}
+		}
+	}
+}
+
+//*********************page etape-sante ****************//
+
+.step2 {
+	#sante &{
+		padding:65px 0 129px;
+		@include media('<desktop') {
+			padding:30px 0;
+		}
+		@include media('<tablet') {
+			padding:0 0 30px;
+		}
+		.decor1 {
+			top: -131px;
+			left: -42px;
+		}
+		.decor2 {
+			top: -41px;
+			right: 32%;
+			transform:translateX(-50%);
+		}
+		.img-holder {
+			width:49%;
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.text-holder {
+			width: 43%;
+			margin: 33px 0 0;
+			@include media('<tablet') {
+				width:100%;
+				margin:0 0 20px;
+			}
+		}
+		.title {
+			h2 {
+				font-size: 50px;
+				line-height: 47px;
+				@include media('<desktop') {
+					font-size:22px;
+					line-height:24px;
+				}
+			}
+		}
+		.btn-plus {
+			left: auto;
+			right: 102px;
+			top: 99px;
+		}
+	}
+}
+
+.step3 {
+	#sante &{
+		padding:111px 0 120px;
+		@include media('<tablet') {
+			padding:50px 0 30px;
+		}
+		.decor {
+			position:absolute;
+			top: -50%;
+			right: -110px;
+			@include media('<tablet') {
+				display:none;
+			}
+		}
+		.text-holder {
+			width:55%;
+			@include media('<desktop') {
+				width:48%;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.img-holder {
+			width:42%;
+			@include media('<desktop') {
+				width:48%;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.btn-plus {
+			left: auto;
+			right: 175px;
+			top: 20px;
 		}
 	}
 }

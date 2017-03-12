@@ -5,9 +5,10 @@
 
 /* Base modules*/
 @import 'base/main';
+@import 'base/animate';
 
 /* Components */
-@import 'components/animate';
+@import 'components/animate-svg';
 @import 'components/diagram';
 @import 'components/tabs-holder';
 @import 'components/banner';
@@ -20,26 +21,13 @@
 @import 'components/modal-pages';
 @import 'components/video-page';
 @import 'components/share';
+@import 'components/custom-scroll';
 
 /* Layouts */
 @import 'layouts/common';
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/navigation';
-
-
-
-@import 'partials/animate';
-@import 'partials/commun';
-@import 'partials/scrollpanel';
-
-	
-.modal {
-    display:block !important;
-    opacity:1 !important;
-    width:100% !important;
-    overflow:hidden;
-}
 
 /* Pages */
 @import 'pages/home';
