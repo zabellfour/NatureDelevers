@@ -202,6 +202,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-note:before {
+  content: "\e902"; }
+
 .icon-drag:before {
   content: "\e900"; }
 
@@ -4945,17 +4948,28 @@ g text {
     font-size: 40px;
     width: 36px;
     height: 36px;
-    -o-transform: rotate(45deg);
-    cursor: pointer; }
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    cursor: pointer;
+    padding: 0; }
     #videoContainer .storyBtn:before {
-      content: '+';
+      content: ' +';
       position: relative;
       display: block;
       -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
               transform: rotate(45deg);
-      right: -1px;
-      top: -10px; }
+      font-size: 36px;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 1px;
+      right: 0;
+      bottom: 0; }
     #videoContainer .storyBtn:after {
       opacity: 0;
       border: 2px solid #ffffff;
@@ -8044,12 +8058,6 @@ g text {
 * html .jspCorner {
   margin: 0 -3px 0 0; }
 
-.modal {
-  display: block !important;
-  opacity: 1 !important;
-  width: 100% !important;
-  overflow: hidden; }
-
 /* Pages */
 .home-page {
   height: 100%; }
@@ -8304,5 +8312,52 @@ g text {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+
+.full-screen-video {
+  height: 100vh;
+  position: relative; }
+  .full-screen-video:after {
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    content: '';
+    position: absolute;
+    left: -65%;
+    bottom: -65%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%); }
+  .full-screen-video .buttons-holder {
+    position: absolute;
+    right: 100px;
+    bottom: 100px; }
+    .full-screen-video .buttons-holder .share-holder {
+      display: inline-block;
+      color: #fff;
+      vertical-align: middle; }
+    .full-screen-video .buttons-holder button {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      font-size: 25px;
+      padding: 0;
+      margin: 0 10px;
+      border: none;
+      background: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden; }
+      .full-screen-video .buttons-holder button.muted:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        background: #fff;
+        width: 140%;
+        -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+                transform-origin: 0 0;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); }
 
 /*# sourceMappingURL=style.min.css.map */

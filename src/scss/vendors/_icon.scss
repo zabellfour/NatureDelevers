@@ -26,6 +26,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-note:before {
+  content: "\e902";
+}
+
 .icon-drag:before {
   content: "\e900";
 }

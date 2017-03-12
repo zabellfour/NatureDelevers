@@ -24,6 +24,6 @@ jQuery(document).ready(function($) {
         openEffect  : 'none',
         closeEffect : 'none'
     });
-    // var s = skrollr.init({forceHeight: false});
+  // var s = skrollr.init({forceHeight: false});
 });
 

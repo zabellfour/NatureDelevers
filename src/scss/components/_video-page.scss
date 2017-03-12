@@ -18,15 +18,26 @@
 		font-size: 40px;
 		width: 36px;
 		height: 36px;
-		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
 		cursor:pointer;
+		padding: 0;
 		&:before{
-			content:'+';
+			content: ' +';
 			position: relative;
 			display: block;
 			transform: rotate(45deg);
-			right: -1px;
-			top: -10px;
+			font-size: 36px;
+			line-height: 1;
+			width: 36px;
+			height: 36px;
+			text-align: center;
+			position:absolute;
+			top:0;
+			left:1px;
+			right:0;
+			bottom:0;
+			
+					
 		}
 		&:after{
 			opacity: 0;

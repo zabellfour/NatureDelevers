@@ -21,7 +21,9 @@
 @import 'components/video-page';
 @import 'components/share';
 
-/* Layouts */
+
+
+/* Layouts */ 
 @import 'layouts/common';
 @import 'layouts/header';
 @import 'layouts/footer';
@@ -35,11 +37,12 @@
 
 	
 .modal {
-    display:block !important;
-    opacity:1 !important;
-    width:100% !important;
-    overflow:hidden;
+    // display:block !important;
+    // opacity:1 !important;
+    // width:100% !important;
+    // overflow:hidden;
 }
 
 /* Pages */
 @import 'pages/home';
+@import 'pages/journee';

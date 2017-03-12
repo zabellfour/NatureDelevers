@@ -1,0 +1,50 @@
+.full-screen-video {
+    height: 100vh;
+    position: relative;
+    &:after {
+        pointer-events: none;
+        top: 0;
+        right: 0;
+        content: '';
+        position: absolute;
+        left: -65%;
+        bottom: -65%;
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .1) 60%, rgba(0, 0, 0, 0) 100%);
+    }
+    .buttons-holder {
+        position: absolute;
+        right: 100px;
+        bottom: 100px;
+        .share-holder {
+            display: inline-block;
+            color: $white;
+            vertical-align: middle;
+        }
+        button {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            font-size: 25px;
+            padding: 0;
+            margin: 0 10px;
+            border: none;
+            background: none;
+            color: $white;
+            position: relative;
+            overflow: hidden;
+            &.muted:after {
+            	content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 2px;
+                background: $white;
+                width: 140%;
+                transform-origin:0 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.journee {}
