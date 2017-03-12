@@ -15,6 +15,7 @@
 </head>
 
 <body id="journee" class="journee">
+<div id="play"></div>
     <div id="wrapper">
         <header id="header">
             <span class="menu-opener">Menu</span>
@@ -121,6 +122,7 @@
             </ul>
         </div>
         <div class="full-screen-video">
+        <div class="fake-play-btn"> </div>
             <div id="videoContainer" class="row">
                 <canvas id="canvas"></canvas>
                 <button type="button" class="storyBtn" data-toggle="modal" data-target="#modalChapter">
@@ -139,17 +141,18 @@
                     <h2></h2>
                     <p></p>
                 </div>
-            </div>
-            <div class="buttons-holder">
-                <div class="share-holder">
-                    <i class="icon-share"></i>
-                    <ul class="share-list">
-                        <li><a href="https://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.MONSITEINTERNET"><i class="icon-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.MONSITEINTERNET.fr"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#"><i class="icon-envelope"></i></a></li>
-                    </ul>
+                <a href="/" class="logo-icon"><i class="icon-chicken"></i></a>
+                <div class="buttons-holder">
+                    <div class="share-holder">
+                        <i class="icon-share"></i>
+                        <ul class="share-list">
+                            <li><a href="https://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.MONSITEINTERNET"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.MONSITEINTERNET.fr"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                    <button id="sound" class="music"> <i class="icon-note"></i></button>
                 </div>
-                <button class="muted"> <i class="icon-note"></i></button>
             </div>
         </div>
         <!-- Modal  -->
@@ -215,7 +218,7 @@
     <script src="js/DDSLoader.js"></script>
     <script src="js/MTLLoader.js"></script>
     <script src="js/OBJLoader.js"></script>
-    <!--  <script src="js/journee.js"></script> -->
+    <script src="js/journee.js"></script>
     <!-- <script src="/js/library/jquery.matchHeight.js"></script> -->
     <script type="text/javascript">
     // ---- tableau de paramètre de chaque chapitre
@@ -296,8 +299,8 @@
             }, 500, function() {
                 myAudio.pause();
             });
-            $("#sound").removeClass("fa-music");
-            $("#sound").addClass("fa-volume-off ");
+            $("#sound").removeClass("music");
+            $("#sound").addClass("volume-off ");
             sound = false;
         } else {
             if (playVideo) {
@@ -306,8 +309,8 @@
                     volume: 1
                 }, 500);
             }
-            $("#sound").removeClass("fa-volume-off ");
-            $("#sound").addClass("fa-music");
+            $("#sound").removeClass("volume-off");
+            $("#sound").addClass("music");
             sound = true;
         }
     });
@@ -332,6 +335,18 @@
 
     // ---- Evt play/pause video
     $("canvas").click(function() {
+        if (playVideo) {
+            onVideoPauseButtonClick();
+            playSound(false);
+            playVideo = false;
+        } else {
+            onVideoPlayButtonClick();
+            playSound(true);
+            playVideo = true;
+        }
+    });
+    
+     $("#custom-play").click(function() {
         if (playVideo) {
             onVideoPauseButtonClick();
             playSound(false);

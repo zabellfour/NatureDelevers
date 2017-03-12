@@ -208,6 +208,7 @@ jQuery(document).ready(function($) {
 function onVideoPlayButtonClick(){
 	video.play();
 }
+
 function onVideoPauseButtonClick(){
 	video.pause();
 }

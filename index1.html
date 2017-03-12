@@ -121,13 +121,16 @@
                 </ul>
             </div>
             <section class="row-top">
-                <img class="logo" src="/images/logoNe.png" alt="NATURE  D'Eleveurs EN TERRES DE FRANCE">
+                <img class="logo" id="logo" src="/images/logoNe.png" alt="NATURE  D'Eleveurs EN TERRES DE FRANCE">
                 <div id="videoContainer">
                     <canvas id="canvas"></canvas>
                 </div>
                 <div class="drag-box">
                     <span class="icon-holder"><i class="icon-drag"></i></span>
                     <span class="icon-holder rotate"><i class="icon-drag"></i></span>
+                </div>
+                <div class="fake-play-btn"> 
+
                 </div>
             </section>
             <section class="row-bottom">
@@ -217,20 +220,33 @@
     <script src="js/DDSLoader.js"></script>
     <script src="js/MTLLoader.js"></script>
     <script src="js/OBJLoader.js"></script>
+
     <script type="text/javascript">
     // ---- Redirection sur clique sur video
+    // $("canvas").click(function() {
+    //     document.location.href = "journee.php";
+    // });
+        var playVideo = true;
     $("canvas").click(function() {
-        document.location.href = "journee.php";
-    });
+        if (playVideo) {
+            onVideoPauseButtonClick();
+          
+            playVideo = false;
+        } else {
+            onVideoPlayButtonClick();
 
+            playVideo = true;
+        }
+    });
+  
     // ---- Zone cible de la video
     var videoContainer = $("#videoContainer");
     // ---- Vidéo à jouer dans les différents formats
     var videoMp4 = 'videos/NatureDEleveurs_accueil_480.mp4';
     var videoOgg = 'videos/NatureDEleveurs_accueil_480.ogv';
-    </script>
-    <!-- 
-	<script src="js/playerFE.js"></script> -->
+
+   </script>
+  
 </body>
 
 </html>

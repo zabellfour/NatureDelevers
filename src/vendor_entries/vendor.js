@@ -20,6 +20,5 @@ module.exports = [
 	'./src/js/modules/mwheelIntent.js',
 	'./src/js/modules/jquery.jscrollpane.js',
 	'./src/js/modules/skrollr.js',
-	'./src/js/modules/journee.js',
-	'./src/js/modules/canvas.js'
+	'./src/js/modules/journee.js'
 ];
