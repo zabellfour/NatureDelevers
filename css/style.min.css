@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Vendors*/
 @font-face {
   font-family: 'mochamattariw';
@@ -243,7 +244,7 @@
 
 /* Base modules*/
 .tabset-block .tabset, #confort .step4 .text-holder ul, .share-holder .share-list, .holder1 .share-list, .nav-footer, .nav-holder .holder2,
-.nav-holder .dropdown, .modal-links {
+.nav-holder .dropdown, .modal-links, .blog-list .category-list, .blog-list .pagination {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -8676,6 +8677,360 @@ g text {
       .full-screen-video .logo-icon {
         top: 10px;
         right: 10px; } }
+
+.login-page .login-holder {
+  background-image: url("../images/login-bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: cursive;
+  height: 100vh;
+  padding-bottom: 9.7%; }
+  @media (max-width: 1023px) {
+    .login-page .login-holder {
+      padding-bottom: 6%; } }
+  @media (max-width: 767px) {
+    .login-page .login-holder {
+      padding-bottom: 4%; } }
+  .login-page .login-holder form {
+    width: 300px;
+    margin: 0 auto; }
+    .login-page .login-holder form * {
+      width: 100%;
+      height: 40px;
+      border-radius: 3px;
+      border: none;
+      margin-top: 20px;
+      color: #868686;
+      outline: none;
+      font-family: "lato"; }
+      @media (max-width: 767px) {
+        .login-page .login-holder form * {
+          margin-top: 8px;
+          height: 30px; } }
+    .login-page .login-holder form button {
+      transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      background-color: #f05238;
+      color: #fff;
+      font-size: 16px;
+      font-family: "lato";
+      font-weight: 700;
+      border: 2px solid transparent;
+      margin-top: 30px; }
+      @media (max-width: 767px) {
+        .login-page .login-holder form button {
+          margin-top: 8px;
+          height: 30px; } }
+      .login-page .login-holder form button:hover {
+        border-color: #f05238;
+        color: #f05238;
+        background-color: transparent; }
+    .login-page .login-holder form input {
+      box-shadow: inset 0px 0px 16px -7px rgba(0, 0, 0, 0.715);
+      height: 40px;
+      line-height: 40px; }
+      @media (max-width: 767px) {
+        .login-page .login-holder form input {
+          margin-top: 8px;
+          height: 30px;
+          line-height: 30px; } }
+
+.blog-list {
+  padding-top: 45px;
+  max-width: 1010px;
+  margin: 0 auto; }
+  @media (max-width: 767px) {
+    .blog-list {
+      padding-top: 20px; } }
+  .blog-list .category-list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 76px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    @media (max-width: 767px) {
+      .blog-list .category-list {
+        margin-bottom: 25px; } }
+    .blog-list .category-list a {
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      color: #a9a9a9;
+      background-color: #e6e6e6;
+      padding: 3px 7px;
+      text-transform: uppercase;
+      font-family: "museo_sans";
+      font-weight: 900;
+      display: inline-block;
+      font-size: 14px; }
+      @media (max-width: 1023px) {
+        .blog-list .category-list a {
+          font-size: 12px; } }
+      @media (max-width: 479px) {
+        .blog-list .category-list a {
+          font-size: 14px;
+          width: 100%;
+          text-align: center; } }
+      .blog-list .category-list a:hover {
+        background-color: #f05238;
+        color: #fff; }
+    .blog-list .category-list li {
+      margin: 0 10px;
+      margin-bottom: 10px; }
+      @media (max-width: 479px) {
+        .blog-list .category-list li {
+          width: 100%; } }
+      .blog-list .category-list li.active a {
+        background-color: #f05238;
+        color: #fff; }
+  .blog-list .post {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 116px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    @media (max-width: 1023px) {
+      .blog-list .post {
+        margin-bottom: 50px; } }
+    @media (max-width: 767px) {
+      .blog-list .post {
+        margin-bottom: 35px; } }
+    .blog-list .post .bottom-row {
+      padding: 0;
+      margin-bottom: 0; }
+    .blog-list .post a {
+      color: #f05238; }
+    .blog-list .post .img-holder {
+      width: 40.6%;
+      position: relative; }
+      @media (max-width: 639px) {
+        .blog-list .post .img-holder {
+          width: 100%;
+          margin-bottom: 20px; } }
+      .blog-list .post .img-holder a {
+        position: relative;
+        z-index: 2;
+        display: block;
+        height: 100%; }
+        .blog-list .post .img-holder a:before {
+          transition: opacity 0.3s ease-in-out;
+          content: "\e912";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          display: inline-block;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          background-color: rgba(0, 0, 0, 0.65);
+          color: #fff;
+          font-size: 30px;
+          font-family: icomoon;
+          z-index: 4;
+          opacity: 0; }
+        .blog-list .post .img-holder a:after {
+          transition: opacity 0.3s ease-in-out;
+          content: 'LIRE L’ARTICLE';
+          font-family: "museo_sans";
+          font-weight: 900;
+          position: absolute;
+          text-align: center;
+          left: 0;
+          right: 0;
+          bottom: 20%;
+          display: inline-block;
+          font-size: 22px;
+          z-index: 5;
+          color: #fff;
+          text-transform: uppercase;
+          opacity: 0; }
+        .blog-list .post .img-holder a:hover:before, .blog-list .post .img-holder a:hover:after {
+          opacity: 1 !important; }
+      .blog-list .post .img-holder .under-mask {
+        background-color: #eee;
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 16px;
+        width: 100%;
+        z-index: 1;
+        transition: top 0.5s;
+        z-index: 1; }
+      .blog-list .post .img-holder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: top; }
+    .blog-list .post .preview-text {
+      margin-bottom: 15px; }
+      @media (max-width: 767px) {
+        .blog-list .post .preview-text {
+          margin-bottom: 10px; } }
+    .blog-list .post .text-holder {
+      width: 59.4%;
+      color: #000;
+      padding-left: 30px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      font-size: 14px; }
+      @media (max-width: 1023px) {
+        .blog-list .post .text-holder {
+          font-size: 13px; } }
+      @media (max-width: 767px) {
+        .blog-list .post .text-holder {
+          font-size: 12px; } }
+      @media (max-width: 639px) {
+        .blog-list .post .text-holder {
+          width: 100%; } }
+      @media (max-width: 639px) {
+        .blog-list .post .text-holder {
+          padding-left: 0; } }
+      .blog-list .post .text-holder p {
+        margin-bottom: 0; }
+      .blog-list .post .text-holder a {
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1; }
+        .blog-list .post .text-holder a:hover {
+          opacity: .8; }
+      .blog-list .post .text-holder h3 {
+        font-family: "museo_sans";
+        font-weight: 900;
+        color: #f05238;
+        line-height: 1;
+        margin-bottom: 20px;
+        font-size: 21px; }
+        @media (max-width: 1023px) {
+          .blog-list .post .text-holder h3 {
+            font-size: 18px;
+            margin-bottom: 15px; } }
+        @media (max-width: 767px) {
+          .blog-list .post .text-holder h3 {
+            font-size: 16px;
+            margin-bottom: 10px; } }
+    .blog-list .post .bottom-row {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .blog-list .post .bottom-row time {
+        color: #f05238; }
+      .blog-list .post .bottom-row a.btn-tag {
+        transition: opacity 0.3s ease-in-out;
+        color: #fff;
+        background-color: #000;
+        padding: 3px 10px;
+        font-family: "lato";
+        font-weight: 400;
+        display: inline-block;
+        margin-left: 5px; }
+        .blog-list .post .bottom-row a.btn-tag:hover {
+          opacity: 0.7; }
+  .blog-list .pagination {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 124px;
+    padding-top: 54px; }
+    @media (max-width: 1023px) {
+      .blog-list .pagination {
+        padding-top: 30px;
+        margin-bottom: 70px; } }
+    .blog-list .pagination li {
+      padding: 0 5px; }
+      .blog-list .pagination li.active a {
+        pointer-events: none;
+        color: #fff;
+        background-color: #f05238;
+        border-color: transparent; }
+      .blog-list .pagination li a {
+        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        display: inline-block;
+        color: #000;
+        border: 1px solid #dadada;
+        font-family: "lato";
+        font-size: 14px; }
+        .blog-list .pagination li a:hover {
+          border: 1px solid #f05238;
+          color: #f05238; }
+
+.blog-page {
+  margin-bottom: 10px; }
+  .blog-page .bottom-row {
+    max-width: 97%;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .blog-page .bottom-row #footer {
+      margin: 0;
+      background: transparent;
+      height: auto; }
+      @media (max-width: 767px) {
+        .blog-page .bottom-row #footer {
+          padding-bottom: 0; } }
+      @media (max-width: 767px) {
+        .blog-page .bottom-row #footer .nav-footer {
+          padding-bottom: 0; } }
+  .blog-page .share-holder {
+    position: relative;
+    top: 0;
+    left: 0; }
 
 .modal {
   display: block !important;
