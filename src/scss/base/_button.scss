@@ -106,6 +106,7 @@
 	vertical-align:middle;
 	padding:15px 10px;
 	position:relative;
+	border:none;
 	@include media('<tablet') {
 		font-size:15px;
 		line-height:17px;
@@ -118,5 +119,13 @@
 	&:hover {
 		background:#fff;
 		color:$rouge;
+	}
+	&.btn-black {
+		color:#fff;
+		background:#000;
+		&:hover {
+			color:#fff;
+			background:$rouge;
+		}
 	}
 }

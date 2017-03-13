@@ -1,5 +1,8 @@
 .body-holder {
 	&#eleverus {
 		background: #fff url('../images/bg-chefdexploitations.png') no-repeat 0 111px;
+		@include media('<tablet') {
+			background:none;
+		}
 	}
 }
