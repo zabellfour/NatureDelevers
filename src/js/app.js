@@ -1,5 +1,6 @@
 import './modules/nav';
 import './modules/tabs';
+import './modules/openClose';
 
 jQuery(document).ready(function($) {
     smoothScroll.init({

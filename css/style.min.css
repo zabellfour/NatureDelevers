@@ -523,7 +523,8 @@ input[type='submit'] {
   display: inline-block;
   vertical-align: middle;
   padding: 15px 10px;
-  position: relative; }
+  position: relative;
+  border: none; }
   @media (max-width: 767px) {
     .btn {
       font-size: 15px;
@@ -536,6 +537,12 @@ input[type='submit'] {
   .btn:hover {
     background: #fff;
     color: #f05238; }
+  .btn.btn-black {
+    color: #fff;
+    background: #000; }
+    .btn.btn-black:hover {
+      color: #fff;
+      background: #f05238; }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -7346,9 +7353,6 @@ g text {
   @media (max-width: 1023px) {
     #sante .step2 {
       padding: 30px 0; } }
-  @media (max-width: 767px) {
-    #sante .step2 {
-      padding: 0 0 30px; } }
   #sante .step2 .decor1 {
     top: -131px;
     left: -42px; }
@@ -7414,6 +7418,182 @@ g text {
     left: auto;
     right: 175px;
     top: 20px; }
+
+#volailles .step1 .text-holder {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 54px;
+  float: none; }
+
+#volailles .step1 .two-column {
+  max-width: 620px;
+  margin: 0 auto 150px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+#volailles .step1 .block {
+  width: 45%;
+  background: #f05238;
+  padding: 17px 17px 50px;
+  color: #fff;
+  position: relative; }
+  #volailles .step1 .block:last-child {
+    margin: 60px 0 0; }
+  #volailles .step1 .block .btn {
+    transition: opacity 0.3s ease-in-out;
+    font-size: 15px;
+    line-height: 17px;
+    min-width: 215px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -20px; }
+    #volailles .step1 .block .btn:hover {
+      background: #000;
+      color: #fff;
+      opacity: .8; }
+
+#volailles .step1 .btn-holder {
+  max-width: 770px;
+  margin: 0 auto 137px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  #volailles .step1 .btn-holder .btn {
+    width: 48%;
+    min-width: 0; }
+
+#volailles .step1 .under-mask {
+  z-index: -2; }
+
+#volailles .step1 .decor1 {
+  top: -54px;
+  left: -177px;
+  z-index: -1; }
+
+#volailles .step1 .decor2 {
+  bottom: -29px;
+  z-index: -1;
+  right: -104px; }
+
+#volailles .step1 h3 {
+  font: 40px/42px "mochaMattari-regular";
+  color: #fff;
+  margin: 0 0 40px; }
+
+#volailles .step2 {
+  padding: 0 0 40px;
+  background: #fff url("../images/decor10.png") no-repeat right; }
+  #volailles .step2 .baner {
+    white-space: nowrap;
+    text-align: center;
+    text-align: center;
+    height: 266px;
+    margin: 0 0 45px;
+    background-position: 50% 50%;
+    background-size: cover; }
+    #volailles .step2 .baner:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      min-height: 100%; }
+    #volailles .step2 .baner > * {
+      white-space: normal;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 99%; }
+    #volailles .step2 .baner .number {
+      left: 50%;
+      color: #9a1d08;
+      opacity: .6; }
+    #volailles .step2 .baner h2 {
+      color: #fff;
+      margin: 0; }
+  #volailles .step2 .box-text {
+    text-align: center;
+    margin: 0 0 65px; }
+  #volailles .step2 .img-list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 0 35px; }
+    #volailles .step2 .img-list .box {
+      width: 20%; }
+    #volailles .step2 .img-list img {
+      width: 100%; }
+  #volailles .step2 .holder-text,
+  #volailles .step2 .block-text {
+    color: #fff;
+    background: #f05238;
+    padding: 25px;
+    margin: 0 0 77px; }
+  #volailles .step2 .holder-text {
+    position: absolute;
+    padding: 32px 25px; }
+  #volailles .step2 .wrap {
+    position: relative; }
+  #volailles .step2 .open-box-text {
+    margin: 0 0 170px; }
+    #volailles .step2 .open-box-text h4 {
+      font: 41px/43px "mochamattariw", "latoregular", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+      text-align: center;
+      color: #000; }
+    #volailles .step2 .open-box-text.active .open-text-btn:after {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  #volailles .step2 .open-text-btn {
+    display: block;
+    width: 50px;
+    margin: 0 auto -27px;
+    height: 50px;
+    background: #f05238;
+    position: relative;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    z-index: 10; }
+    #volailles .step2 .open-text-btn:after, #volailles .step2 .open-text-btn:before {
+      transition: -webkit-transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 24px;
+      width: 22px;
+      height: 4px;
+      background: #fff;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    #volailles .step2 .open-text-btn:before {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  #volailles .step2 .baner-daigram {
+    text-align: center; }
+  #volailles .step2 .js-slide-hidden {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    display: block !important; }
 
 .modal-box .slide-block {
   background-color: #fff;
@@ -7488,6 +7668,9 @@ g text {
 
 .body-holder#eleverus {
   background: #fff url("../images/bg-chefdexploitations.png") no-repeat 0 111px; }
+  @media (max-width: 767px) {
+    .body-holder#eleverus {
+      background: none; } }
 
 /* video style */
 #videoContainer {
@@ -7820,8 +8003,15 @@ g text {
         line-height: 72px; } }
     @media (max-width: 767px) {
       .title .number {
+        left: -41px;
         font-size: 64px;
         line-height: 66px; } }
+    @media (max-width: 1199px) {
+      #section1 .title .number {
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); } }
   .title h2 {
     color: #f05238;
     font-family: "museo_sans";
@@ -9037,6 +9227,6 @@ g text {
   opacity: 1 !important;
   width: 100% !important;
   overflow: hidden !important;
-  display: none !important; }
+  display: block !important; }
 
 /*# sourceMappingURL=style.min.css.map */

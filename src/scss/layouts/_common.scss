@@ -15,7 +15,7 @@
 	}
 }
 .nav-active{
-	overflow: hidden;	
+	overflow: hidden;
 }
 /*title number style */
 
@@ -34,15 +34,22 @@
 		z-index: 0;
 		@include media('<widescreen') {
 			left:0;
-			 transform: translate(0,-50%);
+			transform: translate(0,-50%);
 		}
 		@include media('<desktop') {
 			font-size:70px;
 			line-height:72px;
 		}
 		@include media('<tablet') {
+			left:-41px;
 			font-size: 64px;
 			line-height: 66px;
+		}
+		#section1 &{
+			@include media('<widescreen') {
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
 		}
 	}
 	h2 {
