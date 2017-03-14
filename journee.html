@@ -156,20 +156,20 @@
             </div>
         </div>
         <!-- Modal  -->
-        <div class="modal fade modal-fullscreen modal-parent" id="modalChapter" role="dialog">
+        <div class="modal modal-scrollable fade modal-fullscreen modal-parent" id="modalChapter" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <div class="modal-header">
+                   <!--  <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><i class="icon-close"></i></button>
-                    </div>
+                    </div> -->
                     <div class="modal-body">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Modal pour afficher image / Video / Gif animé du bloc  "02" > Economes et productrices d'énergie || nos exploitations -->
-        <div class="modal fade show-detail-modal" id="showDetail-01">
+     <!--    <div class="modal fade show-detail-modal" id="showDetail-01">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -180,8 +180,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade show-detail-modal" id="showDetail-02">
+        </div> -->
+       <!--  <div class="modal fade show-detail-modal" id="showDetail-02">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -194,8 +194,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade show-detail-modal" id="showDetail-03">
+        </div> -->
+        <!-- <div class="modal fade show-detail-modal" id="showDetail-03">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -206,7 +206,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- /Modal -->
     <script src="js/vendor.min.js"></script>
@@ -226,7 +226,7 @@
             "start": 0,
             "titre": "Nos Exploitations",
             "intro": "Découvrez nos exploitations et nos actions pour le respect de l’environnement...",
-            "popupUrlContent": "01-nos-exploitations.php",
+            "popupUrlContent": "etape-exploitation.php",
             "fin": 12
         },
 
@@ -234,7 +234,7 @@
             "start": 14,
             "titre": "Nous Les Éleveurs",
             "intro": "Découvrez qui nous sommes, notre métier et notre passion d’éleveurs engagés...",
-            "popupUrlContent": "02-nos-eleveurs.php",
+            "popupUrlContent": "etape-eleveur.php",
             "fin": 34
         },
 
@@ -363,6 +363,7 @@
         onVideoPauseButtonClick();
         playSound(false);
     })
+    
     $('#modalChapter').on('hidden.bs.modal', function() {
         onVideoPlayButtonClick();
         playSound(true);
