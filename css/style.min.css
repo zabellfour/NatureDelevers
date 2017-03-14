@@ -243,7 +243,8 @@
   content: "\e918"; }
 
 /* Base modules*/
-.tabset-block .tabset, #confort .step4 .text-holder ul, .share-holder .share-list, .holder1 .share-list, .nav-footer, .nav-holder .holder2,
+.tabset-block .tabset, #confort .step4 .text-holder ul, #volailles .step2 .holder-text ul,
+#volailles .step2 .block-text ul, .share-holder .share-list, .holder1 .share-list, .nav-footer, .nav-holder .holder2,
 .nav-holder .dropdown, .modal-links, .blog-list .category-list, .blog-list .pagination {
   margin: 0;
   padding: 0;
@@ -537,6 +538,8 @@ input[type='submit'] {
   .btn:hover {
     background: #fff;
     color: #f05238; }
+  .btn:focus {
+    outline: none; }
   .btn.btn-black {
     color: #fff;
     background: #000; }
@@ -6155,6 +6158,9 @@ g text {
                 transform: translateX(0);
         font-size: 25px;
         bottom: 73px; } }
+    @media (max-width: 479px) {
+      .banner .scroll-link {
+        bottom: 55px; } }
     .banner .scroll-link a {
       color: inherit; }
     .banner .scroll-link:hover {
@@ -6241,7 +6247,7 @@ g text {
         width: 90%; } }
     @media (max-width: 479px) {
       .banner .holder-left {
-        top: 83px;
+        top: 45px;
         width: 100%;
         padding: 0 40px 0 0; } }
     .banner .holder-left h1 {
@@ -7419,15 +7425,24 @@ g text {
     right: 175px;
     top: 20px; }
 
+#volailles .step1 .number {
+  left: -90px;
+  top: 17px; }
+
 #volailles .step1 .text-holder {
   text-align: center;
   width: 100%;
-  margin: 0 0 54px;
+  margin: 0 0 86px;
+  padding: 0 77px;
   float: none; }
+  @media (max-width: 767px) {
+    #volailles .step1 .text-holder {
+      margin: 0 0 28px;
+      padding: 0 15px; } }
 
 #volailles .step1 .two-column {
   max-width: 620px;
-  margin: 0 auto 150px;
+  margin: 0 auto 165px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -7437,15 +7452,31 @@ g text {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start; }
+  @media (max-width: 1023px) {
+    #volailles .step1 .two-column {
+      margin: 0 auto 60px; } }
+  @media (max-width: 479px) {
+    #volailles .step1 .two-column {
+      display: block; } }
 
 #volailles .step1 .block {
-  width: 45%;
+  line-height: 18px;
+  width: 48%;
   background: #f05238;
-  padding: 17px 17px 50px;
+  padding: 17px 17px 89px;
   color: #fff;
   position: relative; }
+  @media (max-width: 479px) {
+    #volailles .step1 .block {
+      width: 100%;
+      margin: 0 0 15px;
+      padding: 15px; } }
   #volailles .step1 .block:last-child {
-    margin: 60px 0 0; }
+    margin: 60px 0 0;
+    padding: 17px 17px 51px; }
+    @media (max-width: 479px) {
+      #volailles .step1 .block:last-child {
+        margin: 0; } }
   #volailles .step1 .block .btn {
     transition: opacity 0.3s ease-in-out;
     font-size: 15px;
@@ -7456,7 +7487,8 @@ g text {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: -20px; }
+    bottom: -16px;
+    padding: 10px 4px; }
     #volailles .step1 .block .btn:hover {
       background: #000;
       color: #fff;
@@ -7464,16 +7496,34 @@ g text {
 
 #volailles .step1 .btn-holder {
   max-width: 770px;
-  margin: 0 auto 137px;
+  margin: 0 auto 68px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media (max-width: 1023px) {
+    #volailles .step1 .btn-holder {
+      max-width: 500px;
+      margin: 0 auto 10px; } }
+  @media (max-width: 479px) {
+    #volailles .step1 .btn-holder {
+      display: block; } }
   #volailles .step1 .btn-holder .btn {
-    width: 48%;
+    width: 49%;
     min-width: 0; }
+    @media (max-width: 1023px) {
+      #volailles .step1 .btn-holder .btn {
+        font-size: 12px; } }
+    @media (max-width: 479px) {
+      #volailles .step1 .btn-holder .btn {
+        width: 100%;
+        padding: 10px 4px;
+        font-size: 15px;
+        line-height: 17px;
+        min-width: 215px;
+        margin: 0 0 10px; } }
 
 #volailles .step1 .under-mask {
   z-index: -2; }
@@ -7488,20 +7538,85 @@ g text {
   z-index: -1;
   right: -104px; }
 
+#volailles .step1 .decor3,
+#volailles .step1 .decor4 {
+  position: absolute; }
+  @media (max-width: 767px) {
+    #volailles .step1 .decor3,
+    #volailles .step1 .decor4 {
+      display: none; } }
+
+#volailles .step1 .decor3 {
+  left: -28px;
+  bottom: 16%; }
+
+#volailles .step1 .decor4 {
+  right: 47px;
+  bottom: 4%; }
+
+@media (max-width: 767px) {
+  #volailles .step1 .number {
+    left: 50%;
+    top: 17px;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); } }
+
+#volailles .step1 .title h2 {
+  font-size: 50px;
+  line-height: 40px;
+  margin: 0 0 22px; }
+  @media (max-width: 1023px) {
+    #volailles .step1 .title h2 {
+      font-size: 32px;
+      line-height: 34px; } }
+  #volailles .step1 .title h2 span {
+    font-size: 33px;
+    line-height: 34px; }
+    @media (max-width: 1023px) {
+      #volailles .step1 .title h2 span {
+        font-size: 23px;
+        line-height: 25px; } }
+
 #volailles .step1 h3 {
-  font: 40px/42px "mochaMattari-regular";
+  font: 40px/38px "mochaMattari-regular";
   color: #fff;
-  margin: 0 0 40px; }
+  margin: 0 0 33px; }
+  @media (max-width: 1023px) {
+    #volailles .step1 h3 {
+      font-size: 26px;
+      line-height: 28px;
+      margin: 0 0 12px; } }
 
 #volailles .step2 {
-  padding: 0 0 40px;
-  background: #fff url("../images/decor10.png") no-repeat right; }
+  padding: 0 0 21px;
+  background: #f7f6f2 url("../images/decor10.png") no-repeat right bottom; }
+  #volailles .step2 .container {
+    max-width: 1045px; }
+  #volailles .step2 .decor {
+    position: absolute;
+    right: -100px;
+    top: 12%; }
+    @media (max-width: 1023px) {
+      #volailles .step2 .decor {
+        display: none; } }
+  #volailles .step2 .title h2 {
+    font-size: 40px;
+    line-height: 42px; }
+    @media (max-width: 1023px) {
+      #volailles .step2 .title h2 {
+        font-size: 25px;
+        line-height: 27px; } }
+    @media (max-width: 479px) {
+      #volailles .step2 .title h2 {
+        font-size: 20px;
+        line-height: 22px; } }
   #volailles .step2 .baner {
     white-space: nowrap;
     text-align: center;
     text-align: center;
     height: 266px;
-    margin: 0 0 45px;
+    margin: 0 0 41px;
     background-position: 50% 50%;
     background-size: cover; }
     #volailles .step2 .baner:after {
@@ -7515,16 +7630,30 @@ g text {
       display: inline-block;
       vertical-align: middle;
       max-width: 99%; }
+    @media (max-width: 479px) {
+      #volailles .step2 .baner {
+        height: 165px; } }
     #volailles .step2 .baner .number {
       left: 50%;
       color: #9a1d08;
       opacity: .6; }
+      @media (max-width: 1199px) {
+        #volailles .step2 .baner .number {
+          -webkit-transform: translate(50%, -50%);
+              -ms-transform: translate(50%, -50%);
+                  transform: translate(50%, -50%);
+          right: 50%;
+          left: auto; } }
     #volailles .step2 .baner h2 {
       color: #fff;
       margin: 0; }
   #volailles .step2 .box-text {
     text-align: center;
-    margin: 0 0 65px; }
+    margin: 0 0 65px;
+    line-height: 18px; }
+    @media (max-width: 767px) {
+      #volailles .step2 .box-text {
+        margin: 0 0 20px; } }
   #volailles .step2 .img-list {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7532,37 +7661,59 @@ g text {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: 0 0 35px; }
+    margin: 0 0 9px; }
+    @media (max-width: 479px) {
+      #volailles .step2 .img-list {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
     #volailles .step2 .img-list .box {
       width: 20%; }
+      @media (max-width: 479px) {
+        #volailles .step2 .img-list .box {
+          width: 50%;
+          padding: 30px; } }
     #volailles .step2 .img-list img {
       width: 100%; }
   #volailles .step2 .holder-text,
   #volailles .step2 .block-text {
     color: #fff;
     background: #f05238;
-    padding: 25px;
+    padding: 18px 20px 21px 20px;
     margin: 0 0 77px; }
+    @media (max-width: 479px) {
+      #volailles .step2 .holder-text,
+      #volailles .step2 .block-text {
+        margin: 0 0 35px; } }
   #volailles .step2 .holder-text {
     position: absolute;
-    padding: 32px 25px; }
+    padding: 32px 25px;
+    z-index: 8; }
   #volailles .step2 .wrap {
     position: relative; }
   #volailles .step2 .open-box-text {
-    margin: 0 0 170px; }
+    margin: 0 0 210px; }
+    @media (max-width: 1023px) {
+      #volailles .step2 .open-box-text {
+        margin: 0 0 75px; } }
     #volailles .step2 .open-box-text h4 {
       font: 41px/43px "mochamattariw", "latoregular", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
       text-align: center;
-      color: #000; }
+      color: #000;
+      margin: 0 0 10px; }
+      @media (max-width: 1023px) {
+        #volailles .step2 .open-box-text h4 {
+          font-size: 28px;
+          line-height: 30px; } }
     #volailles .step2 .open-box-text.active .open-text-btn:after {
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg); }
   #volailles .step2 .open-text-btn {
     display: block;
-    width: 50px;
+    width: 37px;
     margin: 0 auto -27px;
-    height: 50px;
+    height: 37px;
     background: #f05238;
     position: relative;
     -webkit-transform: rotate(45deg);
@@ -7575,8 +7726,8 @@ g text {
       transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
       content: '';
       position: absolute;
-      left: 15px;
-      top: 24px;
+      left: 8px;
+      top: 17px;
       width: 22px;
       height: 4px;
       background: #fff;
@@ -7589,11 +7740,56 @@ g text {
               transform: rotate(-45deg); }
   #volailles .step2 .baner-daigram {
     text-align: center; }
+    #volailles .step2 .baner-daigram .btn {
+      padding: 11px;
+      font-size: 15px;
+      line-height: 15px;
+      min-width: 298px; }
+    #volailles .step2 .baner-daigram img {
+      margin: 0 0 18px; }
   #volailles .step2 .js-slide-hidden {
     position: absolute !important;
     left: -9999px !important;
     top: -9999px !important;
     display: block !important; }
+
+#volailles .step3 {
+  padding: 147px 0 87px;
+  background: url("../images/decor11.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat; }
+  @media (max-width: 767px) {
+    #volailles .step3 {
+      padding: 85px 0 34px; } }
+  #volailles .step3 .title h2 {
+    font-size: 25px;
+    line-height: 32px;
+    margin: 0 0 20px; }
+    #volailles .step3 .title h2 span {
+      font-size: 40px; }
+      @media (max-width: 767px) {
+        #volailles .step3 .title h2 span {
+          font-size: 30px; } }
+  #volailles .step3 .text-block {
+    line-height: 21px; }
+  @media (max-width: 1023px) {
+    #volailles .step3 .text-holder {
+      width: 40%; } }
+  @media (max-width: 767px) {
+    #volailles .step3 .text-holder {
+      width: 100%;
+      margin: 0 0 10px; } }
+  #volailles .step3 .img-holder {
+    width: 55%;
+    margin: 83px -9px 0 0; }
+    @media (max-width: 1023px) {
+      #volailles .step3 .img-holder {
+        margin: 20px 0 0; } }
+    @media (max-width: 767px) {
+      #volailles .step3 .img-holder {
+        width: 100%; } }
+  @media (max-width: 767px) {
+    #volailles .step3 .number {
+      top: -13px;
+      left: -40px; } }
 
 .modal-box .slide-block {
   background-color: #fff;
@@ -7671,6 +7867,9 @@ g text {
   @media (max-width: 767px) {
     .body-holder#eleverus {
       background: none; } }
+
+.modal {
+  background: #fff; }
 
 /* video style */
 #videoContainer {
