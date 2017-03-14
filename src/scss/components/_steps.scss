@@ -800,27 +800,52 @@
 
 .step1 {
 	#volailles & {
+		.number {
+			left: -90px;
+			top: 17px;
+		}
 		.text-holder {
 			text-align:center;
 			width:100%;
-			margin:0 0 54px;
+			margin:0 0 86px;
+			padding:0 77px;
 			float:none;
+			@include media('<tablet') {
+				margin:0 0 28px;
+				padding:0 15px;
+			}
 		}
 		.two-column {
 			max-width:620px;
-			margin:0 auto 150px;
+			margin:0 auto 165px;
 			display:flex;
 			justify-content: space-between;
 			align-items: flex-start;
+			@include media('<desktop') {
+				margin:0 auto 60px;
+			}
+			@include media('<phone') {
+				display:block;
+			}
 		}
 		.block {
-			width:45%;
+			line-height:18px;
+			width:48%;
 			background:$rouge;
-			padding:17px 17px 50px;
+			padding:17px 17px 89px;
 			color:#fff;
 			position:relative;
+			@include media('<phone') {
+				width:100%;
+				margin:0 0 15px;
+				padding:15px;
+			}
 			&:last-child {
 				margin:60px 0 0;
+				padding:17px 17px 51px;
+				@include media('<phone') {
+					margin:0;
+				}
 			}
 			.btn {
 				@include animate(opacity);
@@ -830,7 +855,8 @@
 				position:absolute;
 				left:50%;
 				transform:translateX(-50%);
-				bottom:-20px;
+				bottom: -16px;
+				padding: 10px 4px;
 				&:hover {
 					background:#000;
 					color:#fff;
@@ -840,12 +866,30 @@
 		}
 		.btn-holder {
 			max-width:770px;
-			margin:0 auto 137px;
+			margin:0 auto 68px;
 			display:flex;
 			justify-content: space-between;
+			@include media('<desktop') {
+				max-width: 500px;
+				margin: 0 auto 10px;
+			}
+			@include media('<phone') {
+				display:block;
+			}
 			.btn {
-				width:48%;
+				width:49%;
 				min-width:0;
+				@include media('<desktop') {
+					font-size: 12px;
+				}
+				@include media('<phone') {
+					width:100%;
+					padding:10px 4px;
+					font-size: 15px;
+					line-height: 17px;
+					min-width: 215px;
+					margin:0 0 10px;
+				}
 			}
 		}
 		.under-mask {
@@ -861,29 +905,108 @@
 			z-index: -1;
 			right: -104px;
 		}
+		.decor3,
+		.decor4 {
+			position:absolute;
+			@include media('<tablet') {
+				display:none;
+			}
+		}
+		.decor3 {
+			left: -28px;
+			bottom: 16%;
+		}
+		.decor4 {
+			right: 47px;
+			bottom: 4%;
+		}
+		.number {
+			@include media('<tablet') {
+				left: 50%;
+				top: 17px;
+				transform: translate(-50%, -50%);
+			}
+		}
+		.title {
+			h2 {
+				font-size:50px;
+				line-height:40px;
+				margin:	0 0 22px;
+				@include media('<desktop') {
+					font-size:32px;
+					line-height:34px;
+				}
+				span {
+					font-size:33px;
+					line-height:34px;
+					@include media('<desktop') {
+						font-size:23px;
+						line-height:25px;
+					}
+				}
+			}
+		}
 		h3 {
-			font: 40px/42px $fontMochaMattari;
+			font: 40px/38px $fontMochaMattari;
 			color:#fff;
-			margin:0 0 40px;
+			margin:0 0 33px;
+			@include media('<desktop') {
+				font-size:26px;
+				line-height:28px;
+				margin: 0 0 12px;
+			}
 		}
 	}
 }
 
 .step2 {
 	#volailles & {
-		padding:0 0 40px;
-		background: #fff url('../images/decor10.png') no-repeat right;
+		padding:0 0 21px;
+		background: #f7f6f2 url('../images/decor10.png') no-repeat right bottom;
+		.container {
+			max-width:1045px;
+		}
+		.decor {
+			position:absolute;
+			right:-100px;
+			top:12%;
+			@include media('<desktop') {
+				display:none;
+			}
+		}
+		.title {
+			h2 {
+				font-size:40px;
+				line-height:42px;
+				@include media('<desktop') {
+					font-size:25px;
+					line-height:27px;
+				}
+				@include media('<phone') {
+					font-size:20px;
+					line-height:22px;
+				}
+			}
+		}
 		.baner {
 			@include v-align;
 			text-align:center;
 			height:266px;
-			margin:0 0 45px;
+			margin:0 0 41px;
 			background-position:50% 50%;
 			background-size:cover;
+			@include media('<phone') {
+				height:165px;
+			}
 			.number {
 				left:50%;
 				color: #9a1d08;
 				opacity: .6;
+				@include media('<widescreen') {
+					transform: translate(50%, -50%);
+					right:50%;
+					left:auto;
+				}
 			}
 			h2 {
 				color:#fff;
@@ -893,13 +1016,24 @@
 		.box-text {
 			text-align:center;
 			margin:0 0 65px;
+			line-height:18px;
+			@include media('<tablet') {
+				margin:0 0 20px;
+			}
 		}
 		.img-list {
 			display: flex;
 			justify-content: space-between;
-			margin:0 0 35px;
+			margin:0 0 9px;
+			@include media('<phone') {
+				flex-wrap: wrap;
+			}
 			.box {
 				width:20%;
+				@include media('<phone') {
+					width:50%;
+					padding:30px;
+				}
 			}
 			img {
 				width:100%;
@@ -909,22 +1043,37 @@
 		.block-text {
 			color:#fff;
 			background:$scarlet;
-			padding:25px;
+			padding:18px 20px 21px 20px;
 			margin:0 0 77px;
+			@include media('<phone') {
+				margin:0 0 35px;
+			}
+			ul {
+				@extend %listreset;
+			}
 		}
 		.holder-text {
 			position:absolute;
 			padding:32px 25px;
+			z-index:8;
 		}
 		.wrap {
 			position:relative;
 		}
 		.open-box-text {
-			margin:0 0 170px;
+			margin:0 0 210px;
+			@include media('<desktop') {
+				margin:0 0 75px;
+			}
 			h4 {
 				font: 41px/43px $san-serif-second;
 				text-align:center;
 				color:#000;
+				margin:0 0 10px;
+				@include media('<desktop') {
+					font-size:28px;
+					line-height:30px;
+				}
 			}
 			&.active {
 				.open-text-btn:after {
@@ -934,9 +1083,9 @@
 		}
 		.open-text-btn {
 			display:block;
-			width: 50px;
+			width: 37px;
 			margin: 0 auto -27px;
-			height:50px;
+			height:37px;
 			background:$scarlet;
 			position:relative;
 			transform: rotate(45deg);
@@ -946,8 +1095,8 @@
 				@include animate(transform);
 				content:'';
 				position:absolute;
-				left: 15px;
-				top: 24px;
+				left: 8px;
+				top: 17px;
 				width: 22px;
 				height: 4px;
 				background:#fff;
@@ -959,12 +1108,72 @@
 		}
 		.baner-daigram {
 			text-align:center;
+			.btn {
+				padding: 11px;
+				font-size: 15px;
+				line-height: 15px;
+				min-width: 298px;
+			}
+			img {
+				margin:0 0 18px;
+			}
 		}
 		.js-slide-hidden {
 			position: absolute !important;
 			left: -9999px !important;
 			top: -9999px !important;
 			display: block !important;
+		}
+	}
+}
+
+.step3 {
+	#volailles & {
+		padding:147px 0 87px;
+		background: url('../images/decor11.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
+		@include media('<tablet') {
+			padding:85px 0 34px;
+		}
+		.title {
+			h2 {
+				font-size: 25px;
+				line-height: 32px;
+				margin:0 0 20px;
+				span {
+					font-size:40px;
+					@include media('<tablet') {
+						font-size:30px;
+					}
+				}
+			}
+		}
+		.text-block {
+			line-height:21px;
+		}
+		.text-holder {
+			@include media('<desktop') {
+				width:40%;
+			}
+			@include media('<tablet') {
+				width:100%;
+				margin:0 0 10px;
+			}
+		}
+		.img-holder {
+			width: 55%;
+			margin: 83px -9px 0 0;
+			@include media('<desktop') {
+				margin:20px 0 0;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.number {
+			@include media('<tablet') {
+				top: -13px;
+				left:-40px;
+			}
 		}
 	}
 }

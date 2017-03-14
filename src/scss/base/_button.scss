@@ -120,6 +120,9 @@
 		background:#fff;
 		color:$rouge;
 	}
+	&:focus {
+		outline:none;
+	}
 	&.btn-black {
 		color:#fff;
 		background:#000;
