@@ -1,0 +1,287 @@
+.blog-list {
+    padding-top: 45px;
+    max-width: 1010px;
+    margin: 0 auto;
+    @include media('<tablet') {
+        padding-top: 20px;
+    }
+    .category-list {
+        @extend %listreset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 76px;
+        flex-wrap: wrap;
+        @include media('<tablet') {
+            margin-bottom: 25px;
+        }
+        a {
+            @include animate(background-color color);
+            color: #a9a9a9;
+            background-color: #e6e6e6;
+            padding: 3px 7px;
+            text-transform: uppercase;
+            font-family: $fontMuseoSans;
+            font-weight: 900;
+            display: inline-block;
+            font-size: 14px;
+            @include media('<desktop') {
+                font-size: 12px;
+            }
+            @include media('<phone') {
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+            &:hover {
+                background-color: $scarlet;
+                color: $white;
+            }
+        }
+        li {
+            margin: 0 10px;
+            margin-bottom: 10px;
+            @include media('<phone') {
+                width: 100%;
+            }
+            &.active a {
+                background-color: $scarlet;
+                color: $white;
+            }
+        }
+    }
+    .post {
+        display: flex;
+        justify-content: flex-start;
+        color: $white;
+        font-size: 14px;
+        margin-bottom: 116px;
+        flex-wrap: wrap;
+        @include media('<desktop') {
+            margin-bottom: 50px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 35px;
+        }
+        .bottom-row {
+            padding: 0;
+            margin-bottom: 0;
+        }
+        a {
+            color: $scarlet;
+        }
+        .img-holder {
+            width: 40.6%;
+            position: relative;
+            @include media('<640px') {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            a {
+                position: relative;
+                z-index: 2;
+                display: block;
+                height: 100%;
+                &:before {
+                    @include animate(opacity);
+                    content: "\e912";
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    display: inline-block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, .65);
+                    color: $white;
+                    font-size: 30px;
+                    font-family: icomoon;
+                    z-index: 4;
+                    opacity: 0;
+                }
+                &:after {
+                    @include animate(opacity);
+                    content: 'LIRE L’ARTICLE';
+                    font-family: $fontMuseoSans;
+                    font-weight: 900;
+                    position: absolute;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
+                    bottom: 20%;
+                    display: inline-block;
+                    font-size: 22px;
+                    z-index: 5;
+                    color: $white;
+                    text-transform: uppercase;
+                    opacity: 0;
+                }
+                &:hover:before,
+                &:hover:after {
+                    opacity: 1 !important;
+                }
+            }
+            .under-mask {
+                background-color: #eee;
+                display: block;
+                height: 100%;
+                position: absolute;
+                left: 16px;
+                width: 100%;
+                z-index: 1;
+                transition: top 0.5s;
+                z-index: 1;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                vertical-align: top;
+            }
+        }
+        .preview-text {
+            margin-bottom: 15px;
+            @include media('<tablet') {
+                margin-bottom: 10px;
+            }
+        }
+        .text-holder {
+            width: 59.4%;
+            color: $black;
+            padding-left: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            @include media('<desktop') {
+                font-size: 13px;
+            }
+            @include media('<tablet') {
+                font-size: 12px;
+            }
+            @include media('<640px') {
+                width: 100%;
+            }
+            @include media('<640px') {
+                padding-left: 0;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            a {
+                @include animate(opacity);
+                opacity: 1;
+                &:hover {
+                    opacity: .8;
+                }
+            }
+            h3 {
+                font-family: $fontMuseoSans;
+                font-weight: 900;
+                color: $scarlet;
+                line-height: 1;
+                margin-bottom: 20px;
+                font-size: 21px;
+                @include media('<desktop') {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+                @include media('<tablet') {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .bottom-row {
+            display: flex;
+            align-self: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            time {
+                color: $scarlet;
+            }
+            a.btn-tag {
+                @include animate(opacity);
+                color: $white;
+                background-color: $black;
+                padding: 3px 10px;
+                font-family: $fontLato;
+                font-weight: 400;
+                display: inline-block;
+                margin-left: 5px;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    .pagination {
+        @extend %listreset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 124px;
+        padding-top: 54px;
+        @include media('<desktop') {
+            padding-top: 30px;
+            margin-bottom: 70px;
+        }
+        li {
+            padding: 0 5px;
+            &.active a {
+                pointer-events: none;
+                color: $white;
+                background-color: $scarlet;
+                border-color: transparent;
+            }
+            a {
+                @include animate(border-color color);
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                display: inline-block;
+                color: $black;
+                border: 1px solid #dadada;
+                font-family: $fontLato;
+                font-size: 14px;
+                &:hover {
+                    border: 1px solid $scarlet;
+                    color: $scarlet;
+                }
+            }
+        }
+    }
+}
+
+.blog-page {
+    margin-bottom: 10px;
+    .bottom-row {
+        max-width: 97%;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #footer {
+            margin: 0;
+            background: transparent;
+            height: auto;
+            @include media('<tablet') {
+                padding-bottom: 0;
+            }
+            .nav-footer {
+                @include media('<tablet') {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    .share-holder {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
