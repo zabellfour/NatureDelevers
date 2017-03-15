@@ -36,22 +36,24 @@
 	position: absolute;
 	margin-top: 0;
 	top: 0;
-    overflow: hidden;
+	overflow: hidden;
 	background:#fff;
 	bottom:0;
 	.modal-open & {
-		bottom:auto;	
+		bottom:auto;
 	}
 	
 }
 
 .modal.fade {
+	opacity:0;
 	top: 100%;
-	transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
+	transition: opacity 0.5s linear, top 0.5s ease-out, bottom 0.5s ease-out, margin-top 0.5s ease-out;
 }
 
 .modal.fade.in {
 	top: 0;
+	opacity:1;
 }
 
 .modal-body {
