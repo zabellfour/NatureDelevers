@@ -7,10 +7,6 @@
 	}
 }
 
-.modal{
-	background:#fff;
-}
-
 /* add a scroll bar to stop page from jerking around */
 .modal-open.page-overflow .page-container,
 .modal-open.page-overflow .page-container .navbar-fixed-top,
@@ -29,7 +25,6 @@
 .modal-scrollable {
 	position: fixed;
 	top: 0;
-	bottom: 0;
 	left: 0;
 	right: 0;
 	overflow: auto;
@@ -41,7 +36,13 @@
 	position: absolute;
 	margin-top: 0;
 	top: 0;
-	overflow: visible;
+    overflow: hidden;
+	background:#fff;
+	bottom:0;
+	.modal-open & {
+		bottom:auto;	
+	}
+	
 }
 
 .modal.fade {

@@ -24,8 +24,6 @@
     pngquant = require('imagemin-pngquant'),
     rename = require('gulp-rename'),
     fs = require('fs'),
-    filesExist = require('files-exist'),
-    cssimport = require("gulp-cssimport"),
     browserSync = require('browser-sync').create();
 
   var Paths = {
@@ -61,8 +59,7 @@
    * Build js vendor (concatenate vendor array)
    */
   gulp.task('buildJsVendors', function() {
-    var jsVendors = require(`./${Paths.src}/vendor_entries/vendor.js`);
-      gulp.src(filesExist(jsVendors))
+    gulp.src(require(`./${Paths.src}/vendor_entries/vendor.js`))
       .pipe(concat('vendor.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest(`./${Paths.buildJS}`));
@@ -94,7 +91,7 @@
       .pipe(sass().on('error', function(err) {
         showError.apply(this, ['Sass compile error', err]);
       }))
-      .pipe(rename('style.min.css'))
+      .pipe(rename('styles.min.css'))
       .pipe(gcmq())
       .pipe(cssnano({ safe: true }))
       .pipe(autoprefixer('last 4 versions'))
@@ -109,7 +106,6 @@
       .pipe(sass().on('error', function(err) {
         showError.apply(this, ['Sass compile error (vendor)', err]);
       }))
-      .pipe(cssimport())
       .pipe(rename('vendor.min.css'))
       .pipe(cssnano({ safe: true }))
       .pipe(gulp.dest(`./${Paths.buildCss}`));
@@ -121,12 +117,12 @@
   gulp.task('imageMin', function() {
     gulp.src(`./${Paths.src}/${Paths.srcImages}/**/*`)
       .pipe(newer(`${Paths.buildImages}/`))
-      .pipe(imagemin({
-        optimizationLevel: 5,
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }],
-        use: [pngquant()]
-      }))
+      // .pipe(imagemin({
+      //   optimizationLevel: 5,
+      //   progressive: true,
+      //   svgoPlugins: [{ removeViewBox: false }],
+      //   use: [pngquant()]
+      // }))
       .pipe(gulp.dest(`${Paths.buildImages}/`))
       .pipe(browserSync.stream());
   });
@@ -134,9 +130,9 @@
   /**
    * Clean image build directory
    */
-  gulp.task('imageClean', function() {
-    gulp.src(`${Paths.buildImages}/`).pipe(rimraf());
-  });
+  // gulp.task('imageClean', function() {
+  //   gulp.src(`${Paths.build}/${Paths.buildImages}/`).pipe(rimraf());
+  // });
 
   /**
    * Watch for file changes
@@ -175,7 +171,7 @@
   /**
    * Creating production folder without unnecessary files
    */
-  gulp.task('production', ['buildCustomJS', 'buildSassProduction', 'buildStylesVendors', 'cleanProduction'], function() {
+  gulp.task('production', ['buildCustomJS', 'buildSassProduction', 'cleanProduction'], function() {
     return gulp.src(['./**/*',
         `!${Paths.src}/`,
         `!${Paths.src}/**/*`,
@@ -183,8 +179,8 @@
         '!bower/**/*',
         '!node_modules/**/*',
         '!node_modules/',
-        `!${Paths.build}/${Paths.buildCss}/**.map`,
-        `!${Paths.build}/${Paths.srcImages}/info.txt`,
+        `!${Paths.buildCss}/**.map`,
+        `!${Paths.srcImages}/info.txt`,
         '!.bowerrc',
         '!bower.json',
         '!.gitignore',
