@@ -168,7 +168,6 @@
     </div>
     <!-- /Modal -->
     <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
     <script src="js/commun.js"></script>
     <script src="js/threex.videotexture.js"></script>
     <script src='js/three.min.js'></script>
@@ -177,6 +176,7 @@
     <script src="js/MTLLoader.js"></script>
     <script src="js/OBJLoader.js"></script>
     <script src="js/journee.js"></script>
+    <script src="js/app.min.js"></script>
     <!-- <script src="/js/library/jquery.matchHeight.js"></script> -->
     <script type="text/javascript">
     // ---- tableau de paramètre de chaque chapitre
@@ -320,8 +320,44 @@
     $('#modalChapter').on('shown.bs.modal', function(e) {
         onVideoPauseButtonClick();
         playSound(false);
-        
-
+        $('body').on('click', '.scroll-link', function() {
+            var offset = $('.body-holder').position().top;
+            $(".modal").animate({
+                scrollTop: offset
+            }, 'slow');
+        });
+        $(".fancybox-media").fancybox({
+            openEffect: 'none',
+            closeEffect: 'none',
+            helpers: {
+                media: {}
+            }
+        });
+        $(".economes-popup").fancybox({
+            maxWidth: 500,
+            maxHeight: 400,
+            fitToView: true,
+            autoSize: true,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+        $(function() {
+            if ($(window).width() > 1024) {
+                skrollr.init({
+                    forceHeight: false
+                });
+                $('.scroll-block').jScrollPane();
+            }
+        });
+        $(".fancybox-media").fancybox({
+            openEffect: 'none',
+            closeEffect: 'none',
+            helpers: {
+                media: {}
+            }
+        });
+        $('.scroll-block').jScrollPane();
     })
 
     $('#modalChapter').on('hidden.bs.modal', function() {

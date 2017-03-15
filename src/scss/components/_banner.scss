@@ -140,6 +140,7 @@
         }
     }
 }
+.holder-center,
 .holder-left {
     position: absolute;
     width: 90%;
@@ -177,6 +178,15 @@
     }
     p {
         margin:0;
+    }
+}
+.holder-center {
+    text-align:center;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    @include media('<phone') {
+        padding:0 15px;
     }
 }
 }

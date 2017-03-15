@@ -1177,3 +1177,101 @@
 		}
 	}
 }
+
+//*********************page etape-tracabilite ****************//
+
+.step1 {
+	#tracabilite &{
+		background: url(../images/decor10.png) no-repeat left 60%, url(../images/decor12.png) no-repeat right bottom;
+		@include media('<desktop') {
+			background:none;
+		}
+		.text-holder,
+		.img-holder {
+			width:100%;
+			text-align:center;
+			@include media('<tablet') {
+				padding:0;
+			}
+		}
+		.title {
+			.number {
+				left:50%;
+				@include media('<widescreen') {
+					transform: translate(-50%, -50%);
+				}
+			}
+			h2 {
+				font-size: 50px;
+				line-height: 55px;
+				@include media('<desktop') {
+					font-size:29px;
+					line-height:31px;
+				}
+			}
+		}
+		.decor1,
+		.decor2 {
+			left: -10px;
+			top: 28%;
+		}
+		.decor2 {
+			left:auto;
+			right: -104px;
+			bottom: 23%;
+		}
+	}
+}
+
+//*********************page etape-elevages ****************//
+
+.step1 {
+	#elevages &{
+		.text-holder,
+		.img-holder {
+			width:100%;
+			text-align:center;
+			@include media('<tablet') {
+				padding:0;
+			}
+		}
+	}
+}
+
+.step2 {
+	#elevages &{
+		text-align:center;
+		padding:0;
+		height:710px;
+		background:url('../images/image15.jpg') no-repeat 50% 50%/cover;
+		.text-holder {
+			width:100%;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		.tree-column {
+			display:flex;
+			justify-content: space-between;
+			height:100%;
+		}
+		.box {
+			border-right:1px solid #443f3f;
+			width:33.333%;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			background:rgba(0,0,0,.5);
+			color:#fff;
+			&:last-child {
+				border:none;
+				background:rgba(0,0,0,.4);
+			}
+			&:first-child {
+				background:rgba(0,0,0,.6);
+			}
+		}
+	}
+}
