@@ -15,18 +15,18 @@ jQuery(document).ready(function($) {
         }
     });
     $(".economes-popup").fancybox({
-        maxWidth    : 500,
-        maxHeight   : 400,
-        fitToView   : true,
-        autoSize    : true,
-        closeClick  : false,
-        openEffect  : 'none',
-        closeEffect : 'none'
+        maxWidth: 500,
+        maxHeight: 400,
+        fitToView: true,
+        autoSize: true,
+        closeClick: false,
+        openEffect: 'none',
+        closeEffect: 'none'
     });
-    $(function () {
-      if ($(window).width() > 1024) {
-        skrollr.init({forceHeight: false});
-        $('.scroll-block').jScrollPane();
-    }
-});
+    $(function() {
+        if ($(window).width() > 1024) {
+            skrollr.init({ forceHeight: false });
+            $('.scroll-block').jScrollPane();
+        }
+    });
 });
