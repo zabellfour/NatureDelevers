@@ -326,6 +326,7 @@
                 scrollTop: offset
             }, 'slow');
         });
+
         $(".fancybox-media").fancybox({
             openEffect: 'none',
             closeEffect: 'none',
@@ -333,6 +334,7 @@
                 media: {}
             }
         });
+
         $(".economes-popup").fancybox({
             maxWidth: 500,
             maxHeight: 400,
@@ -342,6 +344,7 @@
             openEffect: 'none',
             closeEffect: 'none'
         });
+
         $(function() {
             if ($(window).width() > 1024) {
                 skrollr.init({
@@ -350,6 +353,7 @@
                 $('.scroll-block').jScrollPane();
             }
         });
+        
         $(".fancybox-media").fancybox({
             openEffect: 'none',
             closeEffect: 'none',
@@ -357,7 +361,7 @@
                 media: {}
             }
         });
-        $('.scroll-block').jScrollPane();
+       
     })
 
     $('#modalChapter').on('hidden.bs.modal', function() {
