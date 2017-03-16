@@ -1,7 +1,4 @@
 // page init
-jQuery(function(){
-	initOpenClose();
-});
 
 // open-close init
 function initOpenClose() {

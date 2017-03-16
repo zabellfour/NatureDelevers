@@ -7,10 +7,10 @@ import './modules/openClose';
 
 jQuery(document).ready(function($) {
 
-  
-      $('body').on('click', '.scroll-link', function() {
+
+    $('body').on('click', '.scroll-link', function() {
         var offset = $('.body-holder').position().top;
-        $(".modal").animate({ scrollTop: offset }, 'slow');
+        $("body, .modal").animate({ scrollTop: offset }, 'slow');
     });
 
     $(".fancybox-media").fancybox({
