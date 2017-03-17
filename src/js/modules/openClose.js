@@ -1,17 +1,3 @@
-// page init
-
-// open-close init
-function initOpenClose() {
-	jQuery('div.open-box-text').openClose({
-		hideOnClickOutside: true,
-		activeClass: 'active',
-		opener: '.open-text-btn',
-		slider: '.holder-text',
-		animSpeed: 400,
-		effect: 'slide'
-	});
-}
-
 /*
  * jQuery Open/Close plugin
  */
