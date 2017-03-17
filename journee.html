@@ -170,7 +170,6 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
     <script src="js/commun.js"></script>
-    <script src="js/journee.js"></script>
     <script src="js/threex.videotexture.js"></script>
     <script src='js/three.min.js'></script>
     <script src="js/playerFE.js"></script>
@@ -211,6 +210,7 @@
             "fin": 53
         },
 
+
         {
             "start": 54.21,
             "titre": "La maîtrise des étapes de notre filière",
@@ -218,6 +218,7 @@
             "popupUrlContent": "etape-tracabilite.html",
             "fin": 63
         },
+
 
         {
             "start": 65,
@@ -235,8 +236,6 @@
             "fin": 78
         }
     ]
-
-
     var sound = true;
     var playVideo = true;
 
@@ -289,7 +288,6 @@
         }
     }
 
-
     // ---- Evt play/pause video
     $("canvas").click(function() {
         if (playVideo) {
@@ -315,70 +313,17 @@
         }
     });
 
+
     // ---- Fait play/stop le son et la video à l'ouverture/fermeture de la popup
     $('#modalChapter').on('shown.bs.modal', function(e) {
         onVideoPauseButtonClick();
         playSound(false);
-        $('div.open-box-text').openClose({
-            hideOnClickOutside: true,
-            activeClass: 'active',
-            opener: '.open-text-btn',
-            slider: '.holder-text',
-            animSpeed: 400,
-            effect: 'slide'
-        });
-        $('body').on('click', '.scroll-link', function() {
-            var offset = $('.body-holder').position().top;
-            $("body, .modal").animate({
-                scrollTop: offset
-            }, 'slow');
-        });
-
-        $(".fancybox-media").fancybox({
-            openEffect: 'none',
-            closeEffect: 'none',
-            helpers: {
-                media: {}
-            }
-        });
-        $(function() {
-            if ($(window).width() > 1024) {
-                $('.scroll-block').jScrollPane();
-            }
-        });
-        $(".economes-popup").fancybox({
-            maxWidth: 500,
-            maxHeight: 400,
-            fitToView: true,
-            autoSize: true,
-            closeClick: false,
-            openEffect: 'none',
-            closeEffect: 'none'
-        });
-        $(".fancybox-media").fancybox({
-            openEffect: 'none',
-            closeEffect: 'none',
-            helpers: {
-                media: {}
-            }
-        });
-        $('#modalChapter').on('shown.bs.modal', function() {
-            skrollr.init({
-                forceHeight: false
-            });
-        })
-
-    })
-
-
-
+    });
 
     $('#modalChapter').on('hidden.bs.modal', function() {
         onVideoPlayButtonClick();
         playSound(true);
-        skrollr.init().destroy();
-
-    })
+    });
 
     // ---- Zone cible de la video
     var videoContainer = $("#videoContainer");

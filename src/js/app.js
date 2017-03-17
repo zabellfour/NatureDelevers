@@ -2,17 +2,12 @@ import './modules/nav';
 import './modules/tabs';
 import './modules/openClose';
 
-
-
-
-jQuery(document).ready(function($) {
-
+var initJs = function() {
     $('div.open-box-text').openClose;
     $('body').on('click', '.scroll-link', function() {
         var offset = $('.body-holder').position().top;
-        $("body, .modal").animate({ scrollTop: offset }, 'slow');
+        $("body, .modal").animate({ scrollTop: offset }, '.3');
     });
-
     $(".fancybox-media").fancybox({
         openEffect: 'none',
         closeEffect: 'none',
@@ -41,8 +36,17 @@ jQuery(document).ready(function($) {
             media: {}
         }
     });
+    skrollr.init({ forceHeight: false });
     $('#modalChapter').on('shown.bs.modal', function() {
+        skrollr.init().destroy();
         skrollr.init({ forceHeight: false });
-    })
+        initJs();
+    });
+    $('#modalChapter').on('hidden.bs.modal', function() {
+        skrollr.init().destroy();
+    });
+}
 
+jQuery(document).ready(function($) {
+    initJs();
 });
