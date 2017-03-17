@@ -7,7 +7,7 @@ import './modules/openClose';
 
 jQuery(document).ready(function($) {
 
-
+    $('div.open-box-text').openClose;
     $('body').on('click', '.scroll-link', function() {
         var offset = $('.body-holder').position().top;
         $("body, .modal").animate({ scrollTop: offset }, 'slow');
@@ -22,7 +22,6 @@ jQuery(document).ready(function($) {
     });
     $(function() {
         if ($(window).width() > 1024) {
-            skrollr.init({ forceHeight: false });
             $('.scroll-block').jScrollPane();
         }
     });
@@ -42,6 +41,8 @@ jQuery(document).ready(function($) {
             media: {}
         }
     });
-    $('.scroll-block').jScrollPane();
-    $('.under-mask').jScrollPane();
+    $('#modalChapter').on('shown.bs.modal', function() {
+        skrollr.init({ forceHeight: false });
+    })
+
 });

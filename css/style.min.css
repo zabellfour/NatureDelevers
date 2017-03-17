@@ -8434,6 +8434,9 @@ g text {
     .decor2 {
       display: none; } }
 
+.modal-content {
+  z-index: 999; }
+
 #header {
   position: relative; }
   #header .menu-opener {

@@ -177,7 +177,6 @@
     <script src="js/DDSLoader.js"></script>
     <script src="js/MTLLoader.js"></script>
     <script src="js/OBJLoader.js"></script>
-    <!-- <script src="/js/library/jquery.matchHeight.js"></script> -->
     <script type="text/javascript">
     // ---- tableau de paramètre de chaque chapitre
     var story = [{
@@ -216,7 +215,7 @@
             "start": 54.21,
             "titre": "La maîtrise des étapes de notre filière",
             "intro": " De l’œuf à l’assiette, découvrez la maîtrise des étapes de notre filière...",
-            "popupUrlContent": "etape5-tracabilite.html",
+            "popupUrlContent": "etape-tracabilite.html",
             "fin": 63
         },
 
@@ -320,9 +319,17 @@
     $('#modalChapter').on('shown.bs.modal', function(e) {
         onVideoPauseButtonClick();
         playSound(false);
+        $('div.open-box-text').openClose({
+            hideOnClickOutside: true,
+            activeClass: 'active',
+            opener: '.open-text-btn',
+            slider: '.holder-text',
+            animSpeed: 400,
+            effect: 'slide'
+        });
         $('body').on('click', '.scroll-link', function() {
             var offset = $('.body-holder').position().top;
-            $(".modal").animate({
+            $("body, .modal").animate({
                 scrollTop: offset
             }, 'slow');
         });
@@ -334,7 +341,11 @@
                 media: {}
             }
         });
-
+        $(function() {
+            if ($(window).width() > 1024) {
+                $('.scroll-block').jScrollPane();
+            }
+        });
         $(".economes-popup").fancybox({
             maxWidth: 500,
             maxHeight: 400,
@@ -344,16 +355,6 @@
             openEffect: 'none',
             closeEffect: 'none'
         });
-
-        $(function() {
-            if ($(window).width() > 1024) {
-                skrollr.init({
-                    forceHeight: false
-                });
-                $('.scroll-block').jScrollPane();
-            }
-        });
-        
         $(".fancybox-media").fancybox({
             openEffect: 'none',
             closeEffect: 'none',
@@ -361,12 +362,22 @@
                 media: {}
             }
         });
-       
+        $('#modalChapter').on('shown.bs.modal', function() {
+            skrollr.init({
+                forceHeight: false
+            });
+        })
+
     })
+
+
+
 
     $('#modalChapter').on('hidden.bs.modal', function() {
         onVideoPlayButtonClick();
         playSound(true);
+        skrollr.init().destroy();
+
     })
 
     // ---- Zone cible de la video
