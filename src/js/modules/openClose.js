@@ -1,6 +1,7 @@
 /*
  * jQuery Open/Close plugin
  */
+ 
 ;
 (function($) {
     function OpenClose(options) {

@@ -3,7 +3,6 @@ module.exports = [
 	'./bower/smooth-scroll/dist/js/smooth-scroll.js',
 	'./bower/fancybox/source/jquery.fancybox.js',
 	'./bower/fancybox/source/helpers/jquery.fancybox-media.js',
-	// './bower/bootstrap-sass/assets/javascripts/bootstrap.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
 	'./bower/bootstrap-sass/assets/javascripts/bootstrap/button.js',
