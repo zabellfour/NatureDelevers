@@ -1,30 +1,5 @@
-// page init
 jQuery(function() {
     initMobileNav();
-    $(".drop-opener").click(function(event) {
-        event.preventDefault();
-        $(this).parent().find(".dropdown").toggleClass("opened");
-    });
-    $("body").click(function(e) {
-        if ($(e.target).closest(".holder2").length == 0)
-            $(".dropdown").removeClass("opened");
-        if ($(e.target).closest(".share-opened").length == 0)
-            $(".share-holder").removeClass("share-opened");
-    });
-    $(".share-holder").click(function(event) {
-        event.preventDefault();
-        $(this).toggleClass("share-opened");
-    });
-    $(".holder2 .dropdown > li > a").click(function(event) {
-        event.preventDefault();
-        var path = $(this).attr("href");
-        $("#modalChapter .modal-body").load(path);
-        $('#modalChapter').modal('show');
-        $('#modalChapter').modal('handleUpdate');
-        $("body").removeClass("nav-active");
-    });
-
-
 });
 
 // mobile menu init
@@ -36,8 +11,6 @@ function initMobileNav() {
         menuDrop: '.nav-holder'
     });
 }
-
-
 
 /*
  * Simple Mobile Navigation

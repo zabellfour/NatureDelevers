@@ -8975,6 +8975,10 @@ g text {
 .modal {
   z-index: 999; }
 
+.modal-open #wrapper {
+  max-height: 100vh;
+  overflow: hidden; }
+
 /* Pages */
 .home-page {
   height: 100%; }
