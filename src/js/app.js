@@ -40,16 +40,53 @@ var initJs = function() {
         closeEffect: 'none'
     });
     skrollr.init({ forceHeight: false });
+
+
+}
+
+var customNav = function() {
+    $(".drop-opener").click(function(event) {
+        event.preventDefault();
+        $(this).parent().find(".dropdown").toggleClass("opened");
+    });
+    $("body").click(function(e) {
+        if ($(e.target).closest(".holder2").length == 0)
+            $(".dropdown").removeClass("opened");
+        if ($(e.target).closest(".share-opened").length == 0)
+            $(".share-holder").removeClass("share-opened");
+    });
+    $(".share-holder").click(function(event) {
+        event.preventDefault();
+        $(this).toggleClass("share-opened");
+    });
+    $(".holder2 .dropdown > li > a").click(function(event) {
+        event.preventDefault();
+        var path = $(this).attr("href");
+        $("#modalChapter .modal-body").load(path);
+        $('#modalChapter').modal('show');
+        $('#modalChapter').modal('handleUpdate');
+        $("body").removeClass("nav-active");
+    });
+    $(".baner-bottom .btn-footer").click(function(event) {
+
+        event.preventDefault();
+        if (document.location.href.indexOf('journee.html') + 1) {
+            $('#modalChapter').modal('hide');
+        } else {
+            document.location.href = 'journee.html';
+        }
+    });
 }
 
 
 jQuery(document).ready(function($) {
     initJs();
+     customNav();
     $('#modalChapter').on('shown.bs.modal', function() {
         skrollr.init().destroy();
         skrollr.init({ forceHeight: false });
         initJs();
-
+        customNav();	
     });
 
     $('#modalChapter').on('hidden.bs.modal', function() {
