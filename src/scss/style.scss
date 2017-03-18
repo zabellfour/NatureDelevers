@@ -20,8 +20,7 @@
 @import 'components/production';
 @import 'components/images-list';
 @import 'components/steps';
-@import 'components/step-modal';
-@import 'components/modal-pages';
+@import 'components/modal-common';
 @import 'components/video-page';
 @import 'components/share';
 @import 'components/custom-scroll';
@@ -32,7 +31,6 @@
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/navigation';
-@import 'layouts/modals';
 
 /* Pages */
 
@@ -40,3 +38,12 @@
 @import 'pages/journee';
 @import 'pages/login-page';
 @import 'pages/blog-list';
+
+/* Pages modal*/
+
+@import 'modal/etape-exploitation';
+@import 'modal/etape-confortdenosvolailles';
+@import 'modal/etape-sante';
+@import 'modal/etape-alimentation';
+@import 'modal/etape-tracabilite';
+@import 'modal/etape-elevages';

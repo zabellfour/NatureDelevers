@@ -1,0 +1,86 @@
+.step2 {
+	#sante &{
+		padding:65px 0 129px;
+		@include media('<desktop') {
+			padding:30px 0;
+		}
+		.decor1 {
+			top: -131px;
+			left: -42px;
+		}
+		.decor2 {
+			top: -41px;
+			right: 32%;
+			transform:translateX(-50%);
+		}
+		.img-holder {
+			width:49%;
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.text-holder {
+			width: 43%;
+			margin: 33px 0 0;
+			@include media('<tablet') {
+				width:100%;
+				margin:0 0 20px;
+			}
+		}
+		.title {
+			h2 {
+				font-size: 50px;
+				line-height: 47px;
+				@include media('<desktop') {
+					font-size:22px;
+					line-height:24px;
+				}
+			}
+		}
+		.btn-plus {
+			left: auto;
+			right: 102px;
+			top: 99px;
+		}
+	}
+}
+
+.step3 {
+	#sante &{
+		padding:111px 0 120px;
+		@include media('<tablet') {
+			padding:50px 0 30px;
+		}
+		.decor {
+			position:absolute;
+			top: -50%;
+			right: -110px;
+			@include media('<tablet') {
+				display:none;
+			}
+		}
+		.text-holder {
+			width:55%;
+			@include media('<desktop') {
+				width:48%;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.img-holder {
+			width:42%;
+			@include media('<desktop') {
+				width:48%;
+			}
+			@include media('<tablet') {
+				width:100%;
+			}
+		}
+		.btn-plus {
+			left: auto;
+			right: 175px;
+			top: 20px;
+		}
+	}
+}

@@ -24,6 +24,8 @@
     "include-media": "~1.4.2",
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^10.2.1",
     "fancybox": "fancyBox#2.1.6",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "jScrollPane": "^2.0.23",
+    "bower-skrollr": "^0.6.26"
   }
 }

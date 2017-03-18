@@ -1,6 +1,7 @@
 #wrapper{
 	overflow: hidden;
 }
+
 .container{
 	@extend %clearfix;
 	max-width:1010px;
@@ -17,6 +18,7 @@
 .nav-active{
 	overflow: hidden;
 }
+
 /*title number style */
 
 .title {
