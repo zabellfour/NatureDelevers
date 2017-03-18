@@ -1220,6 +1220,10 @@
 			right: -104px;
 			bottom: 23%;
 		}
+		.decor1 {
+			left: -10px;
+			top: 28%;
+		}
 	}
 }
 
@@ -1227,6 +1231,8 @@
 
 .step1 {
 	#elevages &{
+		padding:78px 0 0;
+		background:url('../images/decor13.png') no-repeat 100% 50%/cover;
 		.text-holder,
 		.img-holder {
 			width:100%;
@@ -1234,6 +1240,68 @@
 			@include media('<tablet') {
 				padding:0;
 			}
+		}
+		.img-holder {
+			margin: 51px -34px 0 0;
+			padding: 0 139px 0 139px;
+		}
+		.number {
+			left:50%;
+		}
+		.decor2 {
+			bottom: -9px;
+			right: -109px;
+		}
+		.decor3 {
+			left:0;
+			bottom: 0;
+		}
+		h2 {
+			font-size:50px;
+			height:52px;
+			margin:0 0 33px;
+		}
+	}
+}
+
+.info-worker {
+	width: 218px;
+	position: absolute;
+	right: 17px;
+	top: 11%;
+	text-align:left;
+	background:#fff;
+	line-height:16px;
+	&:after {
+		content: "";
+		position: absolute;
+		box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+		bottom: 0px;
+		width: 84%;
+		height: 10%;
+		border-radius: 100%;
+		left: 7%;
+		right: 7%;
+		z-index:0;
+	}
+	.info-worke-text {
+		font-weight:bold;
+		padding:15px 20px 19px 17px;
+		background:#fff;
+		position:relative;
+		z-index:1;
+	}
+	.name {
+		font-weight:900;
+	}
+	img {
+		width:100%;
+		vertical-align:top;
+	}
+	p {
+		margin:0 0 19px;
+		&:last-child {
+			margin:0;
 		}
 	}
 }
@@ -1248,14 +1316,51 @@
 			width:100%;
 			position:absolute;
 			left:0;
-			top:0;
+			top: 37px;
+			margin:0;
+		}
+		.title {
+			span {
+				color:#fff;
+			}
+			.number {
+				left:50%;
+				top:50%;
+				opacity:0.5;
+				color:#000;
+			}
 		}
 		.tree-column {
 			display:flex;
 			justify-content: space-between;
 			height:100%;
+			span {
+				display:block;
+			}
+		}
+		.number-box {
+			font:100px/102px $fontMuseoSans;
+			font-weight:900;
+		}
+		.number-holder {
+			position:relative;
+		}
+		.text-number {
+			font-size:47px;
+			line-height:49px;
+			font-weight:900;
+		}
+		.text-box {
+			position:absolute;
+			left:50%;
+			width:90%;
+			transform:translateX(-50%);
+			top:100%;
 		}
 		.box {
+			font-size:20px;
+			line-height:22px;
+			font-weight:100;
 			border-right:1px solid #443f3f;
 			width:33.333%;
 			display: flex;
@@ -1272,6 +1377,10 @@
 			&:first-child {
 				background:rgba(0,0,0,.6);
 			}
+		}
+		h2 {
+			font-size:40px;
+			line-height:42px;
 		}
 	}
 }

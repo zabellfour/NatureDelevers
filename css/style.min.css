@@ -7843,15 +7843,71 @@ g text {
     left: auto;
     right: -104px;
     bottom: 23%; }
+  #tracabilite .step1 .decor1 {
+    left: -10px;
+    top: 28%; }
 
-#elevages .step1 .text-holder,
-#elevages .step1 .img-holder {
-  width: 100%;
-  text-align: center; }
-  @media (max-width: 767px) {
-    #elevages .step1 .text-holder,
-    #elevages .step1 .img-holder {
-      padding: 0; } }
+#elevages .step1 {
+  padding: 78px 0 0;
+  background: url("../images/decor13.png") no-repeat 100% 50%/cover; }
+  #elevages .step1 .text-holder,
+  #elevages .step1 .img-holder {
+    width: 100%;
+    text-align: center; }
+    @media (max-width: 767px) {
+      #elevages .step1 .text-holder,
+      #elevages .step1 .img-holder {
+        padding: 0; } }
+  #elevages .step1 .img-holder {
+    margin: 51px -34px 0 0;
+    padding: 0 139px 0 139px; }
+  #elevages .step1 .number {
+    left: 50%; }
+  #elevages .step1 .decor2 {
+    bottom: -9px;
+    right: -109px; }
+  #elevages .step1 .decor3 {
+    left: 0;
+    bottom: 0; }
+  #elevages .step1 h2 {
+    font-size: 50px;
+    height: 52px;
+    margin: 0 0 33px; }
+
+.info-worker {
+  width: 218px;
+  position: absolute;
+  right: 17px;
+  top: 11%;
+  text-align: left;
+  background: #fff;
+  line-height: 16px; }
+  .info-worker:after {
+    content: "";
+    position: absolute;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    bottom: 0px;
+    width: 84%;
+    height: 10%;
+    border-radius: 100%;
+    left: 7%;
+    right: 7%;
+    z-index: 0; }
+  .info-worker .info-worke-text {
+    font-weight: bold;
+    padding: 15px 20px 19px 17px;
+    background: #fff;
+    position: relative;
+    z-index: 1; }
+  .info-worker .name {
+    font-weight: 900; }
+  .info-worker img {
+    width: 100%;
+    vertical-align: top; }
+  .info-worker p {
+    margin: 0 0 19px; }
+    .info-worker p:last-child {
+      margin: 0; }
 
 #elevages .step2 {
   text-align: center;
@@ -7862,7 +7918,15 @@ g text {
     width: 100%;
     position: absolute;
     left: 0;
-    top: 0; }
+    top: 37px;
+    margin: 0; }
+  #elevages .step2 .title span {
+    color: #fff; }
+  #elevages .step2 .title .number {
+    left: 50%;
+    top: 50%;
+    opacity: 0.5;
+    color: #000; }
   #elevages .step2 .tree-column {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7871,7 +7935,29 @@ g text {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 100%; }
+    #elevages .step2 .tree-column span {
+      display: block; }
+  #elevages .step2 .number-box {
+    font: 100px/102px "museo_sans";
+    font-weight: 900; }
+  #elevages .step2 .number-holder {
+    position: relative; }
+  #elevages .step2 .text-number {
+    font-size: 47px;
+    line-height: 49px;
+    font-weight: 900; }
+  #elevages .step2 .text-box {
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 100%; }
   #elevages .step2 .box {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 100;
     border-right: 1px solid #443f3f;
     width: 33.333%;
     display: -webkit-flex;
@@ -7896,6 +7982,9 @@ g text {
       background: rgba(0, 0, 0, 0.4); }
     #elevages .step2 .box:first-child {
       background: rgba(0, 0, 0, 0.6); }
+  #elevages .step2 h2 {
+    font-size: 40px;
+    line-height: 42px; }
 
 .modal-box .slide-block {
   background-color: #fff;
@@ -8427,11 +8516,13 @@ g text {
       left: 10px !important; } }
 
 .decor1,
-.decor2 {
+.decor2,
+.decor3 {
   position: absolute; }
   @media (max-width: 767px) {
     .decor1,
-    .decor2 {
+    .decor2,
+    .decor3 {
       display: none; } }
 
 .modal-content {
@@ -8880,6 +8971,9 @@ g text {
 
 .nav-active {
   overflow: hidden; }
+
+.modal {
+  z-index: 999; }
 
 /* Pages */
 .home-page {

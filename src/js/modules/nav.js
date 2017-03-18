@@ -15,6 +15,15 @@ jQuery(function() {
         event.preventDefault();
         $(this).toggleClass("share-opened");
     });
+    $(".holder2 .dropdown > li > a").click(function(event) {
+        event.preventDefault();
+        var path = $(this).attr("href");
+        $("#modalChapter .modal-body").load(path);
+        $('#modalChapter').modal('show');
+        $('#modalChapter').modal('handleUpdate');
+        $("body").removeClass("nav-active");
+    });
+
 
 });
 

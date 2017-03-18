@@ -84,7 +84,8 @@
 }
 
 .decor1,
-.decor2 {
+.decor2,
+.decor3 {
 	position:absolute;
 	@include media('<tablet') {
 		display:none;
