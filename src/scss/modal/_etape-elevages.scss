@@ -5,6 +5,9 @@
 		@include media('<desktop') {
 			padding:40px 0 0;
 		}
+		@include media('<tablet') {
+			padding:78px 0 30px;
+		}
 		.text-holder,
 		.img-holder {
 			width:100%;
@@ -14,13 +17,14 @@
 			}
 		}
 		.img-holder {
-			margin: 51px -34px 0 0;
-			padding: 0 139px 0 139px;
+			margin: 1px -6px -30px 0;
+			padding: 0 111px 0 111px;
 			@include media('<desktop') {
-				margin:0 0 40px;
+				margin:0 0 -40px;
 			}
 			@include media('<tablet') {
 				padding:0 15px;
+				margin:0;
 			}
 		}
 		.number {
@@ -57,8 +61,8 @@
 .info-worker {
 	width: 218px;
 	position: absolute;
-	right: 17px;
-	top: 11%;
+	right: -9px;
+	top: 123px;
 	text-align:left;
 	background:#fff;
 	line-height:16px;
@@ -67,6 +71,7 @@
 		right:0;
 	}
 	@include media('<tablet') {
+		margin:-20px 0 0;
 		position:relative;
 		width:100%;
 		display:flex;
@@ -120,7 +125,7 @@
 	}
 	.info-worke-text {
 		font-weight:bold;
-		padding:15px 20px 19px 17px;
+		padding:16px 18px 15px 17px;
 		background:#fff;
 		position:relative;
 		z-index:1;
