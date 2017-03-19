@@ -2,18 +2,23 @@
 
 .video-holder {
     margin: 0 0 104px;
+    text-align:center;
     @include media('<tablet') {
         margin-bottom: 29px;
     }
-    .title {
-        text-align: center;
+    .btn {
         padding: 16px;
         background: $black;
-        max-width: 490px;
+        max-width: 420px;
+        min-width:420px;
         margin: 0 auto 23px;
+        display:inline-block;
+        vertical-align:middle;
         padding: 14px 5px 11px;
         @include media('<tablet') {
-            display: none;
+            min-width:0;
+            max-width:100%;
+            width:100%;
         }
         h2 {
             font: 20px/ 26px 'lato';

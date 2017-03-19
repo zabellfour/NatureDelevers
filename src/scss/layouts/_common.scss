@@ -37,7 +37,7 @@
 .number {
 	font:128px/128px 'museo_sans';
 	position:absolute;
-	left: 52%;
+	left: 50%;
 	top: 28%;
 	transform:translate(-50%,-50%);
 	color:#eee;
@@ -124,6 +124,21 @@
 		display:none;
 	}
 }
+
 .modal-content{
 	z-index: 999;
+}
+
+.containsvg {
+	@include media('<tablet') {
+		display:none;
+	}
+}
+
+.containsvg-mobile {
+	display:none;
+	@include media('<tablet') {
+		display:block;
+		padding:0 20px 55px;
+	}
 }
