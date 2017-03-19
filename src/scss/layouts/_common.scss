@@ -96,7 +96,7 @@
 /*box-shadow mask style */
 .skrollr-mobile {
 	overflow:visible !important;
-	.modal-open {
+	body, .modal-open {
 		overflow:visible !important;
 	}
 }
@@ -105,7 +105,7 @@
 	background-color: #eee;
 	display: block;
 	height: 100%;
-	position: absolute;
+	position: absolute; 
 	left: 16px;
 	width: 100%;
 	z-index: 1;

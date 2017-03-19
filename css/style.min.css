@@ -6989,7 +6989,7 @@ g text {
     top: 16px; }
     @media (max-width: 1023px) {
       .step3 .title .number {
-        left: -15px; } }
+        left: -10px; } }
   .step3 .title h2 {
     font-size: 50px;
     margin-bottom: 48px; }
@@ -7307,7 +7307,7 @@ g text {
     @media (max-width: 767px) {
       #videoContainer #progressBar {
         width: 80%;
-        bottom: 55px; } }
+        bottom: 85px; } }
     @media (max-width: 479px) {
       #videoContainer #progressBar {
         width: 90%; } }
@@ -7345,6 +7345,14 @@ g text {
         top: -7px;
         width: 28px;
         transition: opacity 0.2s linear; }
+        @media (max-width: 1023px) {
+          #videoContainer #progressBar .chapter:before {
+            left: -8px;
+            top: -8px; } }
+        @media (max-width: 479px) {
+          #videoContainer #progressBar .chapter:before {
+            left: -9px;
+            top: -9px; } }
       #videoContainer #progressBar .chapter:hover:before {
         opacity: 1.0; }
 
@@ -7576,7 +7584,7 @@ g text {
 /*box-shadow mask style */
 .skrollr-mobile {
   overflow: visible !important; }
-  .skrollr-mobile .modal-open {
+  .skrollr-mobile body, .skrollr-mobile .modal-open {
     overflow: visible !important; }
 
 .under-mask {
@@ -9010,6 +9018,10 @@ g text {
 
 #confort .step1 .btn-plus {
   left: 337px; }
+  @media (max-width: 1023px) {
+    #confort .step1 .btn-plus {
+      left: auto;
+      right: 83px; } }
 
 #confort .step2 {
   padding: 65px 0 118px; }
@@ -9514,6 +9526,8 @@ g text {
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg); }
+    #volailles .step2 .open-text-btn:focus {
+      outline: none; }
   #volailles .step2 .baner-daigram {
     text-align: center; }
     #volailles .step2 .baner-daigram .btn {

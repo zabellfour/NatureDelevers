@@ -40,7 +40,11 @@ var initJs = function() {
         openEffect: 'none',
         closeEffect: 'none'
     });
-    skrollr.init({ forceHeight: false });
+    if ($(window).width() > 1024) {
+        skrollr.init({ forceHeight: false });
+    }
+
+
 
 }
 
@@ -83,7 +87,7 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
-           console.log('animation-etape-tracabilite');
+        console.log('animation-etape-tracabilite');
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -138,7 +142,7 @@ var animation = function() {
             easing: 'ease-out',
         });
     };
-    
+
 
 
 }
@@ -161,10 +165,10 @@ var customNav = function() {
     $(".holder2 .dropdown > li > a").click(function(event) {
         event.preventDefault();
         var path = $(this).attr("href");
-        
+
         $("#modalChapter .modal-body").load(path);
-         if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
-             $(".diagram-holder .svg").removeClass("animation-demarche-nature-deleveurs");
+        if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
+            $(".diagram-holder .svg").removeClass("animation-demarche-nature-deleveurs");
         };
         $('#modalChapter').modal('show');
         $('#modalChapter').modal('handleUpdate');
@@ -184,12 +188,12 @@ var customNav = function() {
     $(".close-modal").click(function(event) {
         if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
             setTimeout(function() { $(".modal-content .modal-body").empty(); }, 300);
-             $(".diagram-holder .svg").addClass("animation-demarche-nature-deleveurs");
+            $(".diagram-holder .svg").addClass("animation-demarche-nature-deleveurs");
         };
     });
 
 }
-
+ 
 
 
 jQuery(document).ready(function($) {
@@ -197,13 +201,18 @@ jQuery(document).ready(function($) {
     customNav();
     animation();
     $('#modalChapter').on('shown.bs.modal', function() {
-        skrollr.init().destroy();
-        skrollr.init({ forceHeight: false });
+        if ($(window).width() > 1024) {
+            skrollr.init().destroy();
+            skrollr.init({ forceHeight: false });
+        }
         initJs();
         customNav();
-        setTimeout(function() {animation();  }, 300);  
+        setTimeout(function() { animation(); }, 300);
     });
     $('#modalChapter').on('hidden.bs.modal', function() {
-        skrollr.init().destroy;
+        if ($(window).width() > 1024) {
+            skrollr.init().destroy;
+        }
     });
 });
+ 

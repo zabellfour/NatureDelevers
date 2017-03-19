@@ -105,7 +105,7 @@
         }
         @include media('<tablet') {
             width: 80%;
-            bottom: 55px;
+            bottom: 85px;
         }
         @include media('<phone') {
             width: 90%;
@@ -146,6 +146,16 @@
                 top: -7px;
                 width: 28px;
                 transition: opacity 0.2s linear;
+                @include media('<desktop') {
+                    left: -8px;
+                    top: -8px
+                }
+                 @include media('<phone') {
+                
+                  left: -9px;
+                    top: -9px
+                 }
+                            
             }
             &:hover:before {
                 opacity: 1.0;
