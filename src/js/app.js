@@ -21,7 +21,7 @@ var initJs = function() {
     $(".fancybox-media").fancybox({
         openEffect: 'none',
         closeEffect: 'none',
-        scrolling : 'no',
+        scrolling: 'no',
         helpers: {
             media: {}
         }
@@ -41,8 +41,107 @@ var initJs = function() {
         closeEffect: 'none'
     });
     skrollr.init({ forceHeight: false });
-    
-     window.sr = new ScrollReveal
+    window.sr = new ScrollReveal;
+}
+
+var animation = function() {
+
+    if (document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) {
+
+        sr.reveal('.appear', {
+            origin: 'top',
+            viewFactor: 0.2,
+            distance: '100px',
+            scale: 1,
+            reset: false
+        }, 450);
+        sr.reveal('.arrowUn', {
+            origin: 'left',
+            scale: 1,
+            distance: '550px',
+            easing: 'ease-out'
+        });
+        sr.reveal('.arrowTop', {
+            origin: 'top',
+            scale: 1,
+            distance: '500px',
+            easing: 'ease-out'
+        });
+        sr.reveal('.arrowRight', {
+            origin: 'right',
+            scale: 1,
+            distance: '150px',
+            easing: 'ease-out'
+        });
+        sr.reveal('.logoBottom', {
+            origin: 'bottom',
+            delay: 2000,
+            duration: 1000,
+            scale: 1,
+            distance: '250px',
+            easing: 'ease-out'
+        });
+
+
+    };
+    if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
+        sr.reveal('.appear', {
+            origin: 'top',
+            viewFactor: 0.2,
+            distance: '0px',
+            scale: 1,
+            reset: true,
+            easing: 'ease-out'
+        }, 350);
+        sr.reveal('.badge', {
+            origin: 'bottom',
+            delay: 50,
+            rotate: { x: 80, y: 50, z: 0 },
+            distance: '50px',
+            scale: 1,
+        });
+        sr.reveal('.arrowTop', {
+            origin: 'top',
+            scale: 1,
+            distance: '100px',
+            easing: 'ease-out'
+        });
+        sr.reveal('.arrowLeft', {
+            origin: 'left',
+            scale: 1,
+            distance: '100px',
+            easing: 'ease-out'
+        });
+    }
+    if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
+
+
+
+        sr.reveal('.appear', {
+            origin: 'top',
+            viewFactor: 0.2,
+            distance: '-50px',
+            scale: 1,
+            reset: true
+        }, 50);
+        sr.reveal('.arrowUn', {
+            origin: 'left',
+            delay: 50,
+            distance: '250px',
+            easing: 'ease-out',
+        });
+        sr.reveal('.arrowTop', {
+            origin: 'top',
+            delay: 50,
+            distance: '200px',
+        });
+        sr.reveal('.arrowRight', {
+            origin: 'right',
+            distance: '150px',
+            easing: 'ease-out',
+        });
+
+    }
 }
 
 var customNav = function() {
@@ -69,28 +168,28 @@ var customNav = function() {
         $("body").removeClass("nav-active");
     });
     $(".baner-bottom .btn-footer").click(function(event) {
-
         event.preventDefault();
         if (document.location.href.indexOf('journee.html') + 1) {
             $('#modalChapter').modal('hide');
+
         } else {
             document.location.href = 'journee.html';
         }
     });
 }
 
+
+
 jQuery(document).ready(function($) {
     initJs();
     customNav();
+    animation();
     $('#modalChapter').on('shown.bs.modal', function() {
         skrollr.init().destroy();
         skrollr.init({ forceHeight: false });
         initJs();
         customNav();
-         window.sr = new ScrollReveal({
-      viewport: $('#modalChapter')
-    });
-    sr.reveal('#svgContainer');
+        animation();
     });
 
     $('#modalChapter').on('hidden.bs.modal', function() {
