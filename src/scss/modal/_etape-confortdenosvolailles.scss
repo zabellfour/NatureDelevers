@@ -59,6 +59,16 @@
 		.title {
 			.number {
 				right: -181px;
+				left:auto;
+				@include media('<widescreen') {
+					right:0;
+					left:auto;
+				}
+				@include media('<tablet') {
+					right: auto;
+					left: -44px;
+					top:0;
+				}
 			}
 		}
 		h2 {

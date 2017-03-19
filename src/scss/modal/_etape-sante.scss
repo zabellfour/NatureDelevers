@@ -82,5 +82,10 @@
 			right: 175px;
 			top: 20px;
 		}
+		.number {
+			@include media('<tablet') {
+				left:-45px;
+			}
+		}
 	}
 }
