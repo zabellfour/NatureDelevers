@@ -2,6 +2,10 @@
 	#confort &{
 		.btn-plus {
 			left:337px;
+			@include media('<desktop') {
+				left: auto;
+				right: 83px;
+			}
 		}
 	}
 }
