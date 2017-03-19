@@ -47,6 +47,7 @@ var initJs = function() {
 var animation = function() {
     window.sr = new ScrollReveal;
     if (document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) {
+        console.log('animation-demarche-nature-deleveurs');
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -82,6 +83,7 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
+           console.log('animation-etape-tracabilite');
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -111,6 +113,7 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
+        console.log('animation-etape-alimentation');
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -158,10 +161,15 @@ var customNav = function() {
     $(".holder2 .dropdown > li > a").click(function(event) {
         event.preventDefault();
         var path = $(this).attr("href");
+        
         $("#modalChapter .modal-body").load(path);
+         if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
+             $(".diagram-holder .svg").removeClass("animation-demarche-nature-deleveurs");
+        };
         $('#modalChapter').modal('show');
         $('#modalChapter').modal('handleUpdate');
         $("body").removeClass("nav-active");
+
 
     });
     $(".baner-bottom .btn-footer").click(function(event) {
@@ -176,7 +184,7 @@ var customNav = function() {
     $(".close-modal").click(function(event) {
         if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
             setTimeout(function() { $(".modal-content .modal-body").empty(); }, 300);
-             $("diagram-holder svg").addClass("animation-demarche-nature-deleveurs");
+             $(".diagram-holder .svg").addClass("animation-demarche-nature-deleveurs");
         };
     });
 
@@ -193,7 +201,7 @@ jQuery(document).ready(function($) {
         skrollr.init({ forceHeight: false });
         initJs();
         customNav();
-        animation();
+        setTimeout(function() {animation();  }, 300);  
     });
     $('#modalChapter').on('hidden.bs.modal', function() {
         skrollr.init().destroy;
