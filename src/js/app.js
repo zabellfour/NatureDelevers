@@ -41,13 +41,12 @@ var initJs = function() {
         closeEffect: 'none'
     });
     skrollr.init({ forceHeight: false });
-    window.sr = new ScrollReveal;
+
 }
 
 var animation = function() {
-
+    window.sr = new ScrollReveal;
     if (document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) {
-
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -81,8 +80,6 @@ var animation = function() {
             distance: '250px',
             easing: 'ease-out'
         });
-
-
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
         sr.reveal('.appear', {
@@ -112,11 +109,8 @@ var animation = function() {
             distance: '100px',
             easing: 'ease-out'
         });
-    }
+    };
     if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
-
-
-
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -140,8 +134,10 @@ var animation = function() {
             distance: '150px',
             easing: 'ease-out',
         });
+    };
+    
 
-    }
+
 }
 
 var customNav = function() {
@@ -166,6 +162,7 @@ var customNav = function() {
         $('#modalChapter').modal('show');
         $('#modalChapter').modal('handleUpdate');
         $("body").removeClass("nav-active");
+
     });
     $(".baner-bottom .btn-footer").click(function(event) {
         event.preventDefault();
@@ -176,6 +173,13 @@ var customNav = function() {
             document.location.href = 'journee.html';
         }
     });
+    $(".close-modal").click(function(event) {
+        if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
+            setTimeout(function() { $(".modal-content .modal-body").empty(); }, 300);
+             $("diagram-holder svg").addClass("animation-demarche-nature-deleveurs");
+        };
+    });
+
 }
 
 
@@ -191,7 +195,6 @@ jQuery(document).ready(function($) {
         customNav();
         animation();
     });
-
     $('#modalChapter').on('hidden.bs.modal', function() {
         skrollr.init().destroy;
     });
