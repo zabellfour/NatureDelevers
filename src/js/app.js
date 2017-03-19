@@ -40,8 +40,9 @@ var initJs = function() {
         closeEffect: 'none'
     });
     skrollr.init({ forceHeight: false });
-
-
+    
+     window.sr = ScrollReveal();
+    
 }
 
 var customNav = function() {
@@ -78,15 +79,15 @@ var customNav = function() {
     });
 }
 
-
 jQuery(document).ready(function($) {
     initJs();
-     customNav();
+    customNav();
     $('#modalChapter').on('shown.bs.modal', function() {
         skrollr.init().destroy();
         skrollr.init({ forceHeight: false });
         initJs();
-        customNav();	
+        customNav();
+        window.sr = ScrollReveal();
     });
 
     $('#modalChapter').on('hidden.bs.modal', function() {
