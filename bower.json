@@ -26,6 +26,7 @@
     "fancybox": "fancyBox#2.1.6",
     "bootstrap-sass": "^3.3.7",
     "jScrollPane": "^2.0.23",
-    "bower-skrollr": "^0.6.26"
+    "bower-skrollr": "^0.6.26",
+    "jquery-mousewheel": "^3.1.13"
   }
 }

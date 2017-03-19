@@ -1,8 +1,11 @@
 .step1 {
 	#volailles & {
 		.number {
-			left: -90px;
+			left: 50%;
 			top: 17px;
+			@include media('<widescreen') {
+				transform: translate(-50%, -50%);
+			}
 		}
 		.text-holder {
 			text-align:center;
@@ -26,6 +29,7 @@
 			}
 			@include media('<phone') {
 				display:block;
+				padding:0 20px;
 			}
 		}
 		.block {
@@ -163,6 +167,9 @@
 	#volailles & {
 		padding:0 0 21px;
 		background: #f7f6f2 url('../images/decor10.png') no-repeat right bottom;
+		@include media('<tablet') {
+			background: #f7f6f2;
+		}
 		.container {
 			max-width:1045px;
 		}

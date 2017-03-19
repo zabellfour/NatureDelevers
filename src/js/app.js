@@ -21,6 +21,7 @@ var initJs = function() {
     $(".fancybox-media").fancybox({
         openEffect: 'none',
         closeEffect: 'none',
+        scrolling : 'no',
         helpers: {
             media: {}
         }
@@ -41,8 +42,7 @@ var initJs = function() {
     });
     skrollr.init({ forceHeight: false });
     
-     window.sr = ScrollReveal();
-    
+     window.sr = new ScrollReveal
 }
 
 var customNav = function() {
@@ -87,7 +87,10 @@ jQuery(document).ready(function($) {
         skrollr.init({ forceHeight: false });
         initJs();
         customNav();
-        window.sr = ScrollReveal();
+         window.sr = new ScrollReveal({
+      viewport: $('#modalChapter')
+    });
+    sr.reveal('#svgContainer');
     });
 
     $('#modalChapter').on('hidden.bs.modal', function() {

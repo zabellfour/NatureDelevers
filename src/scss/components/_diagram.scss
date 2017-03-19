@@ -38,33 +38,14 @@
 			}
 		}
 		.number {
+			@include media('<widescreen') {
+				left:50%;
+				transform: translate(-50%, -50%);
+			}
 			@include media('<tablet') {
 				top:14%;
 			}
 		}
-	}
-}
-
-.number {
-	font:128px/128px 'museo_sans';
-	position:absolute;
-	left: 52%;
-	top: 28%;
-	transform:translate(-50%,-50%);
-	color:#eee;
-	z-index:-1;
-}
-
-.sr {
-	.sr-item{
-		visibility: hidden;
-	}
-}
-
-.home {
-	.visible{
-		opacity: 0;
-		transition:1.5s cubic-bezier(.44,.47,.23,1) ;
 	}
 }
 

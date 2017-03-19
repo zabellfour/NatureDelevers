@@ -5924,27 +5924,15 @@ g text {
           font-size: 10px;
           line-height: 16px;
           letter-spacing: 0; } }
+    @media (max-width: 1199px) {
+      .diagram-holder .title .number {
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); } }
     @media (max-width: 767px) {
       .diagram-holder .title .number {
         top: 14%; } }
-
-.number {
-  font: 128px/128px 'museo_sans';
-  position: absolute;
-  left: 52%;
-  top: 28%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #eee;
-  z-index: -1; }
-
-.sr .sr-item {
-  visibility: hidden; }
-
-.home .visible {
-  opacity: 0;
-  transition: 1.5s cubic-bezier(0.44, 0.47, 0.23, 1); }
 
 @media (max-width: 767px) {
   .containsvg {
@@ -7530,6 +7518,24 @@ g text {
   overflow: hidden; }
 
 /*title number style */
+.home .visible {
+  opacity: 0;
+  transition: 1.5s cubic-bezier(0.44, 0.47, 0.23, 1); }
+
+.sr .sr-item {
+  visibility: hidden; }
+
+.number {
+  font: 128px/128px 'museo_sans';
+  position: absolute;
+  left: 52%;
+  top: 28%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #eee;
+  z-index: -1; }
+
 .title {
   position: relative; }
   .title .number {
@@ -8875,7 +8881,7 @@ g text {
         .economes-block .title h2 {
           font-size: 29px;
           line-height: 31px; } }
-    @media (max-width: 1023px) {
+    @media (max-width: 1199px) {
       .economes-block .title .number {
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
@@ -9050,7 +9056,17 @@ g text {
       #confort .step3 .text-holder {
         width: 100%; } }
   #confort .step3 .title .number {
-    right: -181px; }
+    right: -181px;
+    left: auto; }
+    @media (max-width: 1199px) {
+      #confort .step3 .title .number {
+        right: 0;
+        left: auto; } }
+    @media (max-width: 767px) {
+      #confort .step3 .title .number {
+        right: auto;
+        left: -44px;
+        top: 0; } }
   #confort .step3 h2 {
     font-size: 39px;
     line-height: 49px; }
@@ -9171,10 +9187,18 @@ g text {
     left: auto;
     right: 175px;
     top: 20px; }
+  @media (max-width: 767px) {
+    #sante .step3 .number {
+      left: -45px; } }
 
 #volailles .step1 .number {
-  left: -90px;
+  left: 50%;
   top: 17px; }
+  @media (max-width: 1199px) {
+    #volailles .step1 .number {
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); } }
 
 #volailles .step1 .text-holder {
   text-align: center;
@@ -9204,7 +9228,8 @@ g text {
       margin: 0 auto 60px; } }
   @media (max-width: 479px) {
     #volailles .step1 .two-column {
-      display: block; } }
+      display: block;
+      padding: 0 20px; } }
 
 #volailles .step1 .block {
   line-height: 18px;
@@ -9338,6 +9363,9 @@ g text {
 #volailles .step2 {
   padding: 0 0 21px;
   background: #f7f6f2 url("../images/decor10.png") no-repeat right bottom; }
+  @media (max-width: 767px) {
+    #volailles .step2 {
+      background: #f7f6f2; } }
   #volailles .step2 .container {
     max-width: 1045px; }
   #volailles .step2 .decor {
