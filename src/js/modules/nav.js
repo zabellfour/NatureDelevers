@@ -66,12 +66,20 @@ function initMobileNav() {
         },
         show: function() {
             this.container.addClass(this.options.menuActiveClass);
+            if (document.location.href.indexOf('journee.html') + 1) {
+                onVideoPauseButtonClick();
+                playSound(false);
+            }
             if (this.options.hideOnClickOutside) {
                 this.page.on(this.options.outsideClickEvent, this.outsideClickHandler);
             }
         },
         hide: function() {
             this.container.removeClass(this.options.menuActiveClass);
+            if (document.location.href.indexOf('journee.html') + 1) {
+                onVideoPlayButtonClick();
+                playSound(true);
+            }
             if (this.options.hideOnClickOutside) {
                 this.page.off(this.options.outsideClickEvent, this.outsideClickHandler);
             }

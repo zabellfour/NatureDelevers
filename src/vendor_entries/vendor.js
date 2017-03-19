@@ -19,5 +19,6 @@ module.exports = [
 	'./bower/jquery-mousewheel/jquery.mousewheel.min.js',
 	'./bower/bower-skrollr/skrollr.min.js',
 	'./src/js/journee.js',
-	'./src/js/mwheelIntent.js'
+	'./src/js/mwheelIntent.js',
+	'./src/js/scrollreveal.min.js'
 ];
