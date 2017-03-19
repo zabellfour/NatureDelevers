@@ -70,6 +70,14 @@
 	}
 }
 
+/*box-shadow mask style */
+.skrollr-mobile {
+	overflow:visible !important;
+	.modal-open {
+		overflow:visible !important;
+	}
+}
+
 .under-mask {
 	background-color: #eee;
 	display: block;

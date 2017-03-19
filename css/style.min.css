@@ -7577,6 +7577,12 @@ g text {
     .title h2 span {
       color: #000; }
 
+/*box-shadow mask style */
+.skrollr-mobile {
+  overflow: visible !important; }
+  .skrollr-mobile .modal-open {
+    overflow: visible !important; }
+
 .under-mask {
   background-color: #eee;
   display: block;
@@ -9571,9 +9577,15 @@ g text {
     left: -10px;
     top: 28%; }
 
+.step1 #svgContainer svg {
+  padding: 0 15px; }
+
 #elevages .step1 {
   padding: 78px 0 0;
   background: url("../images/decor13.png") no-repeat 100% 50%/cover; }
+  @media (max-width: 1023px) {
+    #elevages .step1 {
+      padding: 40px 0 0; } }
   #elevages .step1 .text-holder,
   #elevages .step1 .img-holder {
     width: 100%;
@@ -9585,8 +9597,19 @@ g text {
   #elevages .step1 .img-holder {
     margin: 51px -34px 0 0;
     padding: 0 139px 0 139px; }
+    @media (max-width: 1023px) {
+      #elevages .step1 .img-holder {
+        margin: 0 0 40px; } }
+    @media (max-width: 767px) {
+      #elevages .step1 .img-holder {
+        padding: 0 15px; } }
   #elevages .step1 .number {
     left: 50%; }
+    @media (max-width: 1199px) {
+      #elevages .step1 .number {
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); } }
   #elevages .step1 .decor2 {
     bottom: -9px;
     right: -109px; }
@@ -9597,6 +9620,15 @@ g text {
     font-size: 50px;
     height: 52px;
     margin: 0 0 33px; }
+    @media (max-width: 1023px) {
+      #elevages .step1 h2 {
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 10px; } }
+    @media (max-width: 767px) {
+      #elevages .step1 h2 {
+        font-size: 29px;
+        line-height: 31px; } }
 
 .info-worker {
   width: 218px;
@@ -9606,6 +9638,23 @@ g text {
   text-align: left;
   background: #fff;
   line-height: 16px; }
+  @media (max-width: 1023px) {
+    .info-worker {
+      top: 10px;
+      right: 0; } }
+  @media (max-width: 767px) {
+    .info-worker {
+      position: relative;
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  @media (max-width: 479px) {
+    .info-worker {
+      display: block; } }
   .info-worker:after {
     content: "";
     position: absolute;
@@ -9617,12 +9666,49 @@ g text {
     left: 7%;
     right: 7%;
     z-index: 0; }
+  @media (max-width: 767px) {
+    .info-worker .worke-img {
+      width: 30%;
+      position: relative;
+      overflow: hidden; } }
+  @media (max-width: 479px) {
+    .info-worker .worke-img {
+      width: 100%; } }
+  @media (max-width: 767px) {
+    .info-worker .worke-img img {
+      width: 100%;
+      vertical-align: top;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      min-width: 100%;
+      max-width: none;
+      min-height: 100%;
+      width: auto;
+      vertical-align: top; } }
+  @media (max-width: 767px) and (max-width: 479px) {
+    .info-worker .worke-img img {
+      left: 0;
+      top: 0;
+      position: relative;
+      -webkit-transform: translate(0);
+          -ms-transform: translate(0);
+              transform: translate(0); } }
   .info-worker .info-worke-text {
     font-weight: bold;
     padding: 15px 20px 19px 17px;
     background: #fff;
     position: relative;
     z-index: 1; }
+    @media (max-width: 767px) {
+      .info-worker .info-worke-text {
+        width: 70%; } }
+    @media (max-width: 479px) {
+      .info-worker .info-worke-text {
+        width: 100%; } }
   .info-worker .name {
     font-weight: 900; }
   .info-worker img {
@@ -9638,12 +9724,26 @@ g text {
   padding: 0;
   height: 710px;
   background: url("../images/image15.jpg") no-repeat 50% 50%/cover; }
+  @media (max-width: 1023px) {
+    #elevages .step2 {
+      height: 460px; } }
+  @media (max-width: 767px) {
+    #elevages .step2 {
+      height: auto; } }
   #elevages .step2 .text-holder {
     width: 100%;
     position: absolute;
     left: 0;
     top: 37px;
     margin: 0; }
+    @media (max-width: 767px) {
+      #elevages .step2 .text-holder {
+        position: relative;
+        top: 0;
+        margin: 0;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid #443f3f; } }
   #elevages .step2 .title span {
     color: #fff; }
   #elevages .step2 .title .number {
@@ -9651,6 +9751,11 @@ g text {
     top: 50%;
     opacity: 0.5;
     color: #000; }
+    @media (max-width: 1199px) {
+      #elevages .step2 .title .number {
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); } }
   #elevages .step2 .tree-column {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9659,25 +9764,14 @@ g text {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 100%; }
+    @media (max-width: 767px) {
+      #elevages .step2 .tree-column {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%; } }
     #elevages .step2 .tree-column span {
       display: block; }
-  #elevages .step2 .number-box {
-    font: 100px/102px "museo_sans";
-    font-weight: 900; }
-  #elevages .step2 .number-holder {
-    position: relative; }
-  #elevages .step2 .text-number {
-    font-size: 47px;
-    line-height: 49px;
-    font-weight: 900; }
-  #elevages .step2 .text-box {
-    position: absolute;
-    left: 50%;
-    width: 90%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    top: 100%; }
   #elevages .step2 .box {
     font-size: 20px;
     line-height: 22px;
@@ -9701,13 +9795,77 @@ g text {
             align-content: center;
     background: rgba(0, 0, 0, 0.5);
     color: #fff; }
+    @media (max-width: 1023px) {
+      #elevages .step2 .box {
+        font-size: 15px;
+        line-height: 20px;
+        background: rgba(0, 0, 0, 0.65);
+        border-right: none;
+        border-bottom: 1px solid #443f3f; } }
+    @media (max-width: 767px) {
+      #elevages .step2 .box {
+        font-size: 18px;
+        line-height: 20px;
+        width: 100%;
+        padding: 50px 10px; } }
     #elevages .step2 .box:last-child {
       border: none;
       background: rgba(0, 0, 0, 0.4); }
     #elevages .step2 .box:first-child {
       background: rgba(0, 0, 0, 0.6); }
+  #elevages .step2 .number-box {
+    font: 100px/102px "museo_sans";
+    font-weight: 900; }
+    @media (max-width: 1023px) {
+      #elevages .step2 .number-box {
+        font-size: 55px;
+        line-height: 57px; } }
+    @media (max-width: 767px) {
+      #elevages .step2 .number-box {
+        font-size: 40px;
+        line-height: 42px; } }
+  #elevages .step2 .number-holder {
+    position: relative; }
+  #elevages .step2 .text-number {
+    font-size: 47px;
+    line-height: 49px;
+    font-weight: 900; }
+    @media (max-width: 1023px) {
+      #elevages .step2 .text-number {
+        font-size: 30px;
+        line-height: 32px; } }
+    @media (max-width: 767px) {
+      #elevages .step2 .text-number {
+        font-size: 22px;
+        line-height: 24px; } }
+  #elevages .step2 .text-box {
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 100%; }
+    @media (max-width: 767px) {
+      #elevages .step2 .text-box {
+        position: relative;
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+        width: 100%;
+        left: 0; } }
   #elevages .step2 h2 {
     font-size: 40px;
     line-height: 42px; }
+    @media (max-width: 1023px) {
+      #elevages .step2 h2 {
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 10px; } }
+    @media (max-width: 767px) {
+      #elevages .step2 h2 {
+        font-size: 29px;
+        line-height: 31px;
+        margin: 0; } }
 
 /*# sourceMappingURL=style.min.css.map */
