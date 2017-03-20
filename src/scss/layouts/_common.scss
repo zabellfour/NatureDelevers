@@ -36,10 +36,9 @@
 
 .number {
 	font:128px/128px 'museo_sans';
+	display:block;
 	position:absolute;
-	left: 50%;
-	top: 28%;
-	transform:translate(-50%,-50%);
+	text-align:center;
 	color:#eee;
 	z-index:-1;
 }
@@ -48,33 +47,20 @@
 	position:relative;
 	.number {
 		color: #000;
-		display: inline-block;
 		font-family: "museo_sans";
 		font-weight: 900;
 		font-size: 125px;
 		line-height: 100%;
 		margin: 0;
 		opacity: 0.1;
-		position: absolute;
 		z-index: 0;
-		@include media('<widescreen') {
-			left:0;
-			transform: translate(0,-50%);
-		}
 		@include media('<desktop') {
 			font-size:70px;
 			line-height:72px;
 		}
 		@include media('<tablet') {
-			left:-41px;
 			font-size: 64px;
 			line-height: 66px;
-		}
-		#section1 &{
-			@include media('<widescreen') {
-				left: 50%;
-				transform: translate(-50%,-50%);
-			}
 		}
 	}
 	h2 {
@@ -96,7 +82,7 @@
 /*box-shadow mask style */
 .skrollr-mobile {
 	overflow:visible !important;
-	.modal-open {
+	body, .modal-open {
 		overflow:visible !important;
 	}
 }

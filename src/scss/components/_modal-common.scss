@@ -3,17 +3,14 @@
 		background-color: #fff;
 		height: 100%;
 		opacity: 0;
-		padding: 50px 40px;
+		padding:15px;
 		position: absolute;
 		top: 0;
 		visibility: hidden;
 		width: 100%;
 		z-index: 10;
-		transition: all 0.5s ease;
+		transition: all 0.85s ease;
 		overflow: auto;
-		@include media('<tablet') {
-			padding:40px 0;
-		}
 		.box1,
 		.box2 {
 			width:50%;
@@ -69,15 +66,16 @@
 			margin: 0;
 		}
 		&.left-slide-block {
-			left: -100%;
+			left: 0;
 			&.sliding {
 				left: 0;
 			}
 		}
 		&.right-slide-block {
-			right: -100%;
+			right: 0;
 			&.sliding {
-				right: 0;
+				opacity:0.9;
+				visibility:visible;
 			}
 		}
 	}

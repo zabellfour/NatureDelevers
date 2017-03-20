@@ -39,13 +39,10 @@
 	font-weight: 900;
 	position: absolute;
 	font-family: "lato", arial, sans-serif;
-	right: 37px;
-	top: 0;
+	right: 0px;
+	top: -7px;
 	color: #F05236;
 	cursor: pointer;
-	@include media('<tablet') {
-		right:20px;
-	}
 	&:hover {
 		opacity: 0.7;
 	}
