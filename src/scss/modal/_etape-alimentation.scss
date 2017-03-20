@@ -260,7 +260,7 @@
 			}
 		}
 		.holder-text {
-			position:absolute;
+			position:relative;
 			padding:32px 25px;
 			z-index:8;
 		}
@@ -268,10 +268,7 @@
 			position:relative;
 		}
 		.open-box-text {
-			margin:0 0 210px;
-			@include media('<desktop') {
-				margin:0 0 75px;
-			}
+			margin:0 0 60px;
 			h4 {
 				font: 41px/43px $san-serif-second;
 				text-align:center;
@@ -340,7 +337,7 @@
 .step3 {
 	#volailles & {
 		padding:147px 0 87px;
-		background: url('../images/decor11.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
+		background: url('../images/decor11.png') top center repeat-x, url('../images/bg-wood.jpg') top center no-repeat;
 		@include media('<tablet') {
 			padding:85px 0 34px;
 		}

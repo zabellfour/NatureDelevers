@@ -457,13 +457,10 @@ input[type='submit'] {
   font-weight: 900;
   position: absolute;
   font-family: "lato", arial, sans-serif;
-  right: 37px;
-  top: 0;
+  right: 0px;
+  top: -7px;
   color: #F05236;
   cursor: pointer; }
-  @media (max-width: 767px) {
-    .close-text {
-      right: 20px; } }
   .close-text:hover {
     opacity: 0.7; }
 
@@ -7047,17 +7044,14 @@ g text {
   background-color: #fff;
   height: 100%;
   opacity: 0;
-  padding: 50px 40px;
+  padding: 15px;
   position: absolute;
   top: 0;
   visibility: hidden;
   width: 100%;
   z-index: 10;
-  transition: all 0.5s ease;
+  transition: all 0.85s ease;
   overflow: auto; }
-  @media (max-width: 767px) {
-    .modal-box .slide-block {
-      padding: 40px 0; } }
   .modal-box .slide-block .box1,
   .modal-box .slide-block .box2 {
     width: 50%;
@@ -7106,13 +7100,14 @@ g text {
     line-height: 1.35em;
     margin: 0; }
   .modal-box .slide-block.left-slide-block {
-    left: -100%; }
+    left: 0; }
     .modal-box .slide-block.left-slide-block.sliding {
       left: 0; }
   .modal-box .slide-block.right-slide-block {
-    right: -100%; }
+    right: 0; }
     .modal-box .slide-block.right-slide-block.sliding {
-      right: 0; }
+      opacity: 0.9;
+      visibility: visible; }
 
 .modal-open #wrapper {
   max-height: 100vh;
@@ -7430,12 +7425,13 @@ g text {
 
 .jspPane {
   position: absolute;
-  width: 100% !important; }
+  width: 100% !important;
+  padding: 20px 0 0 !important; }
 
 .jspVerticalBar {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 3px;
   width: 10px;
   height: 100%; }
 
@@ -7525,12 +7521,9 @@ g text {
 
 .number {
   font: 128px/128px 'museo_sans';
+  display: block;
   position: absolute;
-  left: 50%;
-  top: 28%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  text-align: center;
   color: #eee;
   z-index: -1; }
 
@@ -7538,36 +7531,21 @@ g text {
   position: relative; }
   .title .number {
     color: #000;
-    display: inline-block;
     font-family: "museo_sans";
     font-weight: 900;
     font-size: 125px;
     line-height: 100%;
     margin: 0;
     opacity: 0.1;
-    position: absolute;
     z-index: 0; }
-    @media (max-width: 1199px) {
-      .title .number {
-        left: 0;
-        -webkit-transform: translate(0, -50%);
-            -ms-transform: translate(0, -50%);
-                transform: translate(0, -50%); } }
     @media (max-width: 1023px) {
       .title .number {
         font-size: 70px;
         line-height: 72px; } }
     @media (max-width: 767px) {
       .title .number {
-        left: -41px;
         font-size: 64px;
         line-height: 66px; } }
-    @media (max-width: 1199px) {
-      #section1 .title .number {
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
   .title h2 {
     color: #f05238;
     font-family: "museo_sans";
@@ -8983,7 +8961,7 @@ g text {
     font-weight: 900; }
 
 #exploitations .step3 {
-  background: url("../images/img-transition-plume2.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat;
+  background: url("../images/img-transition-plume2.png") top center repeat-x, url("../images/bg-wood.jpg") top center no-repeat;
   background-size: auto, cover;
   padding: 100px 0 26px;
   color: #fff; }
@@ -9502,16 +9480,13 @@ g text {
       #volailles .step2 .block-text {
         margin: 0 0 35px; } }
   #volailles .step2 .holder-text {
-    position: absolute;
+    position: relative;
     padding: 32px 25px;
     z-index: 8; }
   #volailles .step2 .wrap {
     position: relative; }
   #volailles .step2 .open-box-text {
-    margin: 0 0 210px; }
-    @media (max-width: 1023px) {
-      #volailles .step2 .open-box-text {
-        margin: 0 0 75px; } }
+    margin: 0 0 60px; }
     #volailles .step2 .open-box-text h4 {
       font: 41px/43px "mochamattariw", "latoregular", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
       text-align: center;
@@ -9573,7 +9548,7 @@ g text {
 
 #volailles .step3 {
   padding: 147px 0 87px;
-  background: url("../images/decor11.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat; }
+  background: url("../images/decor11.png") top center repeat-x, url("../images/bg-wood.jpg") top center no-repeat; }
   @media (max-width: 767px) {
     #volailles .step3 {
       padding: 85px 0 34px; } }
@@ -9706,6 +9681,9 @@ g text {
         line-height: 31px; } }
 
 .info-worker {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   width: 218px;
   position: absolute;
   right: -9px;
@@ -9742,6 +9720,10 @@ g text {
     left: 7%;
     right: 7%;
     z-index: 0; }
+  .info-worker:hover {
+    -webkit-transform: scale(1.02, 1.02);
+        -ms-transform: scale(1.02, 1.02);
+            transform: scale(1.02, 1.02); }
   @media (max-width: 767px) {
     .info-worker .worke-img {
       width: 30%;

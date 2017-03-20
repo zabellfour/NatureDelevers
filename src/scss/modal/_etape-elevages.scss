@@ -59,6 +59,7 @@
 }
 
 .info-worker {
+	@include animate(transform);
 	width: 218px;
 	position: absolute;
 	right: -9px;
@@ -91,6 +92,9 @@
 		left: 7%;
 		right: 7%;
 		z-index:0;
+	}
+	&:hover {
+		transform: scale(1.02,1.02);
 	}
 	.worke-img {
 		@include media('<tablet') {

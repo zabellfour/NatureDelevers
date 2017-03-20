@@ -26,11 +26,44 @@ var initJs = function() {
             media: {}
         }
     });
+
     $(function() {
-        if ($(window).width() > 1024) {
-            $('.scroll-block').jScrollPane();
+        $('.scroll-block').each(
+            function()
+            {
+                $(this).jScrollPane(
+                {
+                    showArrows: $(this).is('.arrow')
+                }
+                );
+                var api = $(this).data('jsp');
+                var throttleTimeout;
+                $(window).bind(
+                    'resize',
+                    function()
+                    {
+                        if (!throttleTimeout) {
+                            throttleTimeout = setTimeout(
+                                function()
+                                {
+                                    api.reinitialise();
+                                    throttleTimeout = null;
+                                },
+                                50
+                                );
+                        }
+                    });
+            })
+    });
+
+    $(function(){
+        if ( $(window).width() > 767 ) {
+            $('.number').each(function(index, el) {
+                $(this).Parallax({ property:'top', speed:0.150, start: 0, delay:0 });
+            });
         }
     });
+
     $(".economes-popup").fancybox({
         maxWidth: 500,
         maxHeight: 400,
@@ -40,12 +73,11 @@ var initJs = function() {
         openEffect: 'none',
         closeEffect: 'none'
     });
-    if ($(window).width() > 1024) {
+
+    $( window ).resize(function() {
         skrollr.init({ forceHeight: false });
-    }
-
-
-
+    });
+    window.sr = new ScrollReveal;
 }
 
 var animation = function() {
@@ -195,8 +227,6 @@ var customNav = function() {
     });
 
 }
-
-
 
 jQuery(document).ready(function($) {
     initJs();
