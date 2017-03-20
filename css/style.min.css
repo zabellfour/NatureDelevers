@@ -7302,7 +7302,7 @@ g text {
     @media (max-width: 767px) {
       #videoContainer #progressBar {
         width: 80%;
-        bottom: 55px; } }
+        bottom: 85px; } }
     @media (max-width: 479px) {
       #videoContainer #progressBar {
         width: 90%; } }
@@ -7340,6 +7340,14 @@ g text {
         top: -7px;
         width: 28px;
         transition: opacity 0.2s linear; }
+        @media (max-width: 1023px) {
+          #videoContainer #progressBar .chapter:before {
+            left: -8px;
+            top: -8px; } }
+        @media (max-width: 479px) {
+          #videoContainer #progressBar .chapter:before {
+            left: -9px;
+            top: -9px; } }
       #videoContainer #progressBar .chapter:hover:before {
         opacity: 1.0; }
 
