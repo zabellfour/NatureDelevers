@@ -207,8 +207,10 @@ jQuery(document).ready(function($) {
 
 function onVideoPlayButtonClick(){
 	video.play();
+	$(".fake-play-btn").addClass('pause-symbol');
 }
 
 function onVideoPauseButtonClick(){
 	video.pause();
+	$(".fake-play-btn").removeClass('pause-symbol');
 }

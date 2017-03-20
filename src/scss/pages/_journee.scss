@@ -6,7 +6,7 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        pointer-events:none;
+        cursor:pointer;
     }
     &:after {
         pointer-events: none;
@@ -81,4 +81,4 @@
 .storyBtn{
     outline: none;
 }
-.journee {}
+

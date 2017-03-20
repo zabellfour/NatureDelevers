@@ -149,8 +149,9 @@ var animation = function() {
 
 var customNav = function() {
     $(".drop-opener").click(function(event) {
-        event.preventDefault();
-        $(this).parent().find(".dropdown").toggleClass("opened");
+        if($(this).hasClass('notdef'))  event.preventDefault();
+        $(this).parent().find(".dropdown").addClass("opened");
+        $(this).removeClass('notdef');
     });
     $("body").click(function(e) {
         if ($(e.target).closest(".holder2").length == 0)
@@ -164,6 +165,7 @@ var customNav = function() {
     });
     $(".holder2 .dropdown > li > a").click(function(event) {
         event.preventDefault();
+        $('.drop-opener').addClass('notdef');
         var path = $(this).attr("href");
 
         $("#modalChapter .modal-body").load(path);
@@ -193,7 +195,7 @@ var customNav = function() {
     });
 
 }
- 
+
 
 
 jQuery(document).ready(function($) {
@@ -215,4 +217,3 @@ jQuery(document).ready(function($) {
         }
     });
 });
- 

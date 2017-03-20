@@ -45,13 +45,13 @@
                 </div>
                 <ul class="holder2">
                     <li>
-                        <a href="#">
+                        <a href="demarche‐nature‐deleveurs.html">
                             <img src="images/menu/zone2-1.jpg" alt="image description" />
                             <span class="text">la démarche <br>nature d’éleveurs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="drop-opener">
+                        <a href="journee.html" class="drop-opener notdef">
                             <img src="images/menu/zone2-2.jpg" alt="image description" />
                             <span class="text">LA JOURNÉE <br>D’UN ÉLEVEUR</span>
                         </a>
@@ -156,43 +156,43 @@
             <ul class=" modal-links ">
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-1.jpg" alt="image description" />
+                        <img src="images/banner7.jpg" alt="image description" />
                         <span class="text">NOS ÉLEVAGES <br>FRANÇAIS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-2.jpg" alt="image description" />
+                        <img src="images/alaune-noseleveurs.jpg" alt="image description" />
                         <span class="text">NOUS LES <br>ÉLEVEURS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-3.jpg" alt="image description" />
+                        <img src="images/alaune-exploitation.jpg" alt="image description" />
                         <span class="text">NOS <br>EXPLOITATIONS </span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-4.jpg" alt="image description" />
+                        <img src="images/banner2.jpg" alt="image description" />
                         <span class="text">LE CONFORT <br>POUR NOS VOLAILLES</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-5.jpg" alt="image description" />
+                        <img src="images/banner4.jpg" alt="image description" />
                         <span class="text">L’ALIMENTATION</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-6.jpg" alt="image description" />
+                        <img src="images/banner1.jpg" alt="image description" />
                         <span class="text">LA SANTÉ <br>DE NOS VOLAILLES</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/menu/zone3-7.jpg" alt="image description" />
+                        <img src="images/banner6.jpg" alt="image description" />
                         <span class="text">LA TRAÇABILITÉ</span>
                     </a>
                 </li>
@@ -229,22 +229,23 @@
     <script src="js/MTLLoader.js"></script>
     <script src="js/OBJLoader.js"></script>
     <script type="text/javascript">
-    // ---- Redirection sur clique sur video
-    // $("canvas").click(function() {
-    //     document.location.href = "journee.php";
-    // });
+
     var playVideo = true;
-    $("canvas").click(function() {
+
+    $(".fake-play-btn").click(function() {
         if (playVideo) {
             onVideoPauseButtonClick();
-
             playVideo = false;
         } else {
             onVideoPlayButtonClick();
-
             playVideo = true;
         }
     });
+    if (playVideo){
+        $(".fake-play-btn").addClass('pause-symbol');
+    } else{
+        $(".fake-play-btn").removeClass('pause-symbol');
+    }
 
     // ---- Zone cible de la video
     var videoContainer = $("#videoContainer");
