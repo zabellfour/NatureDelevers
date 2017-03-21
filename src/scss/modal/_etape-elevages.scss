@@ -26,11 +26,13 @@
 				padding:0 15px;
 				margin:0;
 			}
-		}
-		.number {
-			left:50%;
-			@include media('<widescreen') {
-				transform: translate(-50%, -50%);
+			.big-circle:hover {
+				opacity:.5;
+				cursor:default;
+			}
+			circle:hover {
+				opacity:.6;
+				cursor:pointer;
 			}
 		}
 		.decor2 {
@@ -167,6 +169,10 @@
 		@include media('<tablet') {
 			height:auto;
 		}
+		.title .number {
+			z-index:0;
+			color: rgba(0,0,0,0.4);
+		}
 		.text-holder {
 			width:100%;
 			position:absolute;
@@ -185,15 +191,6 @@
 		.title {
 			span {
 				color:#fff;
-			}
-			.number {
-				left:50%;
-				top:50%;
-				opacity:0.5;
-				color:#000;
-				@include media('<widescreen') {
-					transform: translate(-50%, -50%);
-				}
 			}
 		}
 		.tree-column {

@@ -106,10 +106,6 @@
 			width:100%;
 		}
 	}
-	.number {
-		left: -31px;
-		top: 14px;
-	}
 	.title {
 		h2 {
 			font-size: 43px;
@@ -177,17 +173,6 @@
 			margin: 0;
 		}
 	}
-	.title {
-		.number {
-			left: auto;
-			right: -181px;
-			top: 20px;
-			@include media('<widescreen') {
-				right:0;
-				left:auto;
-			}
-		}
-	}
 	.btn-plus {
 		top: 23px;
 		left: 51px;
@@ -215,7 +200,7 @@
 }
 
 .step3 {
-	background: url('../images/img-transition-plume3.png') top center repeat-x, url('../images/bg-wood.png') top center no-repeat;
+	background: url('../images/img-transition-plume3.png') top center repeat-x, url('../images/bg-wood.jpg') top center no-repeat;
 	background-size:  auto, cover,;
 	position: relative;
 	padding:116px 0 75px;
@@ -274,14 +259,6 @@
 		top: 50px;
 	}
 	.title {
-		.number {
-			left: -28px;
-			opacity: 0.4;
-			top: 16px;
-			@include media('<desktop') {
-				left:-10px;
-			}
-		}
 		h2 {
 			font-size: 50px;
 			margin-bottom: 48px;

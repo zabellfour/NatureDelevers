@@ -35,34 +35,58 @@
 }
 
 .number {
-	font:128px/128px 'museo_sans';
+	font:900 128px/128px 'museo_sans';
 	display:block;
 	position:absolute;
+	left:-100px;
+	top:0;
 	text-align:center;
-	color:#eee;
-	z-index:-1;
+	z-index:0;
+	color: rgba(0,0,0,0.1);
+	@include media('<widescreen') {
+		left:0;
+	}
+	@include media('<desktop') {
+		transform: translate3d(0px,0px,0px) !important;
+		font-size:70px;
+		line-height:72px;
+		top:-25px;
+		left:-15px;
+	}
+	@include media('<tablet') {
+		font-size: 64px;
+		line-height: 66px;
+		left:-40px;
+	}
+	&.number-center {
+		left:0;
+		right:0;
+	}
+	&.number-right {
+		left:auto;
+		right:-100px;
+		@include media('<widescreen') {
+			right:0;
+		}
+		@include media('<desktop') {
+			left:auto;
+			right:-15px;
+		}
+		@include media('<tablet') {
+			left:auto;
+			right:0;
+		}
+	}
+	.step3 & {
+		color: rgba(0,0,0,0.4);
+		@include media('<tablet') {
+			left:-5px;
+		}
+	}
 }
 
 .title {
 	position:relative;
-	.number {
-		color: #000;
-		font-family: "museo_sans";
-		font-weight: 900;
-		font-size: 125px;
-		line-height: 100%;
-		margin: 0;
-		opacity: 0.1;
-		z-index: 0;
-		@include media('<desktop') {
-			font-size:70px;
-			line-height:72px;
-		}
-		@include media('<tablet') {
-			font-size: 64px;
-			line-height: 66px;
-		}
-	}
 	h2 {
 		color: #f05238;
 		font-family: $fontMuseoSans;

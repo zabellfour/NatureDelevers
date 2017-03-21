@@ -5917,15 +5917,6 @@ g text {
             font-size: 10px;
             line-height: 16px;
             letter-spacing: 0; } }
-    @media (max-width: 1199px) {
-      .diagram-holder .title .number {
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
-    @media (max-width: 767px) {
-      .diagram-holder .title .number {
-        top: 14%; } }
 
 /* tabs-holder style */
 .tabs-holder {
@@ -5949,7 +5940,7 @@ g text {
     top: 0;
     width: 100%;
     height: 1px; }
-  .tabs-holder .img-decor01 {
+  .tabs-holder .decor1 {
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -5959,25 +5950,25 @@ g text {
     width: 111px;
     margin: 0 auto; }
     @media (max-width: 1023px) {
-      .tabs-holder .img-decor01 {
+      .tabs-holder .decor1 {
         top: -22px;
         width: 83px; } }
     @media (max-width: 767px) {
-      .tabs-holder .img-decor01 {
+      .tabs-holder .decor1 {
         width: 55px;
         top: -14px; } }
-    .tabs-holder .img-decor01 img {
+    .tabs-holder .decor1 img {
       width: 100%;
       vertical-align: top; }
-  .tabs-holder .img-decor02 {
+  .tabs-holder .decor2 {
     width: 259px;
     position: absolute;
     right: 9%;
     top: -134px; }
     @media (max-width: 767px) {
-      .tabs-holder .img-decor02 {
+      .tabs-holder .decor2 {
         display: none; } }
-    .tabs-holder .img-decor02 img {
+    .tabs-holder .decor2 img {
       width: 100%;
       vertical-align: top; }
   .tabs-holder .title-box {
@@ -6114,7 +6105,8 @@ g text {
     font-size: 51px;
     color: #fff;
     text-decoration: none;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
     @media (max-width: 1023px) {
       .banner .scroll-link {
         font-size: 30px; } }
@@ -6531,10 +6523,11 @@ g text {
 
 /* production style */
 .production-holder {
+  position: relative;
   margin: 0 0 60px;
   padding: 62px 0 0 0;
-  background-image: url("../images/decor04.png"), url("../images/decor05.png");
-  background-position: 0px 50%, 69% 68%;
+  background-image: url("../images/decor05.png");
+  background-position: 69% 68%;
   background-repeat: no-repeat; }
   @media (max-width: 1023px) {
     .production-holder {
@@ -6547,12 +6540,10 @@ g text {
   @media (max-width: 479px) {
     .production-holder {
       background: none; } }
-  .production-holder .number {
-    left: 50%;
-    top: 46%; }
-    @media (max-width: 767px) {
-      .production-holder .number {
-        top: 25%; } }
+  .production-holder .decor01 {
+    position: absolute;
+    left: -25px;
+    top: 35%; }
   .production-holder .title {
     text-align: center;
     position: relative;
@@ -6813,9 +6804,6 @@ g text {
         padding: 0 0 0 49px;
         margin: 0 0 29px;
         width: 100%; } }
-  .step1 .number {
-    left: -31px;
-    top: 14px; }
   .step1 .title h2 {
     font-size: 43px;
     line-height: 45px;
@@ -6892,16 +6880,6 @@ g text {
     .step4 .img-holder figure,
     .step2 .img-holder figure {
       margin: 0; }
-  .step4 .title .number,
-  .step2 .title .number {
-    left: auto;
-    right: -181px;
-    top: 20px; }
-    @media (max-width: 1199px) {
-      .step4 .title .number,
-      .step2 .title .number {
-        right: 0;
-        left: auto; } }
   .step4 .btn-plus,
   .step2 .btn-plus {
     top: 23px;
@@ -6929,7 +6907,7 @@ g text {
         line-height: 31px; } }
 
 .step3 {
-  background: url("../images/img-transition-plume3.png") top center repeat-x, url("../images/bg-wood.png") top center no-repeat;
+  background: url("../images/img-transition-plume3.png") top center repeat-x, url("../images/bg-wood.jpg") top center no-repeat;
   background-size: auto, cover;
   position: relative;
   padding: 116px 0 75px; }
@@ -6980,13 +6958,6 @@ g text {
     left: auto;
     right: 140px;
     top: 50px; }
-  .step3 .title .number {
-    left: -28px;
-    opacity: 0.4;
-    top: 16px; }
-    @media (max-width: 1023px) {
-      .step3 .title .number {
-        left: -10px; } }
   .step3 .title h2 {
     font-size: 50px;
     margin-bottom: 48px; }
@@ -7520,32 +7491,55 @@ g text {
   visibility: hidden; }
 
 .number {
-  font: 128px/128px 'museo_sans';
+  font: 900 128px/128px 'museo_sans';
   display: block;
   position: absolute;
+  left: -100px;
+  top: 0;
   text-align: center;
-  color: #eee;
-  z-index: -1; }
+  z-index: 0;
+  color: rgba(0, 0, 0, 0.1); }
+  @media (max-width: 1199px) {
+    .number {
+      left: 0; } }
+  @media (max-width: 1023px) {
+    .number {
+      -webkit-transform: translate3d(0px, 0px, 0px) !important;
+              transform: translate3d(0px, 0px, 0px) !important;
+      font-size: 70px;
+      line-height: 72px;
+      top: -25px;
+      left: -15px; } }
+  @media (max-width: 767px) {
+    .number {
+      font-size: 64px;
+      line-height: 66px;
+      left: -40px; } }
+  .number.number-center {
+    left: 0;
+    right: 0; }
+  .number.number-right {
+    left: auto;
+    right: -100px; }
+    @media (max-width: 1199px) {
+      .number.number-right {
+        right: 0; } }
+    @media (max-width: 1023px) {
+      .number.number-right {
+        left: auto;
+        right: -15px; } }
+    @media (max-width: 767px) {
+      .number.number-right {
+        left: auto;
+        right: 0; } }
+  .step3 .number {
+    color: rgba(0, 0, 0, 0.4); }
+    @media (max-width: 767px) {
+      .step3 .number {
+        left: -5px; } }
 
 .title {
   position: relative; }
-  .title .number {
-    color: #000;
-    font-family: "museo_sans";
-    font-weight: 900;
-    font-size: 125px;
-    line-height: 100%;
-    margin: 0;
-    opacity: 0.1;
-    z-index: 0; }
-    @media (max-width: 1023px) {
-      .title .number {
-        font-size: 70px;
-        line-height: 72px; } }
-    @media (max-width: 767px) {
-      .title .number {
-        font-size: 64px;
-        line-height: 66px; } }
   .title h2 {
     color: #f05238;
     font-family: "museo_sans";
@@ -8857,6 +8851,8 @@ g text {
 .economes-block {
   background-color: #f7f6f2;
   position: relative; }
+  .economes-block .number {
+    color: rgba(0, 0, 0, 0.2); }
   .economes-block .decor1 {
     right: -95px;
     top: 50%;
@@ -8896,12 +8892,6 @@ g text {
         .economes-block .title h2 {
           font-size: 29px;
           line-height: 31px; } }
-    @media (max-width: 1199px) {
-      .economes-block .title .number {
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        left: 50%; } }
   @media (max-width: 1023px) {
     .economes-block .text {
       margin: 0 0 40px; } }
@@ -9074,18 +9064,10 @@ g text {
     @media (max-width: 767px) {
       #confort .step3 .text-holder {
         width: 100%; } }
-  #confort .step3 .title .number {
-    right: -181px;
-    left: auto; }
-    @media (max-width: 1199px) {
-      #confort .step3 .title .number {
-        right: 0;
-        left: auto; } }
-    @media (max-width: 767px) {
-      #confort .step3 .title .number {
-        right: auto;
-        left: -44px;
-        top: 0; } }
+  @media (max-width: 767px) {
+    #confort .step3 .number {
+      left: -36px;
+      right: auto; } }
   #confort .step3 h2 {
     font-size: 39px;
     line-height: 49px; }
@@ -9099,19 +9081,14 @@ g text {
   @media (max-width: 767px) {
     #confort .step4 {
       padding: 32px 0 40px; } }
+  #confort .step4 .number {
+    color: rgba(0, 0, 0, 0.3); }
   #confort .step4 .title {
     text-align: center;
     margin: 0 0 142px; }
     @media (max-width: 1023px) {
       #confort .step4 .title {
         margin: 0 0 40px; } }
-    #confort .step4 .title .number {
-      left: 50%;
-      right: auto;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
     #confort .step4 .title h2 {
       font-size: 50px;
       line-height: 52px; }
@@ -9178,7 +9155,7 @@ g text {
   padding: 111px 0 120px; }
   @media (max-width: 767px) {
     #sante .step3 {
-      padding: 50px 0 30px; } }
+      padding: 70px 0 30px; } }
   #sante .step3 .decor {
     position: absolute;
     top: -50%;
@@ -9208,16 +9185,7 @@ g text {
     top: 20px; }
   @media (max-width: 767px) {
     #sante .step3 .number {
-      left: -45px; } }
-
-#volailles .step1 .number {
-  left: 50%;
-  top: 17px; }
-  @media (max-width: 1199px) {
-    #volailles .step1 .number {
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); } }
+      left: -35px; } }
 
 #volailles .step1 .text-holder {
   text-align: center;
@@ -9345,14 +9313,6 @@ g text {
   right: 47px;
   bottom: 4%; }
 
-@media (max-width: 767px) {
-  #volailles .step1 .number {
-    left: 50%;
-    top: 17px;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); } }
-
 #volailles .step1 .title h2 {
   font-size: 50px;
   line-height: 40px;
@@ -9385,6 +9345,9 @@ g text {
   @media (max-width: 767px) {
     #volailles .step2 {
       background: #f7f6f2; } }
+  #volailles .step2 .number {
+    color: #9a1d08;
+    opacity: .6; }
   #volailles .step2 .container {
     max-width: 1045px; }
   #volailles .step2 .decor {
@@ -9427,17 +9390,6 @@ g text {
     @media (max-width: 479px) {
       #volailles .step2 .baner {
         height: 165px; } }
-    #volailles .step2 .baner .number {
-      left: 50%;
-      color: #9a1d08;
-      opacity: .6; }
-      @media (max-width: 1199px) {
-        #volailles .step2 .baner .number {
-          -webkit-transform: translate(50%, -50%);
-              -ms-transform: translate(50%, -50%);
-                  transform: translate(50%, -50%);
-          right: 50%;
-          left: auto; } }
     #volailles .step2 .baner h2 {
       color: #fff;
       margin: 0; }
@@ -9581,8 +9533,7 @@ g text {
         width: 100%; } }
   @media (max-width: 767px) {
     #volailles .step3 .number {
-      top: -13px;
-      left: -40px; } }
+      left: -35px; } }
 
 #tracabilite .step1 {
   background: url(../images/decor10.png) no-repeat left 60%, url(../images/decor12.png) no-repeat right bottom; }
@@ -9597,13 +9548,6 @@ g text {
       #tracabilite .step1 .text-holder,
       #tracabilite .step1 .img-holder {
         padding: 0; } }
-  #tracabilite .step1 .title .number {
-    left: 50%; }
-    @media (max-width: 1199px) {
-      #tracabilite .step1 .title .number {
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
   #tracabilite .step1 .title h2 {
     font-size: 50px;
     line-height: 55px; }
@@ -9653,13 +9597,12 @@ g text {
       #elevages .step1 .img-holder {
         padding: 0 15px;
         margin: 0; } }
-  #elevages .step1 .number {
-    left: 50%; }
-    @media (max-width: 1199px) {
-      #elevages .step1 .number {
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
+    #elevages .step1 .img-holder .big-circle:hover {
+      opacity: .5;
+      cursor: default; }
+    #elevages .step1 .img-holder circle:hover {
+      opacity: .6;
+      cursor: pointer; }
   #elevages .step1 .decor2 {
     bottom: -9px;
     right: -109px; }
@@ -9788,6 +9731,9 @@ g text {
   @media (max-width: 767px) {
     #elevages .step2 {
       height: auto; } }
+  #elevages .step2 .title .number {
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.4); }
   #elevages .step2 .text-holder {
     width: 100%;
     position: absolute;
@@ -9804,16 +9750,6 @@ g text {
         border-bottom: 1px solid #443f3f; } }
   #elevages .step2 .title span {
     color: #fff; }
-  #elevages .step2 .title .number {
-    left: 50%;
-    top: 50%;
-    opacity: 0.5;
-    color: #000; }
-    @media (max-width: 1199px) {
-      #elevages .step2 .title .number {
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
   #elevages .step2 .tree-column {
     display: -webkit-flex;
     display: -ms-flexbox;

@@ -59,7 +59,10 @@ var initJs = function() {
     $(function(){
         if ( $(window).width() > 767 ) {
             $('.number').each(function(index, el) {
-                $(this).Parallax({ property:'top', speed:0.150, start: 0, delay:0 });
+                $(this).Parallax({ property:'top', speed:0.100, start: 0, delay:0 });
+            });
+            $('.decor-animation img').each(function(index, el) {
+                $(this).Parallax({ property:'bottom', speed:0.175, start: 0, delay:0 });
             });
         }
     });
@@ -247,3 +250,4 @@ jQuery(document).ready(function($) {
         }
     });
 });
+

@@ -34,14 +34,5 @@
 				}
 			}
 		}
-		.number {
-			@include media('<widescreen') {
-				left:50%;
-				transform: translate(-50%, -50%);
-			}
-			@include media('<tablet') {
-				top:14%;
-			}
-		}
 	}
 }

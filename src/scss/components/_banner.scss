@@ -57,6 +57,7 @@
     color: $white;
     text-decoration: none;
     text-align: center;
+    cursor:pointer;
     @include media('<desktop') {
         font-size: 30px;
     }

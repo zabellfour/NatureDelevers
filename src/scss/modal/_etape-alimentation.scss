@@ -1,12 +1,5 @@
 .step1 {
 	#volailles & {
-		.number {
-			left: 50%;
-			top: 17px;
-			@include media('<widescreen') {
-				transform: translate(-50%, -50%);
-			}
-		}
 		.text-holder {
 			text-align:center;
 			width:100%;
@@ -124,13 +117,6 @@
 			right: 47px;
 			bottom: 4%;
 		}
-		.number {
-			@include media('<tablet') {
-				left: 50%;
-				top: 17px;
-				transform: translate(-50%, -50%);
-			}
-		}
 		.title {
 			h2 {
 				font-size:50px;
@@ -170,6 +156,11 @@
 		@include media('<tablet') {
 			background: #f7f6f2;
 		}
+		.number {
+			color: #9a1d08;
+			opacity: .6;
+			
+		}
 		.container {
 			max-width:1045px;
 		}
@@ -204,16 +195,6 @@
 			background-size:cover;
 			@include media('<phone') {
 				height:165px;
-			}
-			.number {
-				left:50%;
-				color: #9a1d08;
-				opacity: .6;
-				@include media('<widescreen') {
-					transform: translate(50%, -50%);
-					right:50%;
-					left:auto;
-				}
 			}
 			h2 {
 				color:#fff;
@@ -378,8 +359,7 @@
 		}
 		.number {
 			@include media('<tablet') {
-				top: -13px;
-				left:-40px;
+				left:-35px;
 			}
 		}
 	}

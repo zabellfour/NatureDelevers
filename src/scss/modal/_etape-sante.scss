@@ -49,7 +49,7 @@
 	#sante &{
 		padding:111px 0 120px;
 		@include media('<tablet') {
-			padding:50px 0 30px;
+			padding:70px 0 30px;
 		}
 		.decor {
 			position:absolute;
@@ -84,7 +84,7 @@
 		}
 		.number {
 			@include media('<tablet') {
-				left:-45px;
+				left:-35px;
 			}
 		}
 	}

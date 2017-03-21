@@ -60,19 +60,10 @@
 				width:100%;
 			}
 		}
-		.title {
-			.number {
-				right: -181px;
-				left:auto;
-				@include media('<widescreen') {
-					right:0;
-					left:auto;
-				}
-				@include media('<tablet') {
-					right: auto;
-					left: -44px;
-					top:0;
-				}
+		.number {
+			@include media('<tablet') {
+				left: -36px;
+				right: auto;
 			}
 		}
 		h2 {
@@ -92,17 +83,14 @@
 		@include media('<tablet') {
 			padding:32px 0 40px;
 		}
+		.number {
+			color: rgba(0,0,0,0.3);
+		}
 		.title {
 			text-align:center;
 			margin:0 0 142px;
 			@include media('<desktop') {
 				margin:0 0 40px;
-			}
-			.number {
-				left:50%;
-				right:auto;
-				top:50%;
-				transform: translate(-50%, -50%);
 			}
 			h2 {
 				font-size:50px;
