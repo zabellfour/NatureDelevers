@@ -1,15 +1,25 @@
 .modal-box {
+	&.sliding {
+			.slide-block {
+				opacity: 1;
+				visibility: visible;
+			top:0;
+			left:0;
+			}
+		}
 	.slide-block {
 		background-color: #fff;
 		height: 100%;
 		opacity: 0;
 		padding:15px;
 		position: absolute;
-		top: 0;
+		top: -9999px;
+		left:-9999px;
+		display:block !important;
 		visibility: hidden;
 		width: 100%;
 		z-index: 10;
-		transition: all 0.85s ease;
+		transition: opacity 0.85s ease;
 		overflow: auto;
 		.box1,
 		.box2 {
@@ -43,10 +53,6 @@
 			img {
 				width:100%;
 			}
-		}
-		&.sliding {
-			opacity: 1;
-			visibility: visible;
 		}
 		.scroll-block {
 			height: 100%;

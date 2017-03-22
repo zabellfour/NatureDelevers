@@ -58,6 +58,7 @@
     text-decoration: none;
     text-align: center;
     cursor:pointer;
+    z-index:10;
     @include media('<desktop') {
         font-size: 30px;
     }
@@ -122,6 +123,14 @@
         }
         &:hover {
             opacity: 0.7;
+        }
+        &:before {
+            content:'';
+            position:absolute;
+            left:-10px;
+            top:-10px;
+            right:-10px;
+            bottom:-10px;
         }
         &:after {
             content: '';

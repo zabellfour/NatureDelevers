@@ -319,6 +319,7 @@
 	#volailles & {
 		padding:147px 0 87px;
 		background: url('../images/decor11.png') top center repeat-x, url('../images/bg-wood.jpg') top center no-repeat;
+		background-size: auto, cover;
 		@include media('<tablet') {
 			padding:85px 0 34px;
 		}
