@@ -15,7 +15,6 @@ var initJs = function() {
     });
     $('body').on('click', '.scroll-link', function() {
         var offset = $('.body-holder').position().top;
-
         $('body, .modal, html').stop(true, false).animate({ scrollTop: offset }, 1000);
     });
     $(".fancybox-media").fancybox({
@@ -121,6 +120,7 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
+
         console.log('animation-etape-tracabilite');
         sr2.reveal('.modal .appear', {
             origin: 'top',
@@ -151,6 +151,7 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
+
         console.log('animation-etape-alimentation');
         sr3.reveal('.modal .appear', {
             origin: 'top',
@@ -176,9 +177,6 @@ var animation = function() {
             easing: 'ease-out',
         });
     };
-
-
-
 }
 
 var customNav = function() {
