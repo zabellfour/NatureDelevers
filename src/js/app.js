@@ -16,7 +16,7 @@ var initJs = function() {
     $('body').on('click', '.scroll-link', function() {
         var offset = $('.body-holder').position().top;
 
-        $('body, .modal').stop(true, false).animate({ scrollTop: offset }, 1000);
+        $('body, .modal, html').stop(true, false).animate({ scrollTop: offset }, 1000);
     });
     $(".fancybox-media").fancybox({
         openEffect: 'none',
@@ -29,40 +29,35 @@ var initJs = function() {
 
     $(function() {
         $('.scroll-block').each(
-            function()
-            {
-                $(this).jScrollPane(
-                {
+            function() {
+                $(this).jScrollPane({
                     showArrows: $(this).is('.arrow')
-                }
-                );
+                });
                 var api = $(this).data('jsp');
                 var throttleTimeout;
                 $(window).bind(
                     'resize',
-                    function()
-                    {
+                    function() {
                         if (!throttleTimeout) {
                             throttleTimeout = setTimeout(
-                                function()
-                                {
+                                function() {
                                     api.reinitialise();
                                     throttleTimeout = null;
                                 },
                                 50
-                                );
+                            );
                         }
                     });
             })
     });
 
-    $(function(){
-        if ( $(window).width() > 767 ) {
+    $(function() {
+        if ($(window).width() > 767) {
             $('.number').each(function(index, el) {
-                $(this).Parallax({ property:'top', speed:0.100, start: 0, delay:0 });
+                $(this).Parallax({ property: 'top', speed: 0.100, start: 0, delay: 0 });
             });
             $('.decor-animation img').each(function(index, el) {
-                $(this).Parallax({ property:'bottom', speed:0.175, start: 0, delay:0 });
+                $(this).Parallax({ property: 'bottom', speed: 0.175, start: 0, delay: 0 });
             });
         }
     });
@@ -77,42 +72,46 @@ var initJs = function() {
         closeEffect: 'none'
     });
 
-    $( window ).resize(function() {
+
+    $(window).resize(function() {
         skrollr.init({ forceHeight: false });
     });
+        skrollr.init({ forceHeight: false });
     window.sr = new ScrollReveal;
 }
 
 var animation = function() {
-    window.sr = new ScrollReveal;
+    window.sr1 = new ScrollReveal;
+    window.sr2 = new ScrollReveal;
+    window.sr3 = new ScrollReveal;
     if (document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) {
         console.log('animation-demarche-nature-deleveurs');
-        sr.reveal('.appear', {
+        sr1.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
             distance: '100px',
             scale: 1,
-            reset: false
+            reset: true
         }, 450);
-        sr.reveal('.arrowUn', {
+        sr1.reveal('.arrowUn', {
             origin: 'left',
             scale: 1,
             distance: '550px',
             easing: 'ease-out'
         });
-        sr.reveal('.arrowTop', {
+        sr1.reveal('.arrowTop', {
             origin: 'top',
             scale: 1,
             distance: '500px',
             easing: 'ease-out'
         });
-        sr.reveal('.arrowRight', {
+        sr1.reveal('.arrowRight', {
             origin: 'right',
             scale: 1,
             distance: '150px',
             easing: 'ease-out'
         });
-        sr.reveal('.logoBottom', {
+        sr1.reveal('.logoBottom', {
             origin: 'bottom',
             delay: 2000,
             duration: 1000,
@@ -123,7 +122,7 @@ var animation = function() {
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
         console.log('animation-etape-tracabilite');
-        sr.reveal('.appear', {
+        sr2.reveal('.modal .appear', {
             origin: 'top',
             viewFactor: 0.2,
             distance: '0px',
@@ -131,20 +130,20 @@ var animation = function() {
             reset: true,
             easing: 'ease-out'
         }, 350);
-        sr.reveal('.badge', {
+        sr2.reveal('.modal .badge', {
             origin: 'bottom',
             delay: 50,
             rotate: { x: 80, y: 50, z: 0 },
             distance: '50px',
             scale: 1,
         });
-        sr.reveal('.arrowTop', {
+        sr2.reveal('.modal .arrowTop', {
             origin: 'top',
             scale: 1,
             distance: '100px',
             easing: 'ease-out'
         });
-        sr.reveal('.arrowLeft', {
+        sr2.reveal('.modal .arrowLeft', {
             origin: 'left',
             scale: 1,
             distance: '100px',
@@ -153,25 +152,25 @@ var animation = function() {
     };
     if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
         console.log('animation-etape-alimentation');
-        sr.reveal('.appear', {
+        sr3.reveal('.modal .appear', {
             origin: 'top',
             viewFactor: 0.2,
             distance: '-50px',
             scale: 1,
             reset: true
         }, 50);
-        sr.reveal('.arrowUn', {
+        sr3.reveal('.modal .arrowUn', {
             origin: 'left',
             delay: 50,
             distance: '250px',
             easing: 'ease-out',
         });
-        sr.reveal('.arrowTop', {
+        sr3.reveal('.modal .arrowTop', {
             origin: 'top',
             delay: 50,
             distance: '200px',
         });
-        sr.reveal('.arrowRight', {
+        sr3.reveal('.modal .arrowRight', {
             origin: 'right',
             distance: '150px',
             easing: 'ease-out',
@@ -184,7 +183,7 @@ var animation = function() {
 
 var customNav = function() {
     $(".drop-opener").click(function(event) {
-        if($(this).hasClass('notdef'))  event.preventDefault();
+        if ($(this).hasClass('notdef')) event.preventDefault();
         $(this).parent().find(".dropdown").addClass("opened");
         $(this).removeClass('notdef');
     });
@@ -197,6 +196,21 @@ var customNav = function() {
     $(".share-holder").click(function(event) {
         event.preventDefault();
         $(this).toggleClass("share-opened");
+    });
+     $(".modal-links > li > a").click(function(event) {
+        event.preventDefault();
+        $('.drop-opener').addClass('notdef');
+        var path = $(this).attr("href");
+
+        $("#modalChapter .modal-body").load(path);
+        if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
+            $(".diagram-holder .svg").removeClass("animation-demarche-nature-deleveurs");
+        };
+        $('#modalChapter').modal('show');
+        $('#modalChapter').modal('handleUpdate');
+        $("body").removeClass("nav-active");
+
+
     });
     $(".holder2 .dropdown > li > a").click(function(event) {
         event.preventDefault();
@@ -224,8 +238,13 @@ var customNav = function() {
     });
     $(".close-modal").click(function(event) {
         if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
-            setTimeout(function() { $(".modal-content .modal-body").empty(); }, 300);
-            $(".diagram-holder .svg").addClass("animation-demarche-nature-deleveurs");
+            setTimeout(function() {
+                $(".modal-content .modal-body").empty();
+                $(".diagram-holder .svg").addClass("animation-demarche-nature-deleveurs");
+            }, 300);
+  setTimeout(function() {
+              animation();
+            }, 400);
         };
     });
 
@@ -250,4 +269,3 @@ jQuery(document).ready(function($) {
         }
     });
 });
-

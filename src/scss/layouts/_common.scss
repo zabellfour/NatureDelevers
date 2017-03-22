@@ -1,7 +1,12 @@
 #wrapper{
 	overflow: hidden;
 }
-
+.diagram-holder.hidden-holder{
+	display: none !important	;	
+		&.visible{
+			display: block !important	;	
+		}
+}
 .container{
 	@extend %clearfix;
 	max-width:1010px;

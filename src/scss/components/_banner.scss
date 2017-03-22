@@ -21,7 +21,7 @@
         bottom: 0;
         background-color: rgba($black, .15);
         @include media('<tablet') {
-            background-color: rgba($black, .6);
+            background-color: rgba($black, .15);
         }
     }
     .h1 {

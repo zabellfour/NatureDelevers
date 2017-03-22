@@ -6070,7 +6070,7 @@ g text {
     background-color: rgba(0, 0, 0, 0.15); }
     @media (max-width: 767px) {
       .banner:before {
-        background-color: rgba(0, 0, 0, 0.6); } }
+        background-color: rgba(0, 0, 0, 0.15); } }
   .banner .h1 {
     color: #fff;
     position: absolute;
@@ -7468,6 +7468,11 @@ g text {
 #wrapper {
   overflow: hidden; }
 
+.diagram-holder.hidden-holder {
+  display: none !important; }
+  .diagram-holder.hidden-holder.visible {
+    display: block !important; }
+
 .container {
   max-width: 1010px;
   padding: 0 20px;
@@ -7979,7 +7984,7 @@ g text {
           -webkit-transform: translateY(-50%) rotate(135deg);
               -ms-transform: translateY(-50%) rotate(135deg);
                   transform: translateY(-50%) rotate(135deg);
-          right: 10px;
+          right: 25px;
           width: 10px;
           height: 10px;
           border: 2px solid #fff;
