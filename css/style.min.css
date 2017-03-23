@@ -6106,7 +6106,8 @@ g text {
     color: #fff;
     text-decoration: none;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 10; }
     @media (max-width: 1023px) {
       .banner .scroll-link {
         font-size: 30px; } }
@@ -6175,6 +6176,13 @@ g text {
                   animation: scroll-move 1s infinite; } }
       .banner .scroll-link .scroll-icon:hover {
         opacity: 0.7; }
+      .banner .scroll-link .scroll-icon:before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        right: -10px;
+        bottom: -10px; }
       .banner .scroll-link .scroll-icon:after {
         content: '';
         position: absolute;
@@ -7017,12 +7025,19 @@ g text {
   opacity: 0;
   padding: 15px;
   position: absolute;
-  top: 0;
+  top: -9999px;
+  left: -9999px;
+  display: block !important;
   visibility: hidden;
   width: 100%;
   z-index: 10;
-  transition: all 0.85s ease;
+  transition: opacity 0.85s ease;
   overflow: auto; }
+  .modal-box .slide-block.sliding {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    left: 0; }
   .modal-box .slide-block .box1,
   .modal-box .slide-block .box2 {
     width: 50%;
@@ -7053,9 +7068,6 @@ g text {
       margin: 0 0 5px; }
     .modal-box .slide-block .box3 img {
       width: 100%; }
-  .modal-box .slide-block.sliding {
-    opacity: 1;
-    visibility: visible; }
   .modal-box .slide-block .scroll-block {
     height: 100%;
     width: 100% !important;
@@ -9505,7 +9517,8 @@ g text {
 
 #volailles .step3 {
   padding: 147px 0 87px;
-  background: url("../images/decor11.png") top center repeat-x, url("../images/bg-wood.jpg") top center no-repeat; }
+  background: url("../images/decor11.png") top center repeat-x, url("../images/bg-wood.jpg") top center no-repeat;
+  background-size: auto, cover; }
   @media (max-width: 767px) {
     #volailles .step3 {
       padding: 85px 0 34px; } }
@@ -9825,6 +9838,10 @@ g text {
         line-height: 42px; } }
   #elevages .step2 .number-holder {
     position: relative; }
+    @media (max-width: 1023px) {
+      #elevages .step2 .number-holder {
+        -webkit-transform: translate3d(0px, 0px, 0px) !important;
+                transform: translate3d(0px, 0px, 0px) !important; } }
   #elevages .step2 .text-number {
     font-size: 47px;
     line-height: 49px;
