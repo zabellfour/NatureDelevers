@@ -25,7 +25,9 @@ var initJs = function() {
             media: {}
         }
     });
-
+    $('.animation-box').each(function(index, el) {
+        $(this).Parallax({ property: 'bottom', speed: 0.100, start: 0, delay: 0 });
+    });
     $(function() {
         $('.scroll-block').each(
             function() {
@@ -75,15 +77,16 @@ var initJs = function() {
     $(window).resize(function() {
         skrollr.init({ forceHeight: false });
     });
-        skrollr.init({ forceHeight: false });
+    skrollr.init({ forceHeight: false });
     window.sr = new ScrollReveal;
 }
 
+var sr1 = new ScrollReveal;
+var sr2 = new ScrollReveal;
+var sr3 = new ScrollReveal;
 var animation = function() {
-    window.sr1 = new ScrollReveal;
-    window.sr2 = new ScrollReveal;
-    window.sr3 = new ScrollReveal;
-    if (document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) {
+
+    if ((document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) && ($("#modalChapter .modal-body").html().trim() === '')) {
         console.log('animation-demarche-nature-deleveurs');
         sr1.reveal('.appear', {
             origin: 'top',
@@ -118,9 +121,9 @@ var animation = function() {
             distance: '250px',
             easing: 'ease-out'
         });
+
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
-
         console.log('animation-etape-tracabilite');
         sr2.reveal('.modal .appear', {
             origin: 'top',
@@ -149,9 +152,9 @@ var animation = function() {
             distance: '100px',
             easing: 'ease-out'
         });
+
     };
     if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
-
         console.log('animation-etape-alimentation');
         sr3.reveal('.modal .appear', {
             origin: 'top',
@@ -179,6 +182,11 @@ var animation = function() {
     };
 }
 
+
+
+
+
+
 var customNav = function() {
     $(".drop-opener").click(function(event) {
         if ($(this).hasClass('notdef')) event.preventDefault();
@@ -195,15 +203,13 @@ var customNav = function() {
         event.preventDefault();
         $(this).toggleClass("share-opened");
     });
-     $(".modal-links > li > a").click(function(event) {
+    $(".modal-links > li > a").click(function(event) {
         event.preventDefault();
         $('.drop-opener').addClass('notdef');
         var path = $(this).attr("href");
 
         $("#modalChapter .modal-body").load(path);
-        if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
-            $(".diagram-holder .svg").removeClass("animation-demarche-nature-deleveurs");
-        };
+
         $('#modalChapter').modal('show');
         $('#modalChapter').modal('handleUpdate');
         $("body").removeClass("nav-active");
@@ -214,35 +220,24 @@ var customNav = function() {
         event.preventDefault();
         $('.drop-opener').addClass('notdef');
         var path = $(this).attr("href");
-
         $("#modalChapter .modal-body").load(path);
-        if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
-            $(".diagram-holder .svg").removeClass("animation-demarche-nature-deleveurs");
-        };
         $('#modalChapter').modal('show');
         $('#modalChapter').modal('handleUpdate');
         $("body").removeClass("nav-active");
-
-
     });
     $(".baner-bottom .btn-footer").click(function(event) {
         event.preventDefault();
         if (document.location.href.indexOf('journee.html') + 1) {
             $('#modalChapter').modal('hide');
-
         } else {
             document.location.href = 'journee.html';
         }
     });
     $(".close-modal").click(function(event) {
-        if (document.location.href.indexOf('journee.html') + 1) { console.log(''); } else {
+        if (document.location.href.indexOf('journee.html') + 1) { console.log('journee page'); } else {
             setTimeout(function() {
                 $(".modal-content .modal-body").empty();
-                $(".diagram-holder .svg").addClass("animation-demarche-nature-deleveurs");
             }, 300);
-  setTimeout(function() {
-              animation();
-            }, 400);
         };
     });
 
@@ -259,11 +254,24 @@ jQuery(document).ready(function($) {
         }
         initJs();
         customNav();
-        setTimeout(function() { animation(); }, 300);
+        setTimeout(function() {
+            animation();
+        }, 300);
+        $("#reset-animation").click(function(event) {
+
+            $('html, body').animate({
+                scrollTop: 0,
+            }, 1);
+            $('html, body').animate({
+                scrollTop: $("#reset-animation").offset().top
+            }, 1);
+        });
     });
     $('#modalChapter').on('hidden.bs.modal', function() {
         if ($(window).width() > 1024) {
             skrollr.init().destroy;
         }
     });
+
+
 });
