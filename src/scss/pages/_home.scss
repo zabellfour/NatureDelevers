@@ -64,6 +64,9 @@
             width: 57.4%;
             float: left;
             padding: 21px 15px;
+            @include media('>1500px') {
+                width: 70%;
+            }
             @include media('<tablet') {
                 width: 100%;
                 text-align: center;
@@ -79,6 +82,9 @@
             overflow: hidden;
             float: left;
             padding: 21px 15px;
+              @include media('>1500px') {
+                width: 30%;
+            }
             @include media('<tablet') {
                 width: 100%;
                 padding: 20px;

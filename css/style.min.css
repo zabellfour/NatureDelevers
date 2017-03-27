@@ -8119,6 +8119,9 @@ g text {
       width: 57.4%;
       float: left;
       padding: 21px 15px; }
+      @media (min-width: 1501px) {
+        .home-page .row-bottom .col1 {
+          width: 70%; } }
       @media (max-width: 767px) {
         .home-page .row-bottom .col1 {
           width: 100%;
@@ -8139,6 +8142,9 @@ g text {
       overflow: hidden;
       float: left;
       padding: 21px 15px; }
+      @media (min-width: 1501px) {
+        .home-page .row-bottom .col2 {
+          width: 30%; } }
       @media (max-width: 767px) {
         .home-page .row-bottom .col2 {
           width: 100%;

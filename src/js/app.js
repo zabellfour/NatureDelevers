@@ -258,13 +258,19 @@ jQuery(document).ready(function($) {
             animation();
         }, 300);
         $("#reset-animation").click(function(event) {
+            $('body').css('opacity', 0);
 
             $('html, body').animate({
+
                 scrollTop: 0,
             }, 1);
             $('html, body').animate({
                 scrollTop: $("#reset-animation").offset().top
             }, 1);
+            setTimeout(function() {
+                $('body').css('opacity', 1);
+            }, 50);
+
         });
     });
     $('#modalChapter').on('hidden.bs.modal', function() {
