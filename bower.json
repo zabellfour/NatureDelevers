@@ -28,6 +28,7 @@
     "jScrollPane": "^2.0.23",
     "bower-skrollr": "^0.6.26",
     "jquery-mousewheel": "^3.1.13",
-    "parallax.js": "^1.4.2"
+    "parallax.js": "^1.4.2",
+    "wow": "wowjs#^1.1.2"
   }
 }

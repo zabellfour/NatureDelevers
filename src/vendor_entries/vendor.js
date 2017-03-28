@@ -18,6 +18,7 @@ module.exports = [
 	'./bower/jScrollPane/script/jquery.jscrollpane.min.js',
 	'./bower/jquery-mousewheel/jquery.mousewheel.min.js',
 	'./bower/bower-skrollr/skrollr.min.js',
+	'./bower/wow/dist/wow.min.js',
 	'./src/js/journee.js',
 	'./src/js/mwheelIntent.js',
 	'./src/js/scrollreveal.min.js',

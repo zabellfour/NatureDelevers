@@ -25,9 +25,6 @@ var initJs = function() {
             media: {}
         }
     });
-    $('.animation-box').each(function(index, el) {
-        $(this).Parallax({ property: 'bottom', speed: 0.100, start: 0, delay: 0 });
-    });
     $(function() {
         $('.scroll-block').each(
             function() {
@@ -46,7 +43,7 @@ var initJs = function() {
                                     throttleTimeout = null;
                                 },
                                 50
-                            );
+                                );
                         }
                     });
             })
@@ -59,6 +56,9 @@ var initJs = function() {
             });
             $('.decor-animation img').each(function(index, el) {
                 $(this).Parallax({ property: 'bottom', speed: 0.175, start: 0, delay: 0 });
+            });
+            $('.animation-box').each(function(index, el) {
+                $(this).Parallax({ property: 'bottom', speed: 0.100, start: 0, delay: 0 });
             });
         }
     });
@@ -180,12 +180,23 @@ var animation = function() {
             easing: 'ease-out',
         });
     };
+    if (document.getElementsByClassName("animation-commence").length != 0) {
+       sr.reveal('.appear', {
+          origin       :'top',
+          viewFactor : 0.2,
+          distance : '0px',
+          scale    : 1, 
+          reset    : false
+        }, 450);
+        sr.reveal('.arrowTop', {
+              origin       :'top',
+              scale    : 1,
+              distance : '100px',
+              easing   : 'ease-out'
+        });
+    };
+    
 }
-
-
-
-
-
 
 var customNav = function() {
     $(".drop-opener").click(function(event) {
@@ -278,6 +289,4 @@ jQuery(document).ready(function($) {
             skrollr.init().destroy;
         }
     });
-
-
 });

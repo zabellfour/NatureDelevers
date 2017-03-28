@@ -1,0 +1,52 @@
+/* commence page style */
+
+#commence-wrap {
+	.production-holder {
+		background-image: url(../images/decor06.png);
+		margin:0 0 200px;
+	}
+	.two-column {
+		p {
+			margin:0;
+		}
+	}
+	.diagram-holder {
+		background: url(../images/decor14.png) no-repeat left 10%, url(../images/decor12.png) no-repeat right bottom;
+		position:relative;
+		@include media('<desktop') {
+			background:none;
+		}
+		.containsvg {
+			max-width:1055px;
+			padding:0 15px;
+		}
+		.decor1 {
+			left:-80px;
+			top:50%;
+		}
+		.decor2 {
+			right:-130px;
+			top:20%;
+		}
+		.decor3 {
+			right:40%;
+			top:20%;
+		}
+		.decor4 {
+			position:absolute;
+			right:0;
+			bottom:10%;
+			@include media('<desktop') {
+				display:none;
+			}
+		}
+		.decor5 {
+			position:absolute;
+			left:10%;
+			bottom:20%;
+			@include media('<desktop') {
+				display:none;
+			}
+		}
+	}
+}

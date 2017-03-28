@@ -8826,6 +8826,85 @@ g text {
     top: 0;
     left: 0; }
 
+/* commence page style */
+#commence-wrap .production-holder {
+  background-image: url(../images/decor06.png);
+  margin: 0 0 200px; }
+
+#commence-wrap .two-column p {
+  margin: 0; }
+
+#commence-wrap .diagram-holder {
+  background: url(../images/decor14.png) no-repeat left 10%, url(../images/decor12.png) no-repeat right bottom;
+  position: relative; }
+  @media (max-width: 1023px) {
+    #commence-wrap .diagram-holder {
+      background: none; } }
+  #commence-wrap .diagram-holder .containsvg {
+    max-width: 1055px;
+    padding: 0 15px; }
+  #commence-wrap .diagram-holder .decor1 {
+    left: -80px;
+    top: 50%; }
+  #commence-wrap .diagram-holder .decor2 {
+    right: -130px;
+    top: 20%; }
+  #commence-wrap .diagram-holder .decor3 {
+    right: 40%;
+    top: 20%; }
+  #commence-wrap .diagram-holder .decor4 {
+    position: absolute;
+    right: 0;
+    bottom: 10%; }
+    @media (max-width: 1023px) {
+      #commence-wrap .diagram-holder .decor4 {
+        display: none; } }
+  #commence-wrap .diagram-holder .decor5 {
+    position: absolute;
+    left: 10%;
+    bottom: 20%; }
+    @media (max-width: 1023px) {
+      #commence-wrap .diagram-holder .decor5 {
+        display: none; } }
+
+/* secret style */
+.secret-wrap {
+  background: url(../images/secter-bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 100vh; }
+
+.secret-title {
+  text-align: center;
+  color: #fff;
+  margin: 0 0 28px; }
+  .secret-title p {
+    margin: 0; }
+
+.menu-list {
+  padding: 0 0 87px; }
+  .menu-list .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 1023px) {
+      .menu-list .row {
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    .menu-list .row img {
+      width: 100%; }
+  .menu-list .box {
+    width: 600px; }
+    @media (max-width: 1199px) {
+      .menu-list .box {
+        width: 50%; } }
+  .menu-list .img-holder {
+    max-width: 840px;
+    margin: 0 auto; }
+
 /* Pages modal*/
 #exploitations .step1 {
   background-size: cover;
