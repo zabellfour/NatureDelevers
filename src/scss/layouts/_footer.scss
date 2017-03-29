@@ -38,7 +38,7 @@
 		float:left;
 		position:relative;
 		@include media('<tablet') {
-			margin:0;
+			margin:0 5px;
 		}
 		span {
 			@include media('<tablet') {
