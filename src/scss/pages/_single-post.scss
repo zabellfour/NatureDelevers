@@ -1,0 +1,184 @@
+.single-post-page {
+    @extend %clearfix;
+    @include media('<tablet') {
+   
+    }
+    .content {
+        width: 69.3%;
+        float: left;
+        @include media('<desktop') {
+            width: 67%;
+        }
+        @include media('<tablet') {
+            width: 100%;
+        }
+    }
+    .post {
+        color: $black;
+        letter-spacing: 0.2px;
+        margin-bottom: 59px;
+        p {
+            margin-bottom: 21px;
+        }
+    }
+    .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 37px;
+    }
+    .tag {
+        background-color: $black;
+        color: $white;
+        font-size: 14px;
+        padding: 4px 16px;
+    }
+    time {
+        font-size: 14px;
+        color: $scarlet;
+    }
+    strong {
+        font-weight: 900;
+    }
+    .img-holder {
+        width: 100%;
+        margin-top: -82px;
+        margin-bottom: 0;
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+    }
+    h4 {
+        font-family: $fontMuseoSans;
+        font-size: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+        @include media('<desktop') {
+            font-size: 17px;
+        }
+    }
+    .sidebar {
+        padding: 37px 15px;
+        background-color: #f4f4f4;
+        position: relative;
+        z-index: 10;
+        margin-top: -54px;
+        font-family: $fontLato;
+        width: 28.8%;
+        float: right;
+        overflow: hidden;
+        @include media('<desktop') {
+            width: 32%;
+            padding-top: 15px;
+        }
+        @include media('<tablet') {
+            width: 100%;
+        }
+        .sidebar-list {
+            @extend %listreset;
+            padding-left: 12px;
+            margin-bottom: 64px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            li {
+                margin-bottom: 17px;
+                @include media('<desktop') {
+                    margin-bottom: 7px;
+                }
+                @include media('<tablet') {
+                	width: auto;
+display:inline-block;
+margin-right: 10px;
+vertical-align: middle;
+                }
+                a {
+                    position: relative;
+                    padding-left: 24px;
+                    overflow: hidden;
+                    font-weight: 400;
+                    font-family: $fontLato;
+                    @include media('<desktop') {
+                        padding-left: 20px;
+                    }
+                    &:before {
+                        @include animate(left);
+                        content: '';
+                        position: absolute;
+                        top: 4px;
+                        left: -5px;
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border: 1px solid $black;
+                        transform: rotate(45deg);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                    &:hover:before {
+                        left: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.related-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 29px;
+    margin-bottom: 77px;
+    h4 {
+        font-family: $fontMuseoSans;
+        font-size: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+        width: 100%;
+        margin-bottom: 7px;
+    }
+    .post-thumb {
+        width: 31%;
+        margin-bottom: 20px;
+        @include media('<phone') {
+        	width: 100%;
+        }
+        .img-holder {
+            img {
+            	vertical-align: top;
+                width: 100%;
+                max-width: none;
+            }
+            margin-bottom: 10px;
+        }
+        a {
+        	width: 100%;
+            @include animate(opacity color);
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 3px;
+            &:hover {
+                color: $scarlet;
+                opacity: .9;
+            }
+            h5 {
+                font-size: inherit;
+                font-weight: 900;
+                color: inherit;
+                margin-bottom: 0;
+            }
+        }
+    }
+    time {
+        font-size: 14px;
+        color: $scarlet;
+        display: block;
+    }
+}
