@@ -2,9 +2,15 @@ import './modules/nav';
 import './modules/tabs';
 import './modules/openClose';
 
+function initSlider() {
+     var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    });
+}
 
-var initJs = function() {
-
+var initJs = function() { 
     $('div.open-box-text').openClose({
         hideOnClickOutside: true,
         activeClass: 'active',
@@ -48,7 +54,6 @@ var initJs = function() {
                     });
             })
     });
-
     $(function() {
         if ($(window).width() > 767) {
             $('.number').each(function(index, el) {
@@ -62,7 +67,6 @@ var initJs = function() {
             });
         }
     });
-
     $(".economes-popup").fancybox({
         maxWidth: 500,
         maxHeight: 400,
@@ -72,8 +76,6 @@ var initJs = function() {
         openEffect: 'none',
         closeEffect: 'none'
     });
-
-
     $(window).resize(function() {
         skrollr.init({ forceHeight: false });
     });
@@ -181,21 +183,21 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-commence").length != 0) {
-       sr.reveal('.appear', {
-          origin       :'top',
-          viewFactor : 0.2,
-          distance : '0px',
-          scale    : 1, 
-          reset    : false
-        }, 450);
-        sr.reveal('.arrowTop', {
-              origin       :'top',
-              scale    : 1,
-              distance : '100px',
-              easing   : 'ease-out'
-        });
-    };
-    
+     sr.reveal('.appear', {
+      origin       :'top',
+      viewFactor : 0.2,
+      distance : '0px',
+      scale    : 1, 
+      reset    : false
+  }, 450);
+     sr.reveal('.arrowTop', {
+      origin       :'top',
+      scale    : 1,
+      distance : '100px',
+      easing   : 'ease-out'
+  });
+ };
+ 
 }
 
 var customNav = function() {
@@ -255,6 +257,7 @@ var customNav = function() {
 }
 
 jQuery(document).ready(function($) {
+    new WOW().init();
     initJs();
     customNav();
     animation();
@@ -281,7 +284,6 @@ jQuery(document).ready(function($) {
             setTimeout(function() {
                 $('body').css('opacity', 1);
             }, 50);
-
         });
     });
     $('#modalChapter').on('hidden.bs.modal', function() {
@@ -289,4 +291,9 @@ jQuery(document).ready(function($) {
             skrollr.init().destroy;
         }
     });
+    $('#menu1, #menu2, #menu3').on('shown.bs.modal', function() {
+        //var instance = $('#block-video').data('vide');
+         initSlider();
+    });
+    
 });

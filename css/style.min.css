@@ -8870,18 +8870,50 @@ g text {
 /* secret style */
 .secret-wrap {
   background: url(../images/secter-bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
-  min-height: 100vh; }
+  background-size: cover; }
+  .secret-wrap.modal-open {
+    overflow: hidden; }
 
 .secret-title {
+  font: 700 18px/19px "lato", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   text-align: center;
   color: #fff;
-  margin: 0 0 28px; }
+  margin: 40px 0; }
+  .secret-title h1 {
+    font-size: 100px;
+    line-height: 102px;
+    margin: 0; }
   .secret-title p {
     margin: 0; }
 
 .menu-list {
-  padding: 0 0 87px; }
+  padding: 154px 0 87px; }
+  .menu-list .info1,
+  .menu-list .info2,
+  .menu-list .info3 {
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    font: 22px/24px "mochaMattari-regular";
+    letter-spacing: 0.5px; }
+  .menu-list .info1 {
+    top: -56px;
+    left: 41%; }
+  .menu-list .info2 {
+    right: 93px;
+    bottom: -6px; }
+  .menu-list .info3 {
+    bottom: -58%;
+    left: 85px; }
+  .menu-list .arrow-menu {
+    display: block;
+    -webkit-transform: rotate(12deg);
+        -ms-transform: rotate(12deg);
+            transform: rotate(12deg);
+    width: 48%;
+    position: absolute;
+    bottom: -88px;
+    right: 46px; }
   .menu-list .row {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -8894,16 +8926,190 @@ g text {
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between; } }
+    .menu-list .row:first-child {
+      margin: 0 0 100px; }
+    .menu-list .row .btn-plus:focus {
+      outline: none; }
     .menu-list .row img {
       width: 100%; }
+    .menu-list .row.row-sm {
+      margin: -167px 0 296px; }
+      .menu-list .row.row-sm .box {
+        width: 430px;
+        padding: 0 29px 0 0; }
+      .menu-list .row.row-sm .btn-plus {
+        left: auto;
+        right: 4px;
+        top: auto;
+        bottom: 70px; }
   .menu-list .box {
-    width: 600px; }
+    width: 600px;
+    position: relative;
+    padding: 0 50px; }
     @media (max-width: 1199px) {
       .menu-list .box {
         width: 50%; } }
-  .menu-list .img-holder {
-    max-width: 840px;
-    margin: 0 auto; }
+  .menu-list .holder {
+    max-width: 945px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative; }
+    .menu-list .holder .text-block {
+      position: absolute;
+      left: 26px;
+      top: 148px;
+      -webkit-transform: rotate(-10deg);
+          -ms-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+      text-align: center; }
+    .menu-list .holder .img-block {
+      width: 68%;
+      float: right;
+      position: relative; }
+    .menu-list .holder .btn-plus {
+      left: 47px;
+      bottom: 45%;
+      top: auto; }
+    .menu-list .holder .title {
+      font-family: "mochaMattari-regular";
+      font-size: 40px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: #fa6c4f;
+      display: block;
+      background: #fff;
+      padding: 23px 59px;
+      margin: 0 0 14px 10px;
+      max-width: 280px; }
+    .menu-list .holder .info {
+      font: 48px/50px 'playlistscript';
+      color: #fff; }
+  .menu-list .photo-box1 {
+    position: absolute;
+    left: 4px;
+    top: -143px;
+    z-index: 1;
+    -webkit-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+    width: 43%; }
+    .menu-list .photo-box1 .btn-plus {
+      z-index: 10;
+      top: auto;
+      bottom: 158px;
+      left: -10px;
+      -webkit-transform: rotate(27deg);
+          -ms-transform: rotate(27deg);
+              transform: rotate(27deg);
+      z-index: 5; }
+      .menu-list .photo-box1 .btn-plus:hover {
+        -webkit-transform: scale(1.1) rotate(27deg);
+            -ms-transform: scale(1.1) rotate(27deg);
+                transform: scale(1.1) rotate(27deg); }
+  .menu-list .photo-box2 {
+    position: absolute;
+    left: 127px;
+    bottom: -196px;
+    z-index: 1;
+    -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
+    width: 41%; }
+    .menu-list .photo-box2 .btn-plus {
+      top: auto;
+      bottom: 60px;
+      left: auto;
+      right: -14px;
+      -webkit-transform: rotate(-5deg);
+          -ms-transform: rotate(-5deg);
+              transform: rotate(-5deg); }
+      .menu-list .photo-box2 .btn-plus:hover {
+        -webkit-transform: scale(1.1) rotate(-5deg);
+            -ms-transform: scale(1.1) rotate(-5deg);
+                transform: scale(1.1) rotate(-5deg); }
+  .menu-list .photo-box3 {
+    position: absolute;
+    -webkit-transform: rotate(-29deg);
+        -ms-transform: rotate(-29deg);
+            transform: rotate(-29deg);
+    top: 208px;
+    right: -44px;
+    width: 59%;
+    z-index: 1; }
+  .menu-list .box-board {
+    padding: 0; }
+  .menu-list .img-wrap {
+    position: relative;
+    z-index: 2; }
+
+.secret-wrap .modal {
+  display: none; }
+
+.modal-open.secret-wrap #wrapper {
+  max-height: none; }
+
+.modal-open.secret-wrap .modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.68); }
+
+.modal-open.secret-wrap .btn-close {
+  width: 17px;
+  height: 17px;
+  min-width: 0;
+  background: none;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  overflow: hidden;
+  z-index: 10; }
+  .modal-open.secret-wrap .btn-close:after, .modal-open.secret-wrap .btn-close:before {
+    transition: background 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    -webkit-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+            transform: rotate(-40deg); }
+  .modal-open.secret-wrap .btn-close:before {
+    -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+            transform: rotate(40deg); }
+  .modal-open.secret-wrap .btn-close:hover:after, .modal-open.secret-wrap .btn-close:hover:before {
+    background: #f05238; }
+
+.modal-open .menu1, .modal-open
+.menu2, .modal-open
+.menu3 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none; }
+
+.swiper-slide {
+  color: #fff;
+  width: 100%; }
+
+.swiper-button-next, .swiper-button-prev {
+  z-index: 100;
+  top: 50%;
+  left: 50px; }
+
+.swiper-button-next {
+  left: auto;
+  right: 50px; }
 
 /* Pages modal*/
 #exploitations .step1 {

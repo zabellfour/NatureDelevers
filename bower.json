@@ -29,6 +29,8 @@
     "bower-skrollr": "^0.6.26",
     "jquery-mousewheel": "^3.1.13",
     "parallax.js": "^1.4.2",
-    "wow": "wowjs#^1.1.2"
+    "wow": "wowjs#^1.1.2",
+    "vide": "^0.5.1",
+    "swiper": "^3.4.2"
   }
 }
