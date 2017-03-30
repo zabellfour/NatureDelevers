@@ -1,9 +1,8 @@
 import './modules/nav';
 import './modules/tabs';
 import './modules/openClose';
-
 function initSlider() {
-     var mySwiper = new Swiper('.swiper-container', {
+     var mySwiper = new Swiper('.menu-slider', {
         loop: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
@@ -183,21 +182,21 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-commence").length != 0) {
-     sr.reveal('.appear', {
-      origin       :'top',
-      viewFactor : 0.2,
-      distance : '0px',
-      scale    : 1, 
-      reset    : false
-  }, 450);
-     sr.reveal('.arrowTop', {
-      origin       :'top',
-      scale    : 1,
-      distance : '100px',
-      easing   : 'ease-out'
-  });
- };
- 
+       sr.reveal('.appear', {
+          origin       :'top',
+          viewFactor : 0.2,
+          distance : '0px',
+          scale    : 1, 
+          reset    : false
+      }, 450);
+       sr.reveal('.arrowTop', {
+          origin       :'top',
+          scale    : 1,
+          distance : '100px',
+          easing   : 'ease-out'
+      });
+   };
+   
 }
 
 var customNav = function() {
@@ -292,8 +291,11 @@ jQuery(document).ready(function($) {
         }
     });
     $('#menu1, #menu2, #menu3').on('shown.bs.modal', function() {
-        //var instance = $('#block-video').data('vide');
-         initSlider();
+        var result = document.getElementById('block-video');
+        var result2 = '../' + result.getAttribute('data-vide-bg');
+        $('#block-video').vide({ mp4: '../videos/journeeEleveur_HD_tab.mp4'}, {
+        });
+        initSlider();
     });
     
 });
