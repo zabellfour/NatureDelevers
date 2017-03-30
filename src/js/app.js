@@ -3,14 +3,14 @@ import './modules/tabs';
 import './modules/openClose';
 
 function initSlider() {
-     var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
         loop: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
     });
 }
 
-var initJs = function() { 
+var initJs = function() {
     $('div.open-box-text').openClose({
         hideOnClickOutside: true,
         activeClass: 'active',
@@ -49,7 +49,7 @@ var initJs = function() {
                                     throttleTimeout = null;
                                 },
                                 50
-                                );
+                            );
                         }
                     });
             })
@@ -87,7 +87,6 @@ var sr1 = new ScrollReveal;
 var sr2 = new ScrollReveal;
 var sr3 = new ScrollReveal;
 var animation = function() {
-
     if ((document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) && ($("#modalChapter .modal-body").html().trim() === '')) {
         console.log('animation-demarche-nature-deleveurs');
         sr1.reveal('.appear', {
@@ -183,21 +182,21 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-commence").length != 0) {
-     sr.reveal('.appear', {
-      origin       :'top',
-      viewFactor : 0.2,
-      distance : '0px',
-      scale    : 1, 
-      reset    : false
-  }, 450);
-     sr.reveal('.arrowTop', {
-      origin       :'top',
-      scale    : 1,
-      distance : '100px',
-      easing   : 'ease-out'
-  });
- };
- 
+        sr.reveal('.appear', {
+            origin: 'top',
+            viewFactor: 0.2,
+            distance: '0px',
+            scale: 1,
+            reset: false
+        }, 450);
+        sr.reveal('.arrowTop', {
+            origin: 'top',
+            scale: 1,
+            distance: '100px',
+            easing: 'ease-out'
+        });
+    };
+
 }
 
 var customNav = function() {
@@ -292,8 +291,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('#menu1, #menu2, #menu3').on('shown.bs.modal', function() {
-        //var instance = $('#block-video').data('vide');
-         initSlider();
+        initSlider();
     });
-    
+
 });
