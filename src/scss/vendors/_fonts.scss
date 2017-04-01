@@ -1,4 +1,20 @@
 @font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/roboto-thin-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-thin-webfont.woff') format('woff');
+     font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'la_belle_auroreregular';
+    src: url('../fonts/labelleaurore-webfont.woff2') format('woff2'),
+    url('../fonts/labelleaurore-webfont.woff') format('woff');
+     font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
     font-family: 'mochamattariw';
     src: url('../fonts/mochamattariregular-webfont.woff2') format('woff2'),
     url('../fonts/mochamattariregular-webfont.woff') format('woff');
