@@ -303,4 +303,20 @@ jQuery(document).ready(function($) {
         initSlider();
     });
 
+    window.addEventListener('scroll', function(e) {
+        var line = $('#line-path'),
+            offset = 2000 - $(window).scrollTop() / 1.3;
+
+  // $( "#book" ).animate({
+  //   opacity: 0.25,
+  //   left: "+=50",
+  //   height: "toggle"
+  // }, 5000, function() {
+  //   // Animation complete.
+  // });
+
+        line.animate({'stroke-dashoffset':offset}, 25 ,function() {});
+
+    });
+
 });
