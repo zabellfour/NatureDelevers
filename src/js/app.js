@@ -3,9 +3,7 @@ import './modules/tabs';
 import './modules/openClose';
 
 function initSlider() {
-
-    var mySwiper = new Swiper('.swiper-container', {
-
+    var mySwiper = new Swiper('.menu-slider', {
         loop: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'

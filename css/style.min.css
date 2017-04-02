@@ -8974,8 +8974,6 @@ g text {
 .secret-wrap {
   background: url(../images/secter-bg.jpg) no-repeat 50% 50%;
   background-size: cover; }
-  .secret-wrap.modal-open {
-    overflow: hidden; }
   @media (max-width: 767px) {
     .secret-wrap #footer {
       background: #fff;
@@ -9326,7 +9324,9 @@ g text {
 .modal-open.secret-wrap #wrapper {
   max-height: none; }
 
-.modal-open.secret-wrap .modal {
+.modal-open.secret-wrap #menu1,
+.modal-open.secret-wrap #menu2,
+.modal-open.secret-wrap #menu3 {
   position: fixed;
   left: 0;
   right: 0;
@@ -9599,6 +9599,40 @@ g text {
     font-size: 14px;
     color: #f05238;
     display: block; }
+
+#mentions .step1 .title {
+  text-align: center; }
+
+#mentions .strong-holder {
+  margin: 0 0 20px;
+  font-weight: bold; }
+  #mentions .strong-holder p {
+    margin: 0; }
+
+.number-list-holder ol {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0; }
+
+.number-list-holder li {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 900;
+  margin: 0 0 20px; }
+  .number-list-holder li .text-box {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    margin: 20px 0 0; }
+
+.number-list-holder p {
+  margin: 0 0 20px; }
+
+.number-list-holder address {
+  font-style: normal; }
+  .number-list-holder address a {
+    display: inline-block;
+    vertical-align: middle; }
 
 /* Pages modal*/
 #exploitations .step1 {
