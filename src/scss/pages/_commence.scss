@@ -2,19 +2,38 @@
 
 #commence-wrap {
 	.production-holder {
-		background-image: url(../images/decor06.png);
+		background-image: url(../images/decor06.png) no-repeat ;
 		margin:0 0 200px;
+		@include media('<tablet') {
+			margin:0 0 125px;
+		}
 	}
 	.two-column {
 		p {
 			margin:0;
 		}
 	}
-	.diagram-holder {
+	.step2 {
 		background: url(../images/decor14.png) no-repeat left 10%, url(../images/decor12.png) no-repeat right bottom;
 		position:relative;
 		@include media('<desktop') {
 			background:none;
+		}
+		@include media('<tablet') {
+			padding:0;
+		}
+		h2 {
+			@include media('<desktop') {
+				font-size:35px;
+				line-height:40px;
+			}
+			@include media('<tablet') {
+				font-size:28px;
+				line-height:30px;
+			}
+		}
+		.title {
+			text-align:center;
 		}
 		.containsvg {
 			max-width:1055px;

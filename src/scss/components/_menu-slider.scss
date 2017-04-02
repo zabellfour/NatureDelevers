@@ -15,6 +15,7 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
+	color:#fff;
 	@include media('<tablet') {
 		font-size:16px;
 		line-height:18px;
