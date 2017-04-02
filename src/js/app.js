@@ -250,7 +250,7 @@ var customNav = function() {
     $(".close-modal").click(function(event) {
         if (document.location.href.indexOf('journee.html') + 1) { console.log('journee page'); } else {
             setTimeout(function() {
-                $(".modal-content .modal-body").empty();
+                $("#modal-cahpter .modal-content .modal-body").empty();
             }, 300);
         };
     });
@@ -293,13 +293,19 @@ jQuery(document).ready(function($) {
         }
     });
     $('#menu1, #menu2, #menu3').on('shown.bs.modal', function() {
-
         var result = document.getElementById('block-video');
         var result2 = '../' + result.getAttribute('data-vide-bg');
         $('#block-video').vide({ mp4: '../videos/journeeEleveur_HD_tab.mp4' }, {});
         result.style.opacity = "0";
         initSlider();
     });
+    
+     $('.w-ovh').on('shown.bs.modal', function(e) {
+        $('body').addClass('ovh');
+    })
+    $('.w-ovh').on('hidden.bs.modal', function(e) {
+        $('body').removeClass('ovh');
+    })
 
     window.addEventListener('scroll', function(e) {
         var line = $('#line-path'),

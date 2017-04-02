@@ -7519,14 +7519,14 @@ g text {
   @media (max-width: 1023px) {
     .menu-slider .swiper-button-prev,
     .menu-slider .swiper-button-next {
-      left: 10px; } }
+      left: 20px; } }
   .menu-slider .swiper-button-prev:hover,
   .menu-slider .swiper-button-next:hover {
     opacity: .8; }
   @media (max-width: 1023px) {
     .menu-slider .swiper-button-next {
       left: auto;
-      right: 10px; } }
+      right: 20px; } }
   .menu-slider .text-holder {
     margin: 0 0 0 88px;
     padding: 30px 0;
@@ -8974,6 +8974,8 @@ g text {
 .secret-wrap {
   background: url(../images/secter-bg.jpg) no-repeat 50% 50%;
   background-size: cover; }
+  .secret-wrap.ovh {
+    overflow: hidden; }
   @media (max-width: 767px) {
     .secret-wrap #footer {
       background: #fff;
@@ -9387,6 +9389,14 @@ g text {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   visibility: hidden; }
+  #block-video:before {
+    background: rgba(0, 0, 0, 0.68);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
 
 .modal-open #block-video {
   opacity: 1;
@@ -9411,8 +9421,7 @@ g text {
     left: 0;
     right: 0;
     bottom: 800px;
-    text-align: center;
-    z-index: 1; }
+    text-align: center; }
     @media (max-width: 1024px) {
       .menu-list .line-holder {
         display: none; } }
@@ -9613,17 +9622,22 @@ g text {
   list-style-position: inside;
   margin: 0;
   padding: 0; }
+  .number-list-holder ol > li {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 900;
+    margin: 0 0 20px; }
+    .number-list-holder ol > li .text-box {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: normal;
+      margin: 20px 0 0; }
 
-.number-list-holder li {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 900;
-  margin: 0 0 20px; }
-  .number-list-holder li .text-box {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: normal;
-    margin: 20px 0 0; }
+.number-list-holder ul {
+  font-family: "lato", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
 .number-list-holder p {
   margin: 0 0 20px; }
