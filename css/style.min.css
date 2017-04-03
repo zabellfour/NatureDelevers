@@ -6525,12 +6525,10 @@ g text {
 
 .contact-form-holder {
   background: url("../images/bg-contact.png") no-repeat 0 0/cover;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding: 88px 20px 90px 100px; }
   @media (max-width: 1099px) {
     .contact-form-holder {
@@ -6593,18 +6591,14 @@ g text {
     bottom: 0;
     width: 5px; }
   .contact-form-holder .mark-holder {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
     .contact-form-holder .mark-holder .box {
       margin: 0 0 75px 88px; }
       @media (max-width: 1099px) {
@@ -6621,12 +6615,10 @@ g text {
   .contact-form-holder .row {
     overflow: hidden;
     text-align: left;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     margin: 0 0 35px; }
     @media (max-width: 767px) {
       .contact-form-holder .row {
@@ -6694,6 +6686,92 @@ g text {
     @media (max-width: 479px) {
       .contact-form-holder h3 {
         font-size: 16px; } }
+
+.experience-holder {
+  position: relative;
+  padding-top: 100px; }
+  .experience-holder .h2 {
+    text-align: center;
+    font-size: 50px; }
+  .experience-holder .reserve-form {
+    margin-top: 50px;
+    text-align: center;
+    border: 5px solid #f05238;
+    padding: 0 20px 70px; }
+    .experience-holder .reserve-form p {
+      margin-bottom: 20px; }
+    .experience-holder .reserve-form .h3 {
+      color: #f05238;
+      display: inline-block;
+      -ms-transform: translateY(-15px);
+          transform: translateY(-15px);
+      padding: 0 30px;
+      background: #fff;
+      font-size: 24px; }
+    .experience-holder .reserve-form .group {
+      max-width: 734px;
+      margin: 0 auto;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+    .experience-holder .reserve-form .tag {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 5px 15px;
+      min-width: 200px;
+      text-align: center; }
+    .experience-holder .reserve-form button {
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      display: inline-block;
+      background-color: #f05238;
+      color: #fff;
+      padding: 2px 11px;
+      min-width: 200px;
+      text-align: center;
+      border: none;
+      border: 2px solid #f05238; }
+      .experience-holder .reserve-form button:hover {
+        background-color: transparent;
+        color: #f05238; }
+
+.color-red {
+  color: #f05238; }
+
+.color-black {
+  color: #000; }
+
+.experience-info {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 100px; }
+
+.jcf-select {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+  margin-bottom: 0;
+  height: 35px;
+  line-height: 35px; }
+  .jcf-select .jcf-select-text {
+    line-height: 35px; }
+  .jcf-select .jcf-select-opener {
+    background-color: #e6e6e6; }
+    .jcf-select .jcf-select-opener:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      border: 1px solid #000;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+      -ms-transform: rotate(135deg) translate(-50%, -50%);
+          transform: rotate(135deg) translate(-50%, -50%);
+      border-left: none;
+      border-bottom: none; }
 
 /* Pages modal*/
 #exploitations .step1 {

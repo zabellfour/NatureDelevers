@@ -1,0 +1,97 @@
+.experience-holder {
+    position: relative;
+    padding-top: 100px;
+    .h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+    .reserve-form {
+        margin-top: 50px;
+        text-align: center;
+        border: 5px solid $scarlet;
+        padding: 0 20px 70px;
+        p {
+            margin-bottom: 20px;
+        }
+        .h3 {
+            color: $scarlet;
+            display: inline-block;
+            transform: translateY(-15px);
+            padding: 0 30px;
+            background: $white;
+            font-size: 24px;
+        }
+        .group {
+            max-width: 734px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .tag {
+            display: inline-block;
+            background-color: $black;
+            color: $white;
+            padding: 5px 15px;
+            min-width: 200px;
+            text-align: center;
+        }
+        button {
+            @include animate(background-color color);
+            display: inline-block;
+            background-color: $scarlet;
+            color: $white;
+            padding: 2px 11px;
+            min-width: 200px;
+            text-align: center;
+            border: none;
+            border: 2px solid $scarlet;
+            &:hover {
+                background-color: transparent;
+                color: $scarlet;
+            }
+        }
+    }
+}
+
+.color-red {
+    color: $scarlet;
+}
+
+.color-black {
+    color: $black;
+}
+
+.experience-info {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 100px;
+}
+
+.jcf-select {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+    margin-bottom: 0;
+    height: 35px;
+    line-height: 35px;
+    .jcf-select-text {
+        line-height: 35px;
+    }
+    .jcf-select-opener {
+        background-color: #e6e6e6;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            border: 1px solid $black;
+            transform-origin:0% 0%; 
+            transform:rotate(135deg) translate(-50%, -50%);
+            border-left:none;
+            border-bottom:none;
+
+        }
+    }
+}

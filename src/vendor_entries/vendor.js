@@ -22,6 +22,8 @@ module.exports = [
 	'./bower/vide/dist/jquery.vide.min.js',
 	'./bower/swiper/dist/js/swiper.min.js',
 	'./bower/swiper/dist/js/swiper.jquery.min.js',
+	'./bower/jcf/js/jcf.js',
+	'./bower/jcf/js/jcf.select.js',
 	'./src/js/journee.js',
 	'./src/js/mwheelIntent.js',
 	'./src/js/scrollreveal.min.js',

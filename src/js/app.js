@@ -262,6 +262,11 @@ jQuery(document).ready(function($) {
     initJs();
     customNav();
     animation();
+    jcf.replaceAll();
+    jcf.setOptions('Select', {
+   
+    wrapNative: false
+});
     $('#modalChapter').on('shown.bs.modal', function() {
         if ($(window).width() > 1024) {
             skrollr.init().destroy();
@@ -299,8 +304,8 @@ jQuery(document).ready(function($) {
         result.style.opacity = "0";
         initSlider();
     });
-    
-     $('.w-ovh').on('shown.bs.modal', function(e) {
+
+    $('.w-ovh').on('shown.bs.modal', function(e) {
         $('body').addClass('ovh');
     })
     $('.w-ovh').on('hidden.bs.modal', function(e) {
