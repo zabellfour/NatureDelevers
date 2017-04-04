@@ -25,6 +25,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-arrow_back:before {
+  content: "\e903";
+}
 
 .icon-note:before {
   content: "\e902";

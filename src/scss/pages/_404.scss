@@ -1,0 +1,90 @@
+.page-404 {
+    .lg-message {
+        position: absolute;
+        top: 11%;
+        left: 44%;
+        max-width: 550px;
+        text-align: center;
+        font-size: 25px;
+        @include media('<desktop') {
+            top: 8%;
+            left: 40%;
+        }
+        @include media('<tablet') {
+            left: 0;
+            max-width: 100%;
+            right: 0;
+            width: 100%;
+            padding: 0 10%;
+        }
+        strong {
+            font-weight: 900;
+        }
+        .h1 {
+            font-size: 192px;
+            color: $scarlet;
+            margin-bottom: 100px;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translateY(0);
+            margin-bottom: 3px;
+            @include media('<desktop') {
+                font-size: 100px;
+            }
+            @include media('<tablet') {
+                margin-bottom: 0;
+            }
+        }
+        button {
+            @include animate(background-color color);
+            display: inline-block;
+            background-color: $scarlet;
+            color: $white;
+            padding: 5px 10px;
+            min-width: 200px;
+            text-align: center;
+            border: none;
+            border: 2px solid $scarlet;
+            position: relative;
+            font-size: 18px;
+            font-weight: 700;
+            i {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                font-size: 20px;
+            }
+            @include media('<tablet') {
+                width: 100%;
+            }
+            &:hover {
+                background-color: transparent;
+                color: $scarlet;
+            }
+        }
+        p {
+            margin-bottom:31px;
+            font-size: 18px;
+            strong {
+                font-size: 25px;
+            }
+        }
+    }
+    .decor-holder {
+        position: relative;
+        img {
+            position: absolute;
+            top: -15px;
+            left: 35px;
+            @include media('<desktop') {
+                top: -15px;
+                left: 15px;
+            }
+        }
+    }
+    .banner.banner-contact {
+        min-height: 100vh;
+    }
+}

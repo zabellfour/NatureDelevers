@@ -262,11 +262,12 @@ jQuery(document).ready(function($) {
     initJs();
     customNav();
     animation();
-    jcf.replaceAll();
     jcf.setOptions('Select', {
-   
+  
     wrapNative: false
 });
+    jcf.replaceAll();
+   
     $('#modalChapter').on('shown.bs.modal', function() {
         if ($(window).width() > 1024) {
             skrollr.init().destroy();

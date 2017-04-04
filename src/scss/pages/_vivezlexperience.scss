@@ -1,31 +1,75 @@
 .experience-holder {
     position: relative;
-    padding-top: 100px;
+    padding-top: 73px;
+    @include media('<desktop') {
+        padding-top: 50px;
+    }
+    @include media('<tablet') {
+        padding-top: 20px;
+    }
     .h2 {
         text-align: center;
         font-size: 50px;
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        @include media('<desktop') {
+            font-size: 40px;
+        }
+        @include media('<tablet') {
+            font-size: 30px;
+        }
     }
     .reserve-form {
         margin-top: 50px;
         text-align: center;
         border: 5px solid $scarlet;
-        padding: 0 20px 70px;
+        padding: 0 20px 78px;
+        margin-bottom: 150px;
+        @include media('<tablet') {
+            padding: 0 50px 20px;
+            margin: 20px 0 50px;
+        }
+        @include media('<phone') {
+            padding: 10px 15px;
+            margin: 20px 0 50px;
+        }
         p {
-            margin-bottom: 20px;
+            margin-bottom: 59px;
+            @include media('<desktop') {
+                margin-bottom: 30px;
+            }
+            @include media('<tablet') {
+                margin-bottom: 20px;
+            }
         }
         .h3 {
             color: $scarlet;
             display: inline-block;
-            transform: translateY(-15px);
-            padding: 0 30px;
+            margin-top: -11px;
+            transform: translateY(-10px);
+            padding: 0 13px;
             background: $white;
             font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 6px;
+            @include media('<tablet') {
+                transform: translateY(-20px);
+                padding: 0 5px;
+            }
         }
         .group {
             max-width: 734px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
+            @include media('<tablet') {
+                flex-wrap: wrap;
+            }
+        }
+        strong {
+            font-weight: 900;
         }
         .tag {
             display: inline-block;
@@ -34,6 +78,10 @@
             padding: 5px 15px;
             min-width: 200px;
             text-align: center;
+            @include media('<tablet') {
+                width: 100%;
+                margin: 20px 0;
+            }
         }
         button {
             @include animate(background-color color);
@@ -45,10 +93,90 @@
             text-align: center;
             border: none;
             border: 2px solid $scarlet;
+            width: 200px;
+            @include media('<tablet') {
+                width: 100%;
+            }
             &:hover {
                 background-color: transparent;
                 color: $scarlet;
             }
+        }
+        .select-holder {
+            display: inline-block;
+            width: 280px;
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+    .contact-form {
+        margin-bottom: 100px;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+        @include media('<tablet') {
+            margin-bottom: 50px;
+        }
+        .btn-row {
+            width: 100%;
+            text-align: center;
+        }
+        input {
+            border: 4px solid #e6e6e6;
+            height: 34px;
+            padding: 0 10px;
+            margin-bottom: 15px;
+            @include placeholder {
+                color: $black;
+            }
+            &[type="text"] {
+                width: 200px;
+            }
+            &[type="email"] {
+                width: 256px;
+            }
+            &[type="tel"] {
+                width: 146px;
+            }
+            @include media('<desktop') {
+                width: 48% !important;
+            }
+            @include media('<phone') {
+                width: 100% !important;
+            }
+        }
+        button {
+            @include animate(background-color color);
+            display: inline-block;
+            background-color: $scarlet;
+            color: $white;
+            padding: 2px 11px;
+            min-width: 200px;
+            text-align: center;
+            border: none;
+            border: 2px solid $scarlet;
+            height: 37px;
+            position: relative;
+            i {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                font-size: 20px;
+            }
+            @include media('<tablet') {
+                width: 100%;
+            }
+            &:hover {
+                background-color: transparent;
+                color: $scarlet;
+            }
+        }
+        .btn-row{
+        	padding-top: 17px;
         }
     }
 }
@@ -65,10 +193,14 @@
     text-align: center;
     font-size: 14px;
     line-height: 1.4;
-    margin-bottom: 100px;
+    margin-bottom: 104px;
+    @include media('<tablet') {
+        margin-bottom: 50px;
+    }
 }
 
 .jcf-select {
+    width: 100%;
     background: #e6e6e6;
     border-color: #e6e6e6;
     margin-bottom: 0;
@@ -76,22 +208,38 @@
     line-height: 35px;
     .jcf-select-text {
         line-height: 35px;
+        text-align: left;
     }
     .jcf-select-opener {
         background-color: #e6e6e6;
+        width: 36px;
         &:after {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             border: 1px solid $black;
-            transform-origin:0% 0%; 
-            transform:rotate(135deg) translate(-50%, -50%);
-            border-left:none;
-            border-bottom:none;
-
+            transform-origin: 0% 0%;
+            transform: rotate(135deg) translate(-50%, -50%);
+            border-left: none;
+            border-bottom: none;
         }
     }
+    .jsf-option {}
+}
+
+.jcf-list .jcf-option {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 16px 17px;
+}
+
+.jcf-focus {
+    border-color: #e6e6e6 !important;
+}
+
+.jcf-select-drop .jcf-select-drop-content {
+    border: 1px solid #e6e6e6 !important;
 }
