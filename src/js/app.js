@@ -83,12 +83,67 @@ var initJs = function() {
     window.sr = new ScrollReveal;
 }
 
+var customNav = function() {
+    // chanhge journee.html to requiare page
+    var pageWithVideo = "journee.html";
+    $(".drop-opener").click(function(event) {
+        if ($(this).hasClass('notdef')) event.preventDefault();
+        $(this).parent().find(".dropdown").addClass("opened");
+        $(this).removeClass('notdef');
+    });
+    $("body").click(function(e) {
+        if ($(e.target).closest(".holder2").length == 0)
+            $(".dropdown").removeClass("opened");
+        if ($(e.target).closest(".share-opened").length == 0)
+            $(".share-holder").removeClass("share-opened");
+    });
+    $(".share-holder").click(function(event) {
+        event.preventDefault();
+        $(this).toggleClass("share-opened");
+    });
+    $(".modal-links > li > a").click(function(event) {
+        event.preventDefault();
+        $('.drop-opener').addClass('notdef');
+        var path = $(this).attr("href");
+        $("#modalChapter .modal-body").load(path);
+        $('#modalChapter').modal('show');
+        $('#modalChapter').modal('handleUpdate');
+        $("body").removeClass("nav-active");
+
+
+    });
+    $(".holder2 .dropdown > li > a").click(function(event) {
+        event.preventDefault();
+        $('.drop-opener').addClass('notdef');
+        var path = $(this).attr("href");
+        $("#modalChapter .modal-body").load(path);
+        $('#modalChapter').modal('show');
+        $('#modalChapter').modal('handleUpdate');
+        $("body").removeClass("nav-active");
+    });
+    $(".baner-bottom .btn-footer").click(function(event) {
+        event.preventDefault();
+        if ($("body").is("#journee")) {
+            $('#modalChapter').modal('hide');
+        } else {
+            document.location.href = pageWithVideo;
+        }
+    });
+    $(".close-modal").click(function(event) {
+        if ($("body").is("#journee")) {} else {
+            setTimeout(function() {
+                $("#modal-cahpter .modal-content .modal-body").empty();
+            }, 300);
+        };
+    });
+}
+
 var sr1 = new ScrollReveal;
 var sr2 = new ScrollReveal;
 var sr3 = new ScrollReveal;
 var animation = function() {
-    if ((document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) && ($("#modalChapter .modal-body").html().trim() === '')) {
-        console.log('animation-demarche-nature-deleveurs');
+    if (document.getElementsByClassName("animation-demarche-nature-deleveurs").length != 0) {
+        // console.log('animation-demarche-nature-deleveurs');
         sr1.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -125,7 +180,7 @@ var animation = function() {
 
     };
     if (document.getElementsByClassName("animation-etape-tracabilite").length != 0) {
-        console.log('animation-etape-tracabilite');
+        // console.log('animation-etape-tracabilite');
         sr2.reveal('.modal .appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -156,7 +211,7 @@ var animation = function() {
 
     };
     if (document.getElementsByClassName("animation-etape-alimentation").length != 0) {
-        console.log('animation-etape-alimentation');
+        // console.log('animation-etape-alimentation');
         sr3.reveal('.modal .appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -182,7 +237,6 @@ var animation = function() {
         });
     };
     if (document.getElementsByClassName("animation-commence").length != 0) {
-
         sr.reveal('.appear', {
             origin: 'top',
             viewFactor: 0.2,
@@ -197,65 +251,8 @@ var animation = function() {
             easing: 'ease-out'
         });
     };
-
-
 }
 
-var customNav = function() {
-    $(".drop-opener").click(function(event) {
-        if ($(this).hasClass('notdef')) event.preventDefault();
-        $(this).parent().find(".dropdown").addClass("opened");
-        $(this).removeClass('notdef');
-    });
-    $("body").click(function(e) {
-        if ($(e.target).closest(".holder2").length == 0)
-            $(".dropdown").removeClass("opened");
-        if ($(e.target).closest(".share-opened").length == 0)
-            $(".share-holder").removeClass("share-opened");
-    });
-    $(".share-holder").click(function(event) {
-        event.preventDefault();
-        $(this).toggleClass("share-opened");
-    });
-    $(".modal-links > li > a").click(function(event) {
-        event.preventDefault();
-        $('.drop-opener').addClass('notdef');
-        var path = $(this).attr("href");
-
-        $("#modalChapter .modal-body").load(path);
-
-        $('#modalChapter').modal('show');
-        $('#modalChapter').modal('handleUpdate');
-        $("body").removeClass("nav-active");
-
-
-    });
-    $(".holder2 .dropdown > li > a").click(function(event) {
-        event.preventDefault();
-        $('.drop-opener').addClass('notdef');
-        var path = $(this).attr("href");
-        $("#modalChapter .modal-body").load(path);
-        $('#modalChapter').modal('show');
-        $('#modalChapter').modal('handleUpdate');
-        $("body").removeClass("nav-active");
-    });
-    $(".baner-bottom .btn-footer").click(function(event) {
-        event.preventDefault();
-        if (document.location.href.indexOf('journee.html') + 1) {
-            $('#modalChapter').modal('hide');
-        } else {
-            document.location.href = 'journee.html';
-        }
-    });
-    $(".close-modal").click(function(event) {
-        if (document.location.href.indexOf('journee.html') + 1) { console.log('journee page'); } else {
-            setTimeout(function() {
-                $("#modal-cahpter .modal-content .modal-body").empty();
-            }, 300);
-        };
-    });
-
-}
 
 jQuery(document).ready(function($) {
     new WOW().init();
@@ -263,11 +260,9 @@ jQuery(document).ready(function($) {
     customNav();
     animation();
     jcf.setOptions('Select', {
-  
-    wrapNative: false
-});
+        wrapNative: false
+    });
     jcf.replaceAll();
-   
     $('#modalChapter').on('shown.bs.modal', function() {
         if ($(window).width() > 1024) {
             skrollr.init().destroy();
@@ -280,9 +275,7 @@ jQuery(document).ready(function($) {
         }, 300);
         $("#reset-animation").click(function(event) {
             $('body').css('opacity', 0);
-
             $('html, body').animate({
-
                 scrollTop: 0,
             }, 1);
             $('html, body').animate({
@@ -300,9 +293,12 @@ jQuery(document).ready(function($) {
     });
     $('#menu1, #menu2, #menu3').on('shown.bs.modal', function() {
         var result = document.getElementById('block-video');
-        var result2 = '../' + result.getAttribute('data-vide-bg');
-        $('#block-video').vide({ mp4: '../videos/journeeEleveur_HD_tab.mp4' }, {});
-        result.style.opacity = "0";
+        var result2 = 'mp4: ../' + result.getAttribute('data-vide-bg');
+        $('#block-video').vide(result2, { posterType: 'none' });
+        $('#block-video').fadeTo(100, 0);
+        setTimeout(function() {
+            $('#block-video').fadeTo(2000, 1);
+        }, 300);
         initSlider();
     });
 
@@ -312,12 +308,10 @@ jQuery(document).ready(function($) {
     $('.w-ovh').on('hidden.bs.modal', function(e) {
         $('body').removeClass('ovh');
     })
-
     window.addEventListener('scroll', function(e) {
         var line = $('#line-path'),
             offset = 2000 - $(window).scrollTop() / 1.3;
         line.animate({ 'stroke-dashoffset': offset }, 20, function() {});
-
     });
 
 });
