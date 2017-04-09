@@ -52,3 +52,69 @@ input[type='submit'] {
   -webkit-border-radius: 0;
   cursor: pointer;
 }
+
+/* custom select */
+
+.jcf-select {
+  width: 100%;
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+  margin-bottom: 0;
+  height: 35px;
+  line-height: 35px;
+  &.jcf-drop-active {
+    .jcf-select-opener:after {
+      transform:rotate(-45deg) translate(-50%, -50%);
+    }
+  }
+  .jcf-select-text {
+    line-height: 35px;
+    text-align: left;
+  }
+  .jcf-select-opener {
+    background-color: #e6e6e6;
+    width: 36px;
+    &:after {
+      @include animate(transform);
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border: 1px solid $black;
+      transform-origin: 0% 0%;
+      transform: rotate(135deg) translate(-50%, -50%);
+      border-left: none;
+      border-bottom: none;
+    }
+  }
+}
+
+
+.jcf-list {
+  ul {
+    li {
+      border-bottom:1px solid #e6e6e6;
+      &:last-child {
+        border-bottom:none;
+      }
+    }
+  }
+  .jcf-option {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 17px;
+    color:#000;
+  }
+}
+
+.jcf-focus {
+  border-color: #e6e6e6 !important;
+}
+
+.jcf-select-drop {
+  .jcf-select-drop-content {
+    border: 1px solid #e6e6e6 !important;
+  }
+}

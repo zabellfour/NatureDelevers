@@ -78,6 +78,14 @@
             padding: 5px 15px;
             min-width: 200px;
             text-align: center;
+            border:2px solid #000;
+            font-size:14px;
+            text-transform:none;
+            font-weight:normal;
+            &:hover {
+                border:2px solid #000;
+                color:#000;
+            }
             @include media('<tablet') {
                 width: 100%;
                 margin: 20px 0;
@@ -131,6 +139,9 @@
             margin-bottom: 15px;
             @include placeholder {
                 color: $black;
+            }
+            &:focus {
+                outline:none;
             }
             &[type="text"] {
                 width: 200px;
@@ -197,49 +208,4 @@
     @include media('<tablet') {
         margin-bottom: 50px;
     }
-}
-
-.jcf-select {
-    width: 100%;
-    background: #e6e6e6;
-    border-color: #e6e6e6;
-    margin-bottom: 0;
-    height: 35px;
-    line-height: 35px;
-    .jcf-select-text {
-        line-height: 35px;
-        text-align: left;
-    }
-    .jcf-select-opener {
-        background-color: #e6e6e6;
-        width: 36px;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 8px;
-            height: 8px;
-            border: 1px solid $black;
-            transform-origin: 0% 0%;
-            transform: rotate(135deg) translate(-50%, -50%);
-            border-left: none;
-            border-bottom: none;
-        }
-    }
-    .jsf-option {}
-}
-
-.jcf-list .jcf-option {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 16px 17px;
-}
-
-.jcf-focus {
-    border-color: #e6e6e6 !important;
-}
-
-.jcf-select-drop .jcf-select-drop-content {
-    border: 1px solid #e6e6e6 !important;
 }

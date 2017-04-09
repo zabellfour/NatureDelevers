@@ -2,6 +2,7 @@
 
 .banner.banner-contact {
 	h1 {
+		max-width:700px;
 		@include media('<tablet') {
 			top:50%;
 		}
